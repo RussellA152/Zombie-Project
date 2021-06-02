@@ -27,6 +27,9 @@ public class GunScript : MonoBehaviour
     //shooting animation for gun
     public Animation gunAnimation;
 
+    //reloading animation
+    public Animator animator;
+
     //the impact particle from shooting at surfaces/enemies
     public GameObject impactEffect;
 
@@ -41,10 +44,25 @@ public class GunScript : MonoBehaviour
         current_mag_size = original_mag_size;
         bullets_fired = original_mag_size - current_mag_size;
     }
+    private void OnEnable()
+    {
+        isReloading = false;
+        animator.SetBool("Reloading", false);
+    }
 
     // Update is called once per frame
     void Update()
     {
+        //checking if player is walking, playing walking animation 
+        if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
+        {
+            animator.SetBool("Walking", true);
+        }
+        else
+        {
+            animator.SetBool("Walking", false);
+        }
+
         //if player is completely out of ammo, they cannot reload or shoot 
         if(ammoCapacity == 0 && current_mag_size == 0)
         {
@@ -122,12 +140,16 @@ public class GunScript : MonoBehaviour
         isReloading = true;
 
         Debug.Log("reloading");
+        animator.SetBool("Reloading", true);
 
         //delay for reloading time
-        yield return new WaitForSeconds(reloadSpeed);
+        yield return new WaitForSeconds(reloadSpeed -.25f);
+        animator.SetBool("Reloading", false);
+        yield return new WaitForSeconds(.25f);
 
-        
-        if(ammoCapacity >= bullets_fired && ammoCapacity != 0)
+
+
+        if (ammoCapacity >= bullets_fired && ammoCapacity != 0)
         {
             ammoCapacity -= bullets_fired;
             current_mag_size += bullets_fired;
