@@ -4,6 +4,11 @@ using UnityEngine;
 public class Target : MonoBehaviour
 {
     public float health = 50f;
+
+    private void Start()
+    {
+
+    }
     public void TakeDamage(float amount)
     {
         health -= amount;
@@ -18,6 +23,10 @@ public class Target : MonoBehaviour
         if(gameObject.CompareTag("Enemy"))
         {
             Destroy(transform.parent.gameObject);
+            
+            //killing a zombie will decrement the zombie counter (MIGHT BE A DEPEDENCY ISSUE LATER)
+            RoundController.zombieCounter -= 1;
+            
         }
         else
         {
