@@ -22,7 +22,7 @@ public class Target : MonoBehaviour
         //destroys the zombie and its AI (everything)
         if(gameObject.CompareTag("Enemy"))
         {
-            Destroy(transform.parent.gameObject);
+            Destroy(gameObject);
             
             //killing a zombie will decrement the zombie counter (MIGHT BE A DEPEDENCY ISSUE LATER)
             RoundController.zombieCounter -= 1;

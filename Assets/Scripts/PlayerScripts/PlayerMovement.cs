@@ -33,6 +33,8 @@ public class PlayerMovement : MonoBehaviour
 
     // all ground detection stuff
     bool isGrounded;
+    bool canJump;
+
     float groundDistance = 0.4f;
     [SerializeField] LayerMask groundMask;
     [SerializeField] Transform groundCheck;
@@ -48,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        canJump = true;
 
     }
 
@@ -113,15 +116,23 @@ public class PlayerMovement : MonoBehaviour
     private void PlayerMovements()
     {
         //checks for jump input
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump") && isGrounded && canJump)
         {
             PlayerJump();
+            StartCoroutine(PlayerJumpCooldown());
+
         }
 
         //checks for movement (walking) input
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
         moveDirection = oreintation.forward * verticalInput + oreintation.right * horizontalInput;
+    }
+    IEnumerator PlayerJumpCooldown()
+    {
+        canJump = false;
+        yield return new WaitForSeconds(1f);
+        canJump = true;
     }
     void ControlSpeed()
     {

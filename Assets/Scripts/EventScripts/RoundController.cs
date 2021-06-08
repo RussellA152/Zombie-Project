@@ -8,23 +8,28 @@ public class RoundController : MonoBehaviour
     public GameObject zombie;
     public Transform spawnLocation;
     public int round;
-    private int originalZombieCounter = 5;
+    private int originalZombieCounter = 1;
     public int zombieIncrementor = 2;
+
+    public static int amountOfSpawnLocations;
+
+    public List<Transform> RandomSpawnLocations;
 
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("zombie counter " + zombieCounter);
+        //Debug.Log("zombie counter " + zombieCounter);
         round = 0;
         RoundChange.roundChange.onRoundChange += RoundNumberChange;
+        amountOfSpawnLocations = 3;
     }
     private void Update()
     {
-        Debug.Log(zombieCounter);
+        //Debug.Log(zombieCounter);
     }
     private void RoundNumberChange()
     {
-        Debug.Log("zombie counter" + zombieCounter);
+        //Debug.Log("zombie counter" + zombieCounter);
         //if all zombies are dead, increment the round and increase zombie spawns
         if(zombieCounter == 0)
         {
@@ -39,7 +44,13 @@ public class RoundController : MonoBehaviour
         GameObject zombieClone;
         for (int i = 0; i < zombieCounter; i++)
         {
-            zombieClone = Instantiate(zombie, spawnLocation.position, spawnLocation.rotation);
+            int j = Random.Range(0, amountOfSpawnLocations);
+            //changes the spawnLocation's position for each zombie instiantation so they have each have different spawn locations
+            //RandomSpawnLocations[j].position = new Vector3(Random.Range(-50, -40), 1, Random.Range(-10, -5));
+            Debug.Log(j);
+            //spawnLocation.position = new Vector3(Random.Range(-50, -40), 1, Random.Range(-10, -5));
+
+            zombieClone = Instantiate(zombie, RandomSpawnLocations[j].position, RandomSpawnLocations[j].rotation);
         }
     }
 }

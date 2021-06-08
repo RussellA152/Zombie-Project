@@ -1,5 +1,7 @@
 using System.Collections;
+using System;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class GunScript : MonoBehaviour
 {
@@ -126,13 +128,40 @@ public class GunScript : MonoBehaviour
                 //checks if target has a rigidbody
             if(hit.rigidbody != null)
             {
-                hit.rigidbody.AddForce(-hit.normal * impactForce);
+                if(hit.rigidbody.gameObject.GetComponent<NavMeshAgent>() != null)
+                {
+                    hit.rigidbody.gameObject.GetComponent<NavMeshAgent>().enabled = false;
+                    hit.rigidbody.isKinematic = false;
+                    hit.rigidbody.AddForce(-hit.normal * impactForce);
+                    StartCoroutine(KnockbackDelay(hit));
+                    
+
+
+
+                }
+                else
+                    hit.rigidbody.AddForce(-hit.normal * impactForce);
             }
             //instantiate our impact effect at the point of bullet impact
             GameObject impactGameObject = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
             Destroy(impactGameObject, 2f);
         }
     }
+
+    IEnumerator KnockbackDelay(RaycastHit hit)
+    {
+        Debug.Log("start");
+        yield return new WaitForSeconds(.4f);
+        hit.rigidbody.gameObject.GetComponent<NavMeshAgent>().enabled = true;
+        hit.rigidbody.isKinematic = true;
+        Debug.Log("end");
+    }
+
+    //void knockbackoff(RaycastHit hit)
+    //{
+        //hit.rigidbody.gameObject.GetComponent<NavMeshAgent>().enabled = true;
+        //hit.rigidbody.isKinematic = true;
+    //}
     
     IEnumerator Reload()
     {
