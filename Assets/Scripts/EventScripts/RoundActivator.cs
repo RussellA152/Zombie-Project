@@ -4,9 +4,22 @@ using UnityEngine;
 
 public class RoundActivator : MonoBehaviour
 {
-    // Start is called before the first frame update
-    private void OnTriggerEnter(Collider other)
+    private void Update()
     {
-        RoundChange.roundChange.RoundChanging();
+        RoundActivatorFunction();
     }
+    // when all zombies are dead (zombie counter = 0), start next round
+    private void RoundActivatorFunction()
+    {
+        if(RoundController.zombieCounter == 0)
+        {
+            RoundChange.roundChange.RoundChanging();
+        }
+    }
+    
+    //private void OnTriggerEnter(Collider other)
+    //{
+       // RoundChange.roundChange.RoundChanging();
+    //}
+    
 }

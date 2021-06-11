@@ -25,7 +25,8 @@ public class DoorController : MonoBehaviour
     }
     private void OnDoorwayOpen(int id)
     {
-        if (id == 1)
+        //might be redundant
+        if (id == this.id)
         {
             DoorZombieSpawning();
         }
@@ -41,6 +42,7 @@ public class DoorController : MonoBehaviour
     }
     private void DoorZombieSpawning()
     {
+        //we have a list of spawn locations for each individual door, and we add those specific door spawn locations to our main spawn locations list inside the 'RoundController' script
         for(int i = 0; i < DoorSpecificSpawnLocations.Count; i++)
         {
             var spawnerLocation = DoorSpecificSpawnLocations[i];

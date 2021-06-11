@@ -150,11 +150,11 @@ public class GunScript : MonoBehaviour
 
     IEnumerator KnockbackDelay(RaycastHit hit)
     {
-        Debug.Log("start");
+        //Debug.Log("start");
         yield return new WaitForSeconds(.4f);
         hit.rigidbody.gameObject.GetComponent<NavMeshAgent>().enabled = true;
         hit.rigidbody.isKinematic = true;
-        Debug.Log("end");
+        //Debug.Log("end");
     }
 
     //void knockbackoff(RaycastHit hit)
