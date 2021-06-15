@@ -11,6 +11,7 @@ public class Target : MonoBehaviour
     }
     public void TakeDamage(float amount)
     {
+        //amount is passed as an argument inside the GunScript.cs
         health -= amount;
         if (health <= 0f)
         {

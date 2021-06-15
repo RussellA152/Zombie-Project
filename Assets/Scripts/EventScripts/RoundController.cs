@@ -22,6 +22,8 @@ public class RoundController : MonoBehaviour
 
     private bool zombieCanSpawn;
 
+    private float zombieSpawnTime = 3f;
+
     public List<Transform> RandomSpawnLocations;
 
     // Start is called before the first frame update
@@ -32,12 +34,15 @@ public class RoundController : MonoBehaviour
         round = 0;
         RoundChange.roundChange.onRoundChange += RoundNumberChange;
         amountOfSpawnLocations = 3;
+
+        
+
     }
     private void Update()
     {
         //Debug.Log(zombieCounter);
         //Debug.Log(zombieCanSpawn);
-        Debug.Log(round);
+        //Debug.Log(round);
     }
     private void RoundNumberChange()
     {
@@ -45,6 +50,9 @@ public class RoundController : MonoBehaviour
         //if all zombies are dead, increment the round and increase zombie spawns
         if(zombieCounter == 0)
         {
+            //prevents multiple spawning instances, allows us to have correct delay times between rounds and zombie spawns correctly (without this we get infinite invokes)
+            CancelInvoke();
+
             //need to reset spawnIncrementor so we can spawn correct number of zombies
             spawnIncrementor = 0;
             round += 1;
@@ -60,7 +68,7 @@ public class RoundController : MonoBehaviour
 
             //starts in 2 seconds, and invokes every 3 seconds
             //in 2 seconds, we spawn our first zombie, then every 3 seconds after that, we spawn each other zombie
-            InvokeRepeating("ZombieSpawns", 5.0f, 3.0f);
+            InvokeRepeating("ZombieSpawns", 5.0f, zombieSpawnTime);
 
         }
     }
@@ -70,6 +78,8 @@ public class RoundController : MonoBehaviour
         //if we use spawnIncrementor < zombieCounter, we will spawn less zombies since zombieCounter is constantly decreasing due to player killing zombies
         if(spawnIncrementor < ZombieCountAtStartOfRound)
         {
+            Debug.Log("spawn incrementor " + spawnIncrementor);
+            Debug.Log("zombie at start of round " + ZombieCountAtStartOfRound);
             //Debug.Log("i " + spawnIncrementor);
             //Debug.Log("zombie counter " + zombieCounter);
             randomSpawnLocationSpot = Random.Range(0, amountOfSpawnLocations);
@@ -113,12 +123,5 @@ public class RoundController : MonoBehaviour
             */
         //}
     }
-    /*
-    IEnumerator ZombieSpawnDelay()
-    {
-        zombieCanSpawn = false;
-        yield return new WaitForSeconds(5f);
-        zombieCanSpawn = true;
-    }
-    */
+    
 }
