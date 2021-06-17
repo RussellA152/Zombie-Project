@@ -35,6 +35,8 @@ public class GunScript : MonoBehaviour
     //the impact particle from shooting at surfaces/enemies
     public GameObject impactEffect;
 
+    public AudioSource shootSound;
+
     //reloading key
     [SerializeField] KeyCode reloadKey = KeyCode.R;
 
@@ -104,6 +106,7 @@ public class GunScript : MonoBehaviour
         //gunAnimation.Play();
 
         //each time you fire, you lose 1 bullet, also your amount of bullets fired increments by 1
+        shootSound.Play();
         current_mag_size--;
         bullets_fired = original_mag_size - current_mag_size;
 
