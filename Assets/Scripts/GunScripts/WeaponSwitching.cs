@@ -18,8 +18,22 @@ public class WeaponSwitching : MonoBehaviour
         //we set our "previousSelectedWeapon to our current weapon in hand
         int previousSelectedWeapon = selectedWeapon;
 
+        //pressing the '1' key will equip first gun, '2' for second gun, '3' for third gun
+        if (Input.GetKeyDown(KeyCode.Alpha1) == true)
+        {
+            selectedWeapon = 0;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2) == true)
+        {
+            selectedWeapon = 1;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3) == true)
+        {
+            selectedWeapon = 2;
+        }
+
         //scrolling up for swapping guns (goes to next weapon)  
-        if(Input.GetAxis("Mouse ScrollWheel") > 0f)
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f)
         {
             //if we try to scroll past the amount of weapons we have, the index will reset
             if (selectedWeapon <= 0)
@@ -31,6 +45,7 @@ public class WeaponSwitching : MonoBehaviour
                 selectedWeapon--;
 
             }
+            
 
         }
         //scrolling down for swapping guns (goes to previous weapon)
@@ -45,7 +60,7 @@ public class WeaponSwitching : MonoBehaviour
                 selectedWeapon++;
 
             }
-   
+
         }
         //after swapping weapons we check if our previousSelectedWeapon does NOT equal our current weapon (we changed weapons)
         if (previousSelectedWeapon != selectedWeapon)

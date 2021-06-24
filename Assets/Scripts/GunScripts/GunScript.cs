@@ -138,9 +138,6 @@ public class GunScript : MonoBehaviour
                     hit.rigidbody.AddForce(-hit.normal * impactForce);
                     StartCoroutine(KnockbackDelay(hit));
                     
-
-
-
                 }
                 else
                     hit.rigidbody.AddForce(-hit.normal * impactForce);

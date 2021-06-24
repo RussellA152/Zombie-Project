@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class GunSway : MonoBehaviour
 {
+    
     //intensity of the swaying
     public float swayIntensity;
+
     //variable that determines how quick the gun returns to its original position
     public float swaySmooth;
 
@@ -14,6 +16,7 @@ public class GunSway : MonoBehaviour
     private void Start()
     {
         original_rotation = transform.localRotation;
+        
     }
     private void Update()
     {
@@ -23,8 +26,8 @@ public class GunSway : MonoBehaviour
     private void UpdateSway()
     {
         //mouse controls for sway
-        float t_x_mouse = Mathf.Clamp(Input.GetAxis("Mouse X"),-1,1);
-        float t_y_mouse = Mathf.Clamp(Input.GetAxis("Mouse Y"),-1,1);
+        float t_x_mouse = Mathf.Clamp(Input.GetAxisRaw("Mouse X"), -1, 1);
+        float t_y_mouse = Mathf.Clamp(Input.GetAxisRaw("Mouse Y"),-1,1);
 
         //calculates target rotation
         Quaternion t_x_adjustment = Quaternion.AngleAxis(-swayIntensity * t_x_mouse, Vector3.up);
@@ -32,8 +35,10 @@ public class GunSway : MonoBehaviour
 
         Quaternion target_rotation = original_rotation * t_x_adjustment * t_y_adjustment;
 
+        
+        
         //rotate towards target rotation
-        transform.localRotation = Quaternion.RotateTowards(transform.localRotation, target_rotation, Time.deltaTime * swaySmooth);
+        transform.localRotation = Quaternion.RotateTowards(transform.localRotation, target_rotation, swaySmooth * Time.deltaTime);
     }
 
 }
