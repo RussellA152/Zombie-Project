@@ -14,6 +14,7 @@ public class RoundActivator : MonoBehaviour
         if(RoundController.zombieCounter == 0)
         {
             RoundChange.roundChange.RoundChanging();
+            //Debug.Log("Round activator activated!");
             
         }
     }

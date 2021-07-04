@@ -15,9 +15,13 @@ public class GunScript : MonoBehaviour
     public int original_mag_size;
     public int current_mag_size;
     public int ammoCapacity;
+    public int original_ammoCapacity;
     public int bullets_fired;
 
     public float reloadSpeed;
+
+    public int ammoPrice;
+
     private bool isReloading = false;
 
     //referencing our in-game camera
@@ -37,14 +41,20 @@ public class GunScript : MonoBehaviour
 
     public AudioSource shootSound;
 
+    
+
     //reloading key
     [SerializeField] KeyCode reloadKey = KeyCode.R;
 
     //set to 0 by default to allow us to shoot at least once
     private float nextTimeToFire = 0f;
 
+
+    private NavMeshAgent hitRB;
+
     private void Start()
     {
+
         current_mag_size = original_mag_size;
         bullets_fired = original_mag_size - current_mag_size;
     }
@@ -131,9 +141,11 @@ public class GunScript : MonoBehaviour
                 //checks if target has a rigidbody
             if(hit.rigidbody != null)
             {
-                if(hit.rigidbody.gameObject.GetComponent<NavMeshAgent>() != null)
+                hitRB = hit.rigidbody.gameObject.GetComponent<NavMeshAgent>();
+                //check if target has a NavMeshAgent
+                if (hitRB != null)
                 {
-                    hit.rigidbody.gameObject.GetComponent<NavMeshAgent>().enabled = false;
+                    hitRB.enabled = false;
                     hit.rigidbody.isKinematic = false;
                     hit.rigidbody.AddForce(-hit.normal * impactForce);
                     StartCoroutine(KnockbackDelay(hit));
@@ -148,12 +160,27 @@ public class GunScript : MonoBehaviour
         }
     }
 
+    //we call this function when we pick up a MaxAmmo powerup, or if we purchase ammo from the Ammo Crate
+    public void MaxAmmo()
+    {
+        //set the current magazine size to the original mag size, and set the current ammo capacity to original_ammoCapatcity
+        //need to reset bullets_fired otherwise we receive extra ammo when we reload and buy ammo at the same time
+        current_mag_size = original_mag_size;
+        ammoCapacity = original_ammoCapacity;
+        bullets_fired = 0;
+
+    }
+
     IEnumerator KnockbackDelay(RaycastHit hit)
     {
         //Debug.Log("start");
         yield return new WaitForSeconds(.4f);
-        hit.rigidbody.gameObject.GetComponent<NavMeshAgent>().enabled = true;
-        hit.rigidbody.isKinematic = true;
+        if(hitRB != null)
+        {
+            hitRB.enabled = true;
+            hit.rigidbody.isKinematic = true;
+        }
+        
         //Debug.Log("end");
     }
 

@@ -4,22 +4,28 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public float playerHealth;
-    private bool canTakeDamage;
-    private bool wasAttacked;
-    public float damageCooldown = 2f;
-
+    public static float playerHealth;
+    //private bool canTakeDamage;
+    //private bool wasAttacked;
+    //public float damageCooldown = 2f;
+    private float lastCallTime;
 
     private void Start()
     {
-        canTakeDamage = true;
+        //canTakeDamage = true;
+        
         playerHealth = 150f;
     }
     private void Update()
     {
         //Debug.Log(playerHealth);
-        playerDeath();
+        if (Time.time - lastCallTime >= 0.2f)
+        {
+            playerDeath();
+        }
+        
     }
+    /*
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Enemy") && canTakeDamage)
@@ -39,10 +45,12 @@ public class PlayerHealth : MonoBehaviour
         yield return new WaitForSeconds(damageCooldown);
         canTakeDamage = true;
     }
+    */
     private void playerDeath()
     {
         if(playerHealth <= 0f)
         {
+            lastCallTime = Time.time;
             Debug.Log("You Died");
         }
     }

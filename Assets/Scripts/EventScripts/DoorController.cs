@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor.AI;
 
 public class DoorController : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class DoorController : MonoBehaviour
     //public List<Transform> DoorSpecificSpawnLocations;
     public List<Transform> DoorSpecificSpawnLocations;
 
+    //the MAIN list of spawning locations
     public List<Transform> RandomSpawnLocations { get; private set; }
 
     private int amountOfSpawnLocations;
@@ -20,6 +22,8 @@ public class DoorController : MonoBehaviour
     {
         //subscribing to our event system (s)
         GameEvents.current.onDoorwayTriggerEnter += OnDoorwayOpen;
+
+        //RandomSpawnLocations is the MAIN list that contains the locations of each spawn location 
         RandomSpawnLocations = roundChangerObject.GetComponent<RoundController>().RandomSpawnLocations;
         
     }
@@ -28,15 +32,19 @@ public class DoorController : MonoBehaviour
         //might be redundant
         if (id == this.id)
         {
+            
             DoorZombieSpawning();
         }
 
+        //opens door (destroys it for now)
         if (id == this.id)
         {
+            
             Destroy(gameObject);
+            
 
         }
-        //opens door (destroys it for now)
+        
         
 
     }
@@ -54,6 +62,10 @@ public class DoorController : MonoBehaviour
     private void OnDestroy()
     {
         //unsubscribes from event system when door is destroyed/ opened;
+
+        //UPDATES NAVMESH, but causes a game-freeze for a few seconds
+        //NavMeshBuilder.BuildNavMesh();
+
         GameEvents.current.onDoorwayTriggerEnter -= OnDoorwayOpen;
         
     }

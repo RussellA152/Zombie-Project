@@ -8,6 +8,7 @@ public class DoorTrigger : MonoBehaviour
     public int doorPrice;
     private bool inTrigger;
     private bool wantsToBuyDoor;
+
     private void Start()
     {
         inTrigger = false;

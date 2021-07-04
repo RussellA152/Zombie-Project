@@ -26,6 +26,7 @@ public class RoundController : MonoBehaviour
 
     private float zombieSpawnTime = 3f;
 
+    //OUR MAIN LIST OF SPAWNING LOCATIONS / TRANSFORMS
     public List<Transform> RandomSpawnLocations;
 
     Target targetScript;
@@ -77,14 +78,12 @@ public class RoundController : MonoBehaviour
         //if we use spawnIncrementor < zombieCounter, we will spawn less zombies since zombieCounter is constantly decreasing due to player killing zombies
         if(spawnIncrementor < ZombieCountAtStartOfRound)
         {
-            //Debug.Log("spawn incrementor " + spawnIncrementor);
-            //Debug.Log("zombie at start of round " + ZombieCountAtStartOfRound);
-            //Debug.Log("i " + spawnIncrementor);
-            //Debug.Log("zombie counter " + zombieCounter);
+            
             randomSpawnLocationSpot = Random.Range(0, amountOfSpawnLocations);
 
             //Debug.Log(randomSpawnLocationSpot);
 
+            //RandomSpawnLocation's number of elements are increased through the DoorController event System, when opening doors, we add more elements to the RandomSpawnLcations list
             zombieClone = Instantiate(zombie, RandomSpawnLocations[randomSpawnLocationSpot].position, RandomSpawnLocations[randomSpawnLocationSpot].rotation);
 
             //we get the Speed component from the zombieClone (SEE Target.cs) and randomize its speed, we also make sure to increase that speed by the difficultySpeedIncrease incrementor
