@@ -51,6 +51,7 @@ public class GunScript : MonoBehaviour
 
 
     private NavMeshAgent hitRB;
+    private Target target;
 
     private void Start()
     {
@@ -129,7 +130,7 @@ public class GunScript : MonoBehaviour
             //Debug.Log(hit.transform.name);
 
             //allows us to access functions from the target script (if the enemy or object contains the "Target" script
-            Target target = hit.transform.GetComponent<Target>();
+            target = hit.transform.GetComponent<Target>();
             //only allow damage to things that we find the target component for
             if(target != null)
             {
@@ -145,6 +146,7 @@ public class GunScript : MonoBehaviour
                 //check if target has a NavMeshAgent
                 if (hitRB != null)
                 {
+                    //Debug.Log("navmesh OFF");
                     hitRB.enabled = false;
                     hit.rigidbody.isKinematic = false;
                     hit.rigidbody.AddForce(-hit.normal * impactForce);
@@ -175,10 +177,11 @@ public class GunScript : MonoBehaviour
     {
         //Debug.Log("start");
         yield return new WaitForSeconds(.4f);
-        if(hitRB != null)
+        if(hitRB != null && target.health > 0)
         {
             hitRB.enabled = true;
             hit.rigidbody.isKinematic = true;
+            //Debug.Log("navmesh ON");
         }
         
         //Debug.Log("end");

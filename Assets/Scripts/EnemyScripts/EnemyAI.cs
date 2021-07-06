@@ -7,6 +7,7 @@ public class EnemyAI : MonoBehaviour
 {
 
     NavMeshAgent nm;
+    Target target_access;
 
     public Transform target;
     public float hostileRange;
@@ -18,6 +19,7 @@ public class EnemyAI : MonoBehaviour
     void Start()
     {
         nm = GetComponent<NavMeshAgent>();
+        target_access = GetComponent<Target>();
         StartCoroutine(Think());
     }
 
@@ -39,7 +41,11 @@ public class EnemyAI : MonoBehaviour
                     {
                         aiState = AIState.hostile;
                     }
-                    nm.SetDestination(transform.position);
+                    if (target_access.health > 0)
+                    {
+                        nm.SetDestination(target.position);
+                    }
+                    
                     break;
                 case AIState.hostile:
                     dist = Vector3.Distance(target.position, transform.position);
@@ -48,7 +54,11 @@ public class EnemyAI : MonoBehaviour
                     {
                         aiState = AIState.idle;
                     }
-                    nm.SetDestination(target.position);
+                    if(target_access.health > 0)
+                    {
+                        nm.SetDestination(target.position);
+                    }
+                    
                     break;
                 default:
                     break;

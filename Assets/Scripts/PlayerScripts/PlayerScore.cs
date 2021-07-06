@@ -12,6 +12,6 @@ public class PlayerScore : MonoBehaviour
     }
     private void Update()
     {
-        //Debug.Log(pScore);
+        //Debug.Log("My Score: " + pScore);
     }
 }

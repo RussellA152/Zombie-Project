@@ -1,4 +1,4 @@
-
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -10,11 +10,18 @@ public class Target : MonoBehaviour
     public static float maxSpeed = 1.1f;
 
     public static float difficultySpeedIncrease = 0f;
+
+    private NavMeshAgent navMesh;
+    private Rigidbody target_rigidbody;
+    private EnemyAttacks enemyAttacks_access;
      
 
     private void Start()
     {
         //gameObject.GetComponent<NavMeshAgent>().speed = Random.Range(minSpeed, maxSpeed);
+        navMesh = gameObject.GetComponent<NavMeshAgent>();
+        target_rigidbody = GetComponent<Rigidbody>();
+        enemyAttacks_access = GetComponent<EnemyAttacks>();
     }
     public void TakeDamage(float amount)
     {
@@ -45,8 +52,17 @@ public class Target : MonoBehaviour
         //destroys the zombie and its AI (everything)
         if(gameObject.CompareTag("Enemy"))
         {
+            //when enemt dies, give player score
             PlayerScore.pScore += 100f;
-            Destroy(gameObject);
+
+            enemyAttacks_access.enabled = false;
+
+            //turn off zombie's navmesh, then turn off its constraints to make "ragdoll" effects
+            navMesh.enabled = false;
+            target_rigidbody.constraints = RigidbodyConstraints.None;
+
+            //after a few seconds, destroy zombie's body
+            Destroy(gameObject, 2.5f);
             
             //killing a zombie will decrement the zombie counter (MIGHT BE A DEPEDENCY ISSUE LATER)
             RoundController.zombieCounter -= 1;
@@ -57,4 +73,9 @@ public class Target : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    //IEnumerator DeathAnimationDelay()
+    //{
+        //yield return new WaitForSeconds(2.5f);
+        //Destroy(gameObject);
+    //}
 }
