@@ -6,13 +6,13 @@ using UnityEngine;
 public class EnemyAttacks : MonoBehaviour
 {
     public float enemyDamage;   //determines how much damage this enemy will do to player
-    private bool canAttack;
+    //private bool canAttack;
 
     // Start is called before the first frame update
     void Start()
     {
         enemyDamage = 25f; //hard-coded for now, but should be a different value?
-        canAttack = false;
+        //canAttack = false;
     }
 
     // Update is called once per frame

@@ -122,7 +122,7 @@ public class GunScript : MonoBehaviour
         bullets_fired = original_mag_size - current_mag_size;
 
         RaycastHit hit;
-
+        
         //Raycast begins from position of main camera, and goes in the forward direction (forward from camera)
         if(Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward,out hit, range))
         {
@@ -148,7 +148,11 @@ public class GunScript : MonoBehaviour
                 {
                     //Debug.Log("navmesh OFF");
                     hitRB.enabled = false;
+
+                    //setting object to not being kinematic so they can be affected by impact force
                     hit.rigidbody.isKinematic = false;
+
+                    //applying force to object with gun
                     hit.rigidbody.AddForce(-hit.normal * impactForce);
                     StartCoroutine(KnockbackDelay(hit));
                     
@@ -180,7 +184,9 @@ public class GunScript : MonoBehaviour
         if(hitRB != null && target.health > 0)
         {
             hitRB.enabled = true;
+            //set rigidbody back to being kinematic so player cannot push the object
             hit.rigidbody.isKinematic = true;
+
             //Debug.Log("navmesh ON");
         }
         

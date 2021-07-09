@@ -4443,7 +4443,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 626966633}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24.37, y: 1, z: 8.34}
+  m_LocalPosition: {x: 24.37, y: 1, z: 14.28}
   m_LocalScale: {x: 0.9, y: 1, z: 1}
   m_Children:
   - {fileID: 2113607306}
@@ -4551,6 +4551,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  attackHitbox: {fileID: 665314352}
 --- !u!54 &626966640
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5532,7 +5533,7 @@ GameObject:
   - component: {fileID: 707603894}
   - component: {fileID: 707603895}
   - component: {fileID: 707603896}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Ammo Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5742,6 +5743,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  attackHitbox: {fileID: 0}
 --- !u!54 &721864420
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6650,6 +6652,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3974276543324498543, guid: aef7c887e1f419b45b3e480ff017b110, type: 3}
+      propertyPath: m_Size.x
+      value: 1.0574168
+      objectReference: {fileID: 0}
+    - target: {fileID: 3974276543324498543, guid: aef7c887e1f419b45b3e480ff017b110, type: 3}
+      propertyPath: m_Center.x
+      value: -0.4037083
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aef7c887e1f419b45b3e480ff017b110, type: 3}
 --- !u!1 &847836334
@@ -7255,6 +7265,10 @@ PrefabInstance:
       propertyPath: DoorSpecificSpawnLocations.Array.data[5]
       value: 
       objectReference: {fileID: 681235418}
+    - target: {fileID: 4047566828878885324, guid: e2b4f4be6ff6d534790a0bc9af82ccda, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4047566828878885325, guid: e2b4f4be6ff6d534790a0bc9af82ccda, type: 3}
       propertyPath: id
       value: 13
@@ -8000,6 +8014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  attackHitbox: {fileID: 0}
 --- !u!23 &962798800
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8774,7 +8789,7 @@ BoxCollider:
   m_GameObject: {fileID: 1100453222}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -9301,7 +9316,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4633411911301862, guid: 293e268728ae1704b931bbef9043c082, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 36.1
+      value: 24.94
       objectReference: {fileID: 0}
     - target: {fileID: 4633411911301862, guid: 293e268728ae1704b931bbef9043c082, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9991,6 +10006,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  attackHitbox: {fileID: 0}
 --- !u!54 &1300486781
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -19095,7 +19111,7 @@ BoxCollider:
   m_GameObject: {fileID: 2113607305}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -19485,6 +19501,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1298773939031160360, guid: 9172c7877d7982d46be4f549f8385f79, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1298773939031160360, guid: 9172c7877d7982d46be4f549f8385f79, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1298773939031160362, guid: 9172c7877d7982d46be4f549f8385f79, type: 3}
       propertyPath: m_RootOrder
       value: 0

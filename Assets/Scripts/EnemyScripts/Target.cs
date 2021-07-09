@@ -14,7 +14,8 @@ public class Target : MonoBehaviour
     private NavMeshAgent navMesh;
     private Rigidbody target_rigidbody;
     private EnemyAttacks enemyAttacks_access;
-     
+
+    public GameObject attackHitbox;
 
     private void Start()
     {
@@ -55,7 +56,11 @@ public class Target : MonoBehaviour
             //when enemt dies, give player score
             PlayerScore.pScore += 100f;
 
+            //Disables enemy's attacking script to prevent attacks when dead
             enemyAttacks_access.enabled = false;
+
+            //disable the dead zombie's attack hitbox (SO THEY DO NOT ATTACK PLAYER WHEN DEAD)
+            attackHitbox.SetActive(false);
 
             //turn off zombie's navmesh, then turn off its constraints to make "ragdoll" effects
             navMesh.enabled = false;
