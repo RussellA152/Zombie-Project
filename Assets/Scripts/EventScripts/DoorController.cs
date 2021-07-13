@@ -55,13 +55,14 @@ public class DoorController : MonoBehaviour
         {
             var spawnerLocation = DoorSpecificSpawnLocations[i];
 
-            //we check if that spawn location is NOT already in our spawn locations list, if it isn't, then we add that element to our spawn list
+            //we check if that spawn location is NOT already in our spawn locations list, if it isn't, then we add that element to our spawn list (and increase the number of spawn locations)
             if (!RandomSpawnLocations.Contains(spawnerLocation))
             {
                 RandomSpawnLocations.Add(spawnerLocation);
+                RoundController.amountOfSpawnLocations++;
             }
             //RandomSpawnLocations.Add(spawnerLocation);
-            RoundController.amountOfSpawnLocations++;
+            //RoundController.amountOfSpawnLocations++;
             
         }
     }

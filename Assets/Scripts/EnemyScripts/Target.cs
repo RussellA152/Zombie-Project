@@ -17,18 +17,26 @@ public class Target : MonoBehaviour
 
     public GameObject attackHitbox;
 
+    private bool callDieFunction;
+
     private void Start()
     {
+        callDieFunction = true;
         //gameObject.GetComponent<NavMeshAgent>().speed = Random.Range(minSpeed, maxSpeed);
         navMesh = gameObject.GetComponent<NavMeshAgent>();
         target_rigidbody = GetComponent<Rigidbody>();
         enemyAttacks_access = GetComponent<EnemyAttacks>();
+
+        //callDieFunction = true;
     }
     public void TakeDamage(float amount)
     {
         //amount is passed as an argument inside the GunScript.cs
         health -= amount;
-        if (health <= 0f)
+
+        //when the zombie's health is 0 or lower, initate the Die() function
+        //the Die() function should only be called once
+        if (health <= 0f && callDieFunction == true)
         {
             Die();
         }
@@ -40,7 +48,7 @@ public class Target : MonoBehaviour
         if(RoundController.round % 2 == 0 && RoundController.round != 0)
         {
             Debug.Log("Round Difficulty Increased");
-            health += 10f;
+            health += 5f;
             difficultySpeedIncrease += .2f;
                 
             
@@ -53,11 +61,16 @@ public class Target : MonoBehaviour
         //destroys the zombie and its AI (everything)
         if(gameObject.CompareTag("Enemy"))
         {
+            callDieFunction = false;
+
             //when enemt dies, give player score
             PlayerScore.pScore += 100f;
 
             //Disables enemy's attacking script to prevent attacks when dead
             enemyAttacks_access.enabled = false;
+            
+            //lowers the mass of the zombie's rigidbody so their corpse can ragdoll farther
+            target_rigidbody.mass = 0.6f;
 
             //disable the dead zombie's attack hitbox (SO THEY DO NOT ATTACK PLAYER WHEN DEAD)
             attackHitbox.SetActive(false);
@@ -71,6 +84,7 @@ public class Target : MonoBehaviour
             
             //killing a zombie will decrement the zombie counter (MIGHT BE A DEPEDENCY ISSUE LATER)
             RoundController.zombieCounter -= 1;
+            //Debug.Log(RoundController.zombieCounter);
             
         }
         else

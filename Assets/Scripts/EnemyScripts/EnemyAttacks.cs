@@ -18,7 +18,7 @@ public class EnemyAttacks : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log("E" + canAttack);
+        
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -40,6 +40,6 @@ public class EnemyAttacks : MonoBehaviour
     {
         PlayerHealth.playerHealth -= enemyDamage;
         Debug.Log("Attack!");
-        Debug.Log("Your Health: " + PlayerHealth.playerHealth);
+        //Debug.Log("Your Health: " + PlayerHealth.playerHealth);
     }
 }
