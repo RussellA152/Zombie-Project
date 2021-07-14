@@ -98,15 +98,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38e338c4385cb664eada9b5c5e1c5f82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 16
   range: 100
   impactForce: 100
   fireRate: 10
-  original_mag_size: 25
+  original_mag_size: 35
   current_mag_size: 0
-  ammoCapacity: 150
+  ammoCapacity: 315
+  original_ammoCapacity: 315
   bullets_fired: 0
   reloadSpeed: 2.5
+  ammoPrice: 300
   fpsCam: {fileID: 0}
   muzzleFlash: {fileID: 0}
   gunAnimation: {fileID: 0}
