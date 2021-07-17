@@ -10,6 +10,7 @@ public class RefillAmmo : MonoBehaviour
 
     private bool inTrigger;
     private bool wantsToBuyAmmo;
+    private bool ammoIsFull;
 
     // Start is called before the first frame update
     void Start()
@@ -46,15 +47,27 @@ public class RefillAmmo : MonoBehaviour
 
             //accesses GunScript so we can execute the MaxAmmo function (gives player full ammo in clip and capacity)
             access_gun_script = GunAccessor.GetComponentInChildren<GunScript>();
+
                         
         }
     }
     private void OnTriggerStay(Collider other)
     {
+        //we have to check if our ammo is full, if so, then you cannot purchase ammo
+        //if your ammo is not full, then you can purchase ammo
+        if (access_gun_script.ammoIsFull)
+        {
+            ammoIsFull = true;
+        }
+        else
+        {
+            ammoIsFull = false;
+        }
+
         if (other.gameObject.CompareTag("Player"))
         {
             //Debug.Log("Hold 'f' to open Door [Cost: " + doorPrice);
-            if (PlayerScore.pScore >= access_gun_script.ammoPrice && wantsToBuyAmmo)
+            if (PlayerScore.pScore >= access_gun_script.ammoPrice && wantsToBuyAmmo && !ammoIsFull)
             {
                 //subtracts the specific ammo price of currently equipped gun from the Player's score
                 PlayerScore.pScore -= access_gun_script.ammoPrice;

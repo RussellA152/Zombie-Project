@@ -34,8 +34,7 @@ public class RoundController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Debug.Log("zombie counter " + zombieCounter);
-        //zombieCanSpawn = false;
+        
         round = 0;
         RoundChange.roundChange.onRoundChange += RoundNumberChange;
         amountOfSpawnLocations = 3;
@@ -45,6 +44,7 @@ public class RoundController : MonoBehaviour
     {
         //if all zombies are dead, increment the round and increase zombie spawns (we check this inside the RoundActivator script)
         
+
         //prevents multiple spawning instances, allows us to have correct delay times between rounds and zombie spawns correctly (without this we get infinite invokes)
         CancelInvoke();
 
@@ -65,7 +65,7 @@ public class RoundController : MonoBehaviour
         {
             zombieIncrementor += 2;
         }
-        //ZombieSpawns(zombieCounter);
+        
 
         //starts in 2 seconds, and invokes every 3 seconds
         //in 2 seconds, we spawn our first zombie, then every 3 seconds after that, we spawn each other zombie

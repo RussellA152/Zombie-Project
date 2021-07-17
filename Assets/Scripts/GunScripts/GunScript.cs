@@ -23,9 +23,10 @@ public class GunScript : MonoBehaviour
     public int ammoPrice;
 
     private bool isReloading = false;
+    public bool ammoIsFull;
 
-    //referencing our in-game camera
-    public Camera fpsCam;
+    //referencing our in-game camera (also our origin point for bullet raycasts)
+    private Camera fpsCam;
 
     //reference to a particle System (like muzzle flashes)
     public ParticleSystem muzzleFlash;
@@ -55,6 +56,13 @@ public class GunScript : MonoBehaviour
 
     private void Start()
     {
+        //setting the "animator" to the Animator component of WeaponHolder (THIS WON'T WORK IF WE HAVE MULITPLE SCENES)
+        GameObject WeaponHolder = GameObject.Find("WeaponHolder");
+        animator = WeaponHolder.GetComponent<Animator>();
+
+        //setting fpsCam to the Main Camera
+        fpsCam = Camera.main;
+        
 
         current_mag_size = original_mag_size;
         bullets_fired = original_mag_size - current_mag_size;
@@ -68,6 +76,16 @@ public class GunScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if((current_mag_size == original_mag_size) && (ammoCapacity == original_ammoCapacity))
+        {
+            ammoIsFull = true;
+        }
+        else
+        {
+            ammoIsFull = false;
+        }
+        Debug.Log(ammoIsFull);
         //checking if player is walking, playing walking animation 
         if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
         {
