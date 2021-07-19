@@ -131,7 +131,7 @@ public class GunScript : MonoBehaviour
     void Shoot()
     {
         //plays muzzleFlash
-        //muzzleFlash.Play();
+        muzzleFlash.Play();
         //gunAnimation.Play();
 
         //each time you fire, you lose 1 bullet, also your amount of bullets fired increments by 1
