@@ -51,7 +51,7 @@ public class PlayerHealth : MonoBehaviour
         if(playerHealth <= 0f)
         {
             lastCallTime = Time.time;
-            Debug.Log("You Died");
+            //Debug.Log("You Died");
         }
     }
 

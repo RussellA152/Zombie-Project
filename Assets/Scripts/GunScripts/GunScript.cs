@@ -85,7 +85,7 @@ public class GunScript : MonoBehaviour
         {
             ammoIsFull = false;
         }
-        Debug.Log(ammoIsFull);
+        //Debug.Log(ammoIsFull);
         //checking if player is walking, playing walking animation 
         if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
         {

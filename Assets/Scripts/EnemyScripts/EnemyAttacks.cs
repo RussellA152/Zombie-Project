@@ -24,7 +24,7 @@ public class EnemyAttacks : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            InvokeRepeating("EnemyDealingDamage", .3f, 2f);
+            InvokeRepeating("EnemyDealingDamage", .5f, 2f);
         }
     }
    
@@ -41,5 +41,10 @@ public class EnemyAttacks : MonoBehaviour
         PlayerHealth.playerHealth -= enemyDamage;
         Debug.Log("Attack!");
         //Debug.Log("Your Health: " + PlayerHealth.playerHealth);
+    }
+    private void OnDisable()
+    {
+        //This should prevent the zombie from being able to attack player when its dead
+        CancelInvoke();
     }
 }
