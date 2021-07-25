@@ -78,7 +78,6 @@ public class RoundController : MonoBehaviour
         //if we use spawnIncrementor < zombieCounter, we will spawn less zombies since zombieCounter is constantly decreasing due to player killing zombies
         if(spawnIncrementor < ZombieCountAtStartOfRound)
         {
-            
             randomSpawnLocationSpot = Random.Range(0, amountOfSpawnLocations);
             Debug.Log("random spawn: " + randomSpawnLocationSpot);
             //Debug.Log(randomSpawnLocationSpot);

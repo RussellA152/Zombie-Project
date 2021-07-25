@@ -35,7 +35,6 @@ Transform:
   - {fileID: 2611133507991853730}
   - {fileID: 2603683600929793110}
   - {fileID: 2611173628451387370}
-  - {fileID: 3279071678502169932}
   - {fileID: 4033419138382890380}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -117,7 +116,7 @@ MonoBehaviour:
   gunAnimation: {fileID: 0}
   animator: {fileID: 0}
   impactEffect: {fileID: 100002, guid: 00fedc70b62a31e448e8ccc298257b56, type: 3}
-  shootSound: {fileID: 6938085895778387003}
+  shootSound: {fileID: 8300000, guid: 0dbe91efb8ee94e6695ef0f552d202ce, type: 3}
   reloadKey: 114
 --- !u!114 &2607938837084630886
 MonoBehaviour:
@@ -555,7 +554,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2482625373591562144, guid: 12c9e24f914b45249870c9eefbaafb2d, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2482625373591562144, guid: 12c9e24f914b45249870c9eefbaafb2d, type: 3}
       propertyPath: m_LocalScale.x
@@ -628,75 +627,4 @@ Transform:
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 2482625373591562147, guid: 12c9e24f914b45249870c9eefbaafb2d, type: 3}
   m_PrefabInstance: {fileID: 1553068737103979052}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &3177771301193253321
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 2604146754179323618}
-    m_Modifications:
-    - target: {fileID: -3724267479329225230, guid: a34a8d885f468144da87f98f665503e1, type: 3}
-      propertyPath: m_Volume
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114890684659690629, guid: a34a8d885f468144da87f98f665503e1, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114890684659690629, guid: a34a8d885f468144da87f98f665503e1, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.018512905
-      objectReference: {fileID: 0}
-    - target: {fileID: 114890684659690629, guid: a34a8d885f468144da87f98f665503e1, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.010706425
-      objectReference: {fileID: 0}
-    - target: {fileID: 114890684659690629, guid: a34a8d885f468144da87f98f665503e1, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.16805899
-      objectReference: {fileID: 0}
-    - target: {fileID: 114890684659690629, guid: a34a8d885f468144da87f98f665503e1, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114890684659690629, guid: a34a8d885f468144da87f98f665503e1, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114890684659690629, guid: a34a8d885f468144da87f98f665503e1, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114890684659690629, guid: a34a8d885f468144da87f98f665503e1, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114890684659690629, guid: a34a8d885f468144da87f98f665503e1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114890684659690629, guid: a34a8d885f468144da87f98f665503e1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114890684659690629, guid: a34a8d885f468144da87f98f665503e1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3928627866607629122, guid: a34a8d885f468144da87f98f665503e1, type: 3}
-      propertyPath: m_Name
-      value: Gun Sound
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a34a8d885f468144da87f98f665503e1, type: 3}
---- !u!4 &3279071678502169932 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 114890684659690629, guid: a34a8d885f468144da87f98f665503e1, type: 3}
-  m_PrefabInstance: {fileID: 3177771301193253321}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &6938085895778387003 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: -3724267479329225230, guid: a34a8d885f468144da87f98f665503e1, type: 3}
-  m_PrefabInstance: {fileID: 3177771301193253321}
   m_PrefabAsset: {fileID: 0}

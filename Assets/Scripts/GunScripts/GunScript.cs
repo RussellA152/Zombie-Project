@@ -40,7 +40,9 @@ public class GunScript : MonoBehaviour
     //the impact particle from shooting at surfaces/enemies
     public GameObject impactEffect;
 
-    public AudioSource shootSound;
+    public AudioClip shootSound;
+    //public AudioClip reloadSound;
+    private AudioSource gunAudio;
 
     
 
@@ -59,6 +61,10 @@ public class GunScript : MonoBehaviour
         //setting the "animator" to the Animator component of WeaponHolder (THIS WON'T WORK IF WE HAVE MULITPLE SCENES)
         GameObject WeaponHolder = GameObject.Find("WeaponHolder");
         animator = WeaponHolder.GetComponent<Animator>();
+
+        //setting gunAudio to the audio source of the gun
+        GameObject GunAudioObject = GameObject.Find("Gun Audio");
+        gunAudio = GunAudioObject.GetComponent<AudioSource>();
 
         //setting fpsCam to the Main Camera
         fpsCam = Camera.main;
@@ -134,8 +140,10 @@ public class GunScript : MonoBehaviour
         muzzleFlash.Play();
         //gunAnimation.Play();
 
+        //plays shoot AudioClip
+        gunAudio.PlayOneShot(shootSound, 0.6f);
+
         //each time you fire, you lose 1 bullet, also your amount of bullets fired increments by 1
-        shootSound.Play();
         current_mag_size--;
         bullets_fired = original_mag_size - current_mag_size;
 
@@ -165,7 +173,7 @@ public class GunScript : MonoBehaviour
                 if (hitRB != null)
                 {
                     //Debug.Log("navmesh OFF");
-                    hitRB.enabled = false;
+                    //hitRB.enabled = false;
 
                     //setting object to not being kinematic so they can be affected by impact force
                     hit.rigidbody.isKinematic = false;
@@ -201,7 +209,7 @@ public class GunScript : MonoBehaviour
         yield return new WaitForSeconds(.4f);
         if(hitRB != null && target.health > 0)
         {
-            hitRB.enabled = true;
+            //hitRB.enabled = true;
             //set rigidbody back to being kinematic so player cannot push the object
             hit.rigidbody.isKinematic = true;
 
