@@ -5,6 +5,7 @@ public class WeaponSwitching : MonoBehaviour
 {
     //by default, 0 is the first weapon (Handgun)
     public int selectedWeapon = 0;
+    public static Transform equippedWeapon;
 
     //time it takes before you can swap weapons again
     private float swapDelay = 0.5f;
@@ -12,10 +13,16 @@ public class WeaponSwitching : MonoBehaviour
 
     private bool canSwap;
 
+    public static int maxWeaponInventorySize;
+    public static int currentWeaponInventorySize;
+
     // Start is called before the first frame update
     void Start()
     {
         SelectWeapon();
+        maxWeaponInventorySize = 2;
+        currentWeaponInventorySize = transform.childCount;
+        //Debug.Log(currentWeaponInventorySize);
     }
 
     // Update is called once per frame
@@ -30,16 +37,19 @@ public class WeaponSwitching : MonoBehaviour
             selectedWeapon = 0;
             nextTimeToSwap = Time.time + swapDelay;
         }
-        if ((Input.GetKeyDown(KeyCode.Alpha2) == true) && Time.time >= nextTimeToSwap)
+        if ((Input.GetKeyDown(KeyCode.Alpha2) == true) && Time.time >= nextTimeToSwap && currentWeaponInventorySize > 1)
         {
             selectedWeapon = 1;
             nextTimeToSwap = Time.time + swapDelay;
         }
+
+        /*
         if ((Input.GetKeyDown(KeyCode.Alpha3) == true) && Time.time >= nextTimeToSwap)
         {
             selectedWeapon = 2;
             nextTimeToSwap = Time.time + swapDelay;
         }
+        */
 
         //scrolling up for swapping guns (goes to next weapon)  
         //we also check if we're able to swap weapons (weapon swap cooldown has settled)
@@ -80,6 +90,7 @@ public class WeaponSwitching : MonoBehaviour
         {
             //if we changed weapons, then call the SelectWeapon function to set new guns active, otherwise do nothing
             SelectWeapon();
+
         }
 
     }
@@ -90,7 +101,12 @@ public class WeaponSwitching : MonoBehaviour
         foreach(Transform weapon in transform)
         {
             if (i == selectedWeapon)
+            {
                 weapon.gameObject.SetActive(true);
+                equippedWeapon = weapon;
+            }
+                
+
             else
             {
                 weapon.gameObject.SetActive(false);
