@@ -4,6 +4,18 @@ using UnityEngine;
 
 public class PowerUps : MonoBehaviour
 {
+
+    public bool hasInstaKill;
+    public bool hasDoublePoints;
+    public bool hasSuperStrength;
+    public bool gotMaxAmmo;
+
+    private float powerUpCountDown;
+    public float instaKillCountDown;
+    public float doublePointsCountDown;
+    public float superStrengthCountDown;
+
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -15,25 +27,51 @@ public class PowerUps : MonoBehaviour
 
     void GivePowerUp()
     {
-        int powerUpAbilityChance = Random.Range(1, 4);
+        int powerUpAbilityChance = Random.Range(1, 5);
 
         //power up has a insta kill ability
         if(powerUpAbilityChance == 1)
         {
+            hasInstaKill = true;
+            powerUpCountDown = instaKillCountDown;
+            StartCoroutine(PowerupCountDownRoutine());
             Debug.Log("Insta Kill!");
         }
         //power up has a max ammo ability
         else if(powerUpAbilityChance == 2)
         {
+            gotMaxAmmo = true;
             Debug.Log("Max Ammo!");
         }
         //power up has double points ability
         else if(powerUpAbilityChance == 3)
         {
+            hasDoublePoints = true;
+            powerUpCountDown = doublePointsCountDown;
+            StartCoroutine(PowerupCountDownRoutine());
             Debug.Log("Double Points!");
+        }
+        else if(powerUpAbilityChance == 4)
+        {
+            hasSuperStrength = true;
+            powerUpCountDown = superStrengthCountDown;
+            StartCoroutine(PowerupCountDownRoutine());
+            Debug.Log("Super Strength");
         }
 
 
         Destroy(gameObject, 0.5f);
+    }
+    IEnumerator PowerupCountDownRoutine()
+    {
+        Debug.Log("Power up CountDown Begins");
+        yield return new WaitForSeconds(powerUpCountDown);
+        if (hasInstaKill)
+            hasInstaKill = false;
+        else if (hasDoublePoints)
+            hasDoublePoints = false;
+        else if (hasSuperStrength)
+            hasSuperStrength = false;
+        Debug.Log("Power up CountDown Ended");
     }
 }
