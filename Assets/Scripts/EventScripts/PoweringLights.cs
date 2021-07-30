@@ -37,6 +37,6 @@ public class PoweringLights : MonoBehaviour
         Debug.Log("Lights are now powered and on");
 
         //Should we unsubscribed after turning on lights?
-        //PowerEvent.OnPowered -= TurnOnLight;
+        PowerEvent.OnPowered -= TurnOnLight;
     }
 }

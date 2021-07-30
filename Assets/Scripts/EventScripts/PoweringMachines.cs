@@ -24,5 +24,7 @@ public class PoweringMachines : MonoBehaviour
         {
             PerkMachine.machineIsPowered = true;
         }
+
+        PowerEvent.OnPowered -= TurnOnMachinePower;
     }
 }

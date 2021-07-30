@@ -11,7 +11,7 @@ public class EnemyAttacks : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        enemyDamage = 25f; //hard-coded for now, but should be a different value?
+        //enemyDamage = 25f; //hard-coded for now, but should be a different value?
         //canAttack = false;
     }
 

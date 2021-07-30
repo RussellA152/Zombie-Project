@@ -5,13 +5,17 @@ using UnityEngine.UI;
 
 public class PlayerUI : MonoBehaviour
 {
-
     public string healthText;
+
     public Text healthElement;
 
     public Text ammoElement;
 
     public Text pointElement;
+
+    public Text roundElement;
+
+    public Text zombieCounterElement;
 
     private float nextActionTime = 0.0f;
     private float period = 0.3f;
@@ -29,8 +33,12 @@ public class PlayerUI : MonoBehaviour
         if(Time.time > nextActionTime)
         {
             //updates player's health and score a few times per second (fast, but not every frame)
+            //updates the round and zombie counter
             UpdatePlayerHealthUI();
             UpdatePlayerPointsUI();
+            UpdateRoundUI();
+            UpdateZombieCounterUI();
+
             nextActionTime = Time.time + period;
         }
 
@@ -47,5 +55,13 @@ public class PlayerUI : MonoBehaviour
     void UpdatePlayerAmmoUI()
     {
         //ammoElement.text = 
+    }
+    void UpdateRoundUI()
+    {
+        roundElement.text = "Round: " + RoundController.round;
+    }
+    void UpdateZombieCounterUI()
+    {
+        zombieCounterElement.text = "Zombies Left: " + RoundController.zombieCounter;
     }
 }

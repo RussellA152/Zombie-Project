@@ -5,9 +5,11 @@ using UnityEngine.AI;
 public class Target : MonoBehaviour
 {
     public float health = 50f;
+    public float maxHealthAmount;
 
     public static float minSpeed = .8f;
     public static float maxSpeed = 1.1f;
+    public float maxPossibleSpeed;
 
     public static float difficultySpeedIncrease = 0f;
 
@@ -15,7 +17,13 @@ public class Target : MonoBehaviour
     private Rigidbody target_rigidbody;
     private EnemyAttacks enemyAttacks_access;
 
+    public GameObject enemy;
+
     public GameObject attackHitbox;
+
+    public GameObject powerUpObject;
+
+    private GameObject powerUpObjectClone;
 
     private bool callDieFunction;
 
@@ -48,8 +56,14 @@ public class Target : MonoBehaviour
         if(RoundController.round % 2 == 0 && RoundController.round != 0)
         {
             Debug.Log("Round Difficulty Increased");
-            health += 5f;
-            difficultySpeedIncrease += .2f;
+
+            //Caps enemies' health amount so it doesn't go to infinite
+            if(health < maxHealthAmount)
+                health += 5f;
+
+            //Caps enemies' speed amount so it doesn't go to infinite
+            if(maxSpeed < maxPossibleSpeed)
+                difficultySpeedIncrease += .2f;
                 
             
         }
@@ -63,8 +77,11 @@ public class Target : MonoBehaviour
         {
             callDieFunction = false;
 
-            //when enemt dies, give player score
+            //when enemy dies, give player score
             PlayerScore.pScore += 100f;
+
+            //when enemy dies, they have a chance to drop a power-up
+            SetPowerUpProbability();
 
             //Disables enemy's attacking script to prevent attacks when dead
             enemyAttacks_access.enabled = false;
@@ -91,6 +108,18 @@ public class Target : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+    void SetPowerUpProbability()
+    {
+        //There is a 10% chance for a power-up to spawn
+        int PowerUpDropChance = Random.Range(1, 6);
+
+        if(PowerUpDropChance % 5 == 0)
+        {
+            powerUpObjectClone = Instantiate(powerUpObject,transform.position,transform.rotation);
+            Debug.Log("POWER UP SPAWNED");
+        }
+
     }
     //IEnumerator DeathAnimationDelay()
     //{
