@@ -79,7 +79,7 @@ public class RoundController : MonoBehaviour
         if(spawnIncrementor < ZombieCountAtStartOfRound)
         {
             randomSpawnLocationSpot = Random.Range(0, amountOfSpawnLocations);
-            Debug.Log("random spawn: " + randomSpawnLocationSpot);
+            //Debug.Log("random spawn: " + randomSpawnLocationSpot);
             //Debug.Log(randomSpawnLocationSpot);
 
             //RandomSpawnLocation's number of elements are increased through the DoorController event System, when opening doors, we add more elements to the RandomSpawnLcations list

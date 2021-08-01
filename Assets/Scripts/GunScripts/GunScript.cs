@@ -195,7 +195,7 @@ public class GunScript : MonoBehaviour
     //we call this function when we pick up a MaxAmmo powerup, or if we purchase ammo from the Ammo Crate
     public void MaxAmmo()
     {
-        //set the current magazine size to the original mag size, and set the current ammo capacity to original_ammoCapatcity
+        //set the current magazine size to the original mag size, and set the current ammo capacity to original_ammoCapacity
         //need to reset bullets_fired otherwise we receive extra ammo when we reload and buy ammo at the same time
         current_mag_size = original_mag_size;
         ammoCapacity = original_ammoCapacity;

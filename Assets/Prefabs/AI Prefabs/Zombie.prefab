@@ -176,7 +176,10 @@ MonoBehaviour:
   maxPossibleSpeed: 4
   enemy: {fileID: 6161461571742736593}
   attackHitbox: {fileID: 6161461571761144968}
-  powerUpObject: {fileID: 5454159990274693453, guid: dba8190b28530ab46a362a9a2d418faf, type: 3}
+  instaKillPowerUp: {fileID: 5709781838649901865, guid: 5d2bb03800184e0428dac6b77e2b3b37, type: 3}
+  maxAmmoPowerUp: {fileID: 7604624982172217921, guid: 72d932e7338775046b7c13d7d5fbd6a7, type: 3}
+  superStrengthPowerUp: {fileID: 8502951311660931235, guid: ad0ef10e9dccad1478d2f8c441aa78e9, type: 3}
+  doublePointsPowerUp: {fileID: 7069350398894015161, guid: 870945a104a19e3479231c936d6e95f1, type: 3}
 --- !u!114 &6161461571742736586
 MonoBehaviour:
   m_ObjectHideFlags: 0

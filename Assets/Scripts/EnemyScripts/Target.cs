@@ -21,9 +21,12 @@ public class Target : MonoBehaviour
 
     public GameObject attackHitbox;
 
-    public GameObject powerUpObject;
+    public GameObject instaKillPowerUp;
+    public GameObject maxAmmoPowerUp;
+    public GameObject superStrengthPowerUp;
+    public GameObject doublePointsPowerUp;
 
-    private GameObject powerUpObjectClone;
+    private GameObject powerUpObject;
 
     private bool callDieFunction;
 
@@ -116,7 +119,25 @@ public class Target : MonoBehaviour
 
         if(PowerUpDropChance % 5 == 0)
         {
-            powerUpObjectClone = Instantiate(powerUpObject,transform.position,transform.rotation);
+            //IF a power-up spawns, it has a 1 in 4 chance to be a different power ability (I.E. Max Ammo, Insta-kill)
+            int PowerUpAbilityObjectChance = Random.Range(1, 5);
+
+            switch (PowerUpAbilityObjectChance)
+            {
+                case 1:
+                    powerUpObject = Instantiate(instaKillPowerUp, transform.position, transform.rotation);
+                    break;
+                case 2:
+                    powerUpObject = Instantiate(doublePointsPowerUp, transform.position, transform.rotation);
+                    break;
+                case 3:
+                    powerUpObject = Instantiate(maxAmmoPowerUp, transform.position, transform.rotation);
+                    break;
+                case 4:
+                    powerUpObject = Instantiate(superStrengthPowerUp, transform.position, transform.rotation);
+                    break;
+            }
+
             Debug.Log("POWER UP SPAWNED");
         }
 

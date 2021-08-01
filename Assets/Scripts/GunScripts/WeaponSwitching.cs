@@ -5,7 +5,7 @@ public class WeaponSwitching : MonoBehaviour
 {
     //by default, 0 is the first weapon (Handgun)
     public int selectedWeapon = 0;
-    public static Transform equippedWeapon;
+    public Transform equippedWeapon;
 
     //time it takes before you can swap weapons again
     private float swapDelay = 0.5f;
@@ -13,8 +13,10 @@ public class WeaponSwitching : MonoBehaviour
 
     private bool canSwap;
 
-    public static int maxWeaponInventorySize;
-    public static int currentWeaponInventorySize;
+    public int maxWeaponInventorySize;
+    public int currentWeaponInventorySize;
+
+    public int previousSelectedWeapon;
 
     // Start is called before the first frame update
     void Start()
@@ -23,13 +25,16 @@ public class WeaponSwitching : MonoBehaviour
         maxWeaponInventorySize = 2;
         currentWeaponInventorySize = transform.childCount;
         //Debug.Log(currentWeaponInventorySize);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log(equippedWeapon);
+
         //we set our "previousSelectedWeapon to our current weapon in hand
-        int previousSelectedWeapon = selectedWeapon;
+        previousSelectedWeapon = selectedWeapon;
 
         //pressing the '1' key will equip first gun, '2' for second gun, '3' for third gun
         if ((Input.GetKeyDown(KeyCode.Alpha1) == true) && Time.time >= nextTimeToSwap)
@@ -94,7 +99,7 @@ public class WeaponSwitching : MonoBehaviour
         }
 
     }
-    void SelectWeapon()
+    public void SelectWeapon()
     {
         //we iterate through each child's index/position in the WeaponHolder, if the index equals our currently selected weapon, equip it, otherwise its not equipped
         int i = 0;

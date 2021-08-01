@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1298773939031160375}
   - component: {fileID: -6580213152904983102}
   - component: {fileID: -4896771412198998154}
+  - component: {fileID: -3025011901486130014}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -175,8 +176,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d5b1085868b85245b42d769c439f0fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: 0
-  damageCooldown: 2
 --- !u!114 &-4896771412198998154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,6 +188,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f80d166286b6a7444b86ee4b5e8b2348, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-3025011901486130014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298773939031160366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd117ecbfcc764545999116cf66b962b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWeapons: []
 --- !u!1 &1298773939093363859
 GameObject:
   m_ObjectHideFlags: 0

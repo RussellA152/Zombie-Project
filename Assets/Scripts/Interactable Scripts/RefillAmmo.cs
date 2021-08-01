@@ -7,6 +7,7 @@ public class RefillAmmo : MonoBehaviour
 
     public GameObject GunAccessor;
     GunScript access_gun_script;
+    WeaponSwitching access_weaponswitch_script;
 
     private bool inTrigger;
     private bool wantsToBuyAmmo;
@@ -15,7 +16,9 @@ public class RefillAmmo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GunAccessor = GameObject.Find("WeaponHolder");
         access_gun_script = GunAccessor.GetComponentInChildren<GunScript>();
+        access_weaponswitch_script = GunAccessor.GetComponentInChildren<WeaponSwitching>();
 
         inTrigger = false;
         wantsToBuyAmmo = false;
@@ -25,6 +28,17 @@ public class RefillAmmo : MonoBehaviour
     private void Update()
     {
         //Debug.Log(PlayerScore.pScore);
+
+        //Checking if player has swapped weapons while inside the ammo crate's trigger, if so, then we must update the getComponent so we can buy ammo for the new gun
+        if (inTrigger)
+        {
+            if(access_weaponswitch_script.previousSelectedWeapon != access_weaponswitch_script.selectedWeapon)
+            {
+                Debug.Log("get component weapon switch now!");
+                access_gun_script = GunAccessor.GetComponentInChildren<GunScript>();
+            }
+        }
+
 
         //checking if the player is inside the trigger, AND if they are pressing the 'f' key,
         //if so, they want to buy ammo

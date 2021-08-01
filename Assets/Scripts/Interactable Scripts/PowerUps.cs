@@ -2,12 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PowerUps : MonoBehaviour
 {
+    
+
+    //this bool will prevent player from getting power-up more than once
+    private bool hasPowerUp;
 
     public bool hasInstaKill;
     public bool hasDoublePoints;
     public bool hasSuperStrength;
+
     public bool gotMaxAmmo;
 
     private float powerUpCountDown;
@@ -15,18 +21,36 @@ public class PowerUps : MonoBehaviour
     public float doublePointsCountDown;
     public float superStrengthCountDown;
 
+    public int id;
+
+    
+
+    private void Start()
+    {
+        PowerUpEvent.current.onPowerUpAcquire += GivePowerUp;
+
+        hasPowerUp = false;
+    }
+    private void Update()
+    {
+        //Debug.Log(hasSuperStrength);
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && !hasPowerUp)
         {
             Debug.Log("Power-up Acquired");
-            GivePowerUp();
+            PowerUpEvent.current.PowerUpAcquirement(id);
+            Debug.Log("power up event executed");
+
         }
     }
 
-    void GivePowerUp()
+    void GivePowerUp(int id)
     {
+        hasPowerUp = true;
+
         int powerUpAbilityChance = Random.Range(1, 5);
 
         //power up has a insta kill ability
@@ -60,18 +84,34 @@ public class PowerUps : MonoBehaviour
         }
 
 
-        Destroy(gameObject, 0.5f);
+        
     }
     IEnumerator PowerupCountDownRoutine()
     {
         Debug.Log("Power up CountDown Begins");
+
         yield return new WaitForSeconds(powerUpCountDown);
+
         if (hasInstaKill)
+        {
             hasInstaKill = false;
+        }
         else if (hasDoublePoints)
+        {
             hasDoublePoints = false;
+        } 
         else if (hasSuperStrength)
+        {
             hasSuperStrength = false;
+        }
         Debug.Log("Power up CountDown Ended");
+
+        Destroy(gameObject);
+    }
+
+    private void OnDestroy()
+    {
+        PowerUpEvent.current.onPowerUpAcquire -= GivePowerUp;
     }
 }
+    
