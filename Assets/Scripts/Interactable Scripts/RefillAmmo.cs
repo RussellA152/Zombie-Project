@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RefillAmmo : MonoBehaviour
 {
+    public GameObject GiveAmmoReference;
+    private GiveAmmo GiveAmmoAccessor;
 
     public GameObject GunAccessor;
     GunScript access_gun_script;
@@ -17,8 +19,10 @@ public class RefillAmmo : MonoBehaviour
     void Start()
     {
         GunAccessor = GameObject.Find("WeaponHolder");
-        access_gun_script = GunAccessor.GetComponentInChildren<GunScript>();
+        GiveAmmoReference = GameObject.Find("Ammo Purchaser");
+        //access_gun_script = GunAccessor.GetComponentInChildren<GunScript>();
         access_weaponswitch_script = GunAccessor.GetComponentInChildren<WeaponSwitching>();
+        GiveAmmoAccessor = GiveAmmoReference.GetComponent<GiveAmmo>();
 
         inTrigger = false;
         wantsToBuyAmmo = false;
@@ -35,11 +39,10 @@ public class RefillAmmo : MonoBehaviour
             if(access_weaponswitch_script.previousSelectedWeapon != access_weaponswitch_script.selectedWeapon)
             {
                 Debug.Log("get component weapon switch now!");
-                access_gun_script = GunAccessor.GetComponentInChildren<GunScript>();
+                GiveAmmoAccessor.AccessGunComponents();
+                //access_gun_script = GunAccessor.GetComponentInChildren<GunScript>();
             }
         }
-
-
         //checking if the player is inside the trigger, AND if they are pressing the 'f' key,
         //if so, they want to buy ammo
         if (inTrigger && Input.GetKey(KeyCode.F))
@@ -60,41 +63,20 @@ public class RefillAmmo : MonoBehaviour
             inTrigger = true;
 
             //accesses GunScript so we can execute the MaxAmmo function (gives player full ammo in clip and capacity)
-            access_gun_script = GunAccessor.GetComponentInChildren<GunScript>();
+            //access_gun_script = GunAccessor.GetComponentInChildren<GunScript>();
+            GiveAmmoAccessor.AccessGunComponents();
 
-                        
+
         }
     }
     private void OnTriggerStay(Collider other)
     {
-        //we have to check if our ammo is full, if so, then you cannot purchase ammo
-        //if your ammo is not full, then you can purchase ammo
-        if (access_gun_script.ammoIsFull)
-        {
-            ammoIsFull = true;
-        }
-        else
-        {
-            ammoIsFull = false;
-        }
-
         if (other.gameObject.CompareTag("Player"))
         {
-            //Debug.Log("Hold 'f' to open Door [Cost: " + doorPrice);
-            if (PlayerScore.pScore >= access_gun_script.ammoPrice && wantsToBuyAmmo && !ammoIsFull)
-            {
-                //subtracts the specific ammo price of currently equipped gun from the Player's score
-                PlayerScore.pScore -= access_gun_script.ammoPrice;
-                access_gun_script.MaxAmmo();
-
-                Debug.Log("Ammo Crate - max ammo granted.");
-
-            }
-            else
-            {
-                Debug.Log("You didn't buy ammo.");
-            }
+            if(wantsToBuyAmmo)
+                PurchaseAmmo();
         }
+        
     }
 
     private void OnTriggerExit(Collider other)
@@ -105,4 +87,12 @@ public class RefillAmmo : MonoBehaviour
             inTrigger = false;
         }
     }
+
+    public void PurchaseAmmo()
+    {
+        
+        RefillPlayerAmmo.current.AmmoRefiller();
+
+    }
+        
 }

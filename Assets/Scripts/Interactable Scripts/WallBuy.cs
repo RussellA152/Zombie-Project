@@ -13,12 +13,21 @@ public class WallBuy : MonoBehaviour
     public GameObject gunPrefab;
     private GameObject gunClone;
     public GameObject weaponHolder;
+    public GameObject ammoCrate;
+
+    private GameObject GiveAmmoReference;
+    private GiveAmmo GiveAmmoAccessor;
 
     private WeaponSwitching weaponSwitchingAccessor;
 
     public Transform weaponHolderTransform;
 
     private PlayerWeaponInventory currentWeaponsList;
+
+    private RefillAmmo refillAmmoAccessor;
+ 
+    private bool ammoIsFull;
+
 
     private GameObject player;
 
@@ -33,18 +42,36 @@ public class WallBuy : MonoBehaviour
 
         player = GameObject.Find("Player");
         weaponHolder = GameObject.Find("WeaponHolder");
+        GiveAmmoReference = GameObject.Find("Ammo Purchaser");
+
+
         weaponHolderTransform = weaponHolder.transform;
+
+        //will use an event system to make buying ammo easier
+        ammoCrate = GameObject.Find("Ammo Trigger");
 
         currentWeaponsList = player.GetComponent<PlayerWeaponInventory>();
         weaponSwitchingAccessor = weaponHolder.GetComponent<WeaponSwitching>();
+        refillAmmoAccessor = ammoCrate.GetComponent<RefillAmmo>();
+
+        GiveAmmoAccessor = GiveAmmoReference.GetComponent<GiveAmmo>();
+
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Doesn't help with wall buy ammo bug (not detecting gun at times)
+        if (inTrigger)
+        {
+            if (weaponSwitchingAccessor.previousSelectedWeapon != weaponSwitchingAccessor.selectedWeapon)
+            {
+                GiveAmmoAccessor.AccessGunComponents();
+            }
+        }
 
-
+        //Debug.Log(ammoCrate);
         if (inTrigger && Input.GetKey(KeyCode.F))
         {
             wantsToBuyGun = true;
@@ -61,6 +88,7 @@ public class WallBuy : MonoBehaviour
             inTrigger = true;
             if (currentWeaponsList.currentWeaponsList.Contains(gunPrefab) || currentWeaponsList.currentWeaponsList.Contains(gunClone))
             {
+                GiveAmmoAccessor.AccessGunComponents();
                 playerHasThisGun = true;
                 Debug.Log("You have this gun");
             }
@@ -78,8 +106,19 @@ public class WallBuy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            if(weaponSwitchingAccessor.equippedWeapon.gameObject == gunClone || weaponSwitchingAccessor.equippedWeapon.gameObject == gunPrefab)
+            {
+                if ((wantsToBuyGun && playerHasThisGun))
+                {
+                    BuyAmmoInsteadOfGun();
+
+                }
+
+            }
+            
+
             //if player has less the maximum carrying capacity for weapons, then they can buy a gun without replacing 
-            if (weaponSwitchingAccessor.currentWeaponInventorySize < weaponSwitchingAccessor.maxWeaponInventorySize)
+                if (weaponSwitchingAccessor.currentWeaponInventorySize < weaponSwitchingAccessor.maxWeaponInventorySize)
             {
                 if (wantsToBuyGun && !playerHasThisGun && PlayerScore.pScore >= gunPrice)
                 {
@@ -94,6 +133,7 @@ public class WallBuy : MonoBehaviour
                     ReplaceGunOnPurchase();
                 }
             }
+
         }
 
     }
@@ -135,6 +175,7 @@ public class WallBuy : MonoBehaviour
 
         
         Debug.Log("update weapon inventory 1");
+        GiveAmmoAccessor.AccessGunComponents();
     }
 
     //If weapon replacement is needed, this function will be called instead of AddGunOnPurchase()
@@ -178,5 +219,13 @@ public class WallBuy : MonoBehaviour
         playerHasThisGun = true;
 
         Debug.Log("update weapon inventory 2");
+        GiveAmmoAccessor.AccessGunComponents();
+    }
+    void BuyAmmoInsteadOfGun()
+    {
+        
+        Debug.Log("Buy Ammo! instead of buying gun");
+        
+        RefillPlayerAmmo.current.AmmoRefiller();
     }
 }
