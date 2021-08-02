@@ -147,6 +147,8 @@ public class GunScript : MonoBehaviour
         current_mag_size--;
         bullets_fired = original_mag_size - current_mag_size;
 
+        
+
         RaycastHit hit;
         
         //Raycast begins from position of main camera, and goes in the forward direction (forward from camera)
@@ -160,8 +162,18 @@ public class GunScript : MonoBehaviour
             //only allow damage to things that we find the target component for
             if(target != null)
             {
-                //passing through our damage as an argument to do that much damage to the enemy
-                target.TakeDamage(damage);
+                //checks if we have instant kill on
+                if (PowerUpEvent.current.hasInstantKill)
+                {
+                    target.TakeDamage(target.maxHealthAmount);
+                }
+                //passing through our damage as an argument to do that much damage to the enemy (WITHOUT INSTANT KILL)
+                else
+                {
+                    target.TakeDamage(damage);
+                }
+                
+                
             }
 
             

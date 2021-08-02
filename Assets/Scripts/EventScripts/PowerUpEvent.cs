@@ -6,6 +6,19 @@ using UnityEngine;
 public class PowerUpEvent : MonoBehaviour
 {
     public static PowerUpEvent current;
+
+    public bool hasDoublePoints;
+    public bool hasInstantKill;
+
+    private void Start()
+    {
+        hasDoublePoints = false;
+        hasInstantKill = false;
+    }
+    private void Update()
+    {
+        //Debug.Log(PowerUpEvent.current.hasInstantKill);
+    }
     private void Awake()
     {
         current = this;

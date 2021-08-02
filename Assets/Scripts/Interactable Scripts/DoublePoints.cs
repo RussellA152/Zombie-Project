@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class DoublePoints : MonoBehaviour
 {
-    public bool hasDoublePoints;
     public float doublePointsCountDown;
     public int id;
     public float deletionCountDown;
@@ -13,17 +12,17 @@ public class DoublePoints : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         
-        hasDoublePoints = false;
-        StartCoroutine(DeletePowerUpTimer());
+        //StartCoroutine(DeletePowerUpTimer());
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player") && !hasDoublePoints)
+        if (other.gameObject.CompareTag("Player") && !PowerUpEvent.current.hasDoublePoints)
         {
-            if (deletionCountDownHasStarted)
-                StopCoroutine(nameof(DeletePowerUpTimer));
+            //if (deletionCountDownHasStarted)
+                //StopCoroutine(nameof(DeletePowerUpTimer));
 
             //we subscribe when we triggerEnter instead of at Start() so we don't activate duplicates at the same time
 
@@ -37,7 +36,7 @@ public class DoublePoints : MonoBehaviour
     {
         if(id == this.id && this.gameObject)
         {
-            hasDoublePoints = true;
+            PowerUpEvent.current.hasDoublePoints = true;
             StartCoroutine(DoublePointsTimer());
         }
         
@@ -45,7 +44,7 @@ public class DoublePoints : MonoBehaviour
     IEnumerator DoublePointsTimer()
     {
         yield return new WaitForSeconds(doublePointsCountDown);
-        hasDoublePoints = false;
+        PowerUpEvent.current.hasDoublePoints = false;
         Debug.Log("Double points is over");
         Destroy(gameObject);
     }

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class InstantKill : MonoBehaviour
 {
-    public bool hasInstantKill;
     public float instantKillCountDown;
     public int id;
 
@@ -14,13 +13,11 @@ public class InstantKill : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-        hasInstantKill = false;
-    }
 
+    }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player") && !hasInstantKill)
+        if (other.gameObject.CompareTag("Player") && !PowerUpEvent.current.hasInstantKill)
         {
             //we subscribe when we triggerEnter instead of at Start() so we don't activate duplicates at the same time
             PowerUpEvent.current.onPowerUpAcquire += GiveInstantKill;
@@ -33,7 +30,7 @@ public class InstantKill : MonoBehaviour
     {
         if(id == this.id && this.gameObject)
         {
-            hasInstantKill = true;
+            PowerUpEvent.current.hasInstantKill = true;
             StartCoroutine(InstantKillTimer());
         }
         
@@ -41,7 +38,7 @@ public class InstantKill : MonoBehaviour
     IEnumerator InstantKillTimer()
     {
         yield return new WaitForSeconds(instantKillCountDown);
-        hasInstantKill = false;
+        PowerUpEvent.current.hasInstantKill = false;
         Debug.Log("Instant kill is over");
         Destroy(gameObject);
     }

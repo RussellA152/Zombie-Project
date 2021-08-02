@@ -13,6 +13,8 @@ public class Target : MonoBehaviour
 
     public static float difficultySpeedIncrease = 0f;
 
+    public float pointsForDeath;
+
     private NavMeshAgent navMesh;
     private Rigidbody target_rigidbody;
     private EnemyAttacks enemyAttacks_access;
@@ -37,6 +39,7 @@ public class Target : MonoBehaviour
         navMesh = gameObject.GetComponent<NavMeshAgent>();
         target_rigidbody = GetComponent<Rigidbody>();
         enemyAttacks_access = GetComponent<EnemyAttacks>();
+
 
         //callDieFunction = true;
     }
@@ -81,7 +84,15 @@ public class Target : MonoBehaviour
             callDieFunction = false;
 
             //when enemy dies, give player score
-            PlayerScore.pScore += 100f;
+            if (PowerUpEvent.current.hasDoublePoints)
+            {
+                PlayerScore.pScore += pointsForDeath * 2f;
+            }
+            else
+            {
+                PlayerScore.pScore += pointsForDeath;
+            }
+                
 
             //when enemy dies, they have a chance to drop a power-up
             SetPowerUpProbability();
