@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     bool isGrounded;
     bool canJump;
 
-    float groundDistance = 0.4f;
+    public float groundDistance;
     [SerializeField] LayerMask groundMask;
     [SerializeField] Transform groundCheck;
 
@@ -123,15 +123,17 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
-        //checks for movement (walking) input
-        horizontalInput = Input.GetAxis("Horizontal");
-        verticalInput = Input.GetAxis("Vertical");
+        //checks for movement (walking) input (only works for keyboard)
+        horizontalInput = Input.GetAxisRaw("Horizontal");
+        verticalInput = Input.GetAxisRaw("Vertical");
         moveDirection = oreintation.forward * verticalInput + oreintation.right * horizontalInput;
     }
     IEnumerator PlayerJumpCooldown()
     {
         canJump = false;
-        yield return new WaitForSeconds(1f);
+        //Debug.Log("cant jump");
+        yield return new WaitForSeconds(1.2f);
+        //Debug.Log("You can now jump");
         canJump = true;
     }
     void ControlSpeed()

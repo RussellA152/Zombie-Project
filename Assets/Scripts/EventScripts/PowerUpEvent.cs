@@ -18,6 +18,7 @@ public class PowerUpEvent : MonoBehaviour
     private void Update()
     {
         //Debug.Log(PowerUpEvent.current.hasInstantKill);
+        //Debug.Log(hasDoublePoints);
     }
     private void Awake()
     {

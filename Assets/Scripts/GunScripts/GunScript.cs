@@ -43,6 +43,7 @@ public class GunScript : MonoBehaviour
     public AudioClip shootSound;
     //public AudioClip reloadSound;
     private AudioSource gunAudio;
+    private PlayerUI PlayerUIAccessor;
 
     
 
@@ -60,7 +61,9 @@ public class GunScript : MonoBehaviour
     {
         //setting the "animator" to the Animator component of WeaponHolder (THIS WON'T WORK IF WE HAVE MULITPLE SCENES)
         GameObject WeaponHolder = GameObject.Find("WeaponHolder");
+        GameObject PlayerHud = GameObject.Find("Player's HUD");
         animator = WeaponHolder.GetComponent<Animator>();
+        PlayerUIAccessor = PlayerHud.GetComponent<PlayerUI>();
 
         //setting gunAudio to the audio source of the gun
         GameObject GunAudioObject = GameObject.Find("Gun Audio");
@@ -72,11 +75,20 @@ public class GunScript : MonoBehaviour
 
         current_mag_size = original_mag_size;
         bullets_fired = original_mag_size - current_mag_size;
+
+        //when gun is spawned in, update ammo UI
+        PlayerUIAccessor.RetrieveAmmoInfo();
+        PlayerUIAccessor.UpdatePlayerAmmoUI();
+
     }
     private void OnEnable()
     {
         isReloading = false;
         animator.SetBool("Reloading", false);
+
+        //when player swaps weapons, update ammo UI
+        PlayerUIAccessor.RetrieveAmmoInfo();
+        PlayerUIAccessor.UpdatePlayerAmmoUI();
     }
 
     // Update is called once per frame
@@ -147,6 +159,9 @@ public class GunScript : MonoBehaviour
         current_mag_size--;
         bullets_fired = original_mag_size - current_mag_size;
 
+        //update ammo UI each time player shoots;
+        PlayerUIAccessor.UpdatePlayerAmmoUI();
+
         
 
         RaycastHit hit;
@@ -175,7 +190,6 @@ public class GunScript : MonoBehaviour
                 
                 
             }
-
             
                 //checks if target has a rigidbody
             if(hit.rigidbody != null)
@@ -212,6 +226,7 @@ public class GunScript : MonoBehaviour
         current_mag_size = original_mag_size;
         ammoCapacity = original_ammoCapacity;
         bullets_fired = 0;
+        PlayerUIAccessor.UpdatePlayerAmmoUI();
 
     }
 
@@ -270,5 +285,8 @@ public class GunScript : MonoBehaviour
         bullets_fired = 0;
 
         isReloading = false;
+
+        //when player reloads, update ammo UI
+        PlayerUIAccessor.UpdatePlayerAmmoUI();
     }
 }

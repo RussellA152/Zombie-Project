@@ -17,19 +17,34 @@ public class PlayerUI : MonoBehaviour
 
     public Text zombieCounterElement;
 
+    private GameObject weaponHolder;
+    private GunScript gunScriptAccessor;
+    private WeaponSwitching weaponSwitchAccessor;
+
     private float nextActionTime = 0.0f;
     private float period = 0.3f;
 
     // Start is called before the first frame update
     void Start()
     {
+        weaponHolder = GameObject.Find("WeaponHolder");
+        gunScriptAccessor = weaponHolder.GetComponentInChildren<GunScript>();
+        //weaponSwitchAccessor = weaponHolder.GetComponent<WeaponSwitching>();
 
         healthElement.text = healthText + PlayerHealth.playerHealth;
+        ammoElement.text = gunScriptAccessor.current_mag_size + "/" + gunScriptAccessor.ammoCapacity;
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        //if(weaponSwitchAccessor.previousSelectedWeapon != weaponSwitchAccessor.selectedWeapon)
+            //gunScriptAccessor = weaponHolder.GetComponentInChildren<GunScript>();
+
+        //should we update this every frame?
+        //UpdatePlayerAmmoUI();
+
         if(Time.time > nextActionTime)
         {
             //updates player's health and score a few times per second (fast, but not every frame)
@@ -52,9 +67,9 @@ public class PlayerUI : MonoBehaviour
     {
         pointElement.text = "Points: " + PlayerScore.pScore;
     }
-    void UpdatePlayerAmmoUI()
+    public void UpdatePlayerAmmoUI()
     {
-        //ammoElement.text = 
+        ammoElement.text = gunScriptAccessor.current_mag_size + " / " + gunScriptAccessor.ammoCapacity;
     }
     void UpdateRoundUI()
     {
@@ -63,5 +78,10 @@ public class PlayerUI : MonoBehaviour
     void UpdateZombieCounterUI()
     {
         zombieCounterElement.text = "Zombies Left: " + RoundController.zombieCounter;
+    }
+
+    public void RetrieveAmmoInfo()
+    {
+        gunScriptAccessor = weaponHolder.GetComponentInChildren<GunScript>();
     }
 }

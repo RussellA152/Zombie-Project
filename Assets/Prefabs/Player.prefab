@@ -119,14 +119,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oreintation: {fileID: 1298773940178178811}
   playerMovementSpeed: 20
-  walkSpeed: 25
-  sprintSpeed: 35
+  walkSpeed: 23
+  sprintSpeed: 33
   acceleration: 10
   moveSpeedMultiplier: 3
   airSpeedMultiplier: 0.4
-  jumpPower: 11
-  groundDrag: 13
+  jumpPower: 8
+  groundDrag: 11
   airDrag: 0.2
+  groundDistance: 0.2
   groundMask:
     serializedVersion: 2
     m_Bits: 128
@@ -200,7 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd117ecbfcc764545999116cf66b962b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentWeapons: []
+  currentWeaponsList: []
 --- !u!1 &1298773939093363859
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,7 +211,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1298773939093363858}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -154,6 +154,8 @@ public class WallBuy : MonoBehaviour
         //subtract gunPrice from player's score
         PlayerScore.pScore -= gunPrice;
 
+        weaponHolder.GetComponentInChildren<GunScript>().animator.SetBool("Reloading", false);
+
         //spawn the purchased gun inside the weaponHolder
         gunClone = Instantiate(gunPrefab, weaponHolderTransform);
         
@@ -186,6 +188,8 @@ public class WallBuy : MonoBehaviour
 
 
         PlayerScore.pScore -= gunPrice;
+
+        weaponHolder.GetComponentInChildren<GunScript>().animator.SetBool("Reloading", false);
 
         //remove currently equipped weapon
         currentWeaponsList.currentWeaponsList.Remove(weaponSwitchingAccessor.equippedWeapon.gameObject);
