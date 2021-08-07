@@ -2,20 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 public class PlayerUI : MonoBehaviour
 {
-    public string healthText;
+    public TextMeshProUGUI healthText;
+    public TextMeshProUGUI ammoText;
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI roundText;
+    public TextMeshProUGUI zombieCounterText;
 
-    public Text healthElement;
 
-    public Text ammoElement;
+    //public string healthText;
 
-    public Text pointElement;
+    //public Text healthElement;
 
-    public Text roundElement;
+    //public Text ammoElement;
 
-    public Text zombieCounterElement;
+    //public Text pointElement;
+
+    //public Text roundElement;
+
+    //public Text zombieCounterElement;
 
     private GameObject weaponHolder;
     private GunScript gunScriptAccessor;
@@ -31,8 +38,8 @@ public class PlayerUI : MonoBehaviour
         gunScriptAccessor = weaponHolder.GetComponentInChildren<GunScript>();
         //weaponSwitchAccessor = weaponHolder.GetComponent<WeaponSwitching>();
 
-        healthElement.text = healthText + PlayerHealth.playerHealth;
-        ammoElement.text = gunScriptAccessor.current_mag_size + "/" + gunScriptAccessor.ammoCapacity;
+        //healthElement.text = "Health: " + PlayerHealth.playerHealth;
+        UpdatePlayerAmmoUI();
 
     }
 
@@ -60,24 +67,30 @@ public class PlayerUI : MonoBehaviour
     }
     void UpdatePlayerHealthUI()
     {
-        healthElement.text = healthText + PlayerHealth.playerHealth;
+        healthText.text = "Health: " + PlayerHealth.playerHealth;
+        //healthElement.text = healthText + PlayerHealth.playerHealth;
         //Debug.Log("Player health UI updated");
     }
     void UpdatePlayerPointsUI()
     {
-        pointElement.text = "Points: " + PlayerScore.pScore;
+        scoreText.text = "$ " + PlayerScore.pScore;
+        //pointElement.text = "Points: " + PlayerScore.pScore;
     }
     public void UpdatePlayerAmmoUI()
     {
-        ammoElement.text = gunScriptAccessor.current_mag_size + " / " + gunScriptAccessor.ammoCapacity;
+
+        ammoText.text = gunScriptAccessor.current_mag_size + " | " + gunScriptAccessor.ammoCapacity;
+        //ammoElement.text = gunScriptAccessor.current_mag_size + " / " + gunScriptAccessor.ammoCapacity;
     }
     void UpdateRoundUI()
     {
-        roundElement.text = "Round: " + RoundController.round;
+        roundText.text = "" + RoundController.round;
+        //roundElement.text = "Round: " + RoundController.round;
     }
     void UpdateZombieCounterUI()
     {
-        zombieCounterElement.text = "Zombies Left: " + RoundController.zombieCounter;
+        zombieCounterText.text = "Zombies Left: " + RoundController.zombieCounter;
+       // zombieCounterElement.text = "Zombies Left: " + RoundController.zombieCounter;
     }
 
     public void RetrieveAmmoInfo()

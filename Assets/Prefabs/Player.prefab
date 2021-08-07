@@ -119,14 +119,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oreintation: {fileID: 1298773940178178811}
   playerMovementSpeed: 20
-  walkSpeed: 23
-  sprintSpeed: 33
+  walkSpeed: 20
+  sprintSpeed: 30
   acceleration: 10
   moveSpeedMultiplier: 3
   airSpeedMultiplier: 0.4
   jumpPower: 8
   groundDrag: 11
-  airDrag: 0.2
+  airDrag: 0.8
   groundDistance: 0.2
   groundMask:
     serializedVersion: 2
