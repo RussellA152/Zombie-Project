@@ -34,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
     // all ground detection stuff
     bool isGrounded;
     bool canJump;
+    public bool has_speed_increase_perk;
 
     public float groundDistance;
     [SerializeField] LayerMask groundMask;
@@ -162,5 +163,10 @@ public class PlayerMovement : MonoBehaviour
             }
         }
         return false;
+    }
+    public void IncreaseSpeed()
+    {
+        walkSpeed += 5f;
+        sprintSpeed += 5f;
     }
 }

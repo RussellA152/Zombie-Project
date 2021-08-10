@@ -127,6 +127,7 @@ MonoBehaviour:
   jumpPower: 8
   groundDrag: 11
   airDrag: 0.8
+  has_speed_increase_perk: 1
   groundDistance: 0.2
   groundMask:
     serializedVersion: 2
@@ -177,6 +178,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d5b1085868b85245b42d769c439f0fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  has_Life_Savior_Perk: 0
+  has_Health_Increase_Perk: 1
 --- !u!114 &-4896771412198998154
 MonoBehaviour:
   m_ObjectHideFlags: 0

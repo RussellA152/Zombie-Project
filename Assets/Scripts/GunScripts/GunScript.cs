@@ -24,6 +24,7 @@ public class GunScript : MonoBehaviour
 
     private bool isReloading = false;
     public bool ammoIsFull;
+    public bool isUpgraded;
 
     //referencing our in-game camera (also our origin point for bullet raycasts)
     private Camera fpsCam;
@@ -59,6 +60,7 @@ public class GunScript : MonoBehaviour
 
     private void Start()
     {
+
         //setting the "animator" to the Animator component of WeaponHolder (THIS WON'T WORK IF WE HAVE MULITPLE SCENES)
         GameObject WeaponHolder = GameObject.Find("WeaponHolder");
         GameObject PlayerHud = GameObject.Find("Player's HUD");
@@ -75,10 +77,13 @@ public class GunScript : MonoBehaviour
 
         current_mag_size = original_mag_size;
         bullets_fired = original_mag_size - current_mag_size;
+        isUpgraded = false;
 
         //when gun is spawned in, update ammo UI
         PlayerUIAccessor.RetrieveAmmoInfo();
         PlayerUIAccessor.UpdatePlayerAmmoUI();
+
+        
 
     }
     private void OnEnable()
@@ -94,6 +99,7 @@ public class GunScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
 
         if((current_mag_size == original_mag_size) && (ammoCapacity == original_ammoCapacity))
         {
@@ -227,6 +233,21 @@ public class GunScript : MonoBehaviour
         ammoCapacity = original_ammoCapacity;
         bullets_fired = 0;
         PlayerUIAccessor.UpdatePlayerAmmoUI();
+
+    }
+
+    public void UpgradeGun()
+    {
+        damage *= 2;
+        original_mag_size *= 2;
+        original_ammoCapacity *= 2;
+
+        current_mag_size = original_mag_size;
+        ammoCapacity = original_ammoCapacity;
+        bullets_fired = 0;
+        PlayerUIAccessor.UpdatePlayerAmmoUI();
+        Debug.Log("Weapon upgrade me!");
+        isUpgraded = true;
 
     }
 

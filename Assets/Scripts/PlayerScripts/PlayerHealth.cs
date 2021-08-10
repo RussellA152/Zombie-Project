@@ -5,25 +5,54 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     public static float playerHealth;
-    //private bool canTakeDamage;
-    //private bool wasAttacked;
-    //public float damageCooldown = 2f;
+    [SerializeField] float originalPlayerHealth;
+    
     private float lastCallTime;
+
+    public bool has_Life_Savior_Perk;
+    public bool has_Health_Increase_Perk;
 
     private void Start()
     {
         //canTakeDamage = true;
-        
-        playerHealth = 150f;
+        has_Health_Increase_Perk = false;
+        has_Life_Savior_Perk = false;
+
+        originalPlayerHealth = 150f;
+
+        playerHealth = originalPlayerHealth;
     }
     private void Update()
     {
-        //Debug.Log(playerHealth);
+        
+        
         if (Time.time - lastCallTime >= 0.2f)
         {
             playerDeath();
         }
         
+    }
+
+    public void IncreaseHealth()
+    {
+        if (has_Health_Increase_Perk)
+        {
+            originalPlayerHealth += 100f;
+            playerHealth += 100f;
+        }
+    }
+
+    public void SavePlayerLife()
+    {
+        if (has_Life_Savior_Perk)
+        {
+            playerHealth = originalPlayerHealth;
+            has_Life_Savior_Perk = false;
+        }
+        else if (!has_Life_Savior_Perk)
+        {
+            Debug.Log("You Died!");
+        }
     }
     /*
     private void OnTriggerStay(Collider other)
@@ -50,8 +79,9 @@ public class PlayerHealth : MonoBehaviour
     {
         if(playerHealth <= 0f)
         {
+            SavePlayerLife();
             lastCallTime = Time.time;
-            //Debug.Log("You Died");
+            
         }
     }
 
