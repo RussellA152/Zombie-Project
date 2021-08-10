@@ -24,7 +24,7 @@ public class EnemyAttacks : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            InvokeRepeating("EnemyDealingDamage", .6f, 2f);
+            InvokeRepeating("EnemyDealingDamage", .6f, 1f);
         }
     }
    

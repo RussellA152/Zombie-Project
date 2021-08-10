@@ -77,6 +77,11 @@ public class PerkMachine : MonoBehaviour
         {
             inTrigger = true;
             Debug.Log("Entered perk machine trigger");
+
+            if(playerHasPerk && playerHealthAccessor.has_Life_Savior_Perk == false)
+            {
+                playerHasPerk = false;
+            }
         }
     }
     private void OnTriggerStay(Collider other)
