@@ -9,14 +9,19 @@ public class PlayerHealth : MonoBehaviour
     
     private float lastCallTime;
 
-    public bool has_Life_Savior_Perk;
-    public bool has_Health_Increase_Perk;
+    //public bool has_Life_Savior_Perk;
+    //public bool has_Health_Increase_Perk;
+
+    private PlayerPerkInventory perkInventory;
 
     private void Start()
     {
         //canTakeDamage = true;
-        has_Health_Increase_Perk = false;
-        has_Life_Savior_Perk = false;
+
+        perkInventory = GetComponent<PlayerPerkInventory>();
+
+        //has_Health_Increase_Perk = false;
+        //has_Life_Savior_Perk = false;
 
         originalPlayerHealth = 150f;
 
@@ -35,21 +40,22 @@ public class PlayerHealth : MonoBehaviour
 
     public void IncreaseHealth()
     {
-        if (has_Health_Increase_Perk)
+        if (perkInventory.has_Health_Increase_Perk)
         {
-            originalPlayerHealth += 100f;
-            playerHealth += 100f;
+            originalPlayerHealth = 250f;
+            playerHealth = 250f;
         }
     }
 
     public void SavePlayerLife()
     {
-        if (has_Life_Savior_Perk)
+        if (perkInventory.has_Life_Savior_Perk)
         {
+            perkInventory.has_Life_Savior_Perk = false;
             playerHealth = originalPlayerHealth;
-            has_Life_Savior_Perk = false;
+            
         }
-        else if (!has_Life_Savior_Perk)
+        else if (!perkInventory.has_Life_Savior_Perk)
         {
             Debug.Log("You Died!");
         }

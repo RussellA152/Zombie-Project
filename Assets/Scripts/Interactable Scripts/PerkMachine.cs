@@ -23,10 +23,10 @@ public class PerkMachine : MonoBehaviour
     public bool is_Health_Increase_Perk;
 
     [Header("Player Owned Perks")]
-    public bool has_Life_Savior_Perk;
-    public bool has_Reload_Speed_Perk;
-    public bool has_Sprint_Speed_Perk;
-    public bool has_Health_Increase_Perk;
+    public bool purchased_Life_Savior_Perk;
+    public bool purchased_Reload_Speed_Perk;
+    public bool purchased_Sprint_Speed_Perk;
+    public bool purchased_Health_Increase_Perk;
 
     [Header("GameObject Accessors")]
     public GameObject player;
@@ -34,6 +34,7 @@ public class PerkMachine : MonoBehaviour
 
     private PlayerHealth playerHealthAccessor;
     private PlayerMovement playerMovementAccessor;
+    private PlayerPerkInventory playerPerkInventory;
     
 
     private void Awake()
@@ -45,6 +46,7 @@ public class PerkMachine : MonoBehaviour
     {
         playerHealthAccessor = player.GetComponent<PlayerHealth>();
         playerMovementAccessor = player.GetComponent<PlayerMovement>();
+        playerPerkInventory = player.GetComponent<PlayerPerkInventory>();
 
 
 
@@ -78,8 +80,10 @@ public class PerkMachine : MonoBehaviour
             inTrigger = true;
             Debug.Log("Entered perk machine trigger");
 
-            if(playerHasPerk && playerHealthAccessor.has_Life_Savior_Perk == false)
+            //we check if player had ever purchased the life savior perk and if they had lost it (died, and thus losing the life savior perk) and is now trying to repurchase the perk
+            if(playerHasPerk && purchased_Life_Savior_Perk == true && !playerPerkInventory.has_Life_Savior_Perk)
             {
+                purchased_Life_Savior_Perk = false;
                 playerHasPerk = false;
             }
         }
@@ -126,24 +130,29 @@ public class PerkMachine : MonoBehaviour
         switch (perkType)
         {
             case 1:
-                //has_Health_Increase_Perk = true;
-                playerHealthAccessor.has_Health_Increase_Perk = true;
+                
+                playerPerkInventory.has_Health_Increase_Perk = true;
+                purchased_Health_Increase_Perk = true;
                 playerHealthAccessor.IncreaseHealth();
                 Debug.Log("You have acquired health increase!");
                 break;
             case 2:
-                //has_Sprint_Speed_Perk = true;
-                playerMovementAccessor.has_speed_increase_perk = true;
+                
+                playerPerkInventory.has_Sprint_Speed_Perk = true;
+                purchased_Sprint_Speed_Perk = true;
                 playerMovementAccessor.IncreaseSpeed();
                 Debug.Log("You have acquired sprint speed increase!");
                 break;
             case 3:
-                //has_Reload_Speed_Perk = true;
+                
+                playerPerkInventory.has_Reload_Speed_Perk = true;
+                purchased_Reload_Speed_Perk = true;
                 Debug.Log("You have acquired reload speed increase!");
                 break;
             case 4:
-                has_Life_Savior_Perk = true;
-                playerHealthAccessor.has_Life_Savior_Perk = true;
+                playerPerkInventory.has_Life_Savior_Perk = true;
+                purchased_Life_Savior_Perk = true;
+                
                 Debug.Log("You have acquired life savior!");
                 break;
         }

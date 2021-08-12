@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: -6580213152904983102}
   - component: {fileID: -4896771412198998154}
   - component: {fileID: -3025011901486130014}
+  - component: {fileID: 7027959975942305257}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -178,8 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d5b1085868b85245b42d769c439f0fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  has_Life_Savior_Perk: 0
-  has_Health_Increase_Perk: 1
+  originalPlayerHealth: 0
 --- !u!114 &-4896771412198998154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,6 +205,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentWeaponsList: []
+--- !u!114 &7027959975942305257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298773939031160366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e664942c5ca2dec48959ac020dbc9c6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  has_Health_Increase_Perk: 0
+  has_Sprint_Speed_Perk: 0
+  has_Reload_Speed_Perk: 0
+  has_Life_Savior_Perk: 0
 --- !u!1 &1298773939093363859
 GameObject:
   m_ObjectHideFlags: 0

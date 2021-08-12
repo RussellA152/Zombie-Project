@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
     // all ground detection stuff
     bool isGrounded;
     bool canJump;
-    public bool has_speed_increase_perk;
+    //public bool has_speed_increase_perk;
 
     public float groundDistance;
     [SerializeField] LayerMask groundMask;

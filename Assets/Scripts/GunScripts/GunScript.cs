@@ -45,6 +45,7 @@ public class GunScript : MonoBehaviour
     //public AudioClip reloadSound;
     private AudioSource gunAudio;
     private PlayerUI PlayerUIAccessor;
+    private PlayerPerkInventory playerPerkAccessor;
 
     
 
@@ -62,10 +63,12 @@ public class GunScript : MonoBehaviour
     {
 
         //setting the "animator" to the Animator component of WeaponHolder (THIS WON'T WORK IF WE HAVE MULITPLE SCENES)
+        GameObject player = GameObject.Find("Player");
         GameObject WeaponHolder = GameObject.Find("WeaponHolder");
         GameObject PlayerHud = GameObject.Find("Player's HUD");
         animator = WeaponHolder.GetComponent<Animator>();
         PlayerUIAccessor = PlayerHud.GetComponent<PlayerUI>();
+        playerPerkAccessor = player.GetComponent<PlayerPerkInventory>();
 
         //setting gunAudio to the audio source of the gun
         GameObject GunAudioObject = GameObject.Find("Gun Audio");
@@ -282,7 +285,15 @@ public class GunScript : MonoBehaviour
         animator.SetBool("Reloading", true);
 
         //delay for reloading time
-        yield return new WaitForSeconds(reloadSpeed -.25f);
+        if (playerPerkAccessor.has_Reload_Speed_Perk)
+        {
+            yield return new WaitForSeconds((reloadSpeed/2) - .25f);
+        }
+        else
+        {
+            yield return new WaitForSeconds(reloadSpeed - .25f);
+        }
+        
         animator.SetBool("Reloading", false);
         yield return new WaitForSeconds(.25f);
 
