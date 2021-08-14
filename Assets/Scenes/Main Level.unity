@@ -8052,9 +8052,11 @@ MonoBehaviour:
   player: {fileID: 0}
   teleporters_are_linked: 0
   wants_to_link_teleporters: 0
-  powerRoom_teleporter_canLink: 0
+  teleporters_can_be_linked: 0
   time_To_Link: 30
   upgradeRoomTimer: 20
+  powerRoom_Teleporter: {fileID: 1731235794}
+  startingRoom_Teleporter: {fileID: 101791682}
 --- !u!4 &727076487
 Transform:
   m_ObjectHideFlags: 0
