@@ -14,6 +14,9 @@ public class PlayerHealth : MonoBehaviour
 
     private PlayerPerkInventory perkInventory;
     private PlayerMovement playerMovementAccessor;
+    public Coroutine RegenerateHealthCoroutine;
+
+    public bool is_attacked;
 
     private void Start()
     {
@@ -21,6 +24,8 @@ public class PlayerHealth : MonoBehaviour
 
         perkInventory = GetComponent<PlayerPerkInventory>();
         playerMovementAccessor = GetComponent<PlayerMovement>();
+
+        //RegenerateHealthCoroutine = StartCoroutine(RegeneratePlayerHealth());
 
         //has_Health_Increase_Perk = false;
         //has_Life_Savior_Perk = false;
@@ -31,6 +36,10 @@ public class PlayerHealth : MonoBehaviour
     }
     private void Update()
     {
+        if (playerHealth < originalPlayerHealth)
+        {
+            RegenerateHealth();
+        }
 
 
         if (Time.time - lastCallTime >= 0.2f)
@@ -45,14 +54,14 @@ public class PlayerHealth : MonoBehaviour
         if (perkInventory.has_Health_Increase_Perk)
         {
             originalPlayerHealth = 250f;
-            playerHealth = originalPlayerHealth;
+            //playerHealth = originalPlayerHealth;
         }
     }
 
     private void DecreaseHealth()
     {
         originalPlayerHealth = 150f;
-        playerHealth = originalPlayerHealth;
+        //playerHealth = originalPlayerHealth;
     }
 
     public void SavePlayerLife()
@@ -106,5 +115,37 @@ public class PlayerHealth : MonoBehaviour
             
         }
     }
+
+    private void RegenerateHealth()
+    {
+        if (!is_attacked)
+        {
+            playerHealth += 4f * Time.deltaTime;
+            Debug.Log("Regen health!");
+        }
+        else if(is_attacked)
+        {
+            return;
+        }
+
+        
+    }
+
+    /*
+    public IEnumerator RegeneratePlayerHealth()
+    {
+        yield return new WaitForSeconds(1f);
+
+        if (playerHealth < originalPlayerHealth)
+        {
+            playerHealth += .9f * Time.deltaTime;
+
+        }
+        else
+        {
+            yield return null;
+        }
+    }
+    */
 
 }
