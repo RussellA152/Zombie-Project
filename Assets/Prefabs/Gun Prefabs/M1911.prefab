@@ -183,12 +183,11 @@ MonoBehaviour:
   ammoPrice: 0
   ammoIsFull: 0
   isUpgraded: 0
-  canDualWield: 1
   muzzleFlash: {fileID: 8785808602257248310}
   gunAnimation: {fileID: 0}
   animator: {fileID: 0}
   impactEffect: {fileID: 100002, guid: 00fedc70b62a31e448e8ccc298257b56, type: 3}
-  dualWeaponCopy: {fileID: 5976373560600091056}
+  bloodImpactEffect: {fileID: 100002, guid: fc7f8379080d0a844ad699b91bfd56f0, type: 3}
   shootSound: {fileID: 8300000, guid: 4d6281aa604094f04839cffa502096c0, type: 3}
   reloadKey: 114
 --- !u!114 &5976373560600092238

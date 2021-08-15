@@ -295,10 +295,12 @@ MonoBehaviour:
   reloadSpeed: 4
   ammoPrice: 900
   ammoIsFull: 0
+  isUpgraded: 0
   muzzleFlash: {fileID: 7942451876843796416}
   gunAnimation: {fileID: 0}
   animator: {fileID: 0}
   impactEffect: {fileID: 100002, guid: 00fedc70b62a31e448e8ccc298257b56, type: 3}
+  bloodImpactEffect: {fileID: 100002, guid: fc7f8379080d0a844ad699b91bfd56f0, type: 3}
   shootSound: {fileID: 8300000, guid: 2203773368e4340d98c114f55c2dd7fd, type: 3}
   reloadKey: 114
 --- !u!1 &8375518356461391992

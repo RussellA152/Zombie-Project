@@ -6,19 +6,21 @@ public class PlayerHealth : MonoBehaviour
 {
     public static float playerHealth;
     [SerializeField] float originalPlayerHealth;
-    
+
     private float lastCallTime;
 
     //public bool has_Life_Savior_Perk;
     //public bool has_Health_Increase_Perk;
 
     private PlayerPerkInventory perkInventory;
+    private PlayerMovement playerMovementAccessor;
 
     private void Start()
     {
         //canTakeDamage = true;
 
         perkInventory = GetComponent<PlayerPerkInventory>();
+        playerMovementAccessor = GetComponent<PlayerMovement>();
 
         //has_Health_Increase_Perk = false;
         //has_Life_Savior_Perk = false;
@@ -29,13 +31,13 @@ public class PlayerHealth : MonoBehaviour
     }
     private void Update()
     {
-        
-        
+
+
         if (Time.time - lastCallTime >= 0.2f)
         {
             playerDeath();
         }
-        
+
     }
 
     public void IncreaseHealth()
@@ -43,17 +45,31 @@ public class PlayerHealth : MonoBehaviour
         if (perkInventory.has_Health_Increase_Perk)
         {
             originalPlayerHealth = 250f;
-            playerHealth = 250f;
+            playerHealth = originalPlayerHealth;
         }
+    }
+
+    private void DecreaseHealth()
+    {
+        originalPlayerHealth = 150f;
+        playerHealth = originalPlayerHealth;
     }
 
     public void SavePlayerLife()
     {
+        // these two functions basically reset the player to their original health and speed states before purchasing speed perks
         if (perkInventory.has_Life_Savior_Perk)
         {
+            DecreaseHealth();
+            if(perkInventory.has_Sprint_Speed_Perk == true)
+                playerMovementAccessor.DecreaseSpeed();
+
+            //if player was saved by life savior perk, remove all of their perks so they have to repurchase them
             perkInventory.has_Life_Savior_Perk = false;
-            playerHealth = originalPlayerHealth;
-            
+            perkInventory.has_Reload_Speed_Perk = false;
+            perkInventory.has_Sprint_Speed_Perk = false;
+            perkInventory.has_Health_Increase_Perk = false; 
+  
         }
         else if (!perkInventory.has_Life_Savior_Perk)
         {

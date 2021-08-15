@@ -40,6 +40,7 @@ public class GunScript : MonoBehaviour
 
     //the impact particle from shooting at surfaces/enemies
     public GameObject impactEffect;
+    [SerializeField] private GameObject bloodImpactEffect;
 
     public AudioClip shootSound;
     //public AudioClip reloadSound;
@@ -222,8 +223,18 @@ public class GunScript : MonoBehaviour
                     hit.rigidbody.AddForce(-hit.normal * impactForce);
             }
             //instantiate our impact effect at the point of bullet impact
-            GameObject impactGameObject = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
-            Destroy(impactGameObject, 2f);
+            if(hit.rigidbody != null)
+            {
+                GameObject impactGameObject = Instantiate(bloodImpactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+                Destroy(impactGameObject, 2f);
+            }
+            else
+            {
+                GameObject impactGameObject = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+                Destroy(impactGameObject, 2f);
+            }
+            //GameObject impactGameObject = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+            //Destroy(impactGameObject, 2f);
         }
     }
 

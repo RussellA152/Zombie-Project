@@ -169,4 +169,9 @@ public class PlayerMovement : MonoBehaviour
         walkSpeed += 5f;
         sprintSpeed += 5f;
     }
+    public void DecreaseSpeed()
+    {
+        walkSpeed -= 5f;
+        sprintSpeed -= 5f;
+    }
 }

@@ -86,6 +86,22 @@ public class PerkMachine : MonoBehaviour
                 purchased_Life_Savior_Perk = false;
                 playerHasPerk = false;
             }
+            if (playerHasPerk && purchased_Health_Increase_Perk == true && !playerPerkInventory.has_Health_Increase_Perk)
+            {
+                purchased_Health_Increase_Perk = false;
+                playerHasPerk = false;
+            }
+            if(playerHasPerk && purchased_Reload_Speed_Perk == true && !playerPerkInventory.has_Reload_Speed_Perk)
+            {
+                purchased_Reload_Speed_Perk= false;
+                playerHasPerk = false;
+            }
+            if(playerHasPerk && purchased_Sprint_Speed_Perk == true && !playerPerkInventory.has_Sprint_Speed_Perk)
+            {
+                purchased_Sprint_Speed_Perk = false;
+                playerHasPerk = false;
+            }
+
         }
     }
     private void OnTriggerStay(Collider other)
