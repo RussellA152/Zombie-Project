@@ -17,6 +17,7 @@ public class PlayerHealth : MonoBehaviour
     public Coroutine RegenerateHealthCoroutine;
 
     public bool is_attacked;
+    private bool is_dead;
 
     private void Start()
     {
@@ -33,10 +34,12 @@ public class PlayerHealth : MonoBehaviour
         originalPlayerHealth = 150f;
 
         playerHealth = originalPlayerHealth;
+
+        is_dead = false;
     }
     private void Update()
     {
-        if (playerHealth < originalPlayerHealth)
+        if ((playerHealth < originalPlayerHealth) && !is_dead)
         {
             RegenerateHealth();
         }
@@ -78,6 +81,7 @@ public class PlayerHealth : MonoBehaviour
         }
         else if (!perkInventory.has_Life_Savior_Perk)
         {
+            is_dead = true;
             Debug.Log("You Died!");
         }
     }
@@ -116,7 +120,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (!is_attacked)
         {
-            playerHealth += 10f * Time.deltaTime;
+            playerHealth += 25f * Time.deltaTime;
             //Debug.Log("Regen health!");
         }
         else if(is_attacked)

@@ -43,9 +43,17 @@ public class PowerTeleporter : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if(other.gameObject.CompareTag("Player"))
         {
-            inTrigger = true;
+            if (PowerEvent.powerIsTurnedOn)
+            {
+                inTrigger = true;
+            }
+            else
+            {
+                Debug.Log("You must turn on power!");
+            }
+
             //TeleporterEvent.current.in_powerRoom_Teleporter_Trigger = true;
         }
     }
