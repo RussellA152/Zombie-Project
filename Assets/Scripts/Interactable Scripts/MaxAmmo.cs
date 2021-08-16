@@ -7,12 +7,14 @@ public class MaxAmmo : MonoBehaviour
     public bool gotMaxAmmo;
     public int id;
 
-    public float deletionCountDown;
+    [SerializeField] private float deletionCountDown;
     private bool deletionCountDownHasStarted;
 
     PlayerWeaponInventory currentWeaponsList;
 
     private GameObject player;
+
+    private Coroutine deletionCountDownCoroutine;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,8 @@ public class MaxAmmo : MonoBehaviour
         currentWeaponsList = player.GetComponent<PlayerWeaponInventory>();
 
         gotMaxAmmo = false;
+
+        deletionCountDownCoroutine = StartCoroutine(DeletePowerUpTimer());
     }
 
     private void OnTriggerEnter(Collider other)
@@ -58,8 +62,17 @@ public class MaxAmmo : MonoBehaviour
 
         }
     }
+    //makes max ammo power up delete after some time
+    IEnumerator DeletePowerUpTimer()
+    {
+        yield return new WaitForSeconds(deletionCountDown);
+        Destroy(gameObject);
+
+    }
     private void OnDestroy()
     {
+        //not sure if we need to stop coroutine since it gets destroyed but this is here just in case
+        StopCoroutine(deletionCountDownCoroutine);
         PowerUpEvent.current.onPowerUpAcquire -= GiveMaxAmmo;
     }
 }

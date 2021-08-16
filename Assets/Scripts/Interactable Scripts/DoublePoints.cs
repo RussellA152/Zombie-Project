@@ -6,7 +6,8 @@ public class DoublePoints : MonoBehaviour
 {
     public float doublePointsCountDown;
     public int id;
-    public float deletionCountDown;
+
+    [SerializeField] private float deletionCountDown;
     private bool deletionCountDownHasStarted;
 
     //bool that prevents player from grabbing same powerup twice

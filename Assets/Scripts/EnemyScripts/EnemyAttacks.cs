@@ -8,12 +8,13 @@ public class EnemyAttacks : MonoBehaviour
     public float enemyDamage;   //determines how much damage this enemy will do to player
     //private bool canAttack;
     private PlayerHealth playerHealth;
+    private Coroutine SetPlayerAttackedCoroutine;
 
     // Start is called before the first frame update
     void Start()
     {
         playerHealth = GameObject.Find("Player").GetComponent<PlayerHealth>();
-
+        
 
         //enemyDamage = 25f; //hard-coded for now, but should be a different value?
         //canAttack = false;
@@ -28,7 +29,12 @@ public class EnemyAttacks : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            StopCoroutine(SetPlayerAttacked());
+            if (SetPlayerAttackedCoroutine != null)
+            {
+                StopCoroutine(SetPlayerAttackedCoroutine);
+                Debug.Log("Stop Coroutine!");
+            }
+                
             InvokeRepeating("EnemyDealingDamage", .6f, 1f);
             
         }
@@ -39,7 +45,7 @@ public class EnemyAttacks : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             CancelInvoke();
-            StartCoroutine(SetPlayerAttacked());
+            SetPlayerAttackedCoroutine = StartCoroutine(SetPlayerAttacked());
             Debug.Log("Attack invoke cancelled");
         }
     }
@@ -59,7 +65,8 @@ public class EnemyAttacks : MonoBehaviour
     }
     IEnumerator SetPlayerAttacked()
     {
-        yield return new WaitForSeconds(1.5f);
+        Debug.Log("Attack Coroutine!");
+        yield return new WaitForSeconds(3f);
         playerHealth.is_attacked = false;
     }
 }

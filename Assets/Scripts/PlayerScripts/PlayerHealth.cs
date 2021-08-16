@@ -41,11 +41,7 @@ public class PlayerHealth : MonoBehaviour
             RegenerateHealth();
         }
 
-
-        if (Time.time - lastCallTime >= 0.2f)
-        {
-            playerDeath();
-        }
+        playerDeath();
 
     }
 
@@ -111,7 +107,7 @@ public class PlayerHealth : MonoBehaviour
         if(playerHealth <= 0f)
         {
             SavePlayerLife();
-            lastCallTime = Time.time;
+            //lastCallTime = Time.time;
             
         }
     }
@@ -120,8 +116,8 @@ public class PlayerHealth : MonoBehaviour
     {
         if (!is_attacked)
         {
-            playerHealth += 4f * Time.deltaTime;
-            Debug.Log("Regen health!");
+            playerHealth += 10f * Time.deltaTime;
+            //Debug.Log("Regen health!");
         }
         else if(is_attacked)
         {
