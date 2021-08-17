@@ -181,6 +181,7 @@ MonoBehaviour:
   maxAmmoPowerUp: {fileID: 7604624982172217921, guid: 72d932e7338775046b7c13d7d5fbd6a7, type: 3}
   superStrengthPowerUp: {fileID: 8502951311660931235, guid: ad0ef10e9dccad1478d2f8c441aa78e9, type: 3}
   doublePointsPowerUp: {fileID: 7069350398894015161, guid: 870945a104a19e3479231c936d6e95f1, type: 3}
+  zombieDeathSound: {fileID: 8300000, guid: e2ef13590109348d19c2566f7381c2f5, type: 3}
 --- !u!114 &6161461571742736586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,6 +195,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDamage: 25
+  zombieAttackSounds:
+  - {fileID: 8300000, guid: c47f17948f55d41c5876af88204e7f46, type: 3}
+  - {fileID: 8300000, guid: 6a97574b999754ab88af555cfbc0d8f4, type: 3}
+  - {fileID: 8300000, guid: 9e7e59915597f434d993f3baf108945d, type: 3}
+  - {fileID: 8300000, guid: 8a8ffe43c3c0f40a5a6fa21393fd52cf, type: 3}
 --- !u!1 &6161461571761144968
 GameObject:
   m_ObjectHideFlags: 0

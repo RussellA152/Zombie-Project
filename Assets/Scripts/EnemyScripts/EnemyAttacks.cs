@@ -2,6 +2,7 @@ using System.Collections;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class EnemyAttacks : MonoBehaviour
 {
@@ -10,10 +11,17 @@ public class EnemyAttacks : MonoBehaviour
     private PlayerHealth playerHealth;
     private Coroutine SetPlayerAttackedCoroutine;
 
+    [SerializeField] private AudioClip[] zombieAttackSounds;
+    private AudioSource zombieAudioSource;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
         playerHealth = GameObject.Find("Player").GetComponent<PlayerHealth>();
+
+        zombieAudioSource = GetComponent<Target>().returnZombieAudio();
         
 
         //enemyDamage = 25f; //hard-coded for now, but should be a different value?
@@ -51,9 +59,13 @@ public class EnemyAttacks : MonoBehaviour
     }
     private void EnemyDealingDamage()
     {
+        //random chance to play random sound for attack sound
+        int randomAudioClip = Random.Range(0, zombieAttackSounds.Length);
 
         PlayerHealth.playerHealth -= enemyDamage;
         playerHealth.is_attacked = true;
+
+        zombieAudioSource.PlayOneShot(zombieAttackSounds[randomAudioClip], 0.5f);
         
         Debug.Log("Attack!");
         //Debug.Log("Your Health: " + PlayerHealth.playerHealth);

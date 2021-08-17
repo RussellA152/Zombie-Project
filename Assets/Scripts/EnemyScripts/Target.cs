@@ -32,6 +32,10 @@ public class Target : MonoBehaviour
 
     private bool callDieFunction;
 
+    //[SerializeField] private AudioSource zombieAudioSource;
+    [SerializeField] private AudioClip zombieDeathSound;
+    private AudioSource zombieAudio { get; set; }
+
     private void Start()
     {
         callDieFunction = true;
@@ -39,6 +43,10 @@ public class Target : MonoBehaviour
         navMesh = gameObject.GetComponent<NavMeshAgent>();
         target_rigidbody = GetComponent<Rigidbody>();
         enemyAttacks_access = GetComponent<EnemyAttacks>();
+
+        //enemy Audio Source is a static singleton object audio source for zombie attack and death sounds
+        zombieAudio = EnemyAudio.current.enemyAudioSourceGameObject.GetComponent<AudioSource>();
+        //zombieAudioSource.GetComponent<AudioSource>();
 
 
         //callDieFunction = true;
@@ -83,6 +91,12 @@ public class Target : MonoBehaviour
         {
             callDieFunction = false;
 
+            //plays a death sound
+            zombieAudio.PlayOneShot(zombieDeathSound, 0.4f);
+
+            //changes enemy's layer to IgnoreRaycast so bullets will not be blocked by corpses
+            gameObject.layer = 2;
+
             //when enemy dies, give player score
             if (PowerUpEvent.current.hasDoublePoints)
             {
@@ -101,7 +115,7 @@ public class Target : MonoBehaviour
             enemyAttacks_access.enabled = false;
             
             //lowers the mass of the zombie's rigidbody so their corpse can ragdoll farther
-            target_rigidbody.mass = 0.6f;
+            //target_rigidbody.mass = 0.6f;
 
             //disable the dead zombie's attack hitbox (SO THEY DO NOT ATTACK PLAYER WHEN DEAD)
             attackHitbox.SetActive(false);
@@ -158,4 +172,9 @@ public class Target : MonoBehaviour
         //yield return new WaitForSeconds(2.5f);
         //Destroy(gameObject);
     //}
+
+    public AudioSource returnZombieAudio()
+    {
+        return zombieAudio;
+    }
 }

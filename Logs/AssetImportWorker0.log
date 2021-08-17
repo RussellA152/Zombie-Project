@@ -15,11 +15,11 @@ C:/Users/Daniel/Documents/GitHub/Zombie-Project
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-61796
+54356
 Successfully changed project path to: C:/Users/Daniel/Documents/GitHub/Zombie-Project
 C:/Users/Daniel/Documents/GitHub/Zombie-Project
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 34.89 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 34.66 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.1f1 (270dd8c3da1c)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Resources/UnitySubsystems
@@ -37,100 +37,1052 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56576
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56464
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002612 seconds.
+Registered in 0.001882 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 36.00 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 33.49 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.936 seconds
+- Completed reload, in  0.913 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.000689 seconds.
+Registered in 0.000799 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.33 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.44 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.784 seconds
+- Completed reload, in  0.783 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
 Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1608 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 81.9 MB.
 System memory in use after: 81.9 MB.
 
 Unloading 71 unused Assets to reduce memory usage. Loaded Objects now: 2056.
-Total: 2.058900 ms (FindLiveObjects: 0.134900 ms CreateObjectMapping: 0.045500 ms MarkObjects: 1.725700 ms  DeleteObjects: 0.152000 ms)
+Total: 2.799800 ms (FindLiveObjects: 0.313600 ms CreateObjectMapping: 0.125300 ms MarkObjects: 2.091700 ms  DeleteObjects: 0.268100 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Scripts/PlayerScripts/PlayerHealth.cs
-  artifactKey: Guid(4d5b1085868b85245b42d769c439f0fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/PlayerScripts/PlayerHealth.cs using Guid(4d5b1085868b85245b42d769c439f0fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '068c48eda5faad5d78768c958be1a779') in 0.040988 seconds
-  Import took 0.044061 seconds .
+  path: Assets/Shapeforms Audio Free Sound Effects/Cassette Preview/AUDIO/CASSETTE_RATTLE_12.wav
+  artifactKey: Guid(5876df27b42534f79a61f829f41842e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Cassette Preview/AUDIO/CASSETTE_RATTLE_12.wav using Guid(5876df27b42534f79a61f829f41842e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33c2407510c3a3c92db76a1c1c850e12') in 0.111337 seconds
+  Import took 0.113826 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 24.073614 seconds.
-  path: Assets/Scripts/PlayerScripts/PlayerHealth.cs
-  artifactKey: Guid(4d5b1085868b85245b42d769c439f0fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/PlayerScripts/PlayerHealth.cs using Guid(4d5b1085868b85245b42d769c439f0fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77f8a33effdb84d2bfd43ce393322dc1') in 0.002136 seconds
-  Import took 0.005126 seconds .
+  Time since last request: 0.000208 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Cassette Preview/AUDIO/FAST_FORWARD_LOOP_02.wav
+  artifactKey: Guid(846a3cecc85184967834e9df7b344754) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Cassette Preview/AUDIO/FAST_FORWARD_LOOP_02.wav using Guid(846a3cecc85184967834e9df7b344754) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1eb87f6155fa97571c103d1245c2a209') in 0.011166 seconds
+  Import took 0.013375 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000805 seconds.
-  path: Assets/Scripts/PlayerScripts/PlayerHealth.cs
-  artifactKey: Guid(4d5b1085868b85245b42d769c439f0fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/PlayerScripts/PlayerHealth.cs using Guid(4d5b1085868b85245b42d769c439f0fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77f8a33effdb84d2bfd43ce393322dc1') in 0.002194 seconds
-  Import took 0.005118 seconds .
+  Time since last request: 0.000235 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Cassette Preview/AUDIO
+  artifactKey: Guid(ef278dabd380d4784a4db67aeaa49651) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Cassette Preview/AUDIO using Guid(ef278dabd380d4784a4db67aeaa49651) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8de4221c18e825b3162881e751c42851') in 0.008055 seconds
+  Import took 0.010449 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 12.702271 seconds.
-  path: Assets/Scripts/PlayerScripts/PlayerHealth.cs
-  artifactKey: Guid(4d5b1085868b85245b42d769c439f0fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/PlayerScripts/PlayerHealth.cs using Guid(4d5b1085868b85245b42d769c439f0fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'addead1358c083694950817f7b46a25b') in 0.002276 seconds
-  Import took 0.005274 seconds .
+  Time since last request: 0.000246 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Cassette Preview/AUDIO/BUTTON_05.wav
+  artifactKey: Guid(f9390048cef5143fab5373e6dd3c429e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Cassette Preview/AUDIO/BUTTON_05.wav using Guid(f9390048cef5143fab5373e6dd3c429e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c47214a98697ae668a786273cd2cb3c') in 0.010512 seconds
+  Import took 0.012922 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000498 seconds.
-  path: Assets/Scripts/PlayerScripts/PlayerHealth.cs
-  artifactKey: Guid(4d5b1085868b85245b42d769c439f0fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/PlayerScripts/PlayerHealth.cs using Guid(4d5b1085868b85245b42d769c439f0fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'addead1358c083694950817f7b46a25b') in 0.002369 seconds
-  Import took 0.005540 seconds .
+  Time since last request: 0.000260 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Cassette Preview/AUDIO/SLOW DOWN SPEED UP_05.wav
+  artifactKey: Guid(4872c3adf623846bd9f78507d9690a56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Cassette Preview/AUDIO/SLOW DOWN SPEED UP_05.wav using Guid(4872c3adf623846bd9f78507d9690a56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28827f2c386d63dec94f68d1f592f792') in 0.013883 seconds
+  Import took 0.016685 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 44.780705 seconds.
-  path: Assets/Scripts/PlayerScripts/PlayerHealth.cs
-  artifactKey: Guid(4d5b1085868b85245b42d769c439f0fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/PlayerScripts/PlayerHealth.cs using Guid(4d5b1085868b85245b42d769c439f0fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd162b8490300087c8def0f6ebb45de28') in 0.002617 seconds
-  Import took 0.005470 seconds .
+  Time since last request: 0.000414 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Cassette Preview/AUDIO/REMOVE_CASSETTE_07.wav
+  artifactKey: Guid(adf8eea18cb5e47eb95c7c80d6c21366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Cassette Preview/AUDIO/REMOVE_CASSETTE_07.wav using Guid(adf8eea18cb5e47eb95c7c80d6c21366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a554bc8adf1117e7ec1838a623d9fbc') in 0.013624 seconds
+  Import took 0.016250 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000297 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Cassette Preview
+  artifactKey: Guid(b18a755b033884e27a3bdf8a7caca43b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Cassette Preview using Guid(b18a755b033884e27a3bdf8a7caca43b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e32320b7d6991d0dfe314d0c86017996') in 0.009770 seconds
+  Import took 0.012400 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000241 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Cassette Preview/AUDIO/REWIND_FAST_FORWARD_09.wav
+  artifactKey: Guid(d8e27b2312aff4681875d54cadb4820a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Cassette Preview/AUDIO/REWIND_FAST_FORWARD_09.wav using Guid(d8e27b2312aff4681875d54cadb4820a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51631449a49f0dd25496d1912e0b8054') in 0.012403 seconds
+  Import took 0.014907 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Cassette Preview/AUDIO/BUTTON_12.wav
+  artifactKey: Guid(f0e561914ddd74b36b07b7040b6126d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Cassette Preview/AUDIO/BUTTON_12.wav using Guid(f0e561914ddd74b36b07b7040b6126d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f62608a80fd9e6c1ce010bf5c9fa9c36') in 0.010186 seconds
+  Import took 0.012729 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000244 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Cassette Preview/AUDIO/TAPE_NOISE_01.wav
+  artifactKey: Guid(2e29faeacabe6430994cf7fb71c830a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Cassette Preview/AUDIO/TAPE_NOISE_01.wav using Guid(2e29faeacabe6430994cf7fb71c830a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9c03a529a6e3623414550668c85e122') in 0.010236 seconds
+  Import took 0.012429 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000259 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Cassette Preview/AUDIO/BUTTON_STOP_02.wav
+  artifactKey: Guid(060176aecd6b941e39640bb46e99df1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Cassette Preview/AUDIO/BUTTON_STOP_02.wav using Guid(060176aecd6b941e39640bb46e99df1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8771d59c1db9e54812a82eb5af175e43') in 0.010623 seconds
+  Import took 0.013137 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000171 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Cassette Preview/AUDIO/OPEN_CASE_02.wav
+  artifactKey: Guid(a662aafbcfaef4b6da8f965d1dfab2c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Cassette Preview/AUDIO/OPEN_CASE_02.wav using Guid(a662aafbcfaef4b6da8f965d1dfab2c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9a96f9c17916cd83cd1ccbe74ab6d40') in 0.009968 seconds
+  Import took 0.012623 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000228 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Cassette Preview/AUDIO/CASSETTE_RATTLE_20.wav
+  artifactKey: Guid(8db5629cc770f4cb9a8dbf720fadb6bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Cassette Preview/AUDIO/CASSETTE_RATTLE_20.wav using Guid(8db5629cc770f4cb9a8dbf720fadb6bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca0d88d63ccb62f50f5d316e1048f95b') in 0.009620 seconds
+  Import took 0.011924 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000236 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Cassette Preview/AUDIO/TAPE STOP_15.wav
+  artifactKey: Guid(94c757ba8aa5d4ce3978fd3a825f454c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Cassette Preview/AUDIO/TAPE STOP_15.wav using Guid(94c757ba8aa5d4ce3978fd3a825f454c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5c06aee7baae54c2e9b6deb84ea7ec8') in 0.011068 seconds
+  Import took 0.013733 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000202 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Cassette Preview/AUDIO/LOOP_01.wav
+  artifactKey: Guid(1d2f819522b894766ac9c4323f9d79ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Cassette Preview/AUDIO/LOOP_01.wav using Guid(1d2f819522b894766ac9c4323f9d79ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9529727c443a98613b7f0feabcb5ab0') in 0.010477 seconds
+  Import took 0.013604 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000149 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Cassette Preview/AUDIO/LOAD_CASSETTE_08.wav
+  artifactKey: Guid(0ae4a20a1902842349712242a032c8ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Cassette Preview/AUDIO/LOAD_CASSETTE_08.wav using Guid(0ae4a20a1902842349712242a032c8ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b60c7ef9d49c2805d3fc095319ff542') in 0.010030 seconds
+  Import took 0.012795 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000298 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Cassette Preview/AUDIO/BUTTON_03.wav
+  artifactKey: Guid(6b872a5c2f1a84f639ec3e0b0071d301) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Cassette Preview/AUDIO/BUTTON_03.wav using Guid(6b872a5c2f1a84f639ec3e0b0071d301) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '602c35d6c81f472b5fd10cdd15cc332d') in 0.010391 seconds
+  Import took 0.013038 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Cassette Preview/AUDIO/EMF_TAPE_RECORDING_06.wav
+  artifactKey: Guid(b6968f1807cdb40af9533cf7bc1e5e7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Cassette Preview/AUDIO/EMF_TAPE_RECORDING_06.wav using Guid(b6968f1807cdb40af9533cf7bc1e5e7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ae10ef0ae5c679b33ba0027af0b954a') in 0.011256 seconds
+  Import took 0.013807 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 47.978038 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview
+  artifactKey: Guid(c9e1ce91bdc42401592009d71745330e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview using Guid(c9e1ce91bdc42401592009d71745330e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f2a5ae966fa8ba58c2c23af45c7e6ee') in 0.013246 seconds
+  Import took 0.015709 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.726567 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/AUDIO
+  artifactKey: Guid(c4b2d7258c516493e9e8421fe85b4d4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/AUDIO using Guid(c4b2d7258c516493e9e8421fe85b4d4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e29e274a42977dcf1f1d5786b0ee76d') in 0.001878 seconds
+  Import took 0.004971 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.069063 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/AUDIO/AMBIENCE_HEARTBEAT_LOOP.wav
+  artifactKey: Guid(ec8385887bb6b4314bafca94c477199e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/AUDIO/AMBIENCE_HEARTBEAT_LOOP.wav using Guid(ec8385887bb6b4314bafca94c477199e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2c2e55155891943df6d258d1a3baabe') in 0.008645 seconds
+  Import took 0.010962 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000222 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/AUDIO/ONE_SHOT_CINEMATIC_EFFECT_10.wav
+  artifactKey: Guid(149caefbcaf1d4cefaad17d5e77a3b18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/AUDIO/ONE_SHOT_CINEMATIC_EFFECT_10.wav using Guid(149caefbcaf1d4cefaad17d5e77a3b18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a41193a8db04b3f8f2baf1c197f296a9') in 0.009209 seconds
+  Import took 0.011773 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000231 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/AUDIO/ONE_SHOT_SPACE_TEAR.wav
+  artifactKey: Guid(5a88f32090626429cb403d0e923d127a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/AUDIO/ONE_SHOT_SPACE_TEAR.wav using Guid(5a88f32090626429cb403d0e923d127a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75114d1931c0bc51d2a2be1db994d9ad') in 0.011360 seconds
+  Import took 0.013915 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/AUDIO/AMBIENCE_SIGNAL_LOOP.wav
+  artifactKey: Guid(c47edbdb9091d44adb2992d743c34909) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/AUDIO/AMBIENCE_SIGNAL_LOOP.wav using Guid(c47edbdb9091d44adb2992d743c34909) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f6c9d982e6d29c1f2ab33997a882898') in 0.009820 seconds
+  Import took 0.019859 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/AUDIO/AMBIENCE_UNDERGROUND_POWER_STATION_LOOP.wav
+  artifactKey: Guid(4f84cc2837b084a5783ad7ecdaf62d04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/AUDIO/AMBIENCE_UNDERGROUND_POWER_STATION_LOOP.wav using Guid(4f84cc2837b084a5783ad7ecdaf62d04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22cef82a801fcc0943536a4bd4286a2b') in 0.010779 seconds
+  Import took 0.013631 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000257 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/AUDIO/SUB_DROP_DEEP.wav
+  artifactKey: Guid(626aeda33e0134a66a6257c865d0c5c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/AUDIO/SUB_DROP_DEEP.wav using Guid(626aeda33e0134a66a6257c865d0c5c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5effd017279386428292997bc597ce94') in 0.009990 seconds
+  Import took 0.012865 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/AUDIO/AMBIENCE_TUNNEL_WIND_LOOP.wav
+  artifactKey: Guid(f2183a39c3aa24cb9b21f5e581adaf3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/AUDIO/AMBIENCE_TUNNEL_WIND_LOOP.wav using Guid(f2183a39c3aa24cb9b21f5e581adaf3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '520ab1fb7fd38fc206d59f5e0df40840') in 0.009629 seconds
+  Import took 0.012065 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000182 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/AUDIO/AMBIENCE_TUNDRA_LOOP_01.wav
+  artifactKey: Guid(3220df8b4a4e241b9b1833cd386bfe98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/AUDIO/AMBIENCE_TUNDRA_LOOP_01.wav using Guid(3220df8b4a4e241b9b1833cd386bfe98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '234dcf5cb545b795f790f4b116d422e4') in 0.010643 seconds
+  Import took 0.012962 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000260 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/AUDIO/AMBIENCE_SPACECRAFT_HOLD_LOOP.wav
+  artifactKey: Guid(a5c08d9a56b724f9abb5c05c5809efcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/AUDIO/AMBIENCE_SPACECRAFT_HOLD_LOOP.wav using Guid(a5c08d9a56b724f9abb5c05c5809efcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb27f7d2ccd7f8af83ddf86f4e9af2f1') in 0.010001 seconds
+  Import took 0.012384 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 53.016757 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview
+  artifactKey: Guid(015e34da2bb70455995a53eae16cfaa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview using Guid(015e34da2bb70455995a53eae16cfaa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99ec4becf21927188420b5a2d47e999e') in 0.006203 seconds
+  Import took 0.009072 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.667954 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO
+  artifactKey: Guid(f070f279fc84b427681c9d3043226045) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO using Guid(f070f279fc84b427681c9d3043226045) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f3fa09744015b5ab6e36b4ce5928e82') in 0.001907 seconds
+  Import took 0.004562 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.541642 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/ANMLBat_Creature Vocalisation_01.wav
+  artifactKey: Guid(981194f4f58b449efba499760ec29256) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/ANMLBat_Creature Vocalisation_01.wav using Guid(981194f4f58b449efba499760ec29256) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7781f1a79a4979a56f3a2c40654382e5') in 0.018972 seconds
+  Import took 0.022000 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000330 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/LASRGun_Plasma Rifle Fire_03.wav
+  artifactKey: Guid(df0e60887b63f45c7801a38fccae1f8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/LASRGun_Plasma Rifle Fire_03.wav using Guid(df0e60887b63f45c7801a38fccae1f8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3857056dc57e69c51f7035ad6b478f74') in 0.009491 seconds
+  Import took 0.011871 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000282 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/SCIEnrg_Shield Activate Deactivate_02.wav
+  artifactKey: Guid(b3f498961b9bd47e29973abf7e1bce2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/SCIEnrg_Shield Activate Deactivate_02.wav using Guid(b3f498961b9bd47e29973abf7e1bce2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e147e39446a4995223d393114cba6e04') in 0.010032 seconds
+  Import took 0.013100 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000269 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/LASRGun_Electron Impeller Charged Fire_02.wav
+  artifactKey: Guid(46e4002e4b6074361a58bbd232a2cfd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/LASRGun_Electron Impeller Charged Fire_02.wav using Guid(46e4002e4b6074361a58bbd232a2cfd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5dd193ee64a60998c255565347fc6323') in 0.010952 seconds
+  Import took 0.013710 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000296 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNMech_Insert Clip_04.wav
+  artifactKey: Guid(552e1ee9826bb42fe83505a9defb673d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNMech_Insert Clip_04.wav using Guid(552e1ee9826bb42fe83505a9defb673d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5db0990f587ddd310072ed0d7d21a780') in 0.009693 seconds
+  Import took 0.012064 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000155 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNMech_Scope Deactivate_11.wav
+  artifactKey: Guid(40454dde674144b9e9c69775b6136dc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNMech_Scope Deactivate_11.wav using Guid(40454dde674144b9e9c69775b6136dc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a99db6897c11694d0fbf79bdf90371df') in 0.009040 seconds
+  Import took 0.011685 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000236 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/BEEP_Targeting Loop_06.wav
+  artifactKey: Guid(b878334bbc55e4e94abc0354bc2f2838) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/BEEP_Targeting Loop_06.wav using Guid(b878334bbc55e4e94abc0354bc2f2838) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f222460243727a8eb964c9d9f297f0e') in 0.009677 seconds
+  Import took 0.012366 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000173 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNAuto_Assault Rifle D Burst_05.wav
+  artifactKey: Guid(716300b5477724dba8bfa26038ecafd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNAuto_Assault Rifle D Burst_05.wav using Guid(716300b5477724dba8bfa26038ecafd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa68596ba546d9e9d2a846c80b36d564') in 0.009037 seconds
+  Import took 0.011647 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000187 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/SCIMisc_Arm Weapon Heavy_01.wav
+  artifactKey: Guid(a1e03f0a0492b425a95c51529467e09d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/SCIMisc_Arm Weapon Heavy_01.wav using Guid(a1e03f0a0492b425a95c51529467e09d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f89af9e7432c817b41c2e5104b41b80b') in 0.010626 seconds
+  Import took 0.012902 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000186 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/BLLTBy_Bullet By Centred Fast_02.wav
+  artifactKey: Guid(feaaec11b7c20462eb6660365bbeb1ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/BLLTBy_Bullet By Centred Fast_02.wav using Guid(feaaec11b7c20462eb6660365bbeb1ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03cdad49d68cf64ac16684178864dba5') in 0.010993 seconds
+  Import took 0.013387 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNMech_Empty Clip Burst B_01.wav
+  artifactKey: Guid(8af5749b172a645a68265fc8c9ed216d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNMech_Empty Clip Burst B_01.wav using Guid(8af5749b172a645a68265fc8c9ed216d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c094035eb83da1bd3a08a7d4b8abb361') in 0.010421 seconds
+  Import took 0.012760 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000151 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/LASRGun_Classic Blaster A Fire_03.wav
+  artifactKey: Guid(16c25250151e04a37b489a3f056c8314) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/LASRGun_Classic Blaster A Fire_03.wav using Guid(16c25250151e04a37b489a3f056c8314) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4429d2987cb719cb0b42d2a56cb50baf') in 0.008906 seconds
+  Import took 0.011456 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000259 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNArtl_Rocket Launcher Fire_02.wav
+  artifactKey: Guid(08d5810d653eb4ab0ba625cd6017606b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNArtl_Rocket Launcher Fire_02.wav using Guid(08d5810d653eb4ab0ba625cd6017606b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84cf97d8f7a25a9e001cb323bdbe2c4a') in 0.009928 seconds
+  Import took 0.012493 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNAuto_Sci Fi Shotgun Burst_03.wav
+  artifactKey: Guid(605b56ec45cac44ca9e89ab50b38880d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNAuto_Sci Fi Shotgun Burst_03.wav using Guid(605b56ec45cac44ca9e89ab50b38880d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c70814c073adbab4175a3d6c0f060438') in 0.009335 seconds
+  Import took 0.011928 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000182 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/SCIEnrg_Energy Orb_05.wav
+  artifactKey: Guid(b71edef5d6eb84fe0b6837f05a411bd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/SCIEnrg_Energy Orb_05.wav using Guid(b71edef5d6eb84fe0b6837f05a411bd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6acdcf0bb5d9aad7125c8104d7a63d0a') in 0.008807 seconds
+  Import took 0.011385 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000178 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/BEEPTimer_Anticipation Beeps_05.wav
+  artifactKey: Guid(56227355334454a669691eddf1801cb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/BEEPTimer_Anticipation Beeps_05.wav using Guid(56227355334454a669691eddf1801cb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14a8aaf44cdaea7bdc01eba5796cd222') in 0.008974 seconds
+  Import took 0.011808 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000176 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/DSGNStngr_Kill Confirm Metallic_02.wav
+  artifactKey: Guid(c1726d04415374b73a017619468158d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/DSGNStngr_Kill Confirm Metallic_02.wav using Guid(c1726d04415374b73a017619468158d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9d61b83a27afd72d50dd22be4c59a7e') in 0.008612 seconds
+  Import took 0.011146 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000156 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/BLLTRico_Metallic_11.wav
+  artifactKey: Guid(201cfd6b00d124092b0f9810e5699d90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/BLLTRico_Metallic_11.wav using Guid(201cfd6b00d124092b0f9810e5699d90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '317d9f614c811e19cf137c9f3ec25a6c') in 0.009654 seconds
+  Import took 0.012397 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000172 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/BLLTImpt_Hit Marker_07.wav
+  artifactKey: Guid(07e17c040baac49bfbab34e436244b01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/BLLTImpt_Hit Marker_07.wav using Guid(07e17c040baac49bfbab34e436244b01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf1064fb0a564aa149fa48e8123e18a9') in 0.009747 seconds
+  Import took 0.012146 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000147 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNArtl_Grenade Launcher Fire_05.wav
+  artifactKey: Guid(af7c7a46541c343b495812ae2b3c5d28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNArtl_Grenade Launcher Fire_05.wav using Guid(af7c7a46541c343b495812ae2b3c5d28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b1001ce97bef3143977132c97ba34b1') in 0.010230 seconds
+  Import took 0.012455 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000161 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNAuto_RPU Mk2 Burst_04.wav
+  artifactKey: Guid(eafb9188574084c7cadfd6108975cf13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNAuto_RPU Mk2 Burst_04.wav using Guid(eafb9188574084c7cadfd6108975cf13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a538b9ea726433c4b01caebea901909f') in 0.010400 seconds
+  Import took 0.012807 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000145 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/LASRGun_Ion Pistol C Burst_02.wav
+  artifactKey: Guid(eaaec473bb45349d991515330257e71a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/LASRGun_Ion Pistol C Burst_02.wav using Guid(eaaec473bb45349d991515330257e71a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7125ee1f43f9c13e08ee99ac0c49472') in 0.009693 seconds
+  Import took 0.012116 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000213 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/LASRGun_Particle Compressor Fire_01.wav
+  artifactKey: Guid(aeff979cceb2c4e8598eeb0500112a13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/LASRGun_Particle Compressor Fire_01.wav using Guid(aeff979cceb2c4e8598eeb0500112a13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e47d7b4e74aaac07286aa536dd92c905') in 0.009718 seconds
+  Import took 0.012376 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000180 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/UIBeep_Lock On_05.wav
+  artifactKey: Guid(792a6e132d38a4f70bbae7f091a6cab3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/UIBeep_Lock On_05.wav using Guid(792a6e132d38a4f70bbae7f091a6cab3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a62796453c35a669d84bf4b5f20427b6') in 0.010258 seconds
+  Import took 0.012682 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000249 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/SCIMisc_Reload Alien Tech_02.wav
+  artifactKey: Guid(27fd630d6199d4ef994265f301a8d53d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/SCIMisc_Reload Alien Tech_02.wav using Guid(27fd630d6199d4ef994265f301a8d53d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25023d4b6a8444740e0d60ba61681cd8') in 0.010116 seconds
+  Import took 0.012603 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000158 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNPis_Pistol Fire Longer Tail_05.wav
+  artifactKey: Guid(81764b23e5b364bcdbebf662664d45f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNPis_Pistol Fire Longer Tail_05.wav using Guid(81764b23e5b364bcdbebf662664d45f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a3f49ad69f0b6df641cebffcb3b0135') in 0.010651 seconds
+  Import took 0.013271 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000195 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/LASRGun_Alien Handgun Burst_03.wav
+  artifactKey: Guid(7eb957ad4a8624c1690dd32b27bcf2a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/LASRGun_Alien Handgun Burst_03.wav using Guid(7eb957ad4a8624c1690dd32b27bcf2a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4e24fd3410d43ffe929869b242ef605') in 0.010427 seconds
+  Import took 0.012859 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000172 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNMech_Mechanical_12.wav
+  artifactKey: Guid(80a62d8ae89f646d49b3e89cba4e5822) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNMech_Mechanical_12.wav using Guid(80a62d8ae89f646d49b3e89cba4e5822) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c193eb0151a2c8369ff014e4d9cf6b09') in 0.009431 seconds
+  Import took 0.012337 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/LASRGun_Electron Impeller Fire_07.wav
+  artifactKey: Guid(4139162f635014b5db7fdb69147ad0f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/LASRGun_Electron Impeller Fire_07.wav using Guid(4139162f635014b5db7fdb69147ad0f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3061e616de821d87143da50b2451c59') in 0.010097 seconds
+  Import took 0.012854 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000184 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNTech_Sci Fi Shotgun Fire_04.wav
+  artifactKey: Guid(a4ef8ffb6472a4f39a9a6462b071a991) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNTech_Sci Fi Shotgun Fire_04.wav using Guid(a4ef8ffb6472a4f39a9a6462b071a991) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69a6ab849c9e693e522388fbb5a14a8c') in 0.009852 seconds
+  Import took 0.012479 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000287 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNAuto_Assault Rifle A Fire_01.wav
+  artifactKey: Guid(e5f0a762c652f4065a1238d2febd38c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNAuto_Assault Rifle A Fire_01.wav using Guid(e5f0a762c652f4065a1238d2febd38c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c076db3c1667df2fb273f2386262e0b2') in 0.009860 seconds
+  Import took 0.012976 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000183 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/EXPLDsgn_Explosion Rumble Distorted_01.wav
+  artifactKey: Guid(d1f2477ca0d094c828b805f8745c21be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/EXPLDsgn_Explosion Rumble Distorted_01.wav using Guid(d1f2477ca0d094c828b805f8745c21be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae0cf9efcf525c51ed91f788ffa78b03') in 0.009195 seconds
+  Import took 0.011746 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000159 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/BLLTRico_Ricochet Metallic_04.wav
+  artifactKey: Guid(fcdfa99eea8ea494a944eda18aaef581) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/BLLTRico_Ricochet Metallic_04.wav using Guid(fcdfa99eea8ea494a944eda18aaef581) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b669a544f4ea9c69936f0f6e42221b09') in 0.009544 seconds
+  Import took 0.011884 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000223 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/LASRGun_Plasma Rifle Bullet Stream_02.wav
+  artifactKey: Guid(1af371c55ce7f481192cb3b75db41e69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/LASRGun_Plasma Rifle Bullet Stream_02.wav using Guid(1af371c55ce7f481192cb3b75db41e69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ab5645380e48181e9e8eed1e5f31237') in 0.010101 seconds
+  Import took 0.012946 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000181 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/EXPLDsgn_Explosion Impact_14.wav
+  artifactKey: Guid(dce0fc50c98b24282867ddc791aa869d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/EXPLDsgn_Explosion Impact_14.wav using Guid(dce0fc50c98b24282867ddc791aa869d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a38636ec043756dcdbbbcb6667b2151') in 0.009359 seconds
+  Import took 0.011777 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000257 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNMech_Scope Deactivate_06.wav
+  artifactKey: Guid(dd0028d2068774a9a958d1174bddee3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNMech_Scope Deactivate_06.wav using Guid(dd0028d2068774a9a958d1174bddee3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7865a337f8afb6bdbf7bad1cb50ae1bd') in 0.010110 seconds
+  Import took 0.012796 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000222 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNSupr_Silenced Pistol Fire Short_01.wav
+  artifactKey: Guid(67ff0f1f4f6f24ad5ac07ccfd34636fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNSupr_Silenced Pistol Fire Short_01.wav using Guid(67ff0f1f4f6f24ad5ac07ccfd34636fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a659ac269e68503ddfee1e8551f3e52a') in 0.009580 seconds
+  Import took 0.012077 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000140 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/MOTRSrvo_Plasma Rifle Arm_01.wav
+  artifactKey: Guid(006910ae2cc6e426c9797a60920c1243) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/MOTRSrvo_Plasma Rifle Arm_01.wav using Guid(006910ae2cc6e426c9797a60920c1243) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0d5e7a6eb16d65eec9df4797dc23ca8') in 0.009420 seconds
+  Import took 0.011546 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000159 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/CREAMnstr_Beast Vocalisation_09.wav
+  artifactKey: Guid(134bab590d7624647a39e5ccb50d9cf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/CREAMnstr_Beast Vocalisation_09.wav using Guid(134bab590d7624647a39e5ccb50d9cf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b9dd9a0d1e572aedb71ebf5cbcb2715') in 0.010736 seconds
+  Import took 0.013255 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GORESplt_Giblet Splatter_02.wav
+  artifactKey: Guid(e2ef13590109348d19c2566f7381c2f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GORESplt_Giblet Splatter_02.wav using Guid(e2ef13590109348d19c2566f7381c2f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d6d9a2b015cb93a1a7eead7ada3cad1') in 0.009463 seconds
+  Import took 0.012191 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000217 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/BLLTShel_Shell Eject_02.wav
+  artifactKey: Guid(3e8309c4fa8f04d34a29bfad612312b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/BLLTShel_Shell Eject_02.wav using Guid(3e8309c4fa8f04d34a29bfad612312b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbcaa57f483313afc29ad8cead266ba4') in 0.009105 seconds
+  Import took 0.011614 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000150 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/LIQImpt_Goo Splatter_09.wav
+  artifactKey: Guid(a245ac773194142cfa12c21de3e0980b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/LIQImpt_Goo Splatter_09.wav using Guid(a245ac773194142cfa12c21de3e0980b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a458f1c0d4fbf9f65fa37177b202a8eb') in 0.010700 seconds
+  Import took 0.013125 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNCano_Quad Cannon Fire Double_01.wav
+  artifactKey: Guid(cc2776a16222947d48ff48810945280f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNCano_Quad Cannon Fire Double_01.wav using Guid(cc2776a16222947d48ff48810945280f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abe495c315e6a1d0ae1152bc24078689') in 0.009580 seconds
+  Import took 0.012033 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000244 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/LASRBeam_Plasma Loop_01.wav
+  artifactKey: Guid(b47937426fd334cbb9bcd463e67e5744) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/LASRBeam_Plasma Loop_01.wav using Guid(b47937426fd334cbb9bcd463e67e5744) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0de7bdbf074a7a6d653efebbf23965aa') in 0.010567 seconds
+  Import took 0.012943 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000147 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNTech_Tormentor Shotgun Fire_05.wav
+  artifactKey: Guid(6063de929982848818da46b675640842) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNTech_Tormentor Shotgun Fire_05.wav using Guid(6063de929982848818da46b675640842) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '748bc9a9ebabc6b5e40547e128e536a5') in 0.009208 seconds
+  Import took 0.011615 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000195 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/UIGlitch_Error Tone_03.wav
+  artifactKey: Guid(16458abe8d5a64f7a8082f0de46d643f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/UIGlitch_Error Tone_03.wav using Guid(16458abe8d5a64f7a8082f0de46d643f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '906e0c5daeaf6b8661bf0b0e1118bce9') in 0.009550 seconds
+  Import took 0.012105 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000166 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/MECHClik_Mine Deploy_02.wav
+  artifactKey: Guid(2bd37df2fb96f4d978c1f706701ce87f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/MECHClik_Mine Deploy_02.wav using Guid(2bd37df2fb96f4d978c1f706701ce87f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bfad074b11884b0664a097be6c240d9') in 0.009433 seconds
+  Import took 0.012335 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/EXPLDsgn_Implode_15.wav
+  artifactKey: Guid(bca37a64604704def8659e7c2769936d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/EXPLDsgn_Implode_15.wav using Guid(bca37a64604704def8659e7c2769936d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a5ba73e523200df39631cd48853ba79') in 0.009531 seconds
+  Import took 0.012115 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNAuto_Plasmid Machinegun Burst_07.wav
+  artifactKey: Guid(220e070a1453c4cbbb6c8cfe18bc1a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNAuto_Plasmid Machinegun Burst_07.wav using Guid(220e070a1453c4cbbb6c8cfe18bc1a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd86cf763779b921c475e155923dd54d') in 0.009878 seconds
+  Import took 0.012355 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000146 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNMech_Arm Weapon Rattle_10.wav
+  artifactKey: Guid(270e84d37dc0c4999977a731e70cba50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/GUNMech_Arm Weapon Rattle_10.wav using Guid(270e84d37dc0c4999977a731e70cba50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a96daad8d4672ca67149d825a25ed92') in 0.010553 seconds
+  Import took 0.013012 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 135.494984 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview
+  artifactKey: Guid(c3858a26c5828445a8715486c11e3e06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview using Guid(c3858a26c5828445a8715486c11e3e06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '496267e47d2d63a7b4afb8c205daad97') in 0.007707 seconds
+  Import took 0.010797 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.968236 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO
+  artifactKey: Guid(cbbbe2b74b4ab4e3f8388abdd95dac46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO using Guid(cbbbe2b74b4ab4e3f8388abdd95dac46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '036bfca75d78a13b536d226e0db4ec1b') in 0.001767 seconds
+  Import took 0.004163 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.068442 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Bank Card Placed Down 03.wav
+  artifactKey: Guid(04a08498de4804732a12c93fd4a6380e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Bank Card Placed Down 03.wav using Guid(04a08498de4804732a12c93fd4a6380e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53e107e39eea4a0f7f4a737dfb36d9f8') in 0.008621 seconds
+  Import took 0.011079 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000249 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Receipt Handled 03.wav
+  artifactKey: Guid(a70f4e4e209224b179568f3592318309) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Receipt Handled 03.wav using Guid(a70f4e4e209224b179568f3592318309) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bdd62b902c2aaa488e4213c5a05afd7') in 0.009206 seconds
+  Import took 0.011646 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000252 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coins_Placed_Down_Hardcover_Pitched.wav
+  artifactKey: Guid(7ed1386224f144cc395ef91f69a202c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coins_Placed_Down_Hardcover_Pitched.wav using Guid(7ed1386224f144cc395ef91f69a202c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2d5128fbde5ccafdea9ea2f071d9f0b') in 0.017975 seconds
+  Import took 0.020443 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coins_Bottlecaps_Drop.wav
+  artifactKey: Guid(0bd478282216943d298e9b5dc2f94fc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coins_Bottlecaps_Drop.wav using Guid(0bd478282216943d298e9b5dc2f94fc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36072047d7d5ddb9daee1b8a32483d2e') in 0.011416 seconds
+  Import took 0.014080 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000216 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coin Hardcover Spin Loop.wav
+  artifactKey: Guid(8caee2ee6509349a89060e08c1b861a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coin Hardcover Spin Loop.wav using Guid(8caee2ee6509349a89060e08c1b861a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58e2c46113c945dd6b11feec5f4c86a2') in 0.010418 seconds
+  Import took 0.012863 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000254 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coin Slid Along Wood.wav
+  artifactKey: Guid(b21add37a269f440a809ad24ac4fa79f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coin Slid Along Wood.wav using Guid(b21add37a269f440a809ad24ac4fa79f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d0e063e8fea57a21579eb8824f90ce8') in 0.010921 seconds
+  Import took 0.013121 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000244 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Wallet Close.wav
+  artifactKey: Guid(c976abc5f77b045bc9354060d8baec2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Wallet Close.wav using Guid(c976abc5f77b045bc9354060d8baec2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e85264ff27c518c0daf7bc335ab00567') in 0.012149 seconds
+  Import took 0.014313 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000217 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coin Flung.wav
+  artifactKey: Guid(10c2cb89f89ea41c781d05ab6a18aad9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coin Flung.wav using Guid(10c2cb89f89ea41c781d05ab6a18aad9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92c9084867e3e27e22ab0c39e2438454') in 0.010104 seconds
+  Import took 0.012610 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coin Dropped on Wood Rattle.wav
+  artifactKey: Guid(44ec0024decd141b8b8de268b2689761) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coin Dropped on Wood Rattle.wav using Guid(44ec0024decd141b8b8de268b2689761) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90f47635f4cc1d33fb097d6b00288d5b') in 0.010784 seconds
+  Import took 0.013438 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000262 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coin Dropped on Ceramic Dish.wav
+  artifactKey: Guid(b4d84b4427b714f81906f5e9df31e3a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coin Dropped on Ceramic Dish.wav using Guid(b4d84b4427b714f81906f5e9df31e3a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36cc99802b217dc84826d0c3ff6a7f8a') in 0.010447 seconds
+  Import took 0.012849 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000177 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coins In Sack Dropped on Wood.wav
+  artifactKey: Guid(673c02d2180274f03b7d61e5780ad2d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coins In Sack Dropped on Wood.wav using Guid(673c02d2180274f03b7d61e5780ad2d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e24b85ed4c1ed7a1f45064bf7925a42a') in 0.010118 seconds
+  Import took 0.012907 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000180 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Notes Scrunched In Wallet.wav
+  artifactKey: Guid(fba439e1b58ba4429b4475229512e02e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Notes Scrunched In Wallet.wav using Guid(fba439e1b58ba4429b4475229512e02e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f17d2f4a037c9d5645ae9f958a35b2a') in 0.009240 seconds
+  Import took 0.011856 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000275 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coin Counter Loop 01.wav
+  artifactKey: Guid(3f2de09c214014b14a31aadb69efa78d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coin Counter Loop 01.wav using Guid(3f2de09c214014b14a31aadb69efa78d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c98bf3fa0ecd61ebe8695c64800d5a09') in 0.010490 seconds
+  Import took 0.013078 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coins in Sack Dropped on Soft Surface.wav
+  artifactKey: Guid(19a5b18b079f844bba783a9ec5f32efa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coins in Sack Dropped on Soft Surface.wav using Guid(19a5b18b079f844bba783a9ec5f32efa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee67076a1ef854a1b50f285d2470c52a') in 0.009766 seconds
+  Import took 0.012241 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003142 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coins in Sack Dropped on Soft Surface.wav
+  artifactKey: Guid(19a5b18b079f844bba783a9ec5f32efa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/The Mint – Coins and Money Preview/AUDIO/Coins in Sack Dropped on Soft Surface.wav using Guid(19a5b18b079f844bba783a9ec5f32efa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee67076a1ef854a1b50f285d2470c52a') in 0.006413 seconds
+  Import took 0.009089 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 32.043459 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview
+  artifactKey: Guid(368368a68bf104f5d8a1b9cc65e442f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview using Guid(368368a68bf104f5d8a1b9cc65e442f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d41487bfa9a042e5018413cd21f11fe') in 0.006244 seconds
+  Import took 0.009215 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.723823 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview/AUDIO
+  artifactKey: Guid(675755b0f8c3d4eee8a082b0ab2442be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview/AUDIO using Guid(675755b0f8c3d4eee8a082b0ab2442be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e684880d5a5715acc513b968f17a9e4a') in 0.002953 seconds
+  Import took 0.006013 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.092465 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview/AUDIO/CLOTHING_MATERIAL_MOVEMENT_01.wav
+  artifactKey: Guid(c0ac8cb41ea41403c8ba98147d940a75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview/AUDIO/CLOTHING_MATERIAL_MOVEMENT_01.wav using Guid(c0ac8cb41ea41403c8ba98147d940a75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b5dbcdcab629372bf8dc0eebdeb4d3b') in 0.010509 seconds
+  Import took 0.013312 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000262 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview/AUDIO/HIGH_SNAP_02.wav
+  artifactKey: Guid(7c59ead1c0a254004bc52e663fd40aa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview/AUDIO/HIGH_SNAP_02.wav using Guid(7c59ead1c0a254004bc52e663fd40aa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '503c5a996f97618e98efe17ece74f874') in 0.009542 seconds
+  Import took 0.012168 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000190 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview/AUDIO/HIT_SLAP_07.wav
+  artifactKey: Guid(0d5dab2d9e8a04cb8a1b06c583193e55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview/AUDIO/HIT_SLAP_07.wav using Guid(0d5dab2d9e8a04cb8a1b06c583193e55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1126ca9e2e0da0b420209bd1b29e54f4') in 0.009989 seconds
+  Import took 0.013026 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview/AUDIO/PUNCH_SQUELCH_HEAVY_05.wav
+  artifactKey: Guid(9e7e59915597f434d993f3baf108945d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview/AUDIO/PUNCH_SQUELCH_HEAVY_05.wav using Guid(9e7e59915597f434d993f3baf108945d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8dd425b27bc76bdd5d0d20e58c2085e') in 0.010914 seconds
+  Import took 0.013762 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview/AUDIO/PUNCH_PERCUSSIVE_HEAVY_09.wav
+  artifactKey: Guid(8d745b333dbb6440e9da37b96b264e3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview/AUDIO/PUNCH_PERCUSSIVE_HEAVY_09.wav using Guid(8d745b333dbb6440e9da37b96b264e3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da09ba9bf6808903ea54c686ed6a524c') in 0.011671 seconds
+  Import took 0.014576 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000283 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview/AUDIO/PUNCH_DESIGNED_HEAVY_23.wav
+  artifactKey: Guid(d14d9281a9cf64901b5ed891b5eb7069) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview/AUDIO/PUNCH_DESIGNED_HEAVY_23.wav using Guid(d14d9281a9cf64901b5ed891b5eb7069) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc9fe0692a046b98fdc68571c673044a') in 0.009668 seconds
+  Import took 0.012018 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000264 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview/AUDIO/PUNCH_DESIGNED_HEAVY_74.wav
+  artifactKey: Guid(d2a19d08754f24ad682d7ee54af1c8ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview/AUDIO/PUNCH_DESIGNED_HEAVY_74.wav using Guid(d2a19d08754f24ad682d7ee54af1c8ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90bdc5128fe6af03d04c4cd066f2c922') in 0.009992 seconds
+  Import took 0.012372 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000215 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview/AUDIO/PUNCH_PERCUSSIVE_HEAVY_08.wav
+  artifactKey: Guid(11c07a2f183894950b7b881a1fb66331) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview/AUDIO/PUNCH_PERCUSSIVE_HEAVY_08.wav using Guid(11c07a2f183894950b7b881a1fb66331) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfd0b0cd7d956e27a56e3e7c47027f17') in 0.011018 seconds
+  Import took 0.013373 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000233 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview/AUDIO/PUNCH_INTENSE_HEAVY_03.wav
+  artifactKey: Guid(8a8ffe43c3c0f40a5a6fa21393fd52cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview/AUDIO/PUNCH_INTENSE_HEAVY_03.wav using Guid(8a8ffe43c3c0f40a5a6fa21393fd52cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2cff0b2529184e32d14a856bd1f09e14') in 0.012967 seconds
+  Import took 0.015279 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000221 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview/AUDIO/WHOOSH_AIRY_FLUTTER_01.wav
+  artifactKey: Guid(23521bf6cf1e34f51ba1a86ec9553326) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview/AUDIO/WHOOSH_AIRY_FLUTTER_01.wav using Guid(23521bf6cf1e34f51ba1a86ec9553326) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53121c8fa03daeb3e95b262420ffd401') in 0.010725 seconds
+  Import took 0.013094 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview/AUDIO/HIT_METAL_WRENCH_HEAVIEST_02.wav
+  artifactKey: Guid(26c507c8785d841f3bca141ed44cd0a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview/AUDIO/HIT_METAL_WRENCH_HEAVIEST_02.wav using Guid(26c507c8785d841f3bca141ed44cd0a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dcd259e1f954ae744d9d903b66c7c325') in 0.012748 seconds
+  Import took 0.016012 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview/AUDIO/PUNCH_CLEAN_HEAVY_10.wav
+  artifactKey: Guid(d7da440ad4f6c4e7489efd85844988d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview/AUDIO/PUNCH_CLEAN_HEAVY_10.wav using Guid(d7da440ad4f6c4e7489efd85844988d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7f544836ff529be431f14e81092ea97') in 0.010879 seconds
+  Import took 0.014054 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000238 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview/AUDIO/WHOOSH_ARM_SWING_01.wav
+  artifactKey: Guid(303d44c8d6ec943a38df8ec10b19d9c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview/AUDIO/WHOOSH_ARM_SWING_01.wav using Guid(303d44c8d6ec943a38df8ec10b19d9c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d9a9ddb84f4c6a7eac8d5220fc6fec3') in 0.014327 seconds
+  Import took 0.016770 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview/AUDIO/PUNCH_DESIGNED_HEAVY_86.wav
+  artifactKey: Guid(c47f17948f55d41c5876af88204e7f46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview/AUDIO/PUNCH_DESIGNED_HEAVY_86.wav using Guid(c47f17948f55d41c5876af88204e7f46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a305c7dbeb87a409b0dfe50308998f3d') in 0.015654 seconds
+  Import took 0.018432 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000187 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview/AUDIO/HIT_SHORT_04.wav
+  artifactKey: Guid(673e0c563e49943e983f44f0fb941436) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview/AUDIO/HIT_SHORT_04.wav using Guid(673e0c563e49943e983f44f0fb941436) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '795f073051501f06498525a8daa10c2f') in 0.012340 seconds
+  Import took 0.015193 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview/AUDIO/PUNCH_SQUELCH_HEAVY_01.wav
+  artifactKey: Guid(6a97574b999754ab88af555cfbc0d8f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview/AUDIO/PUNCH_SQUELCH_HEAVY_01.wav using Guid(6a97574b999754ab88af555cfbc0d8f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b198b1e0a31a0685db61abf8a664fe77') in 0.018687 seconds
+  Import took 0.020945 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000160 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview/AUDIO/PUNCH_ELECTRIC_HEAVY_02.wav
+  artifactKey: Guid(e5f93a5297603479283f5159748502b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview/AUDIO/PUNCH_ELECTRIC_HEAVY_02.wav using Guid(e5f93a5297603479283f5159748502b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2898e037d9f96341b117fb3b448c199') in 0.021641 seconds
+  Import took 0.024375 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000226 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview/AUDIO/PUNCH_ELECTRIC_HEAVY_05.wav
+  artifactKey: Guid(f65b2671e8e2e47b1939dd5831760196) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Hit and Punch Preview/AUDIO/PUNCH_ELECTRIC_HEAVY_05.wav using Guid(f65b2671e8e2e47b1939dd5831760196) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '518427c208a3d20896cda58a31ef76ed') in 0.012885 seconds
+  Import took 0.015380 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 159.551393 seconds.
+  path: Assets/Scripts/EnemyScripts/Target.cs
+  artifactKey: Guid(3fc5b1bcd9e27be48815b9d98181b6cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EnemyScripts/Target.cs using Guid(3fc5b1bcd9e27be48815b9d98181b6cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdd0bbebce8619c2a35f279e9126518d') in 0.012303 seconds
+  Import took 0.015518 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.185472 seconds.
+  path: Assets/Scripts/EnemyScripts/Target.cs
+  artifactKey: Guid(3fc5b1bcd9e27be48815b9d98181b6cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EnemyScripts/Target.cs using Guid(3fc5b1bcd9e27be48815b9d98181b6cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdb683d89672814d5e847b341ebbcaa0') in 0.001984 seconds
+  Import took 0.006180 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 34.959354 seconds.
+  path: Assets/Scripts/EnemyScripts/Target.cs
+  artifactKey: Guid(3fc5b1bcd9e27be48815b9d98181b6cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EnemyScripts/Target.cs using Guid(3fc5b1bcd9e27be48815b9d98181b6cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a70c83c6bf006115196139b1e843266') in 0.002444 seconds
+  Import took 0.005670 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 40.702266 seconds.
+  path: Assets/Scripts/EnemyScripts/Target.cs
+  artifactKey: Guid(3fc5b1bcd9e27be48815b9d98181b6cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EnemyScripts/Target.cs using Guid(3fc5b1bcd9e27be48815b9d98181b6cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '995b0e60dafac025b2070e4970698077') in 0.002389 seconds
+  Import took 0.005588 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.954643 seconds.
+  path: Assets/Scripts/EnemyScripts/Target.cs
+  artifactKey: Guid(3fc5b1bcd9e27be48815b9d98181b6cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EnemyScripts/Target.cs using Guid(3fc5b1bcd9e27be48815b9d98181b6cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9ba928fcbf19db857efdff3ddc7de20') in 0.002890 seconds
+  Import took 0.005659 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 25.804777 seconds.
+  path: Assets/Scripts/EnemyScripts/Target.cs
+  artifactKey: Guid(3fc5b1bcd9e27be48815b9d98181b6cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EnemyScripts/Target.cs using Guid(3fc5b1bcd9e27be48815b9d98181b6cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea538ae4c1bc688e7f91186c65c569a8') in 0.001902 seconds
+  Import took 0.004696 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 34.632428 seconds.
+  path: Assets/Scripts/EnemyScripts/Target.cs
+  artifactKey: Guid(3fc5b1bcd9e27be48815b9d98181b6cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EnemyScripts/Target.cs using Guid(3fc5b1bcd9e27be48815b9d98181b6cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c086469b7950ac7f331f28dc5214af7f') in 0.002401 seconds
+  Import took 0.005107 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000858 seconds.
+Registered in 0.000790 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Warning: Annotation not found!
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
@@ -145,57 +1097,775 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.715 seconds
-Platform modules already initialized, skipping
-Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1553 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 79.3 MB.
-System memory in use after: 79.3 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2058.
-Total: 2.095000 ms (FindLiveObjects: 0.187000 ms CreateObjectMapping: 0.059200 ms MarkObjects: 1.725500 ms  DeleteObjects: 0.122600 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000714 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
-
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.710 seconds
+- Completed reload, in  0.716 seconds
 Platform modules already initialized, skipping
 Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
 Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
 Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1553 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 79.3 MB.
-System memory in use after: 79.3 MB.
+System memory in use before: 82.1 MB.
+System memory in use after: 82.2 MB.
 
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2060.
-Total: 2.101900 ms (FindLiveObjects: 0.197700 ms CreateObjectMapping: 0.051000 ms MarkObjects: 1.769100 ms  DeleteObjects: 0.083200 ms)
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2067.
+Total: 1.811800 ms (FindLiveObjects: 0.147400 ms CreateObjectMapping: 0.099800 ms MarkObjects: 1.446900 ms  DeleteObjects: 0.117000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.940871 seconds.
+  path: Assets/Prefabs/AI Prefabs/Zombie.prefab
+  artifactKey: Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/AI Prefabs/Zombie.prefab using Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65effbf5efa5c552975aef4a7bcb6863') in 0.063301 seconds
+  Import took 0.066422 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.522680 seconds.
+  path: Assets/Prefabs/Hit Sounds Audio Source.prefab
+  artifactKey: Guid(b38985089c838d1498ec126f29f67124) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hit Sounds Audio Source.prefab using Guid(b38985089c838d1498ec126f29f67124) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01feea0b4c99635cf32e94b6cd2da8c2') in 0.007442 seconds
+  Import took 0.010060 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012692 seconds.
+  path: Assets/Prefabs/Hit Sounds Audio Source.prefab
+  artifactKey: Guid(b38985089c838d1498ec126f29f67124) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hit Sounds Audio Source.prefab using Guid(b38985089c838d1498ec126f29f67124) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01feea0b4c99635cf32e94b6cd2da8c2') in 0.003668 seconds
+  Import took 0.006874 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.940377 seconds.
+  path: Assets/Prefabs/AI Prefabs/Zombie.prefab
+  artifactKey: Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/AI Prefabs/Zombie.prefab using Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3598d3b82f84b6af1a5d0b3a58e454a6') in 0.011866 seconds
+  Import took 0.016847 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 63.220357 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/Dystopia Full Library.pdf
+  artifactKey: Guid(3325428b5ef6740ea8085dc4ec576906) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/Dystopia Full Library.pdf using Guid(3325428b5ef6740ea8085dc4ec576906) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '813859c77555536edfb65aed64d531ef') in 0.011382 seconds
+  Import took 0.014582 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000812 seconds.
+  path: Assets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/Dystopia Full Library.pdf
+  artifactKey: Guid(3325428b5ef6740ea8085dc4ec576906) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shapeforms Audio Free Sound Effects/Dystopia – Ambience and Drone Preview/Dystopia Full Library.pdf using Guid(3325428b5ef6740ea8085dc4ec576906) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '813859c77555536edfb65aed64d531ef') in 0.002360 seconds
+  Import took 0.004654 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 68.471827 seconds.
+  path: Assets/Prefabs/AI Prefabs/Zombie.prefab
+  artifactKey: Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/AI Prefabs/Zombie.prefab using Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4091d4c433e214abc95d924895baa805') in 0.013683 seconds
+  Import took 0.017905 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.014847 seconds.
+  path: Assets/Prefabs/AI Prefabs/Zombie.prefab
+  artifactKey: Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/AI Prefabs/Zombie.prefab using Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4091d4c433e214abc95d924895baa805') in 0.010181 seconds
+  Import took 0.014387 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000778 seconds.
+Registered in 0.000740 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.719 seconds
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1553 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 82.2 MB.
+System memory in use after: 82.3 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2072.
+Total: 2.156500 ms (FindLiveObjects: 0.195800 ms CreateObjectMapping: 0.037500 ms MarkObjects: 1.807500 ms  DeleteObjects: 0.115100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001210 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.869 seconds
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1553 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 82.3 MB.
+System memory in use after: 82.3 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2074.
+Total: 2.241900 ms (FindLiveObjects: 0.191600 ms CreateObjectMapping: 0.061100 ms MarkObjects: 1.913100 ms  DeleteObjects: 0.075000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000746 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.697 seconds
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1553 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 82.3 MB.
+System memory in use after: 82.4 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2076.
+Total: 1.812800 ms (FindLiveObjects: 0.142300 ms CreateObjectMapping: 0.046500 ms MarkObjects: 1.538100 ms  DeleteObjects: 0.085100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000864 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.692 seconds
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1553 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 82.3 MB.
+System memory in use after: 82.4 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2078.
+Total: 1.871100 ms (FindLiveObjects: 0.167800 ms CreateObjectMapping: 0.036900 ms MarkObjects: 1.537400 ms  DeleteObjects: 0.128100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 267.036796 seconds.
+  path: Assets/Scripts/EnemyScripts/EnemyAudio.cs
+  artifactKey: Guid(3d500dcac3f1c4244b97d185397f6fe8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EnemyScripts/EnemyAudio.cs using Guid(3d500dcac3f1c4244b97d185397f6fe8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '795ad3f8a94e749f1c1b1d770e0600dd') in 0.008559 seconds
+  Import took 0.011618 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000872 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.728 seconds
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1554 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 82.4 MB.
+System memory in use after: 82.4 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2081.
+Total: 2.402100 ms (FindLiveObjects: 0.257600 ms CreateObjectMapping: 0.056500 ms MarkObjects: 1.976600 ms  DeleteObjects: 0.110500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000812 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.701 seconds
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1554 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 82.4 MB.
+System memory in use after: 82.4 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2083.
+Total: 1.977400 ms (FindLiveObjects: 0.197300 ms CreateObjectMapping: 0.045000 ms MarkObjects: 1.621500 ms  DeleteObjects: 0.112700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000838 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.719 seconds
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1554 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 82.4 MB.
+System memory in use after: 82.4 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2085.
+Total: 2.351100 ms (FindLiveObjects: 0.203600 ms CreateObjectMapping: 0.083800 ms MarkObjects: 1.981500 ms  DeleteObjects: 0.081500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000746 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.58 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.683 seconds
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1554 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 82.4 MB.
+System memory in use after: 82.4 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2087.
+Total: 2.251700 ms (FindLiveObjects: 0.166400 ms CreateObjectMapping: 0.054300 ms MarkObjects: 1.946200 ms  DeleteObjects: 0.083800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000734 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.701 seconds
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1554 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 82.4 MB.
+System memory in use after: 82.4 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2089.
+Total: 2.203200 ms (FindLiveObjects: 0.235900 ms CreateObjectMapping: 0.081200 ms MarkObjects: 1.813300 ms  DeleteObjects: 0.072000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 279.031192 seconds.
+  path: Assets/Scripts/EnemyScripts/EnemyAttacks.cs
+  artifactKey: Guid(831c70ea137ee0d4ebd6cea6d5b645ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EnemyScripts/EnemyAttacks.cs using Guid(831c70ea137ee0d4ebd6cea6d5b645ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '033b2e16169f4ee8e052d4b62c928b66') in 0.007796 seconds
+  Import took 0.010799 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000802 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.705 seconds
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1554 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 82.4 MB.
+System memory in use after: 82.4 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2091.
+Total: 2.200600 ms (FindLiveObjects: 0.190100 ms CreateObjectMapping: 0.057400 ms MarkObjects: 1.847200 ms  DeleteObjects: 0.105000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 487.009846 seconds.
+  path: Assets/Scripts/EnemyScripts/EnemyAttacks.cs
+  artifactKey: Guid(831c70ea137ee0d4ebd6cea6d5b645ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EnemyScripts/EnemyAttacks.cs using Guid(831c70ea137ee0d4ebd6cea6d5b645ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3aa28a7a616cd963926086b0c2efed47') in 0.004659 seconds
+  Import took 0.008236 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 29.293608 seconds.
+  path: Assets/Prefabs/AI Prefabs/Zombie.prefab
+  artifactKey: Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/AI Prefabs/Zombie.prefab using Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66fae48244cd5efa977d56828149aafd') in 0.039864 seconds
+  Import took 0.042718 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.418990 seconds.
+  path: Assets/Prefabs/AI Prefabs/Zombie.prefab
+  artifactKey: Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/AI Prefabs/Zombie.prefab using Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7abd5c8c560e34fffab098ab797aa43c') in 0.012349 seconds
+  Import took 0.016131 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.015734 seconds.
+  path: Assets/Prefabs/AI Prefabs/Zombie.prefab
+  artifactKey: Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/AI Prefabs/Zombie.prefab using Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7abd5c8c560e34fffab098ab797aa43c') in 0.018962 seconds
+  Import took 0.021800 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000806 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.705 seconds
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1554 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 82.4 MB.
+System memory in use after: 82.4 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2094.
+Total: 1.755200 ms (FindLiveObjects: 0.144400 ms CreateObjectMapping: 0.048800 ms MarkObjects: 1.496700 ms  DeleteObjects: 0.064600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000812 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.723 seconds
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1554 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 82.4 MB.
+System memory in use after: 82.5 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2096.
+Total: 2.820900 ms (FindLiveObjects: 0.308800 ms CreateObjectMapping: 0.054600 ms MarkObjects: 2.351800 ms  DeleteObjects: 0.104400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000709 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.63 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.693 seconds
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1554 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 82.4 MB.
+System memory in use after: 82.5 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2098.
+Total: 1.855200 ms (FindLiveObjects: 0.235000 ms CreateObjectMapping: 0.040700 ms MarkObjects: 1.464600 ms  DeleteObjects: 0.114400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 3608.365326 seconds.
+  path: Assets/Prefabs/AI Prefabs/Zombie.prefab
+  artifactKey: Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/AI Prefabs/Zombie.prefab using Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '387a5dba6d6f6081dfce1fcff747d4f8') in 0.046131 seconds
+  Import took 0.048694 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000767 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.725 seconds
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1554 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 82.4 MB.
+System memory in use after: 82.5 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2101.
+Total: 1.850600 ms (FindLiveObjects: 0.136400 ms CreateObjectMapping: 0.044200 ms MarkObjects: 1.605000 ms  DeleteObjects: 0.064300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 293.446242 seconds.
+  path: Assets/Prefabs/AI Prefabs/Zombie.prefab
+  artifactKey: Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/AI Prefabs/Zombie.prefab using Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82355841576e6d2336c895b2d1d3f9bc') in 0.056166 seconds
+  Import took 0.059893 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.138361 seconds.
+  path: Assets/Prefabs/AI Prefabs/Zombie.prefab
+  artifactKey: Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/AI Prefabs/Zombie.prefab using Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afa64ab745745a05f26b26d1b274fddd') in 0.010056 seconds
+  Import took 0.012668 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.016685 seconds.
+  path: Assets/Prefabs/AI Prefabs/Zombie.prefab
+  artifactKey: Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/AI Prefabs/Zombie.prefab using Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afa64ab745745a05f26b26d1b274fddd') in 0.010347 seconds
+  Import took 0.012877 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.575799 seconds.
+  path: Assets/Prefabs/AI Prefabs/Zombie.prefab
+  artifactKey: Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/AI Prefabs/Zombie.prefab using Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'defd757b05934ae0f2d2be0582ff2b8a') in 0.010559 seconds
+  Import took 0.013051 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.017519 seconds.
+  path: Assets/Prefabs/AI Prefabs/Zombie.prefab
+  artifactKey: Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/AI Prefabs/Zombie.prefab using Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'defd757b05934ae0f2d2be0582ff2b8a') in 0.011660 seconds
+  Import took 0.014389 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 47.247237 seconds.
+  path: Assets/Prefabs/AI Prefabs/Zombie.prefab
+  artifactKey: Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/AI Prefabs/Zombie.prefab using Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af64baf6773116a1d014bf1bed3079d4') in 0.010829 seconds
+  Import took 0.014444 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.020091 seconds.
+  path: Assets/Prefabs/AI Prefabs/Zombie.prefab
+  artifactKey: Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/AI Prefabs/Zombie.prefab using Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af64baf6773116a1d014bf1bed3079d4') in 0.010476 seconds
+  Import took 0.013398 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 25.611547 seconds.
+  path: Assets/Prefabs/AI Prefabs/Zombie.prefab
+  artifactKey: Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/AI Prefabs/Zombie.prefab using Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c0fd837db2bba6d7c37aec546cfd96b') in 0.009972 seconds
+  Import took 0.012634 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.381679 seconds.
+  path: Assets/Prefabs/AI Prefabs/Zombie.prefab
+  artifactKey: Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/AI Prefabs/Zombie.prefab using Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42216f5425eb39628395e9ab22e613bf') in 0.008971 seconds
+  Import took 0.011696 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 120.707243 seconds.
+  path: Assets/Prefabs/AI Prefabs/Zombie.prefab
+  artifactKey: Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/AI Prefabs/Zombie.prefab using Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70bca3bb972860468302885a09702f36') in 0.009556 seconds
+  Import took 0.012467 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000828 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.718 seconds
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1554 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 82.4 MB.
+System memory in use after: 82.5 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2104.
+Total: 2.029500 ms (FindLiveObjects: 0.229400 ms CreateObjectMapping: 0.038200 ms MarkObjects: 1.635900 ms  DeleteObjects: 0.125500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.318129 seconds.
+  path: Assets/Prefabs/AI Prefabs/Zombie.prefab
+  artifactKey: Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/AI Prefabs/Zombie.prefab using Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03c600a1c908edbd7243908ee4d145bc') in 0.044055 seconds
+  Import took 0.046729 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000880 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.796 seconds
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1554 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 82.4 MB.
+System memory in use after: 82.5 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2107.
+Total: 1.836400 ms (FindLiveObjects: 0.132400 ms CreateObjectMapping: 0.041600 ms MarkObjects: 1.595300 ms  DeleteObjects: 0.066500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000834 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.40 ms, found 0 plugins.
@@ -213,170 +1883,26 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.828 seconds
+- Completed reload, in  0.747 seconds
 Platform modules already initialized, skipping
 Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
 Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1553 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 79.3 MB.
-System memory in use after: 79.3 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2062.
-Total: 2.770700 ms (FindLiveObjects: 0.237800 ms CreateObjectMapping: 0.111800 ms MarkObjects: 2.272300 ms  DeleteObjects: 0.147600 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000696 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
-
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.699 seconds
-Platform modules already initialized, skipping
-Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1553 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 79.3 MB.
-System memory in use after: 79.4 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2064.
-Total: 2.246100 ms (FindLiveObjects: 0.296000 ms CreateObjectMapping: 0.071600 ms MarkObjects: 1.809400 ms  DeleteObjects: 0.068400 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000781 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
-
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.729 seconds
-Platform modules already initialized, skipping
-Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1553 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 79.3 MB.
-System memory in use after: 79.4 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2066.
-Total: 2.157700 ms (FindLiveObjects: 0.284500 ms CreateObjectMapping: 0.082000 ms MarkObjects: 1.724700 ms  DeleteObjects: 0.065900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000793 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
-
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.680 seconds
-Platform modules already initialized, skipping
-Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1553 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 79.3 MB.
-System memory in use after: 79.4 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2068.
-Total: 2.234800 ms (FindLiveObjects: 0.292000 ms CreateObjectMapping: 0.049800 ms MarkObjects: 1.782300 ms  DeleteObjects: 0.109700 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000778 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+Unloading 1554 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 82.4 MB.
+System memory in use after: 82.5 MB.
 
-[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
-
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.764 seconds
-Platform modules already initialized, skipping
-Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1553 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 79.3 MB.
-System memory in use after: 79.4 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2070.
-Total: 2.346100 ms (FindLiveObjects: 0.205700 ms CreateObjectMapping: 0.052200 ms MarkObjects: 1.948600 ms  DeleteObjects: 0.138700 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 1011.638211 seconds.
-  path: Assets/Prefabs/AI Prefabs/Zombie.prefab
-  artifactKey: Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AI Prefabs/Zombie.prefab using Guid(5c049299be54759439178f3a3059c1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46bb76bed7c862d1053c65ee539c75cd') in 0.078031 seconds
-  Import took 0.081959 seconds .
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2109.
+Total: 1.937000 ms (FindLiveObjects: 0.189300 ms CreateObjectMapping: 0.049100 ms MarkObjects: 1.609800 ms  DeleteObjects: 0.087600 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000997 seconds.
+Registered in 0.000687 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Warning: Annotation not found!
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
@@ -391,17 +1917,152 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.695 seconds
+- Completed reload, in  0.681 seconds
 Platform modules already initialized, skipping
 Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
 Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1553 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.2 MB.
-System memory in use after: 82.2 MB.
+Unloading 1554 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 82.4 MB.
+System memory in use after: 82.5 MB.
 
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2081.
-Total: 1.836000 ms (FindLiveObjects: 0.192400 ms CreateObjectMapping: 0.052900 ms MarkObjects: 1.525300 ms  DeleteObjects: 0.064600 ms)
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2111.
+Total: 2.062200 ms (FindLiveObjects: 0.169400 ms CreateObjectMapping: 0.045900 ms MarkObjects: 1.731900 ms  DeleteObjects: 0.113600 ms)
 
-AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000859 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.688 seconds
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1554 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 82.5 MB.
+System memory in use after: 82.5 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2113.
+Total: 1.891900 ms (FindLiveObjects: 0.219200 ms CreateObjectMapping: 0.058300 ms MarkObjects: 1.535600 ms  DeleteObjects: 0.077700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000737 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.700 seconds
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1554 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 82.5 MB.
+System memory in use after: 82.5 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2115.
+Total: 2.158100 ms (FindLiveObjects: 0.181800 ms CreateObjectMapping: 0.060000 ms MarkObjects: 1.789800 ms  DeleteObjects: 0.125700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000902 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.775 seconds
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1554 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 82.5 MB.
+System memory in use after: 82.5 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2117.
+Total: 2.091400 ms (FindLiveObjects: 0.380000 ms CreateObjectMapping: 0.040700 ms MarkObjects: 1.602000 ms  DeleteObjects: 0.068100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000819 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.818 seconds
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1554 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 82.5 MB.
+System memory in use after: 82.5 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2119.
+Total: 2.698000 ms (FindLiveObjects: 0.354800 ms CreateObjectMapping: 0.083200 ms MarkObjects: 2.147200 ms  DeleteObjects: 0.110800 ms)
+
