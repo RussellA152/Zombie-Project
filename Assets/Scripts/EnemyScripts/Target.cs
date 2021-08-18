@@ -9,7 +9,7 @@ public class Target : MonoBehaviour
 
     public static float minSpeed = .8f;
     public static float maxSpeed = 1.1f;
-    public float maxPossibleSpeed;
+    [SerializeField] private float maxPossibleSpeed;
 
     public static float difficultySpeedIncrease = 0f;
 

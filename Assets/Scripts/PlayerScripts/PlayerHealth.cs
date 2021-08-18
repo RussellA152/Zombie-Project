@@ -18,6 +18,10 @@ public class PlayerHealth : MonoBehaviour
 
     public bool is_attacked;
     private bool is_dead;
+    private bool checked_for_death;
+
+    [SerializeField] private GameObject roundControllerObject;
+    private RoundController roundControllerScriptAccessor;
 
     private void Start()
     {
@@ -25,6 +29,8 @@ public class PlayerHealth : MonoBehaviour
 
         perkInventory = GetComponent<PlayerPerkInventory>();
         playerMovementAccessor = GetComponent<PlayerMovement>();
+        roundControllerScriptAccessor = roundControllerObject.GetComponent<RoundController>();
+
 
         //RegenerateHealthCoroutine = StartCoroutine(RegeneratePlayerHealth());
 
@@ -45,6 +51,13 @@ public class PlayerHealth : MonoBehaviour
         }
 
         playerDeath();
+
+        if (is_dead && !checked_for_death )
+        {
+            roundControllerScriptAccessor.StopZombieSpawning();
+            checked_for_death = true;
+            Debug.Log("unsubscribed zombie spawns");
+        }
 
     }
 

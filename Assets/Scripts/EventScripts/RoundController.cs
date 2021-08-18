@@ -93,4 +93,10 @@ public class RoundController : MonoBehaviour
         }
         
     }
+
+    public void StopZombieSpawning()
+    {
+        //unsubscribes zombie spawning function from Round event system to stop zombie spawns
+        RoundChange.roundChange.onRoundChange -= RoundNumberChange;
+    }
 }
