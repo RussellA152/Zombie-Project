@@ -9,11 +9,13 @@ public class PowerUpEvent : MonoBehaviour
 
     public bool hasDoublePoints;
     public bool hasInstantKill;
+    public bool hasInfiniteAmmo;
 
     private void Start()
     {
         hasDoublePoints = false;
         hasInstantKill = false;
+        hasInfiniteAmmo = false;
     }
     private void Update()
     {

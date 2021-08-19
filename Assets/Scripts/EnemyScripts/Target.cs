@@ -23,10 +23,11 @@ public class Target : MonoBehaviour
 
     public GameObject attackHitbox;
 
-    public GameObject instaKillPowerUp;
-    public GameObject maxAmmoPowerUp;
-    public GameObject superStrengthPowerUp;
-    public GameObject doublePointsPowerUp;
+    [SerializeField] private GameObject instaKillPowerUp;
+    [SerializeField] private GameObject maxAmmoPowerUp;
+    [SerializeField] private GameObject infiniteAmmoPowerUp;
+    [SerializeField] private GameObject doublePointsPowerUp;
+    [SerializeField] private GameObject freePointsPowerUp;
 
     private GameObject powerUpObject;
 
@@ -139,13 +140,13 @@ public class Target : MonoBehaviour
     }
     void SetPowerUpProbability()
     {
-        //There is a 10% chance for a power-up to spawn
-        int PowerUpDropChance = Random.Range(1, 6);
+        //There is a small chance for a power up to spawn when a zombie dies
+        int PowerUpDropChance = Random.Range(1, 12);
 
         if(PowerUpDropChance % 5 == 0)
         {
-            //IF a power-up spawns, it has a 1 in 4 chance to be a different power ability (I.E. Max Ammo, Insta-kill)
-            int PowerUpAbilityObjectChance = Random.Range(1, 5);
+            //IF a power-up spawns, it has a 1 in 5 chance to be a different power ability (I.E. Max Ammo, Insta-kill)
+            int PowerUpAbilityObjectChance = Random.Range(1, 6);
 
             switch (PowerUpAbilityObjectChance)
             {
@@ -159,7 +160,10 @@ public class Target : MonoBehaviour
                     powerUpObject = Instantiate(maxAmmoPowerUp, transform.position, transform.rotation);
                     break;
                 case 4:
-                    powerUpObject = Instantiate(superStrengthPowerUp, transform.position, transform.rotation);
+                    powerUpObject = Instantiate(infiniteAmmoPowerUp, transform.position, transform.rotation);
+                    break;
+                case 5:
+                    powerUpObject = Instantiate(freePointsPowerUp, transform.position, transform.rotation);
                     break;
             }
 

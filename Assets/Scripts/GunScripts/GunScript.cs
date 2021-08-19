@@ -125,7 +125,8 @@ public class GunScript : MonoBehaviour
         }
 
         //if player is completely out of ammo, they cannot reload or shoot 
-        if(ammoCapacity == 0 && current_mag_size == 0)
+        //If player has infinite ammo, then allow them to continue shooting
+        if(ammoCapacity == 0 && current_mag_size == 0 && !PowerUpEvent.current.hasInfiniteAmmo)
         {
             return;
         }
@@ -135,7 +136,8 @@ public class GunScript : MonoBehaviour
             return;
         }
         //if your magazine is empty, you must reload
-        if (current_mag_size <= 0f)
+        //if player has ifinite ammo, and their mag is empty, then don't let them reload
+        if (current_mag_size <= 0f && !PowerUpEvent.current.hasInfiniteAmmo)
         {
             StartCoroutine(Reload());
             return;
@@ -166,9 +168,12 @@ public class GunScript : MonoBehaviour
         gunAudio.PlayOneShot(shootSound, 0.6f);
 
         //each time you fire, you lose 1 bullet, also your amount of bullets fired increments by 1
-        current_mag_size--;
-        bullets_fired = original_mag_size - current_mag_size;
-
+        //ONLY if the player doesn't have infinite ammo, otherwise they won't lose ammo
+        if (!PowerUpEvent.current.hasInfiniteAmmo)
+        {
+            current_mag_size--;
+            bullets_fired = original_mag_size - current_mag_size;
+        }
         //update ammo UI each time player shoots;
         PlayerUIAccessor.UpdatePlayerAmmoUI();
 
