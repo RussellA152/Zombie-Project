@@ -7,8 +7,8 @@ public class Target : MonoBehaviour
     public float health = 50f;
     public float maxHealthAmount;
 
-    public static float minSpeed = .8f;
-    public static float maxSpeed = 1.1f;
+    public float minRandomSpeed;
+    public float maxRandomSpeed;
     [SerializeField] private float maxPossibleSpeed;
 
     public static float difficultySpeedIncrease = 0f;
@@ -36,7 +36,11 @@ public class Target : MonoBehaviour
     //[SerializeField] private AudioSource zombieAudioSource;
     [SerializeField] private AudioClip zombieDeathSound;
     private AudioSource zombieAudio { get; set; }
-
+    private void OnEnable()
+    {
+        //enemy Audio Source is a static singleton object audio source for zombie attack and death sounds
+        //zombieAudio = EnemyAudio.current.enemyAudioSourceGameObject.GetComponent<AudioSource>();
+    }
     private void Start()
     {
         callDieFunction = true;
@@ -44,13 +48,16 @@ public class Target : MonoBehaviour
         navMesh = gameObject.GetComponent<NavMeshAgent>();
         target_rigidbody = GetComponent<Rigidbody>();
         enemyAttacks_access = GetComponent<EnemyAttacks>();
-
-        //enemy Audio Source is a static singleton object audio source for zombie attack and death sounds
         zombieAudio = EnemyAudio.current.enemyAudioSourceGameObject.GetComponent<AudioSource>();
+
         //zombieAudioSource.GetComponent<AudioSource>();
 
 
         //callDieFunction = true;
+    }
+    private void Update()
+    {
+        //Debug.Log(zombieAudio);
     }
     public void TakeDamage(float amount)
     {
@@ -77,7 +84,7 @@ public class Target : MonoBehaviour
                 health += 5f;
 
             //Caps enemies' speed amount so it doesn't go to infinite
-            if(maxSpeed < maxPossibleSpeed)
+            if(maxRandomSpeed < maxPossibleSpeed)
                 difficultySpeedIncrease += .2f;
                 
             
@@ -177,8 +184,8 @@ public class Target : MonoBehaviour
         //Destroy(gameObject);
     //}
 
-    public AudioSource returnZombieAudio()
-    {
-        return zombieAudio;
-    }
+    //public AudioSource returnZombieAudio()
+    //{
+        //return zombieAudio;
+    //}
 }

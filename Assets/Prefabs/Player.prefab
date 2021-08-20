@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1298773939031160362}
   - component: {fileID: 1298773939031160363}
   - component: {fileID: 1298773939031160364}
+  - component: {fileID: 7656623549159173955}
   - component: {fileID: 1298773939031160365}
   - component: {fileID: 1298773939031160361}
   - component: {fileID: 1298773939031160360}
@@ -70,7 +71,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 64dc30340842e654f972fe12a0586da9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -92,7 +93,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &1298773939031160365
+--- !u!136 &7656623549159173955
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,6 +105,20 @@ CapsuleCollider:
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &1298773939031160365
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298773939031160366}
+  m_Material: {fileID: 13400000, guid: 027fcebc01a7c774dbfba519fc962907, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  m_Radius: 0.7
+  m_Height: 1.5
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1298773939031160361
@@ -128,7 +143,6 @@ MonoBehaviour:
   jumpPower: 8
   groundDrag: 11
   airDrag: 0.8
-  has_speed_increase_perk: 1
   groundDistance: 0.2
   groundMask:
     serializedVersion: 2
@@ -180,6 +194,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   originalPlayerHealth: 0
+  is_attacked: 0
+  roundControllerObject: {fileID: 0}
 --- !u!114 &-4896771412198998154
 MonoBehaviour:
   m_ObjectHideFlags: 0

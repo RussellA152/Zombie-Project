@@ -21,8 +21,8 @@ public class EnemyAttacks : MonoBehaviour
     {
         playerHealth = GameObject.Find("Player").GetComponent<PlayerHealth>();
 
-        zombieAudioSource = GetComponent<Target>().returnZombieAudio();
-        
+        zombieAudioSource = EnemyAudio.current.enemyAudioSourceGameObject.GetComponent<AudioSource>();
+
 
         //enemyDamage = 25f; //hard-coded for now, but should be a different value?
         //canAttack = false;
@@ -31,7 +31,7 @@ public class EnemyAttacks : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //Debug.Log(zombieAudioSource);
     }
     private void OnTriggerEnter(Collider other)
     {
