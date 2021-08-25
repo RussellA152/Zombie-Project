@@ -6,10 +6,13 @@ using UnityEngine.AI;
 public class RoundController : MonoBehaviour
 {
     public static int zombieCounter = 0;    //initally set to 0, this is variable represents how many zombies are currently alive
+
     public GameObject zombie;   //original prefab of the zombie
     public GameObject zombieDog;  //original prefab of the zombie 'dog' (smaller zombie essentially)
+
     private GameObject zombieClone; //zombieClones are the zombie that are spawned/instantiated
     private GameObject zombieDogClone;
+
     public Transform spawnLocation;
 
     public static int round;
@@ -45,7 +48,6 @@ public class RoundController : MonoBehaviour
     }
     private void Update()
     {
-        
     }
 
     private void RoundNumberChange()
@@ -60,8 +62,11 @@ public class RoundController : MonoBehaviour
         spawnIncrementor = 0;
         round += 1;
 
-
-        targetScript = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Target>();
+        //first, access the original zombie's health to increase it
+        targetScript = zombie.GetComponent<Target>();
+        targetScript.RoundDifficultyIncrease();
+        //secondly, access the original zombie dog's health to increase it (by reassigning the targetscript)
+        targetScript = zombieDog.GetComponent<Target>();
         targetScript.RoundDifficultyIncrease();
 
 
@@ -80,14 +85,14 @@ public class RoundController : MonoBehaviour
         {
             //starts in 5 seconds, and invokes every 3 seconds
             //in 5 seconds, we spawn our first zombie, then every 3 seconds after that, we spawn each other zombie
-            InvokeRepeating("ZombieDogSpawns", 5.0f, zombieDogSpawnTime);
-            Debug.Log("Spawn Dogs!");
+            InvokeRepeating("ZombieDogSpawns", 11.0f, zombieDogSpawnTime);
+           // Debug.Log("Spawn Dogs!");
         }
         //if the round is not divisible by 5 (ex. 2,3,4,9), then it will be a normal zombie round
         else
         {
-            InvokeRepeating("ZombieSpawns", 5.0f, zombieSpawnTime);
-            Debug.Log("Spawn Zombies!");
+            InvokeRepeating("ZombieSpawns", 10.0f, zombieSpawnTime);
+            //Debug.Log("Spawn Zombies!");
         }
     }
     private void ZombieSpawns()
@@ -109,6 +114,8 @@ public class RoundController : MonoBehaviour
 
             spawnIncrementor += 1;
 
+            Debug.Log("Spawned a zombie!");
+
         }
         
     }
@@ -124,12 +131,14 @@ public class RoundController : MonoBehaviour
 
             //RandomSpawnLocation's number of elements are increased through the DoorController event System, when opening doors, we add more elements to the RandomSpawnLcations list
             zombieDogClone = Instantiate(zombieDog, RandomSpawnLocations[randomSpawnLocationSpot].position, RandomSpawnLocations[randomSpawnLocationSpot].rotation);
-            var zombieDogCloneData = zombieClone.GetComponent<Target>();
+            var zombieDogCloneData = zombieDogClone.GetComponent<Target>();
 
             //we get the Speed component from the zombieClone (SEE Target.cs) and randomize its speed, we also make sure to increase that speed by the difficultySpeedIncrease incrementor
             zombieDogClone.GetComponent<NavMeshAgent>().speed = Random.Range(zombieDogCloneData.minRandomSpeed + Target.difficultySpeedIncrease, zombieDogCloneData.maxRandomSpeed + Target.difficultySpeedIncrease);
 
             spawnIncrementor += 1;
+
+            Debug.Log("Spawned a zombie DOG!");
         }
     }
 

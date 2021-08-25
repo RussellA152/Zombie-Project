@@ -81,6 +81,7 @@ public class SuperImprover : MonoBehaviour
                 //upgrade the currently held weapon
                 PlayerScore.pScore -= upgradePrice;
                 gunScriptAccessor.UpgradeGun();
+                gunScriptAccessor.ammoPrice *= 2;
                 
             }
                 

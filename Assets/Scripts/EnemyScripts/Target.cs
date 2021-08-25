@@ -147,10 +147,10 @@ public class Target : MonoBehaviour
     }
     void SetPowerUpProbability()
     {
-        //There is a small chance for a power up to spawn when a zombie dies
-        int PowerUpDropChance = Random.Range(1, 12);
+        //There is a small chance (10%) for a power up to spawn when a zombie dies
+        int PowerUpDropChance = Random.Range(1, 51);
 
-        if(PowerUpDropChance % 5 == 0)
+        if(PowerUpDropChance % 10 == 0)
         {
             //IF a power-up spawns, it has a 1 in 5 chance to be a different power ability (I.E. Max Ammo, Insta-kill)
             int PowerUpAbilityObjectChance = Random.Range(1, 6);

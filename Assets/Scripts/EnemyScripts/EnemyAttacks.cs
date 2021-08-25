@@ -1,6 +1,7 @@
 using System.Collections;
-using System;
-using System.Collections.Generic;
+//using System;
+//using System.Collections.Generic;
+using UnityEngine.AI;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -13,6 +14,7 @@ public class EnemyAttacks : MonoBehaviour
 
     [SerializeField] private AudioClip[] zombieAttackSounds;
     private AudioSource zombieAudioSource;
+    private NavMeshAgent  navmeshAgentAccessor;
 
 
 
@@ -20,6 +22,8 @@ public class EnemyAttacks : MonoBehaviour
     void Start()
     {
         playerHealth = GameObject.Find("Player").GetComponent<PlayerHealth>();
+
+        navmeshAgentAccessor = gameObject.GetComponent<NavMeshAgent>();
 
         zombieAudioSource = EnemyAudio.current.enemyAudioSourceGameObject.GetComponent<AudioSource>();
 
@@ -37,6 +41,8 @@ public class EnemyAttacks : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            //when player is about to be attacked, the zombie's navmeshagent is stopped as to prevent player from being constantly pushed by the zombie (prevents pushing through walls)
+            navmeshAgentAccessor.isStopped = true;
             if (SetPlayerAttackedCoroutine != null)
             {
                 StopCoroutine(SetPlayerAttackedCoroutine);
@@ -53,7 +59,10 @@ public class EnemyAttacks : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             CancelInvoke();
+            //when player exits hitbox (not being attacked anymore), the zombie can start moving again
+            navmeshAgentAccessor.isStopped = false;
             SetPlayerAttackedCoroutine = StartCoroutine(SetPlayerAttacked());
+            
             Debug.Log("Attack invoke cancelled");
         }
     }
