@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6101554952893080280}
   - component: {fileID: 4197012338976057596}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: Head Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62,7 +62,7 @@ GameObject:
   - component: {fileID: 6161461571742736596}
   - component: {fileID: 6161461571742736585}
   - component: {fileID: 6161461571742736584}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Zombie
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -124,6 +124,7 @@ MonoBehaviour:
   pointsForDeath: 100
   enemy: {fileID: 6161461571742736593}
   attackHitbox: {fileID: 6161461571761144968}
+  headHitBox: {fileID: 4535154337366502985}
   instaKillPowerUp: {fileID: 5709781838649901865, guid: 5d2bb03800184e0428dac6b77e2b3b37, type: 3}
   maxAmmoPowerUp: {fileID: 7604624982172217921, guid: 72d932e7338775046b7c13d7d5fbd6a7, type: 3}
   infiniteAmmoPowerUp: {fileID: 8502951311660931235, guid: ad0ef10e9dccad1478d2f8c441aa78e9, type: 3}
@@ -258,7 +259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6161461571761144969}
   - component: {fileID: 6161461571761144970}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: Attacking Hitbox (Zombie)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -304,7 +305,7 @@ GameObject:
   - component: {fileID: 6161461571989913525}
   - component: {fileID: 6161461571989913524}
   - component: {fileID: 6161461571989913523}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: Right Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -383,7 +384,7 @@ BoxCollider:
   m_GameObject: {fileID: 6161461571989913522}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -399,7 +400,7 @@ GameObject:
   - component: {fileID: 6161461572253360377}
   - component: {fileID: 6161461572253360376}
   - component: {fileID: 6161461572253360263}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: Left Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -478,7 +479,7 @@ BoxCollider:
   m_GameObject: {fileID: 6161461572253360262}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -494,7 +495,7 @@ GameObject:
   - component: {fileID: 6161461572403721781}
   - component: {fileID: 6161461572403721780}
   - component: {fileID: 6161461572403721779}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Left Arm
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -589,7 +590,7 @@ GameObject:
   - component: {fileID: 6161461573408486866}
   - component: {fileID: 6161461573408486865}
   - component: {fileID: 6161461573408486864}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Right Arm
   m_TagString: Enemy
   m_Icon: {fileID: 0}

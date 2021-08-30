@@ -43,11 +43,6 @@ public class EnemyAttacks : MonoBehaviour
         {
             //when player is about to be attacked, the zombie's navmeshagent is stopped as to prevent player from being constantly pushed by the zombie (prevents pushing through walls)
             navmeshAgentAccessor.isStopped = true;
-            if (SetPlayerAttackedCoroutine != null)
-            {
-                StopCoroutine(SetPlayerAttackedCoroutine);
-                Debug.Log("Stop Coroutine!");
-            }
                 
             InvokeRepeating("EnemyDealingDamage", .6f, 1f);
             
@@ -63,20 +58,28 @@ public class EnemyAttacks : MonoBehaviour
             navmeshAgentAccessor.isStopped = false;
             SetPlayerAttackedCoroutine = StartCoroutine(SetPlayerAttacked());
             
-            Debug.Log("Attack invoke cancelled");
+            //Debug.Log("Attack invoke cancelled");
         }
     }
     private void EnemyDealingDamage()
     {
+        playerHealth.is_attacked = true;
+        //stop player's health regeneration
+        if (SetPlayerAttackedCoroutine != null)
+        {
+            StopCoroutine(SetPlayerAttackedCoroutine);
+            Debug.Log("Stop Health Regen Coroutine!");
+        }
+        PlayerHealth.playerHealth -= enemyDamage;
         //random chance to play random sound for attack sound
         int randomAudioClip = Random.Range(0, zombieAttackSounds.Length);
 
-        PlayerHealth.playerHealth -= enemyDamage;
-        playerHealth.is_attacked = true;
-
         zombieAudioSource.PlayOneShot(zombieAttackSounds[randomAudioClip], 0.5f);
+
         
-        Debug.Log("Attack!");
+        
+
+        //Debug.Log("Attack!");
         //Debug.Log("Your Health: " + PlayerHealth.playerHealth);
     }
     private void OnDisable()
@@ -86,8 +89,9 @@ public class EnemyAttacks : MonoBehaviour
     }
     IEnumerator SetPlayerAttacked()
     {
-        Debug.Log("Attack Coroutine!");
+        Debug.Log("Wait for regeneration");
         yield return new WaitForSeconds(3f);
         playerHealth.is_attacked = false;
+        Debug.Log("Can Regen!");
     }
 }

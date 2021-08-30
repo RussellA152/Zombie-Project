@@ -5,6 +5,9 @@ using UnityEngine.AI;
 
 public class GunScript : MonoBehaviour
 {
+    //all layers are able to be hit by bullets EXCEPT the "Ragdoll" layer which is meant for corpses so the player doesn't shoot them
+    private LayerMask bullet_applicable_layermasks = ~(1 << 11);
+
     //values for damage, range, firerate, etc. of current weapon (each weapon should have different values)
     public float damage = 10f;
     public float range = 100f;
@@ -181,8 +184,8 @@ public class GunScript : MonoBehaviour
 
         RaycastHit hit;
         
-        //Raycast begins from position of main camera, and goes in the forward direction (forward from camera)
-        if(Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward,out hit, range))
+        //Raycast begins from position of main camera, and goes in the forward direction (forward from camera) (also IGNORES the "Ragdoll" layer)
+        if(Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward,out hit, range,bullet_applicable_layermasks,QueryTriggerInteraction.Ignore))
         {
             //displays what/who we shoot at
             //Debug.Log(hit.transform.name);

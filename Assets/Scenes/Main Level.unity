@@ -8067,6 +8067,7 @@ MonoBehaviour:
   pointsForDeath: 0
   enemy: {fileID: 0}
   attackHitbox: {fileID: 0}
+  headHitBox: {fileID: 0}
   instaKillPowerUp: {fileID: 0}
   maxAmmoPowerUp: {fileID: 0}
   infiniteAmmoPowerUp: {fileID: 0}
@@ -11325,6 +11326,7 @@ MonoBehaviour:
   pointsForDeath: 0
   enemy: {fileID: 0}
   attackHitbox: {fileID: 0}
+  headHitBox: {fileID: 0}
   instaKillPowerUp: {fileID: 0}
   maxAmmoPowerUp: {fileID: 0}
   infiniteAmmoPowerUp: {fileID: 0}
@@ -11468,7 +11470,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 247
+    m_Bits: 3319
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -13519,6 +13521,18 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 8590909434295012953, guid: b63a6ac70f02c5a40b968781f6d5b57b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 8590909434295012953, guid: b63a6ac70f02c5a40b968781f6d5b57b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.00667
+      objectReference: {fileID: 0}
+    - target: {fileID: 8590909434295012953, guid: b63a6ac70f02c5a40b968781f6d5b57b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.067498684
+      objectReference: {fileID: 0}
     - target: {fileID: 8795238953227450351, guid: b63a6ac70f02c5a40b968781f6d5b57b, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -15043,6 +15057,7 @@ MonoBehaviour:
   pointsForDeath: 0
   enemy: {fileID: 0}
   attackHitbox: {fileID: 0}
+  headHitBox: {fileID: 0}
   instaKillPowerUp: {fileID: 0}
   maxAmmoPowerUp: {fileID: 0}
   infiniteAmmoPowerUp: {fileID: 0}
@@ -24312,7 +24327,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1298773939031160362, guid: 9172c7877d7982d46be4f549f8385f79, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -110.799995
+      value: -112.7
       objectReference: {fileID: 0}
     - target: {fileID: 1298773939031160362, guid: 9172c7877d7982d46be4f549f8385f79, type: 3}
       propertyPath: m_LocalRotation.w

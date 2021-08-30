@@ -22,6 +22,7 @@ public class Target : MonoBehaviour
     public GameObject enemy;
 
     public GameObject attackHitbox;
+    [SerializeField] private GameObject headHitBox;
 
     [SerializeField] private GameObject instaKillPowerUp;
     [SerializeField] private GameObject maxAmmoPowerUp;
@@ -81,7 +82,7 @@ public class Target : MonoBehaviour
 
             //Caps enemies' health amount so it doesn't go to infinite
             if(health < maxHealthAmount)
-                health += 5f;
+                health += 10f;
 
             //Caps enemies' speed amount so it doesn't go to infinite
             if(maxRandomSpeed < maxPossibleSpeed)
@@ -102,8 +103,8 @@ public class Target : MonoBehaviour
             //plays a death sound
             zombieAudio.PlayOneShot(zombieDeathSound, 0.4f);
 
-            //changes enemy's layer to IgnoreRaycast so bullets will not be blocked by corpses
-            gameObject.layer = 2;
+            //changes enemy's layer to "Ragdoll" to prevent player and enemy collision with corpse
+            gameObject.layer = 11;
 
             //when enemy dies, give player score
             if (PowerUpEvent.current.hasDoublePoints)
@@ -116,21 +117,21 @@ public class Target : MonoBehaviour
             }
                 
 
-            //when enemy dies, they have a chance to drop a power-up
-            SetPowerUpProbability();
-
             //Disables enemy's attacking script to prevent attacks when dead
             enemyAttacks_access.enabled = false;
-            
-            //lowers the mass of the zombie's rigidbody so their corpse can ragdoll farther
-            //target_rigidbody.mass = 0.6f;
 
             //disable the dead zombie's attack hitbox (SO THEY DO NOT ATTACK PLAYER WHEN DEAD)
+            //disables enemies headhitbox so player cannot collide with it 
             attackHitbox.SetActive(false);
+            headHitBox.SetActive(false);
 
             //turn off zombie's navmesh, then turn off its constraints to make "ragdoll" effects
             navMesh.enabled = false;
             target_rigidbody.constraints = RigidbodyConstraints.None;
+
+
+            //when enemy dies, they have a chance to drop a power-up
+            SetPowerUpProbability();
 
             //after a few seconds, destroy zombie's body
             Destroy(gameObject, 2.5f);

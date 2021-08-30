@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+//using UnityEngine.UI;
 using TMPro;
 public class PlayerUI : MonoBehaviour
 {
@@ -47,16 +47,16 @@ public class PlayerUI : MonoBehaviour
     void Update()
     {
         //if(weaponSwitchAccessor.previousSelectedWeapon != weaponSwitchAccessor.selectedWeapon)
-            //gunScriptAccessor = weaponHolder.GetComponentInChildren<GunScript>();
+        //gunScriptAccessor = weaponHolder.GetComponentInChildren<GunScript>();
 
         //should we update this every frame?
         //UpdatePlayerAmmoUI();
-
-        if(Time.time > nextActionTime)
+        UpdatePlayerHealthUI();
+        if (Time.time > nextActionTime)
         {
             //updates player's health and score a few times per second (fast, but not every frame)
             //updates the round and zombie counter
-            UpdatePlayerHealthUI();
+            
             UpdatePlayerPointsUI();
             UpdateRoundUI();
             UpdateZombieCounterUI();
@@ -67,7 +67,7 @@ public class PlayerUI : MonoBehaviour
     }
     void UpdatePlayerHealthUI()
     {
-        healthText.text = "Health: " + PlayerHealth.playerHealth;
+        healthText.text = "Health: " + Mathf.Round(PlayerHealth.playerHealth);
         //healthElement.text = healthText + PlayerHealth.playerHealth;
         //Debug.Log("Player health UI updated");
     }

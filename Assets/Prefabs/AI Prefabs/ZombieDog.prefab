@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4333451036470947730}
   - component: {fileID: 4333451036470947732}
   - component: {fileID: 4333451036470947740}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ZombieDog
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -96,6 +96,7 @@ MonoBehaviour:
   pointsForDeath: 150
   enemy: {fileID: 4333451036470947735}
   attackHitbox: {fileID: 4333451037586183321}
+  headHitBox: {fileID: 7448720061830523930}
   instaKillPowerUp: {fileID: 5709781838649901865, guid: 5d2bb03800184e0428dac6b77e2b3b37, type: 3}
   maxAmmoPowerUp: {fileID: 7604624982172217921, guid: 72d932e7338775046b7c13d7d5fbd6a7, type: 3}
   infiniteAmmoPowerUp: {fileID: 8502951311660931235, guid: ad0ef10e9dccad1478d2f8c441aa78e9, type: 3}
@@ -214,7 +215,7 @@ GameObject:
   - component: {fileID: 4333451037086670598}
   - component: {fileID: 4333451037086670617}
   - component: {fileID: 4333451037086670616}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Right Arm
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -309,7 +310,7 @@ GameObject:
   - component: {fileID: 4333451037198936910}
   - component: {fileID: 4333451037198936897}
   - component: {fileID: 4333451037198936911}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: Right Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -404,7 +405,7 @@ GameObject:
   - component: {fileID: 4333451037360604544}
   - component: {fileID: 4333451037360604547}
   - component: {fileID: 4333451037360604546}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Left Arm
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -497,7 +498,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4333451037586183302}
   - component: {fileID: 4333451037586183303}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: Attacking Hitbox (Dog)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -543,7 +544,7 @@ GameObject:
   - component: {fileID: 4333451038212417734}
   - component: {fileID: 4333451038212417753}
   - component: {fileID: 4333451038212417735}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: Left Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -636,7 +637,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5718534282409378141}
   - component: {fileID: 4384589963436773613}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: Head Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
