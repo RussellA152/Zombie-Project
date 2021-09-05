@@ -17,8 +17,7 @@ public class RoundController : MonoBehaviour
 
     public static int round;
 
-    private int originalZombieCounter = 1; 
-    public int zombieIncrementor = 2;   //zombie Counter increases by this amount for each round
+    public int zombieIncrementor;   //zombie Counter increases by this amount for each round
     private int ZombieCountAtStartOfRound; //basically the zombie counter but without decrementation (this number doesn't undergo any subtraction like zombieCounter does)
 
     private int spawnIncrementor = 0; //incrementor for spawning zombies (INSIDE ZombieSpawns() function) (this increases each time a zombie has spawned)
@@ -44,7 +43,8 @@ public class RoundController : MonoBehaviour
         round = 0;
         RoundChange.roundChange.onRoundChange += RoundNumberChange;
         amountOfSpawnLocations = 3;
-
+        //round = 144;
+        //round = 25;
     }
     private void Update()
     {
@@ -69,24 +69,28 @@ public class RoundController : MonoBehaviour
         targetScript = zombieDog.GetComponent<Target>();
         targetScript.RoundDifficultyIncrease();
 
-
-        //round 1 wil have 3 zombies, round 2 will have 5, round 3 will have 7, etc.
-        zombieCounter = originalZombieCounter + zombieIncrementor;
+        //This should be hard-coded to make sure the zombie counter caps at 25 maximum zombies
+        if (zombieIncrementor < 22)
+        {
+            zombieIncrementor = (round * 2) + 1 ;
+        }
+        //round 1 wil have 4 zombies, round 2 will have 6, round 3 will have 8, etc.
+        zombieCounter = zombieIncrementor;
         //since zombieCounter is constantly decreasing, we need to remember how many zombies we should be spawning at the start of each round, which is why we use ZombieCountAtStartOfRound
         ZombieCountAtStartOfRound = zombieCounter;
-        if (zombieIncrementor < 23)
+        
+        //if the round is 16 or higher and is not divisible by 5, spawn zombies and dogs simutaneously
+        if (round >= 16 && round % 5 != 0 && round != 0)
         {
-            zombieIncrementor += 2;
+            InvokeRepeating("ZombieAndDogSpawns", 10.0f, zombieSpawnTime);
         }
-
-
         //we check if the round is 5,10,15,20, etc. if so, then it will be a dedicated dog round
-        if (round % 5 == 0 && round !=0)
+        else if (round % 5 == 0 && round != 0)
         {
             //starts in 5 seconds, and invokes every 3 seconds
             //in 5 seconds, we spawn our first zombie, then every 3 seconds after that, we spawn each other zombie
             InvokeRepeating("ZombieDogSpawns", 11.0f, zombieDogSpawnTime);
-           // Debug.Log("Spawn Dogs!");
+            // Debug.Log("Spawn Dogs!");
         }
         //if the round is not divisible by 5 (ex. 2,3,4,9), then it will be a normal zombie round
         else
@@ -140,6 +144,54 @@ public class RoundController : MonoBehaviour
 
             Debug.Log("Spawned a zombie DOG!");
         }
+    }
+
+    private void ZombieAndDogSpawns()
+    {
+        if(spawnIncrementor < ZombieCountAtStartOfRound)
+        {
+            var zombieTypeSpawnChance = Random.Range(0, 7);
+
+            // 4/7 chance to spawn a regular zombie 
+            if(zombieTypeSpawnChance % 2 == 0)
+            {
+                randomSpawnLocationSpot = Random.Range(0, amountOfSpawnLocations);
+
+                //RandomSpawnLocation's number of elements are increased through the DoorController event System, when opening doors, we add more elements to the RandomSpawnLcations list
+                zombieClone = Instantiate(zombie, RandomSpawnLocations[randomSpawnLocationSpot].position, RandomSpawnLocations[randomSpawnLocationSpot].rotation);
+                var zombieCloneData = zombieClone.GetComponent<Target>();
+
+                //we get the Speed component from the zombieClone (SEE Target.cs) and randomize its speed, we also make sure to increase that speed by the difficultySpeedIncrease incrementor
+                zombieClone.GetComponent<NavMeshAgent>().speed = Random.Range(zombieCloneData.minRandomSpeed + Target.difficultySpeedIncrease, zombieCloneData.maxRandomSpeed + Target.difficultySpeedIncrease);
+
+                spawnIncrementor += 1;
+                Debug.Log("Spawned a zombie! (SIMUTANEOUSLY)");
+            }
+            
+            //smaller chance to spawn a zombie dog
+            else
+            {
+                randomSpawnLocationSpot = Random.Range(0, amountOfSpawnLocations);
+
+
+                //RandomSpawnLocation's number of elements are increased through the DoorController event System, when opening doors, we add more elements to the RandomSpawnLcations list
+                zombieDogClone = Instantiate(zombieDog, RandomSpawnLocations[randomSpawnLocationSpot].position, RandomSpawnLocations[randomSpawnLocationSpot].rotation);
+                var zombieDogCloneData = zombieDogClone.GetComponent<Target>();
+
+                //we get the Speed component from the zombieClone (SEE Target.cs) and randomize its speed, we also make sure to increase that speed by the difficultySpeedIncrease incrementor
+                zombieDogClone.GetComponent<NavMeshAgent>().speed = Random.Range(zombieDogCloneData.minRandomSpeed + Target.difficultySpeedIncrease, zombieDogCloneData.maxRandomSpeed + Target.difficultySpeedIncrease);
+
+                spawnIncrementor += 1;
+
+                Debug.Log("Spawned a zombie DOG! (SIMUTANEOUSLY)");
+
+            }
+
+
+
+        }
+
+
     }
 
     public void StopZombieSpawning()
