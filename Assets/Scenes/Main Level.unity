@@ -2618,9 +2618,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedWeapon: 0
   equippedWeapon: {fileID: 0}
+  swapTime: 1
   maxWeaponInventorySize: 0
   currentWeaponInventorySize: 0
   previousSelectedWeapon: 0
+  animator: {fileID: 314030238}
 --- !u!95 &314030238
 Animator:
   serializedVersion: 3

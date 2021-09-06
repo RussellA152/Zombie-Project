@@ -98,9 +98,15 @@ public class GunScript : MonoBehaviour
         isReloading = false;
         animator.SetBool("Reloading", false);
 
+        //animator.SetBool("Swapping", false);
+
         //when player swaps weapons, update ammo UI
         PlayerUIAccessor.RetrieveAmmoInfo();
         PlayerUIAccessor.UpdatePlayerAmmoUI();
+    }
+    private void OnDisable()
+    {
+        //animator.SetBool("Swapping", true);
     }
 
     // Update is called once per frame
