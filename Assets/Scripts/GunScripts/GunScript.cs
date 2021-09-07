@@ -6,7 +6,8 @@ using UnityEngine.AI;
 public class GunScript : MonoBehaviour
 {
     //all layers are able to be hit by bullets EXCEPT the "Ragdoll" layer which is meant for corpses so the player doesn't shoot them
-    private LayerMask bullet_applicable_layermasks = ~(1 << 11);
+    //private LayerMask bullet_applicable_layermasks = ~(1 << 11);
+    [SerializeField] LayerMask bullet_applicable_layermasks;
 
     //values for damage, range, firerate, etc. of current weapon (each weapon should have different values)
     public float damage = 10f;
@@ -26,6 +27,7 @@ public class GunScript : MonoBehaviour
     public int ammoPrice;
 
     private bool isReloading = false;
+    public bool isSwapping;
     public bool ammoIsFull;
     public bool isUpgraded;
 
@@ -140,7 +142,7 @@ public class GunScript : MonoBehaviour
             return;
         }
         //you can't shoot if you're reloading
-        if (isReloading)
+        if (isReloading || isSwapping)
         {
             return;
         }

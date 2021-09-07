@@ -8,8 +8,8 @@ public class WeaponSwitching : MonoBehaviour
     public Transform equippedWeapon;
 
     //time it takes before you can swap weapons again
-    //private float swapDelay = 0.2f;
-    //private float nextTimeToSwap = 0f;
+    private float swapDelay = 0.4f;
+    private float nextTimeToSwap = 0f;
 
     [SerializeField] private float swapTime;
 
@@ -41,15 +41,15 @@ public class WeaponSwitching : MonoBehaviour
         previousSelectedWeapon = selectedWeapon;
 
         //pressing the '1' key will equip first gun, '2' for second gun, '3' for third gun
-        if ((Input.GetKeyDown(KeyCode.Alpha1) == true))
+        if ((Input.GetKeyDown(KeyCode.Alpha1) == true) && Time.time >= nextTimeToSwap)
         {
             selectedWeapon = 0;
-            //nextTimeToSwap = Time.time + swapDelay;
+            nextTimeToSwap = Time.time + swapDelay;
         }
-        if ((Input.GetKeyDown(KeyCode.Alpha2) == true) && currentWeaponInventorySize > 1)
+        if ((Input.GetKeyDown(KeyCode.Alpha2) == true) && Time.time >= nextTimeToSwap && currentWeaponInventorySize > 1)
         {
             selectedWeapon = 1;
-            //nextTimeToSwap = Time.time + swapDelay;
+            nextTimeToSwap = Time.time + swapDelay;
         }
 
         /*
@@ -62,9 +62,9 @@ public class WeaponSwitching : MonoBehaviour
 
         //scrolling up for swapping guns (goes to next weapon)  
         //we also check if we're able to swap weapons (weapon swap cooldown has settled)
-        if ((Input.GetAxis("Mouse ScrollWheel") > 0f))
+        if ((Input.GetAxis("Mouse ScrollWheel") > 0f) && Time.time >= nextTimeToSwap)
         {
-            //nextTimeToSwap = Time.time + swapDelay;
+            nextTimeToSwap = Time.time + swapDelay;
             //if we try to scroll past the amount of weapons we have, the index will reset
             if (selectedWeapon <= 0)
             {
@@ -81,9 +81,9 @@ public class WeaponSwitching : MonoBehaviour
         }
         //scrolling down for swapping guns (goes to previous weapon)
         //we also check if we're able to swap weapons (weapon swap cooldown has settled)
-        if ((Input.GetAxis("Mouse ScrollWheel") < 0f))
+        if ((Input.GetAxis("Mouse ScrollWheel") < 0f) && Time.time >= nextTimeToSwap)
         {
-            //nextTimeToSwap = Time.time + swapDelay;
+            nextTimeToSwap = Time.time + swapDelay;
             if (selectedWeapon >= transform.childCount - 1)
             {
                 selectedWeapon = 0;
@@ -129,10 +129,12 @@ public class WeaponSwitching : MonoBehaviour
     IEnumerator WeaponSwapDelay()
     {
         animator.SetBool("Swapping", true);
+        GetComponentInChildren<GunScript>().isSwapping = true;
         yield return new WaitForSeconds(swapTime -.25f);
         SelectWeapon();
         animator.SetBool("Swapping", false);
         yield return new WaitForSeconds(.25f);
+        GetComponentInChildren<GunScript>().isSwapping = false;
 
     }
 

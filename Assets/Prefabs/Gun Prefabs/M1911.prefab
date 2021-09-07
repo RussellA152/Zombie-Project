@@ -170,6 +170,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38e338c4385cb664eada9b5c5e1c5f82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bullet_applicable_layermasks:
+    serializedVersion: 2
+    m_Bits: 2035
   damage: 12
   range: 100
   impactForce: 120
@@ -181,6 +184,7 @@ MonoBehaviour:
   bullets_fired: 0
   reloadSpeed: 1.5
   ammoPrice: 0
+  isSwapping: 0
   ammoIsFull: 0
   isUpgraded: 0
   muzzleFlash: {fileID: 8785808602257248310}
