@@ -15,9 +15,12 @@ public class RefillAmmo : MonoBehaviour
     private bool wantsToBuyAmmo;
     private bool ammoIsFull;
 
+    private bool canInteract;   //this boolean value will prevent player from spamming purchasing ammo from Ammo Crate
+
     // Start is called before the first frame update
     void Start()
     {
+        canInteract = true;
         GunAccessor = GameObject.Find("WeaponHolder");
         GiveAmmoReference = GameObject.Find("Ammo Purchaser");
         //access_gun_script = GunAccessor.GetComponentInChildren<GunScript>();
@@ -73,8 +76,14 @@ public class RefillAmmo : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if(wantsToBuyAmmo)
+            if(wantsToBuyAmmo && canInteract)
+            {
                 PurchaseAmmo();
+                StartCoroutine(InteractionDelay());
+
+            }
+                
+                
         }
         
     }
@@ -93,6 +102,12 @@ public class RefillAmmo : MonoBehaviour
         
         RefillPlayerAmmo.current.AmmoRefiller();
 
+    }
+    IEnumerator InteractionDelay()
+    {
+        canInteract = false;
+        yield return new WaitForSeconds(1f);
+        canInteract = true;
     }
         
 }

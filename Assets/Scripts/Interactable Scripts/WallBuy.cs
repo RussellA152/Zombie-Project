@@ -33,9 +33,12 @@ public class WallBuy : MonoBehaviour
 
     public float gunPrice;
 
+    private bool canInteract;   //this bool determines if the player will be able to interact/use this wallbuy (so player cannot spam interactions with wall buy, I.E. purchasing ammo really fast and losing lots of money)
+
     // Start is called before the first frame update
     void Start()
     {
+        canInteract = true;
         inTrigger = false;
         wantsToBuyGun = false;
         playerHasThisGun = false;
@@ -106,11 +109,13 @@ public class WallBuy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if(weaponSwitchingAccessor.equippedWeapon.gameObject == gunClone || weaponSwitchingAccessor.equippedWeapon.gameObject == gunPrefab)
+            if(weaponSwitchingAccessor.equippedWeapon.gameObject == gunClone || weaponSwitchingAccessor.equippedWeapon.gameObject == gunPrefab )
             {
-                if ((wantsToBuyGun && playerHasThisGun))
+                if ((wantsToBuyGun && playerHasThisGun && canInteract))
                 {
                     BuyAmmoInsteadOfGun();
+                    StartCoroutine(InteractionDelay());
+
 
                 }
 
@@ -120,17 +125,19 @@ public class WallBuy : MonoBehaviour
             //if player has less the maximum carrying capacity for weapons, then they can buy a gun without replacing 
                 if (weaponSwitchingAccessor.currentWeaponInventorySize < weaponSwitchingAccessor.maxWeaponInventorySize)
             {
-                if (wantsToBuyGun && !playerHasThisGun && PlayerScore.pScore >= gunPrice)
+                if (wantsToBuyGun && !playerHasThisGun && PlayerScore.pScore >= gunPrice && canInteract)
                 {
                     AddGunOnPurchase();
+                    StartCoroutine(InteractionDelay());
                 }
             }
             //IF player has too many weapons, then we should replace their currently equipped weapon
             if (weaponSwitchingAccessor.currentWeaponInventorySize >= weaponSwitchingAccessor.maxWeaponInventorySize)
             {
-                if (wantsToBuyGun && !playerHasThisGun && PlayerScore.pScore >= gunPrice)
+                if (wantsToBuyGun && !playerHasThisGun && PlayerScore.pScore >= gunPrice && canInteract)
                 {
                     ReplaceGunOnPurchase();
+                    StartCoroutine(InteractionDelay());
                 }
             }
 
@@ -149,7 +156,7 @@ public class WallBuy : MonoBehaviour
     void AddGunOnPurchase()
     {
         //gives player the gun they purchased
-        Debug.Log("You purchased this gun!");
+        //Debug.Log("You purchased this gun!");
 
         //subtract gunPrice from player's score
         PlayerScore.pScore -= gunPrice;
@@ -176,7 +183,7 @@ public class WallBuy : MonoBehaviour
         playerHasThisGun = true;
 
         
-        Debug.Log("update weapon inventory 1");
+        //Debug.Log("update weapon inventory 1");
         GiveAmmoAccessor.AccessGunComponents();
     }
 
@@ -184,7 +191,7 @@ public class WallBuy : MonoBehaviour
     void ReplaceGunOnPurchase()
     {
         //should replace the player's current weapon in-hand
-        Debug.Log("replace current gun in-hand");
+        //Debug.Log("replace current gun in-hand");
 
 
         PlayerScore.pScore -= gunPrice;
@@ -222,7 +229,7 @@ public class WallBuy : MonoBehaviour
 
         playerHasThisGun = true;
 
-        Debug.Log("update weapon inventory 2");
+        //Debug.Log("update weapon inventory 2");
         GiveAmmoAccessor.AccessGunComponents();
     }
     void BuyAmmoInsteadOfGun()
@@ -231,5 +238,11 @@ public class WallBuy : MonoBehaviour
         Debug.Log("Buy Ammo! instead of buying gun");
         
         RefillPlayerAmmo.current.AmmoRefiller();
+    }
+    IEnumerator InteractionDelay()
+    {
+        canInteract = false;
+        yield return new WaitForSeconds(1f);
+        canInteract = true;
     }
 }

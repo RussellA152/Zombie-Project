@@ -30,7 +30,7 @@ public class GiveAmmo : MonoBehaviour
     }
     void GivePlayerFullAmmoForOneGun()
     {
-        
+        access_gun_script = GunAccessor.GetComponentInChildren<GunScript>();
         //we have to check if our ammo is full, if so, then you cannot purchase ammo
         //if your ammo is not full, then you can purchase ammo
         if (access_gun_script.ammoIsFull)
