@@ -34,6 +34,7 @@ public class WallBuy : MonoBehaviour
     public float gunPrice;
 
     private bool canInteract;   //this bool determines if the player will be able to interact/use this wallbuy (so player cannot spam interactions with wall buy, I.E. purchasing ammo really fast and losing lots of money)
+    private int purchaseDetermine;  // if this value equals 1, the player purchased a weapon without replacement, if it equals 2, the player replaced a weapon on wall buy purchase 
 
     // Start is called before the first frame update
     void Start()
@@ -51,7 +52,7 @@ public class WallBuy : MonoBehaviour
         weaponHolderTransform = weaponHolder.transform;
 
         //will use an event system to make buying ammo easier
-        ammoCrate = GameObject.Find("Ammo Trigger");
+        ammoCrate = GameObject.Find("AmmoBox Trigger");
 
         currentWeaponsList = player.GetComponent<PlayerWeaponInventory>();
         weaponSwitchingAccessor = weaponHolder.GetComponent<WeaponSwitching>();
@@ -121,13 +122,14 @@ public class WallBuy : MonoBehaviour
 
             }
             
-
             //if player has less the maximum carrying capacity for weapons, then they can buy a gun without replacing 
                 if (weaponSwitchingAccessor.currentWeaponInventorySize < weaponSwitchingAccessor.maxWeaponInventorySize)
             {
                 if (wantsToBuyGun && !playerHasThisGun && PlayerScore.pScore >= gunPrice && canInteract)
                 {
-                    AddGunOnPurchase();
+                    purchaseDetermine = 1;
+                    StartCoroutine(WeaponSwapOnPurchaseDelay());
+                   
                     StartCoroutine(InteractionDelay());
                 }
             }
@@ -136,7 +138,9 @@ public class WallBuy : MonoBehaviour
             {
                 if (wantsToBuyGun && !playerHasThisGun && PlayerScore.pScore >= gunPrice && canInteract)
                 {
-                    ReplaceGunOnPurchase();
+                    purchaseDetermine = 2;
+                    StartCoroutine(WeaponSwapOnPurchaseDelay());
+                    //ReplaceGunOnPurchase();
                     StartCoroutine(InteractionDelay());
                 }
             }
@@ -244,5 +248,27 @@ public class WallBuy : MonoBehaviour
         canInteract = false;
         yield return new WaitForSeconds(1f);
         canInteract = true;
+    }
+
+    //This coroutine plays the weapon swapping animation when purchasing a wall buy (gives impression of exchanging weapons)
+    //We play the animation, then wait a little bit, then call the weapon purchasing functions, then stop the weapon swap animation
+    IEnumerator WeaponSwapOnPurchaseDelay()
+    {
+        weaponSwitchingAccessor.animator.SetBool("Swapping", true);
+        weaponHolder.GetComponentInChildren<GunScript>().isSwapping = true;
+        yield return new WaitForSeconds(1f - .25f);
+
+        if(purchaseDetermine == 1)
+        {
+           AddGunOnPurchase();
+        }
+        else if( purchaseDetermine == 2)
+        {
+           ReplaceGunOnPurchase();
+        }
+
+        weaponSwitchingAccessor.animator.SetBool("Swapping", false);
+        yield return new WaitForSeconds(.25f);
+        weaponHolder.GetComponentInChildren<GunScript>().isSwapping = false;
     }
 }

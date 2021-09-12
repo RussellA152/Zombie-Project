@@ -16,6 +16,7 @@ public class RefillAmmo : MonoBehaviour
     private bool ammoIsFull;
 
     private bool canInteract;   //this boolean value will prevent player from spamming purchasing ammo from Ammo Crate
+    [SerializeField] private Animator animator;
 
     // Start is called before the first frame update
     void Start()
