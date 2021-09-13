@@ -90,6 +90,7 @@ public class WallBuy : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             inTrigger = true;
+            //checking if the player currently has the wall buy weapon in their weapon inventory 
             if (currentWeaponsList.currentWeaponsList.Contains(gunPrefab) || currentWeaponsList.currentWeaponsList.Contains(gunClone))
             {
                 GiveAmmoAccessor.AccessGunComponents();
@@ -101,7 +102,6 @@ public class WallBuy : MonoBehaviour
                 playerHasThisGun = false;
                 Debug.Log("You do not have this gun");
             }
-            //weaponInventoryAccessor = GetComponent<WeaponSwitching>();
         }
 
         

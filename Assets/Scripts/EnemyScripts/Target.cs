@@ -101,7 +101,7 @@ public class Target : MonoBehaviour
             callDieFunction = false;
 
             //plays a death sound
-            zombieAudio.PlayOneShot(zombieDeathSound, 0.4f);
+            zombieAudio.PlayOneShot(zombieDeathSound, 0.5f);
 
             //changes enemy's layer to "Ragdoll" to prevent player and enemy collision with corpse
             gameObject.layer = 11;

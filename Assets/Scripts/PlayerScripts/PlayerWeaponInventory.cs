@@ -14,7 +14,7 @@ public class PlayerWeaponInventory : MonoBehaviour
     void Start()
     {
         
-        UpdatePlayerWeaponInventory();
+        //UpdatePlayerWeaponInventory();
 
         currentWeaponsList = new List<GameObject>(GameObject.FindGameObjectsWithTag("Weapon"));
     }

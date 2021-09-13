@@ -62,6 +62,7 @@ GameObject:
   - component: {fileID: 6161461571742736596}
   - component: {fileID: 6161461571742736585}
   - component: {fileID: 6161461571742736584}
+  - component: {fileID: 939743707675463194}
   m_Layer: 10
   m_Name: Zombie
   m_TagString: Enemy
@@ -130,7 +131,7 @@ MonoBehaviour:
   infiniteAmmoPowerUp: {fileID: 8502951311660931235, guid: ad0ef10e9dccad1478d2f8c441aa78e9, type: 3}
   doublePointsPowerUp: {fileID: 7069350398894015161, guid: 870945a104a19e3479231c936d6e95f1, type: 3}
   freePointsPowerUp: {fileID: 7604624982172217921, guid: 9781a7c3488ad9441963694985d24c27, type: 3}
-  zombieDeathSound: {fileID: 8300000, guid: e2ef13590109348d19c2566f7381c2f5, type: 3}
+  zombieDeathSound: {fileID: 8300000, guid: ce5196f2f3d0344c19fd98e1033a1f46, type: 3}
 --- !u!114 &6161461571742736586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,6 +250,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 3
+--- !u!114 &939743707675463194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6161461571742736593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 0, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &6161461571761144968
 GameObject:
   m_ObjectHideFlags: 0

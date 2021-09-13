@@ -21,6 +21,8 @@ public class WeaponSwitching : MonoBehaviour
     public int previousSelectedWeapon;
 
     public Animator animator;
+    private AudioSource gunInventoryAudioPlayer;
+    [SerializeField] AudioClip weaponswapSound;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +30,7 @@ public class WeaponSwitching : MonoBehaviour
         SelectWeapon();
         maxWeaponInventorySize = 2;
         currentWeaponInventorySize = transform.childCount;
+        gunInventoryAudioPlayer = GameObject.Find("Gun Inventory Audio").GetComponent<AudioSource>();
         //Debug.Log(currentWeaponInventorySize);
         
     }
@@ -41,15 +44,15 @@ public class WeaponSwitching : MonoBehaviour
         previousSelectedWeapon = selectedWeapon;
 
         //pressing the '1' key will equip first gun, '2' for second gun, '3' for third gun
-        if ((Input.GetKeyDown(KeyCode.Alpha1) == true) && Time.time >= nextTimeToSwap)
+        if ((Input.GetKeyDown(KeyCode.Alpha1) == true))
         {
             selectedWeapon = 0;
-            nextTimeToSwap = Time.time + swapDelay;
+            //nextTimeToSwap = Time.time + swapDelay;
         }
-        if ((Input.GetKeyDown(KeyCode.Alpha2) == true) && Time.time >= nextTimeToSwap && currentWeaponInventorySize > 1)
+        if ((Input.GetKeyDown(KeyCode.Alpha2) == true) && currentWeaponInventorySize > 1)
         {
             selectedWeapon = 1;
-            nextTimeToSwap = Time.time + swapDelay;
+            //nextTimeToSwap = Time.time + swapDelay;
         }
 
         /*
@@ -131,6 +134,8 @@ public class WeaponSwitching : MonoBehaviour
         animator.SetBool("Swapping", true);
         GetComponentInChildren<GunScript>().isSwapping = true;
         yield return new WaitForSeconds(swapTime -.25f);
+        if (!gunInventoryAudioPlayer.isPlaying)
+            gunInventoryAudioPlayer.PlayOneShot(weaponswapSound, 0.4f);
         SelectWeapon();
         animator.SetBool("Swapping", false);
         yield return new WaitForSeconds(.25f);
