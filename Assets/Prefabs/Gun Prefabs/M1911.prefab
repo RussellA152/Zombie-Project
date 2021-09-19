@@ -173,10 +173,11 @@ MonoBehaviour:
   bullet_applicable_layermasks:
     serializedVersion: 2
     m_Bits: 2035
+  isAutomatic: 0
   damage: 12
   range: 100
   impactForce: 120
-  fireRate: 3
+  fireRate: 8
   original_mag_size: 8
   current_mag_size: 0
   ammoCapacity: 56

@@ -9,6 +9,8 @@ public class GunScript : MonoBehaviour
     //private LayerMask bullet_applicable_layermasks = ~(1 << 11);
     [SerializeField] LayerMask bullet_applicable_layermasks;
 
+    [SerializeField] private bool isAutomatic;
+
     //values for damage, range, firerate, etc. of current weapon (each weapon should have different values)
     public float damage = 10f;
     public float range = 100f;
@@ -160,12 +162,17 @@ public class GunScript : MonoBehaviour
             return;
         }
         //pressing left mouse will shoot
-        if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
+        if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire && isAutomatic)
         {
             //higher firerate values allow player to shoot faster
             //essentially, we are setting nextTimeToFire equal to the sum of Time.time and 1/(firerate) 
             //if the Time.time is 5 seconds, and our nextTimeToFire is 5.25, we need to wait .25 seconds to shoot again
             nextTimeToFire = Time.time + 1f/fireRate;
+            Shoot();
+        }
+        if ( Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire && !isAutomatic)
+        {
+            nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
         }
     }

@@ -336,6 +336,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: Swapping
     m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: Walking
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7000175520458841867}
   m_Solo: 0
