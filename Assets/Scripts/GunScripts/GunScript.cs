@@ -17,6 +17,8 @@ public class GunScript : MonoBehaviour
     public float impactForce = 100f;
     public float fireRate = 0.5f;
 
+    [SerializeField] private float upgradeDamageMultiplier;
+
 
     public int original_mag_size;
     public int current_mag_size;
@@ -275,7 +277,7 @@ public class GunScript : MonoBehaviour
 
     public void UpgradeGun()
     {
-        damage *= 2;
+        damage *= upgradeDamageMultiplier;
         original_mag_size *= 2;
         original_ammoCapacity *= 2;
 
