@@ -8,6 +8,10 @@ public class RoundController : MonoBehaviour
     public static int zombieCounter = 0;    //initally set to 0, this is variable represents how many zombies are currently alive
 
     public GameObject zombie;   //original prefab of the zombie
+
+    [SerializeField] private List<GameObject> ZombiePrefabs;   //list of zombie gameobject prefabs
+    private int length_of_zombie_prefabs;   //the length of the list of zombie prefabs
+
     public GameObject zombieDog;  //original prefab of the zombie 'dog' (smaller zombie essentially)
 
     private GameObject zombieClone; //zombieClones are the zombie that are spawned/instantiated
@@ -43,6 +47,7 @@ public class RoundController : MonoBehaviour
         round = 0;
         RoundChange.roundChange.onRoundChange += RoundNumberChange;
         amountOfSpawnLocations = 3;
+        length_of_zombie_prefabs = ZombiePrefabs.Count;
         //round = 144;
         //round = 25;
     }
@@ -106,8 +111,10 @@ public class RoundController : MonoBehaviour
         if(spawnIncrementor < ZombieCountAtStartOfRound)
         {
             randomSpawnLocationSpot = Random.Range(0, amountOfSpawnLocations);
-            //Debug.Log("random spawn: " + randomSpawnLocationSpot);
-            //Debug.Log(randomSpawnLocationSpot);
+
+            //randomly chooses which zombie prefab to spawn in 
+            int randomZombiePrefabNumber = Random.Range(0, length_of_zombie_prefabs - 1);
+            zombie = ZombiePrefabs[randomZombiePrefabNumber];
 
             //RandomSpawnLocation's number of elements are increased through the DoorController event System, when opening doors, we add more elements to the RandomSpawnLcations list
             zombieClone = Instantiate(zombie, RandomSpawnLocations[randomSpawnLocationSpot].position, RandomSpawnLocations[randomSpawnLocationSpot].rotation);

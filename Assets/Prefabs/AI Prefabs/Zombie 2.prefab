@@ -64,7 +64,7 @@ GameObject:
   - component: {fileID: 6161461571742736584}
   - component: {fileID: 939743707675463194}
   m_Layer: 10
-  m_Name: Zombie
+  m_Name: Zombie 2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -703,7 +703,7 @@ PrefabInstance:
     - target: {fileID: 715696104421454375, guid: 32dd0396e86eb6a49884ed33a7550a94, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: bb3b375fab98e8e468f932943286d2d4, type: 2}
+      objectReference: {fileID: 2100000, guid: 139a65e682912bf40a90d9dd51b8c651, type: 2}
     - target: {fileID: 721895284676437837, guid: 32dd0396e86eb6a49884ed33a7550a94, type: 3}
       propertyPath: m_Mesh
       value: 
