@@ -803,8 +803,9 @@ GameObject:
   m_Component:
   - component: {fileID: 518573228}
   - component: {fileID: 518573227}
+  - component: {fileID: 518573229}
   m_Layer: 0
-  m_Name: Area Light
+  m_Name: Ceiling Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -886,6 +887,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &518573229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518573226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6251deb2ff864a74bb4cdf685f84ebb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFlickering: 1
+  timeDelay: 0
 --- !u!4 &563751854 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4561544271246036, guid: 9b1b38ad56a221f4bb6ad963a1996883, type: 3}
@@ -1969,7 +1984,7 @@ GameObject:
   - component: {fileID: 1108734106}
   - component: {fileID: 1108734105}
   m_Layer: 0
-  m_Name: Area Light (1)
+  m_Name: Lamp Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2119,6 +2134,7 @@ GameObject:
   - component: {fileID: 1142437272}
   - component: {fileID: 1142437271}
   - component: {fileID: 1142437270}
+  - component: {fileID: 1142437273}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2185,12 +2201,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1142437269}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -50, y: -0.25, z: -50.646}
+  m_LocalPosition: {x: -50, y: -0.25, z: -53}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1142437273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142437269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43c6b1c846a9fa446a50762772044c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyMenuCamera: {fileID: 1142437269}
+  finalPositionZ: -49
 --- !u!4 &1184324585 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4481777221271996, guid: 9207d796a4eef5c4fb42153a24ebf588, type: 3}

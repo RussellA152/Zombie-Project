@@ -16,12 +16,12 @@ public class FlashLight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.H) && !lightActive)
+        if (Input.GetKeyDown(KeyCode.T) && !lightActive)
         {
             lightActive = true;
             Light.SetActive(lightActive);
         }
-        else if(Input.GetKeyDown(KeyCode.H) && lightActive)
+        else if(Input.GetKeyDown(KeyCode.T) && lightActive)
         {
             lightActive = false;
             Light.SetActive(lightActive);

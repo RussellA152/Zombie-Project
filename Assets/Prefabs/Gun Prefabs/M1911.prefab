@@ -173,6 +173,11 @@ MonoBehaviour:
   bullet_applicable_layermasks:
     serializedVersion: 2
     m_Bits: 2035
+  recoilRotateX: 9
+  recoilPositionZ: 0.5
+  verticalRecoil: -3
+  horizontalRecoil: 0
+  mainCamera: {fileID: 0}
   isAutomatic: 0
   damage: 12
   range: 100

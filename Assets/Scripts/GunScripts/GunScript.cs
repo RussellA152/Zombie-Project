@@ -9,6 +9,10 @@ public class GunScript : MonoBehaviour
     //private LayerMask bullet_applicable_layermasks = ~(1 << 11);
     [SerializeField] LayerMask bullet_applicable_layermasks;
 
+    //these recoil variables only affect the view model weapons
+    [SerializeField] private float recoilRotateX;
+    [SerializeField] private float recoilPositionZ;
+
     [SerializeField] private bool isAutomatic;
 
     //values for damage, range, firerate, etc. of current weapon (each weapon should have different values)
@@ -186,6 +190,9 @@ public class GunScript : MonoBehaviour
 
         //plays shoot AudioClip
         gunAudio.PlayOneShot(shootSound, 0.6f);
+
+        LeanTween.rotateX(this.gameObject, recoilRotateX, .05f);
+        LeanTween.moveLocalZ(this.gameObject, recoilPositionZ, .05f);
 
         //each time you fire, you lose 1 bullet, also your amount of bullets fired increments by 1
         //ONLY if the player doesn't have infinite ammo, otherwise they won't lose ammo

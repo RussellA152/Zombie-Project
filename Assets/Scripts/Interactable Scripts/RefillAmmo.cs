@@ -8,6 +8,7 @@ public class RefillAmmo : MonoBehaviour
     private GiveAmmo GiveAmmoAccessor;
 
     public GameObject GunAccessor;
+    [SerializeField] private GameObject ammoCrateLid;
     GunScript access_gun_script;
     WeaponSwitching access_weaponswitch_script;
 
@@ -103,11 +104,15 @@ public class RefillAmmo : MonoBehaviour
         
         RefillPlayerAmmo.current.AmmoRefiller();
 
+        //opens the top of the ammo crate (animation)
+        LeanTween.rotateZ(ammoCrateLid, -125, .6f);
+
     }
     IEnumerator InteractionDelay()
     {
         canInteract = false;
         yield return new WaitForSeconds(1f);
+        LeanTween.rotateZ(ammoCrateLid, -180, .5f);
         canInteract = true;
     }
         
