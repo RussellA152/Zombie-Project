@@ -13,6 +13,8 @@ public class GunScript : MonoBehaviour
     [SerializeField] private float recoilRotateX;
     [SerializeField] private float recoilPositionZ;
 
+    private GameObject weaponHolder;
+
     [SerializeField] private bool isAutomatic;
 
     //values for damage, range, firerate, etc. of current weapon (each weapon should have different values)
@@ -79,6 +81,7 @@ public class GunScript : MonoBehaviour
         //setting the "animator" to the Animator component of WeaponHolder (THIS WON'T WORK IF WE HAVE MULITPLE SCENES)
         GameObject player = GameObject.Find("Player");
         GameObject WeaponHolder = GameObject.Find("WeaponHolder");
+        weaponHolder = WeaponHolder;
         GameObject PlayerHud = GameObject.Find("Player's HUD");
         animator = WeaponHolder.GetComponent<Animator>();
         PlayerUIAccessor = PlayerHud.GetComponent<PlayerUI>();
@@ -191,7 +194,7 @@ public class GunScript : MonoBehaviour
         //plays shoot AudioClip
         gunAudio.PlayOneShot(shootSound, 0.6f);
 
-        LeanTween.rotateX(this.gameObject, recoilRotateX, .05f);
+        LeanTween.rotateLocal(this.gameObject, new Vector3(recoilRotateX,180,0), .05f);
         LeanTween.moveLocalZ(this.gameObject, recoilPositionZ, .05f);
 
         //each time you fire, you lose 1 bullet, also your amount of bullets fired increments by 1

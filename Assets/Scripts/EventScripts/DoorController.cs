@@ -20,6 +20,7 @@ public class DoorController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Application.targetFrameRate = 15;
         //subscribing to our event system (s)
         GameEvents.current.onDoorwayTriggerEnter += OnDoorwayOpen;
 

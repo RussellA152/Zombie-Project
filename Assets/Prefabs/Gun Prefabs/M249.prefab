@@ -286,7 +286,7 @@ MonoBehaviour:
   bullet_applicable_layermasks:
     serializedVersion: 2
     m_Bits: 2035
-  recoilRotateX: 0.75
+  recoilRotateX: 2
   recoilPositionZ: 0.48
   isAutomatic: 1
   damage: 14
@@ -558,7 +558,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2482625373591562149, guid: 12c9e24f914b45249870c9eefbaafb2d, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8863819101131684772, guid: 12c9e24f914b45249870c9eefbaafb2d, type: 3}
       propertyPath: m_BoundingSphereOverride.w
