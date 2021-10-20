@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.AI;
+using UnityEngine.AI;
 
 public class DoorController : MonoBehaviour
 {
@@ -15,6 +15,10 @@ public class DoorController : MonoBehaviour
     private int amountOfSpawnLocations;
 
     public GameObject roundChangerObject;
+    [SerializeField] private float rotationValueY;  //this value specifies where the door's y component will rotate to
+
+    [SerializeField] private bool door_is_rotatable;
+
 
 
     // Start is called before the first frame update
@@ -37,12 +41,18 @@ public class DoorController : MonoBehaviour
             DoorZombieSpawning();
         }
 
-        //opens door (destroys it for now)
+        //opens door
         if (id == this.id)
         {
-            
-            Destroy(gameObject);
-            
+
+            if (door_is_rotatable)
+                LeanTween.rotateLocal(this.gameObject, new Vector3(0, rotationValueY, 0), .5f);
+            else
+                Destroy(gameObject);
+            //disabls the nav mesh obstacle on the door so zombies can walk the new door path
+            GetComponent<NavMeshObstacle>().enabled = false;
+            GameEvents.current.onDoorwayTriggerEnter -= OnDoorwayOpen;
+
 
         }
         

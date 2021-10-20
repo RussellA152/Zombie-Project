@@ -8,8 +8,8 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: 9fc0d4010bbf28b4594072e72b8655ab
+  m_OcclusionCullingData: {fileID: 36300000, guid: 99feca2b2648daa469e734aefb1629a4, type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -5329,6 +5329,8 @@ MonoBehaviour:
   DoorSpecificSpawnLocations:
   - {fileID: 1004138266}
   roundChangerObject: {fileID: 1899265384}
+  rotationValueY: 0
+  door_is_rotatable: 0
 --- !u!65 &504589202
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5694,6 +5696,14 @@ PrefabInstance:
     - target: {fileID: 4047566828225609237, guid: e2b4f4be6ff6d534790a0bc9af82ccda, type: 3}
       propertyPath: id
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4047566828225609237, guid: e2b4f4be6ff6d534790a0bc9af82ccda, type: 3}
+      propertyPath: rotationValueY
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 4047566828225609237, guid: e2b4f4be6ff6d534790a0bc9af82ccda, type: 3}
+      propertyPath: door_is_rotatable
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4047566828225609237, guid: e2b4f4be6ff6d534790a0bc9af82ccda, type: 3}
       propertyPath: roundChangerObject
@@ -7281,6 +7291,8 @@ MonoBehaviour:
   DoorSpecificSpawnLocations:
   - {fileID: 1304193970}
   roundChangerObject: {fileID: 1899265384}
+  rotationValueY: 0
+  door_is_rotatable: 0
 --- !u!65 &642302984
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9088,6 +9100,8 @@ MonoBehaviour:
   - {fileID: 1661884434}
   - {fileID: 374926670}
   roundChangerObject: {fileID: 1899265384}
+  rotationValueY: 0
+  door_is_rotatable: 0
 --- !u!208 &730747309
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -11348,6 +11362,14 @@ PrefabInstance:
       value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4047566828225609237, guid: e2b4f4be6ff6d534790a0bc9af82ccda, type: 3}
+      propertyPath: rotationValueY
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 4047566828225609237, guid: e2b4f4be6ff6d534790a0bc9af82ccda, type: 3}
+      propertyPath: door_is_rotatable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4047566828225609237, guid: e2b4f4be6ff6d534790a0bc9af82ccda, type: 3}
       propertyPath: roundChangerObject
       value: 
       objectReference: {fileID: 1899265384}
@@ -12822,7 +12844,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -17668,7 +17690,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1428642097
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18729,6 +18751,11 @@ Transform:
   m_Father: {fileID: 633208345}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &1481243512 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4048351714809572641, guid: e2b4f4be6ff6d534790a0bc9af82ccda, type: 3}
+  m_PrefabInstance: {fileID: 4047566828367850546}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1484174915 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4083613769861144, guid: 21b6cde9dbed3ae40a6a352e6c11be55, type: 3}
@@ -21895,6 +21922,8 @@ MonoBehaviour:
   DoorSpecificSpawnLocations:
   - {fileID: 524987523}
   roundChangerObject: {fileID: 1899265384}
+  rotationValueY: 0
+  door_is_rotatable: 0
 --- !u!65 &1696404585
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23802,6 +23831,8 @@ MonoBehaviour:
   - {fileID: 1492919309}
   - {fileID: 130651754}
   roundChangerObject: {fileID: 1899265384}
+  rotationValueY: 0
+  door_is_rotatable: 1
 --- !u!208 &1848957081
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -24578,6 +24609,8 @@ MonoBehaviour:
   DoorSpecificSpawnLocations:
   - {fileID: 1195634820}
   roundChangerObject: {fileID: 1899265384}
+  rotationValueY: 0
+  door_is_rotatable: 0
 --- !u!65 &1925345134
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25687,6 +25720,8 @@ MonoBehaviour:
   DoorSpecificSpawnLocations:
   - {fileID: 1304193970}
   roundChangerObject: {fileID: 1899265384}
+  rotationValueY: 0
+  door_is_rotatable: 0
 --- !u!65 &2015429056
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26998,10 +27033,6 @@ PrefabInstance:
       propertyPath: roundControllerObject
       value: 
       objectReference: {fileID: 1899265384}
-    - target: {fileID: 1298773939031160361, guid: 9172c7877d7982d46be4f549f8385f79, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1298773939031160362, guid: 9172c7877d7982d46be4f549f8385f79, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -27144,6 +27175,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4047566828225609237, guid: e2b4f4be6ff6d534790a0bc9af82ccda, type: 3}
+      propertyPath: this_door
+      value: 
+      objectReference: {fileID: 1481243512}
+    - target: {fileID: 4047566828225609237, guid: e2b4f4be6ff6d534790a0bc9af82ccda, type: 3}
+      propertyPath: rotationValueY
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4047566828225609237, guid: e2b4f4be6ff6d534790a0bc9af82ccda, type: 3}
+      propertyPath: door_is_rotatable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4047566828225609237, guid: e2b4f4be6ff6d534790a0bc9af82ccda, type: 3}
       propertyPath: roundChangerObject
       value: 
       objectReference: {fileID: 1899265384}
@@ -27162,6 +27205,10 @@ PrefabInstance:
     - target: {fileID: 4047566828878885327, guid: e2b4f4be6ff6d534790a0bc9af82ccda, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4047566828878885327, guid: e2b4f4be6ff6d534790a0bc9af82ccda, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4048351714809572641, guid: e2b4f4be6ff6d534790a0bc9af82ccda, type: 3}
       propertyPath: m_Name

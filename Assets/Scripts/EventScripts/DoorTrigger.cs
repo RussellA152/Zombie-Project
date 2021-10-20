@@ -8,11 +8,14 @@ public class DoorTrigger : MonoBehaviour
     public int doorPrice;
     private bool inTrigger;
     private bool wantsToBuyDoor;
+    private bool doorWasOpened;
+
 
     private void Start()
     {
         inTrigger = false;
         wantsToBuyDoor = false;
+        doorWasOpened = false;
     }
     private void Update()
     {
@@ -44,16 +47,14 @@ public class DoorTrigger : MonoBehaviour
         {
             
             //Debug.Log("Hold 'f' to open Door [Cost: " + doorPrice);
-            if(PlayerScore.pScore >= doorPrice && wantsToBuyDoor)
+            if(PlayerScore.pScore >= doorPrice && wantsToBuyDoor && !doorWasOpened)
             {
                 Debug.Log("You opened Door #" + id);
                 PlayerScore.pScore -= doorPrice;
                 GameEvents.current.DoorwayTriggerEnter(id);
+                doorWasOpened = true;
+
             }
-            else
-            {
-                Debug.Log("You didn't buy door");
-            }   
         }    
     }
     //when player exits the Door Trigger, inTrigger is set to false
