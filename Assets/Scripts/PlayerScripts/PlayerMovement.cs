@@ -43,6 +43,14 @@ public class PlayerMovement : MonoBehaviour
     [Header("KeyBinds")]
     [SerializeField] KeyCode sprintKey = KeyCode.LeftShift;
 
+    [SerializeField] private AudioClip footstep_sound;
+    [SerializeField] private AudioClip footstep_jump_sound;
+    [SerializeField] private AudioClip footstep_jumpLand_sound;
+    [SerializeField] private AudioClip footstep_run_sound;
+    private float footstep_delay_between_sounds = 0f;
+    [SerializeField] private float footstep_sound_speed;
+    private AudioSource player_audiosource;
+
     RaycastHit slopeHit;
 
     private Rigidbody rb;
@@ -51,6 +59,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        player_audiosource = GetComponent<AudioSource>();
         canJump = true;
 
     }
@@ -90,6 +99,7 @@ public class PlayerMovement : MonoBehaviour
         // *IMPORTANT: A high drag value will cause player too fall down too slowly
         rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
         rb.AddForce(transform.up * jumpPower, ForceMode.Impulse);
+        //player_audiosource.PlayOneShot(footstep_jump_sound);
 
         //if (Physics.OverlapSphere(groundCheckTransform.position, 0.1f, playerMask).Length == 0)
         //{
@@ -127,6 +137,29 @@ public class PlayerMovement : MonoBehaviour
         //checks for movement (walking) input (only works for keyboard)
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
+        if ((Input.GetButton("Horizontal") || Input.GetButton("Vertical")) && Time.time > footstep_delay_between_sounds)
+        {
+            player_audiosource.pitch = Random.Range(.85f, 1f);
+            //walk speed should be about 2.3f and sprint speed should be a bit higher
+            if (Input.GetKey(sprintKey))
+            {
+                footstep_delay_between_sounds = Time.time + 1f / (footstep_sound_speed * 1.4f);
+                player_audiosource.PlayOneShot(footstep_run_sound);
+            }
+            else
+            {
+                footstep_delay_between_sounds = Time.time + 1f / footstep_sound_speed;
+                player_audiosource.PlayOneShot(footstep_sound);
+            }
+        }
+        else if (!isGrounded)
+        {
+            player_audiosource.pitch = Random.Range(.75f, 1f);
+            player_audiosource.Stop();
+            player_audiosource.PlayOneShot(footstep_jumpLand_sound);
+            //footstep_delay_between_sounds = Time.time + 1f / footstep_sound_speed;
+        }
+
         moveDirection = oreintation.forward * verticalInput + oreintation.right * horizontalInput;
     }
     IEnumerator PlayerJumpCooldown()
@@ -142,6 +175,7 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetKey(sprintKey) && isGrounded)
         {
             playerMovementSpeed = Mathf.Lerp(playerMovementSpeed, sprintSpeed, acceleration * Time.deltaTime);
+
         }
         else
         {
