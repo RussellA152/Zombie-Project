@@ -43,7 +43,6 @@ public class RoundController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
         round = 0;
         RoundChange.roundChange.onRoundChange += RoundNumberChange;
         amountOfSpawnLocations = 3;
@@ -125,7 +124,7 @@ public class RoundController : MonoBehaviour
 
             spawnIncrementor += 1;
 
-            Debug.Log("Spawned a zombie!");
+            //Debug.Log("Spawned a zombie!");
 
         }
         
@@ -149,7 +148,7 @@ public class RoundController : MonoBehaviour
 
             spawnIncrementor += 1;
 
-            Debug.Log("Spawned a zombie DOG!");
+            //Debug.Log("Spawned a zombie DOG!");
         }
     }
 
@@ -172,7 +171,7 @@ public class RoundController : MonoBehaviour
                 zombieClone.GetComponent<NavMeshAgent>().speed = Random.Range(zombieCloneData.minRandomSpeed + Target.difficultySpeedIncrease, zombieCloneData.maxRandomSpeed + Target.difficultySpeedIncrease);
 
                 spawnIncrementor += 1;
-                Debug.Log("Spawned a zombie! (SIMUTANEOUSLY)");
+                //Debug.Log("Spawned a zombie! (SIMUTANEOUSLY)");
             }
             
             //smaller chance to spawn a zombie dog
@@ -190,7 +189,7 @@ public class RoundController : MonoBehaviour
 
                 spawnIncrementor += 1;
 
-                Debug.Log("Spawned a zombie DOG! (SIMUTANEOUSLY)");
+                //Debug.Log("Spawned a zombie DOG! (SIMUTANEOUSLY)");
 
             }
 

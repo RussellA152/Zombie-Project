@@ -50,7 +50,7 @@ public class DoorController : MonoBehaviour
             else
                 Destroy(gameObject);
             //disabls the nav mesh obstacle on the door so zombies can walk the new door path
-            GetComponent<NavMeshObstacle>().enabled = false;
+            //GetComponent<NavMeshObstacle>().enabled = false;
             GameEvents.current.onDoorwayTriggerEnter -= OnDoorwayOpen;
 
 

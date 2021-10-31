@@ -1,4 +1,4 @@
-using System.Collections;
+
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -35,6 +35,7 @@ public class Target : MonoBehaviour
     private bool callDieFunction;
 
     //[SerializeField] private AudioSource zombieAudioSource;
+    [SerializeField] private AudioClip zombieDamageSound;
     [SerializeField] private AudioClip zombieDeathSound;
     private AudioSource zombieAudio { get; set; }
     private void OnEnable()
@@ -50,6 +51,7 @@ public class Target : MonoBehaviour
         target_rigidbody = GetComponent<Rigidbody>();
         enemyAttacks_access = GetComponent<EnemyAttacks>();
         zombieAudio = EnemyAudio.current.enemyAudioSourceGameObject.GetComponent<AudioSource>();
+        //zombieDamagedAudio = EnemyDamagedSound.current.enemyDamagedAudioSourceGameObject.GetComponent<AudioSource>();
 
         //zombieAudioSource.GetComponent<AudioSource>();
 
@@ -64,6 +66,7 @@ public class Target : MonoBehaviour
     {
         //amount is passed as an argument inside the GunScript.cs
         health -= amount;
+        zombieAudio.PlayOneShot(zombieDamageSound, 0.5f);
 
         //when the zombie's health is 0 or lower, initate the Die() function
         //the Die() function should only be called once
@@ -101,7 +104,16 @@ public class Target : MonoBehaviour
             callDieFunction = false;
 
             //plays a death sound
-            zombieAudio.PlayOneShot(zombieDeathSound, 0.5f);
+            if (zombieAudio.isPlaying)
+            {
+                zombieAudio.Stop();
+                zombieAudio.PlayOneShot(zombieDeathSound, 0.5f);
+            }
+            else
+            {
+                zombieAudio.PlayOneShot(zombieDeathSound, 0.5f);
+            }
+            
 
             //changes enemy's layer to "Ragdoll" to prevent player and enemy collision with corpse
             gameObject.layer = 11;

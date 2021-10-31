@@ -10,6 +10,8 @@ public class DoorTrigger : MonoBehaviour
     private bool wantsToBuyDoor;
     private bool doorWasOpened;
 
+    public bool isEndingDoor;    //this bool represents whether this door, is the final door to end the level
+
 
     private void Start()
     {
@@ -47,13 +49,21 @@ public class DoorTrigger : MonoBehaviour
         {
             
             //Debug.Log("Hold 'f' to open Door [Cost: " + doorPrice);
-            if(PlayerScore.pScore >= doorPrice && wantsToBuyDoor && !doorWasOpened)
+            if(PlayerScore.pScore >= doorPrice && wantsToBuyDoor && !doorWasOpened && !isEndingDoor)
             {
                 Debug.Log("You opened Door #" + id);
                 PlayerScore.pScore -= doorPrice;
                 GameEvents.current.DoorwayTriggerEnter(id);
                 doorWasOpened = true;
 
+            }
+            else if(PlayerScore.pScore >= doorPrice && wantsToBuyDoor && !doorWasOpened && isEndingDoor)
+            {
+                PlayerScore.pScore -= doorPrice;
+                //instead of calling event, we will call our Buyable ending script functions
+                BuyableEnding.current.conditions_met = true;
+                BuyableEnding.current.CompleteLevel();
+                doorWasOpened = true;
             }
         }    
     }

@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
     public float moveSpeedMultiplier;
     public float airSpeedMultiplier;
+    private float airTime;
 
     [SerializeField] private float jumpPower;
 
@@ -75,6 +76,27 @@ public class PlayerMovement : MonoBehaviour
         ControlSpeed();
 
         slopeMoveDirection = Vector3.ProjectOnPlane(moveDirection, slopeHit.normal);
+
+        //if airTime is greater than 0 and the player is grounded, then they just landed
+        if (airTime > 0)
+        {
+            if (isGrounded)
+            {
+                player_audiosource.pitch = Random.Range(.75f, 1f);
+
+                player_audiosource.PlayOneShot(footstep_jumpLand_sound);
+            }
+        }
+
+        if (isGrounded)
+        {
+            airTime = 0f;
+        }
+        else
+        {
+            airTime += Time.deltaTime;
+        }
+
     }
     private void FixedUpdate()
     {
@@ -99,7 +121,7 @@ public class PlayerMovement : MonoBehaviour
         // *IMPORTANT: A high drag value will cause player too fall down too slowly
         rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
         rb.AddForce(transform.up * jumpPower, ForceMode.Impulse);
-        //player_audiosource.PlayOneShot(footstep_jump_sound);
+        
 
         //if (Physics.OverlapSphere(groundCheckTransform.position, 0.1f, playerMask).Length == 0)
         //{
@@ -129,6 +151,17 @@ public class PlayerMovement : MonoBehaviour
         //checks for jump input
         if (Input.GetButtonDown("Jump") && isGrounded && canJump)
         {
+            if (player_audiosource.isPlaying)
+            {
+                player_audiosource.pitch = Random.Range(.85f, 1f);
+                player_audiosource.Stop();
+                player_audiosource.PlayOneShot(footstep_jump_sound);
+            }
+            else
+            {
+                player_audiosource.pitch = Random.Range(.85f, 1f);
+                player_audiosource.PlayOneShot(footstep_jump_sound);
+            }
             PlayerJump();
             StartCoroutine(PlayerJumpCooldown());
 
@@ -137,7 +170,7 @@ public class PlayerMovement : MonoBehaviour
         //checks for movement (walking) input (only works for keyboard)
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
-        if ((Input.GetButton("Horizontal") || Input.GetButton("Vertical")) && Time.time > footstep_delay_between_sounds)
+        if ((Input.GetButton("Horizontal") || Input.GetButton("Vertical")) && Time.time > footstep_delay_between_sounds && isGrounded)
         {
             player_audiosource.pitch = Random.Range(.85f, 1f);
             //walk speed should be about 2.3f and sprint speed should be a bit higher
@@ -151,13 +184,6 @@ public class PlayerMovement : MonoBehaviour
                 footstep_delay_between_sounds = Time.time + 1f / footstep_sound_speed;
                 player_audiosource.PlayOneShot(footstep_sound);
             }
-        }
-        else if (!isGrounded)
-        {
-            player_audiosource.pitch = Random.Range(.75f, 1f);
-            player_audiosource.Stop();
-            player_audiosource.PlayOneShot(footstep_jumpLand_sound);
-            //footstep_delay_between_sounds = Time.time + 1f / footstep_sound_speed;
         }
 
         moveDirection = oreintation.forward * verticalInput + oreintation.right * horizontalInput;
