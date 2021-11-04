@@ -1,18 +1,27 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class MenuMonitor : MonoBehaviour
 {
+    [SerializeField] private TextMeshProUGUI downsizerText;
+    [SerializeField] private Button playButton;
+    [SerializeField] private Button quitButton;
     // Start is called before the first frame update
     void Start()
     {
-        
+        playButton.gameObject.SetActive(false);
+        quitButton.gameObject.SetActive(false);
+        downsizerText.gameObject.SetActive(true);
+        StartCoroutine(ChangeText());
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator ChangeText()
     {
-        
+        yield return new WaitForSeconds(3.6f);
+        downsizerText.gameObject.SetActive(false);
+        playButton.gameObject.SetActive(true);
+        quitButton.gameObject.SetActive(true);
     }
 }

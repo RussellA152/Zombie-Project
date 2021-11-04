@@ -1,7 +1,7 @@
 using System.Collections;
-using System;
 using UnityEngine;
 using UnityEngine.AI;
+using EZCameraShake;
 
 public class GunScript : MonoBehaviour
 {
@@ -12,6 +12,8 @@ public class GunScript : MonoBehaviour
     //these recoil variables only affect the view model weapons
     [SerializeField] private float recoilRotateX;
     [SerializeField] private float recoilPositionZ;
+    [SerializeField] private float magnitudePower;
+    [SerializeField] private float shakeFadeOutTime;
 
     private GameObject weaponHolder;
 
@@ -77,7 +79,7 @@ public class GunScript : MonoBehaviour
 
     private void Start()
     {
-
+        //Application.targetFrameRate = 15;
         //setting the "animator" to the Animator component of WeaponHolder (THIS WON'T WORK IF WE HAVE MULITPLE SCENES)
         GameObject player = GameObject.Find("Player");
         GameObject WeaponHolder = GameObject.Find("WeaponHolder");
@@ -196,6 +198,8 @@ public class GunScript : MonoBehaviour
 
         LeanTween.rotateLocal(this.gameObject, new Vector3(recoilRotateX,180,0), .05f);
         LeanTween.moveLocalZ(this.gameObject, recoilPositionZ, .05f);
+
+        CameraShaker.Instance.ShakeOnce(magnitudePower, 2.5f, .05f, shakeFadeOutTime);
 
         //each time you fire, you lose 1 bullet, also your amount of bullets fired increments by 1
         //ONLY if the player doesn't have infinite ammo, otherwise they won't lose ammo
