@@ -299,6 +299,8 @@ public class GunScript : MonoBehaviour
         ammoCapacity = original_ammoCapacity;
         bullets_fired = 0;
         PlayerUIAccessor.UpdatePlayerAmmoUI();
+
+        ammoPrice *= 2;
         Debug.Log("Weapon upgrade me!");
         isUpgraded = true;
 
