@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
+using EZCameraShake;
 
 public class DoorController : MonoBehaviour
 {
@@ -15,10 +15,20 @@ public class DoorController : MonoBehaviour
     private int amountOfSpawnLocations;
 
     public GameObject roundChangerObject;
+
+    [SerializeField] private GameObject doorBomb;    //this is the bomb attached in front of a non-rotatable door
+    [SerializeField] private ParticleSystem explosionParticles;
+    [SerializeField] private Light explosionLight;
+    [SerializeField] private float timeUntilDoorDisables;
+
     [SerializeField] private float rotationValueY;  //this value specifies where the door's y component will rotate to
 
     [SerializeField] private bool door_is_rotatable;
+    [SerializeField] private AudioSource interactive_audioSource;
+    [SerializeField] private AudioClip doorOpenSound;
 
+    [SerializeField] private AudioClip detonateStartExplosiveSound;
+    [SerializeField] private AudioClip detonateTickingExplosiveSound;
 
 
     // Start is called before the first frame update
@@ -46,9 +56,19 @@ public class DoorController : MonoBehaviour
         {
 
             if (door_is_rotatable)
+            {
                 LeanTween.rotateLocal(this.gameObject, new Vector3(0, rotationValueY, 0), .5f);
+                interactive_audioSource.PlayOneShot(doorOpenSound,1f);
+            }
+
             else
-                Destroy(gameObject);
+            {
+                //door will explode instead of rotate
+                StartCoroutine(DoorExplosion());
+                
+            }
+                
+
             //disabls the nav mesh obstacle on the door so zombies can walk the new door path
             //GetComponent<NavMeshObstacle>().enabled = false;
             GameEvents.current.onDoorwayTriggerEnter -= OnDoorwayOpen;
@@ -76,6 +96,28 @@ public class DoorController : MonoBehaviour
             //RoundController.amountOfSpawnLocations++;
             
         }
+    }
+    IEnumerator DoorExplosion()
+    {
+        //play detonate sound
+        doorBomb.SetActive(true);
+        interactive_audioSource.PlayOneShot(detonateStartExplosiveSound, 1f);
+        yield return new WaitForSeconds(.7f);
+        interactive_audioSource.PlayOneShot(detonateTickingExplosiveSound,1f);
+        yield return new WaitForSeconds(1.35f);
+        interactive_audioSource.PlayOneShot(doorOpenSound, 1f);
+        CameraShaker.Instance.ShakeOnce(22f, 5f, 0.1f, 2.5f);
+        //the particle system will renable its script to auto delete itself after animation is done playing
+        explosionParticles.gameObject.GetComponent<CFX_AutoDestructShuriken>().enabled = true;
+        doorBomb.SetActive(false);
+        explosionParticles.Play();
+        explosionLight.gameObject.SetActive(true);
+        //disables explosion light without worrying about when this door will be destoryed
+        explosionLight.GetComponent<DoorExplosionLight>().DisableThisLight();
+        yield return new WaitForSeconds(timeUntilDoorDisables);
+        Destroy(gameObject);
+
+
     }
     private void OnDestroy()
     {

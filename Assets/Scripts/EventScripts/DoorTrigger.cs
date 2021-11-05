@@ -61,6 +61,7 @@ public class DoorTrigger : MonoBehaviour
             {
                 PlayerScore.pScore -= doorPrice;
                 //instead of calling event, we will call our Buyable ending script functions
+                GameEvents.current.DoorwayTriggerEnter(id);
                 BuyableEnding.current.conditions_met = true;
                 BuyableEnding.current.CompleteLevel();
                 doorWasOpened = true;
