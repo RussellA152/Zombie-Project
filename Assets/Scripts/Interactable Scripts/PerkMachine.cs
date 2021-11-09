@@ -11,6 +11,7 @@ public class PerkMachine : MonoBehaviour
     private bool wantsToBuyPerk;
 
     private bool playerHasPerk;
+    private bool canInteract;
 
     [SerializeField] int perkPrice;
 
@@ -35,7 +36,13 @@ public class PerkMachine : MonoBehaviour
     private PlayerHealth playerHealthAccessor;
     private PlayerMovement playerMovementAccessor;
     private PlayerPerkInventory playerPerkInventory;
-    
+
+    [SerializeField] private AudioSource interactive_audioSource;
+    [SerializeField] private AudioClip soda_open_sound;
+
+    [SerializeField] private AudioClip purchase_successful_sound;
+    [SerializeField] private AudioClip purchase_failed_sound;
+
 
     private void Awake()
     {
@@ -49,7 +56,7 @@ public class PerkMachine : MonoBehaviour
         playerPerkInventory = player.GetComponent<PlayerPerkInventory>();
 
 
-
+        canInteract = true;
         machineIsPowered = false;
         wantsToBuyPerk = false;
         playerHasPerk = false;
@@ -108,11 +115,22 @@ public class PerkMachine : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if(wantsToBuyPerk && PlayerScore.pScore >= perkPrice && !playerHasPerk)
+            if(wantsToBuyPerk && !playerHasPerk && canInteract)
             {
-                playerHasPerk = true;
-                PlayerScore.pScore -= perkPrice;
-                GivePerkType();
+                if (PlayerScore.pScore >= perkPrice)
+                {
+                    interactive_audioSource.PlayOneShot(purchase_successful_sound,0.5f);
+                    playerHasPerk = true;
+                    PlayerScore.pScore -= perkPrice;
+                    GivePerkType();
+
+                    StartCoroutine(InteractionDelay());
+                }
+                else
+                {
+                    interactive_audioSource.PlayOneShot(purchase_failed_sound,0.5f);
+                    StartCoroutine(InteractionDelay());
+                }
                 
             }
         }
@@ -143,8 +161,12 @@ public class PerkMachine : MonoBehaviour
     //This function checks what the perktype is, it then gives player the perk
     private void GivePerkType()
     {
+        //plays a soda can opening sound when purchasing perk
+        interactive_audioSource.PlayOneShot(soda_open_sound,0.5f);
+
         switch (perkType)
         {
+
             case 1:
                 
                 playerPerkInventory.has_Health_Increase_Perk = true;
@@ -173,5 +195,12 @@ public class PerkMachine : MonoBehaviour
                 break;
         }
     }
-    
+
+    IEnumerator InteractionDelay()
+    {
+        canInteract = false;
+        yield return new WaitForSeconds(1f);
+        canInteract = true;
+    }
+
 }

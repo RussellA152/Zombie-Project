@@ -8,7 +8,7 @@ public class PlayerScore : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pScore = 20000f;
+        pScore = 10000f;
     }
     private void Update()
     {

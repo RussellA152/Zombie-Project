@@ -288,7 +288,10 @@ MonoBehaviour:
   animator: {fileID: 0}
   impactEffect: {fileID: 100002, guid: 03abc1b9299977a4dae31925d2303f04, type: 3}
   bloodImpactEffect: {fileID: 100002, guid: c6bcb2550ccc9764abcbb6d466ffde5b, type: 3}
-  shootSound: {fileID: 8300000, guid: 1b145bcffd767854fb0c71c37678ebaa, type: 3}
+  shootSound: {fileID: 8300000, guid: 66b029071b12fd34aa5d2e76ba8aedff, type: 3}
+  reloadSound1: {fileID: 8300000, guid: 07fc0f22acfd5d44a8eb828628400cd9, type: 3}
+  reloadSound2: {fileID: 8300000, guid: a0c42a6bddd28f74aa4f34fef2930291, type: 3}
+  reloadSound3: {fileID: 8300000, guid: 9d1bfb3f7e78dde4aa3ea1c8288c5a46, type: 3}
   reloadKey: 114
 --- !u!114 &4873978627280196049
 MonoBehaviour:

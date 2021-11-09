@@ -9,7 +9,12 @@ public class GiveAmmo : MonoBehaviour
     GunScript access_gun_script;
     WeaponSwitching access_weaponswitch_script;
 
-    private bool ammoIsFull;
+    private bool ammoIsFull; 
+
+    [SerializeField] private AudioSource interactive_audioSource;
+    [SerializeField] private AudioClip purchase_successful_sound;
+    [SerializeField] private AudioClip purchase_failed_sound;
+
 
     // Start is called before the first frame update
     void Start()
@@ -43,16 +48,29 @@ public class GiveAmmo : MonoBehaviour
         }
 
         //Debug.Log("Hold 'f' to open Door [Cost: " + doorPrice);
-        if (PlayerScore.pScore >= access_gun_script.ammoPrice && !ammoIsFull)
+        if (!ammoIsFull)
         {
-            //subtracts the specific ammo price of currently equipped gun from the Player's score
-            
-            PlayerScore.pScore -= access_gun_script.ammoPrice;
-            access_gun_script.MaxAmmo();
+
+            if(PlayerScore.pScore >= access_gun_script.ammoPrice)
+            {
+                //subtracts the specific ammo price of currently equipped gun from the Player's score
+                interactive_audioSource.PlayOneShot(purchase_successful_sound,0.5f);
+                PlayerScore.pScore -= access_gun_script.ammoPrice;
+                access_gun_script.MaxAmmo();
 
 
-            Debug.Log("Ammo Crate - max ammo granted.");
+                Debug.Log("Ammo Crate - max ammo granted.");
 
+            }
+            else
+            {
+                interactive_audioSource.PlayOneShot(purchase_failed_sound,0.5f);
+            }
+
+        }
+        else
+        {
+            interactive_audioSource.PlayOneShot(purchase_failed_sound, 0.5f);
         }
     }
 

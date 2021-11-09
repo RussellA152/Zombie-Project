@@ -24,11 +24,12 @@ public class DoorController : MonoBehaviour
     [SerializeField] private float rotationValueY;  //this value specifies where the door's y component will rotate to
 
     [SerializeField] private bool door_is_rotatable;
-    [SerializeField] private AudioSource interactive_audioSource;
+    [SerializeField] public AudioSource interactive_audioSource;
     [SerializeField] private AudioClip doorOpenSound;
 
     [SerializeField] private AudioClip detonateStartExplosiveSound;
     [SerializeField] private AudioClip detonateTickingExplosiveSound;
+
 
 
     // Start is called before the first frame update

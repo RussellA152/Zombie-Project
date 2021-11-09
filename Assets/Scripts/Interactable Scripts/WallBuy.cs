@@ -36,6 +36,10 @@ public class WallBuy : MonoBehaviour
     private bool canInteract;   //this bool determines if the player will be able to interact/use this wallbuy (so player cannot spam interactions with wall buy, I.E. purchasing ammo really fast and losing lots of money)
     private int purchaseDetermine;  // if this value equals 1, the player purchased a weapon without replacement, if it equals 2, the player replaced a weapon on wall buy purchase 
 
+    [SerializeField] private AudioSource interactive_audioSource;
+    [SerializeField] private AudioClip purchase_successful_sound;
+    [SerializeField] private AudioClip purchase_failed_sound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -110,7 +114,7 @@ public class WallBuy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if(weaponSwitchingAccessor.equippedWeapon.gameObject == gunClone || weaponSwitchingAccessor.equippedWeapon.gameObject == gunPrefab )
+            if (weaponSwitchingAccessor.equippedWeapon.gameObject == gunClone || weaponSwitchingAccessor.equippedWeapon.gameObject == gunPrefab)
             {
                 if ((wantsToBuyGun && playerHasThisGun && canInteract))
                 {
@@ -121,30 +125,48 @@ public class WallBuy : MonoBehaviour
                 }
 
             }
-            
+
             //if player has less the maximum carrying capacity for weapons, then they can buy a gun without replacing 
-                if (weaponSwitchingAccessor.currentWeaponInventorySize < weaponSwitchingAccessor.maxWeaponInventorySize)
+            if (weaponSwitchingAccessor.currentWeaponInventorySize < weaponSwitchingAccessor.maxWeaponInventorySize)
             {
-                if (wantsToBuyGun && !playerHasThisGun && PlayerScore.pScore >= gunPrice && canInteract)
+                if (wantsToBuyGun && !playerHasThisGun && canInteract)
                 {
-                    purchaseDetermine = 1;
-                    StartCoroutine(WeaponSwapOnPurchaseDelay());
-                   
-                    StartCoroutine(InteractionDelay());
+                    if (PlayerScore.pScore >= gunPrice)
+                    {
+                        interactive_audioSource.PlayOneShot(purchase_successful_sound,0.5f);
+                        purchaseDetermine = 1;
+                        StartCoroutine(WeaponSwapOnPurchaseDelay());
+
+                        StartCoroutine(InteractionDelay());
+                    }
+                    else
+                    {
+                        interactive_audioSource.PlayOneShot(purchase_failed_sound,0.5f);
+                        StartCoroutine(InteractionDelay());
+                    }
+
                 }
             }
             //IF player has too many weapons, then we should replace their currently equipped weapon
             if (weaponSwitchingAccessor.currentWeaponInventorySize >= weaponSwitchingAccessor.maxWeaponInventorySize)
             {
-                if (wantsToBuyGun && !playerHasThisGun && PlayerScore.pScore >= gunPrice && canInteract)
+                if (wantsToBuyGun && !playerHasThisGun && canInteract)
                 {
-                    purchaseDetermine = 2;
-                    StartCoroutine(WeaponSwapOnPurchaseDelay());
-                    //ReplaceGunOnPurchase();
-                    StartCoroutine(InteractionDelay());
+                    if (PlayerScore.pScore >= gunPrice)
+                    {
+                        interactive_audioSource.PlayOneShot(purchase_successful_sound,0.5f);
+                        purchaseDetermine = 2;
+                        StartCoroutine(WeaponSwapOnPurchaseDelay());
+
+                        StartCoroutine(InteractionDelay());
+                    }
+                    else
+                    {
+                        interactive_audioSource.PlayOneShot(purchase_failed_sound,0.5f);
+                        StartCoroutine(InteractionDelay());
+                    }
                 }
             }
-
         }
 
     }
@@ -163,7 +185,7 @@ public class WallBuy : MonoBehaviour
         //Debug.Log("You purchased this gun!");
 
         //subtract gunPrice from player's score
-        PlayerScore.pScore -= gunPrice;
+
 
         weaponHolder.GetComponentInChildren<GunScript>().animator.SetBool("Reloading", false);
 
@@ -197,8 +219,6 @@ public class WallBuy : MonoBehaviour
         //should replace the player's current weapon in-hand
         //Debug.Log("replace current gun in-hand");
 
-
-        PlayerScore.pScore -= gunPrice;
 
         weaponHolder.GetComponentInChildren<GunScript>().animator.SetBool("Reloading", false);
 
@@ -254,6 +274,9 @@ public class WallBuy : MonoBehaviour
     //We play the animation, then wait a little bit, then call the weapon purchasing functions, then stop the weapon swap animation
     IEnumerator WeaponSwapOnPurchaseDelay()
     {
+        //normally we would call this in the AddGunOnPurchase or ReplaceGunOnPurchase functions, but we will call this here instead because the swap delay will make the transaction take longer
+        PlayerScore.pScore -= gunPrice;
+
         weaponSwitchingAccessor.animator.SetBool("Swapping", true);
         weaponHolder.GetComponentInChildren<GunScript>().isSwapping = true;
         yield return new WaitForSeconds(1f - .25f);

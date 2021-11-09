@@ -59,6 +59,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 10
   doorPrice: 100
+  isEndingDoor: 0
+  interactive_audio_source: {fileID: 0}
+  purchase_successful_sound: {fileID: 8300000, guid: 792a6e132d38a4f70bbae7f091a6cab3, type: 3}
+  purchase_failed_sound: {fileID: 8300000, guid: 16458abe8d5a64f7a8082f0de46d643f, type: 3}
 --- !u!1 &4048351714809572641
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,3 +196,13 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   roundChangerObject: {fileID: 0}
+  doorBomb: {fileID: 0}
+  explosionParticles: {fileID: 0}
+  explosionLight: {fileID: 0}
+  timeUntilDoorDisables: 0
+  rotationValueY: 0
+  door_is_rotatable: 0
+  interactive_audioSource: {fileID: 0}
+  doorOpenSound: {fileID: 0}
+  detonateStartExplosiveSound: {fileID: 0}
+  detonateTickingExplosiveSound: {fileID: 0}

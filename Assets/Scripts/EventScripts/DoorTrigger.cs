@@ -11,6 +11,10 @@ public class DoorTrigger : MonoBehaviour
     private bool doorWasOpened;
 
     public bool isEndingDoor;    //this bool represents whether this door, is the final door to end the level
+    [SerializeField] private AudioSource interactive_audio_source;
+
+    [SerializeField] private AudioClip purchase_successful_sound;
+    [SerializeField] private AudioClip purchase_failed_sound;
 
 
     private void Start()
@@ -18,6 +22,8 @@ public class DoorTrigger : MonoBehaviour
         inTrigger = false;
         wantsToBuyDoor = false;
         doorWasOpened = false;
+
+        interactive_audio_source = this.transform.GetComponentInParent<DoorController>().interactive_audioSource;
     }
     private void Update()
     {
@@ -49,22 +55,40 @@ public class DoorTrigger : MonoBehaviour
         {
             
             //Debug.Log("Hold 'f' to open Door [Cost: " + doorPrice);
-            if(PlayerScore.pScore >= doorPrice && wantsToBuyDoor && !doorWasOpened && !isEndingDoor)
+            if(wantsToBuyDoor && !doorWasOpened && !isEndingDoor)
             {
-                Debug.Log("You opened Door #" + id);
-                PlayerScore.pScore -= doorPrice;
-                GameEvents.current.DoorwayTriggerEnter(id);
-                doorWasOpened = true;
+                if(PlayerScore.pScore >= doorPrice)
+                {
+                    PlayerScore.pScore -= doorPrice;
+                    GameEvents.current.DoorwayTriggerEnter(id);
+                    interactive_audio_source.PlayOneShot(purchase_successful_sound,0.5f);
+                    doorWasOpened = true;
+                }
+                else
+                {
+                    interactive_audio_source.PlayOneShot(purchase_failed_sound,0.5f);
+                }
+                
 
             }
-            else if(PlayerScore.pScore >= doorPrice && wantsToBuyDoor && !doorWasOpened && isEndingDoor)
+            else if(wantsToBuyDoor && !doorWasOpened && isEndingDoor)
             {
-                PlayerScore.pScore -= doorPrice;
-                //instead of calling event, we will call our Buyable ending script functions
-                GameEvents.current.DoorwayTriggerEnter(id);
-                BuyableEnding.current.conditions_met = true;
-                BuyableEnding.current.CompleteLevel();
-                doorWasOpened = true;
+                if(PlayerScore.pScore >= doorPrice)
+                {
+                    PlayerScore.pScore -= doorPrice;
+                    interactive_audio_source.PlayOneShot(purchase_successful_sound,0.5f);
+                    //instead of calling event, we will call our Buyable ending script functions
+                    GameEvents.current.DoorwayTriggerEnter(id);
+                    BuyableEnding.current.conditions_met = true;
+                    BuyableEnding.current.CompleteLevel();
+                    doorWasOpened = true;
+                }
+                else
+                {
+                    interactive_audio_source.PlayOneShot(purchase_failed_sound,0.5f);
+                }
+
+                
             }
         }    
     }

@@ -81,7 +81,7 @@ public class RefillAmmo : MonoBehaviour
             if(wantsToBuyAmmo && canInteract)
             {
                 PurchaseAmmo();
-                StartCoroutine(InteractionDelay());
+                
 
             }
                 
@@ -101,12 +101,18 @@ public class RefillAmmo : MonoBehaviour
 
     public void PurchaseAmmo()
     {
-        
+
         RefillPlayerAmmo.current.AmmoRefiller();
 
         //opens the top of the ammo crate (animation)
-        LeanTween.rotateZ(ammoCrateLid, -125, .6f);
+        TweenCrate();
+        StartCoroutine(InteractionDelay());
 
+
+    }
+    public void TweenCrate()
+    {
+        LeanTween.rotateZ(ammoCrateLid, -125, .6f);
     }
     IEnumerator InteractionDelay()
     {

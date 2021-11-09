@@ -60,6 +60,10 @@ public class GunScript : MonoBehaviour
     [SerializeField] private GameObject bloodImpactEffect;
 
     public AudioClip shootSound;
+    [SerializeField] private AudioClip reloadSound1;  //remove mag sound
+    [SerializeField] private AudioClip reloadSound2;  //load mag sound
+    [SerializeField] private AudioClip reloadSound3;  //gun cocking sound
+
     //public AudioClip reloadSound;
     private AudioSource gunAudio;
     private PlayerUI PlayerUIAccessor;
@@ -339,10 +343,23 @@ public class GunScript : MonoBehaviour
         //delay for reloading time
         if (playerPerkAccessor.has_Reload_Speed_Perk)
         {
+            yield return new WaitForSeconds(0.2f);
+            gunAudio.PlayOneShot(reloadSound1, 0.5f);
+            yield return new WaitForSeconds(.4f);
+            gunAudio.PlayOneShot(reloadSound2, 0.5f);
+            yield return new WaitForSeconds(.4f);
+            gunAudio.PlayOneShot(reloadSound3, 0.5f);
+
             yield return new WaitForSeconds((reloadSpeed/2) - .25f);
         }
         else
         {
+            yield return new WaitForSeconds(0.2f);
+            gunAudio.PlayOneShot(reloadSound1, 0.5f);
+            yield return new WaitForSeconds(0.8f);
+            gunAudio.PlayOneShot(reloadSound2, 0.5f);
+            yield return new WaitForSeconds(0.8f);
+            gunAudio.PlayOneShot(reloadSound3, 0.5f);
             yield return new WaitForSeconds(reloadSpeed - .25f);
         }
         
