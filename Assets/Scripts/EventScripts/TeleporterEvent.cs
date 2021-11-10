@@ -24,6 +24,17 @@ public class TeleporterEvent : MonoBehaviour
     public Transform powerRoom_Teleporter;
     public Transform startingRoom_Teleporter;
 
+    public AudioSource interactive_audio_source;
+
+    public AudioClip teleport_link_sound;
+    public AudioClip teleport_successful_sound;
+    public AudioClip teleport_failed_sound;
+    public AudioClip teleport_return_sound;
+    public AudioClip interact_successful_sound;
+
+    private bool canInteract;
+
+
     private void Awake()
     {
         current = this;

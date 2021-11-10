@@ -36,7 +36,6 @@ public class WallBuy : MonoBehaviour
     private bool canInteract;   //this bool determines if the player will be able to interact/use this wallbuy (so player cannot spam interactions with wall buy, I.E. purchasing ammo really fast and losing lots of money)
     private int purchaseDetermine;  // if this value equals 1, the player purchased a weapon without replacement, if it equals 2, the player replaced a weapon on wall buy purchase 
 
-    [SerializeField] private AudioSource interactive_audioSource;
     [SerializeField] private AudioClip purchase_successful_sound;
     [SerializeField] private AudioClip purchase_failed_sound;
 
@@ -133,7 +132,7 @@ public class WallBuy : MonoBehaviour
                 {
                     if (PlayerScore.pScore >= gunPrice)
                     {
-                        interactive_audioSource.PlayOneShot(purchase_successful_sound,0.5f);
+                        InteractAudioSource.current.PlayInteractClip(purchase_successful_sound, 0.5f);
                         purchaseDetermine = 1;
                         StartCoroutine(WeaponSwapOnPurchaseDelay());
 
@@ -141,7 +140,7 @@ public class WallBuy : MonoBehaviour
                     }
                     else
                     {
-                        interactive_audioSource.PlayOneShot(purchase_failed_sound,0.5f);
+                        InteractAudioSource.current.PlayInteractClip(purchase_failed_sound, 0.5f);
                         StartCoroutine(InteractionDelay());
                     }
 
@@ -154,7 +153,7 @@ public class WallBuy : MonoBehaviour
                 {
                     if (PlayerScore.pScore >= gunPrice)
                     {
-                        interactive_audioSource.PlayOneShot(purchase_successful_sound,0.5f);
+                        InteractAudioSource.current.PlayInteractClip(purchase_successful_sound, 0.5f);
                         purchaseDetermine = 2;
                         StartCoroutine(WeaponSwapOnPurchaseDelay());
 
@@ -162,7 +161,7 @@ public class WallBuy : MonoBehaviour
                     }
                     else
                     {
-                        interactive_audioSource.PlayOneShot(purchase_failed_sound,0.5f);
+                        InteractAudioSource.current.PlayInteractClip(purchase_failed_sound, 0.5f);
                         StartCoroutine(InteractionDelay());
                     }
                 }

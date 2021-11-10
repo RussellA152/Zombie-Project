@@ -15,6 +15,7 @@ public class StartingTeleporter : MonoBehaviour
             if (TeleporterEvent.current.wants_to_link_teleporters && Input.GetKeyDown(KeyCode.F) && !TeleporterEvent.current.teleporters_are_linked)
             {
                 TeleporterEvent.current.teleporters_are_linked = true;
+                TeleporterEvent.current.interactive_audio_source.PlayOneShot(TeleporterEvent.current.teleport_link_sound, 0.5f);
                 Debug.Log("Teleporters are linked!");
             }
         }

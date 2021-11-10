@@ -909,7 +909,6 @@ MonoBehaviour:
   id: 18
   doorPrice: 100
   isEndingDoor: 1
-  interactive_audio_source: {fileID: 0}
   purchase_successful_sound: {fileID: 8300000, guid: 792a6e132d38a4f70bbae7f091a6cab3, type: 3}
   purchase_failed_sound: {fileID: 8300000, guid: 16458abe8d5a64f7a8082f0de46d643f, type: 3}
 --- !u!65 &68633253
@@ -1528,7 +1527,6 @@ MonoBehaviour:
   id: 14
   doorPrice: 0
   isEndingDoor: 0
-  interactive_audio_source: {fileID: 0}
   purchase_successful_sound: {fileID: 8300000, guid: 792a6e132d38a4f70bbae7f091a6cab3, type: 3}
   purchase_failed_sound: {fileID: 8300000, guid: 16458abe8d5a64f7a8082f0de46d643f, type: 3}
 --- !u!1 &120914112
@@ -2126,7 +2124,6 @@ MonoBehaviour:
   id: 3
   doorPrice: 100
   isEndingDoor: 0
-  interactive_audio_source: {fileID: 0}
   purchase_successful_sound: {fileID: 0}
   purchase_failed_sound: {fileID: 0}
 --- !u!65 &203551228
@@ -2634,7 +2631,6 @@ MonoBehaviour:
   id: 5
   doorPrice: 100
   isEndingDoor: 0
-  interactive_audio_source: {fileID: 0}
   purchase_successful_sound: {fileID: 0}
   purchase_failed_sound: {fileID: 0}
 --- !u!65 &281854628
@@ -2917,7 +2913,7 @@ MonoBehaviour:
   currentWeaponInventorySize: 0
   previousSelectedWeapon: 0
   animator: {fileID: 314030238}
-  weaponswapSound: {fileID: 8300000, guid: 406c929b7299afb469c82778f8d15d5b, type: 3}
+  weaponswapSound: {fileID: 8300000, guid: 53c407265c9243f4898071d0b10e9b94, type: 3}
 --- !u!95 &314030238
 Animator:
   serializedVersion: 3
@@ -5724,7 +5720,6 @@ MonoBehaviour:
   timeUntilDoorDisables: 0
   rotationValueY: 0
   door_is_rotatable: 0
-  interactive_audioSource: {fileID: 0}
   doorOpenSound: {fileID: 0}
   detonateStartExplosiveSound: {fileID: 0}
   detonateTickingExplosiveSound: {fileID: 0}
@@ -6097,7 +6092,7 @@ PrefabInstance:
     - target: {fileID: 4047566828225609237, guid: e2b4f4be6ff6d534790a0bc9af82ccda, type: 3}
       propertyPath: doorOpenSound
       value: 
-      objectReference: {fileID: 8300000, guid: 813737c5ed7cd91479d90b962a032ddd, type: 3}
+      objectReference: {fileID: 8300000, guid: fd1d1973b06907d45a11e285d5711951, type: 3}
     - target: {fileID: 4047566828225609237, guid: e2b4f4be6ff6d534790a0bc9af82ccda, type: 3}
       propertyPath: rotationValueY
       value: 180
@@ -7720,7 +7715,6 @@ MonoBehaviour:
   timeUntilDoorDisables: 0
   rotationValueY: 0
   door_is_rotatable: 0
-  interactive_audioSource: {fileID: 0}
   doorOpenSound: {fileID: 0}
   detonateStartExplosiveSound: {fileID: 0}
   detonateTickingExplosiveSound: {fileID: 0}
@@ -8678,7 +8672,6 @@ MonoBehaviour:
   timeUntilDoorDisables: 1
   rotationValueY: 0
   door_is_rotatable: 0
-  interactive_audioSource: {fileID: 1776938757}
   doorOpenSound: {fileID: 8300000, guid: 09cfebd01aef12a4e824b9cbaaa601b1, type: 3}
   detonateStartExplosiveSound: {fileID: 8300000, guid: b878334bbc55e4e94abc0354bc2f2838, type: 3}
   detonateTickingExplosiveSound: {fileID: 8300000, guid: 56227355334454a669691eddf1801cb9, type: 3}
@@ -9188,7 +9181,6 @@ MonoBehaviour:
   id: 2
   doorPrice: 100
   isEndingDoor: 0
-  interactive_audio_source: {fileID: 0}
   purchase_successful_sound: {fileID: 0}
   purchase_failed_sound: {fileID: 0}
 --- !u!65 &710508096
@@ -9456,6 +9448,12 @@ MonoBehaviour:
   upgradeRoomTimer: 20
   powerRoom_Teleporter: {fileID: 1731235794}
   startingRoom_Teleporter: {fileID: 101791682}
+  interactive_audio_source: {fileID: 1776938757}
+  teleport_link_sound: {fileID: 8300000, guid: 9024dbf5a6bc2b44db8a7d904b8cd249, type: 3}
+  teleport_successful_sound: {fileID: 8300000, guid: 94aa272159502be49aca10612cbd1b6a, type: 3}
+  teleport_failed_sound: {fileID: 8300000, guid: 16458abe8d5a64f7a8082f0de46d643f, type: 3}
+  teleport_return_sound: {fileID: 8300000, guid: d029aaaa1de8a22418e7590df5338e93, type: 3}
+  interact_successful_sound: {fileID: 8300000, guid: 792a6e132d38a4f70bbae7f091a6cab3, type: 3}
 --- !u!4 &727076487
 Transform:
   m_ObjectHideFlags: 0
@@ -9582,7 +9580,6 @@ MonoBehaviour:
   timeUntilDoorDisables: 0
   rotationValueY: 0
   door_is_rotatable: 0
-  interactive_audioSource: {fileID: 1776938757}
   doorOpenSound: {fileID: 8300000, guid: 09cfebd01aef12a4e824b9cbaaa601b1, type: 3}
   detonateStartExplosiveSound: {fileID: 8300000, guid: b878334bbc55e4e94abc0354bc2f2838, type: 3}
   detonateTickingExplosiveSound: {fileID: 8300000, guid: 56227355334454a669691eddf1801cb9, type: 3}
@@ -10776,7 +10773,6 @@ MonoBehaviour:
   id: 6
   doorPrice: 100
   isEndingDoor: 0
-  interactive_audio_source: {fileID: 0}
   purchase_successful_sound: {fileID: 0}
   purchase_failed_sound: {fileID: 0}
 --- !u!65 &796373924
@@ -11613,7 +11609,6 @@ MonoBehaviour:
   id: 4
   doorPrice: 100
   isEndingDoor: 0
-  interactive_audio_source: {fileID: 0}
   purchase_successful_sound: {fileID: 0}
   purchase_failed_sound: {fileID: 0}
 --- !u!65 &857880837
@@ -11991,7 +11986,7 @@ PrefabInstance:
     - target: {fileID: 4047566828225609237, guid: e2b4f4be6ff6d534790a0bc9af82ccda, type: 3}
       propertyPath: doorOpenSound
       value: 
-      objectReference: {fileID: 8300000, guid: 813737c5ed7cd91479d90b962a032ddd, type: 3}
+      objectReference: {fileID: 8300000, guid: fd1d1973b06907d45a11e285d5711951, type: 3}
     - target: {fileID: 4047566828225609237, guid: e2b4f4be6ff6d534790a0bc9af82ccda, type: 3}
       propertyPath: rotationValueY
       value: 180
@@ -16599,7 +16594,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GunAccessor: {fileID: 0}
-  interactive_audioSource: {fileID: 1776938757}
   purchase_successful_sound: {fileID: 8300000, guid: 792a6e132d38a4f70bbae7f091a6cab3, type: 3}
   purchase_failed_sound: {fileID: 8300000, guid: 16458abe8d5a64f7a8082f0de46d643f, type: 3}
 --- !u!4 &1173192240
@@ -16887,7 +16881,6 @@ MonoBehaviour:
   id: 11
   doorPrice: 100
   isEndingDoor: 0
-  interactive_audio_source: {fileID: 0}
   purchase_successful_sound: {fileID: 8300000, guid: 792a6e132d38a4f70bbae7f091a6cab3, type: 3}
   purchase_failed_sound: {fileID: 8300000, guid: 16458abe8d5a64f7a8082f0de46d643f, type: 3}
 --- !u!65 &1198650786
@@ -18056,7 +18049,6 @@ MonoBehaviour:
   id: 1
   doorPrice: 100
   isEndingDoor: 0
-  interactive_audio_source: {fileID: 0}
   purchase_successful_sound: {fileID: 0}
   purchase_failed_sound: {fileID: 0}
 --- !u!65 &1340905221
@@ -23005,7 +22997,6 @@ MonoBehaviour:
   timeUntilDoorDisables: 0
   rotationValueY: 0
   door_is_rotatable: 0
-  interactive_audioSource: {fileID: 0}
   doorOpenSound: {fileID: 0}
   detonateStartExplosiveSound: {fileID: 0}
   detonateTickingExplosiveSound: {fileID: 0}
@@ -24131,7 +24122,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1752362480}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 2, y: 1, z: 0.83333325}
+  m_LocalPosition: {x: 1.745, y: 1, z: 0.83333325}
   m_LocalScale: {x: 2.5, y: 1.3, z: 1}
   m_Children: []
   m_Father: {fileID: 662593496}
@@ -24150,6 +24141,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponHolder: {fileID: 314030235}
+  purchase_successful_sound: {fileID: 8300000, guid: 792a6e132d38a4f70bbae7f091a6cab3, type: 3}
+  weapon_upgrade_sound: {fileID: 8300000, guid: ddb8ec7f150bd9645a101b4547cee881, type: 3}
+  purchase_failed_sound: {fileID: 8300000, guid: 16458abe8d5a64f7a8082f0de46d643f, type: 3}
 --- !u!1001 &1763617578
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25009,8 +25003,7 @@ MonoBehaviour:
   timeUntilDoorDisables: 0
   rotationValueY: 0
   door_is_rotatable: 1
-  interactive_audioSource: {fileID: 1776938757}
-  doorOpenSound: {fileID: 8300000, guid: 813737c5ed7cd91479d90b962a032ddd, type: 3}
+  doorOpenSound: {fileID: 8300000, guid: fd1d1973b06907d45a11e285d5711951, type: 3}
   detonateStartExplosiveSound: {fileID: 0}
   detonateTickingExplosiveSound: {fileID: 0}
 --- !u!208 &1848957081
@@ -25595,6 +25588,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43dd1ba2a5dde844eb01240da13ab96b, type: 3}
+--- !u!1 &1890939453 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3500921412721500100, guid: ff292df1e0bbf9749b8673e2522924eb, type: 3}
+  m_PrefabInstance: {fileID: 2122660611}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1890939454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890939453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0010c3a5134bc684ba4f7982aa099ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1899265384
 GameObject:
   m_ObjectHideFlags: 0
@@ -25795,7 +25805,6 @@ MonoBehaviour:
   timeUntilDoorDisables: 0
   rotationValueY: 0
   door_is_rotatable: 0
-  interactive_audioSource: {fileID: 0}
   doorOpenSound: {fileID: 0}
   detonateStartExplosiveSound: {fileID: 0}
   detonateTickingExplosiveSound: {fileID: 0}
@@ -26914,7 +26923,6 @@ MonoBehaviour:
   timeUntilDoorDisables: 0
   rotationValueY: 0
   door_is_rotatable: 0
-  interactive_audioSource: {fileID: 0}
   doorOpenSound: {fileID: 0}
   detonateStartExplosiveSound: {fileID: 0}
   detonateTickingExplosiveSound: {fileID: 0}
@@ -28721,7 +28729,7 @@ PrefabInstance:
     - target: {fileID: 4047566828225609237, guid: e2b4f4be6ff6d534790a0bc9af82ccda, type: 3}
       propertyPath: doorOpenSound
       value: 
-      objectReference: {fileID: 8300000, guid: 813737c5ed7cd91479d90b962a032ddd, type: 3}
+      objectReference: {fileID: 8300000, guid: fd1d1973b06907d45a11e285d5711951, type: 3}
     - target: {fileID: 4047566828225609237, guid: e2b4f4be6ff6d534790a0bc9af82ccda, type: 3}
       propertyPath: rotationValueY
       value: 90

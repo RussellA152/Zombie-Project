@@ -119,7 +119,7 @@ MonoBehaviour:
   ammoCapacity: 270
   original_ammoCapacity: 270
   bullets_fired: 0
-  reloadSpeed: 2
+  reloadSpeed: 1.15
   ammoPrice: 100
   isSwapping: 0
   ammoIsFull: 0
@@ -133,6 +133,7 @@ MonoBehaviour:
   reloadSound1: {fileID: 8300000, guid: a6ffcd8c4f5552a47ac2a376e9593f93, type: 3}
   reloadSound2: {fileID: 8300000, guid: a4d0cfb41bd94774dba3d8aea9d22a6b, type: 3}
   reloadSound3: {fileID: 8300000, guid: 2f6f544760b573f4f8486648bca82cb7, type: 3}
+  timeBetweenReloadSounds: 0.9
   reloadKey: 114
 --- !u!114 &6940726272111740849
 MonoBehaviour:

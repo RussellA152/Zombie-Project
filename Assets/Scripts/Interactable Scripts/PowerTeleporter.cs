@@ -28,6 +28,7 @@ public class PowerTeleporter : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.F) && !TeleporterEvent.current.teleporters_are_linked && !TeleporterEvent.current.wants_to_link_teleporters && TeleporterEvent.current.teleporters_can_be_linked)
             {
                 TeleporterEvent.current.wants_to_link_teleporters = true;
+                TeleporterEvent.current.interactive_audio_source.PlayOneShot(TeleporterEvent.current.interact_successful_sound, 0.5f);
                 Debug.Log("Player wants to link teleporters!");
             }
             //if teleporter is already linked and player presses 'F' then teleport player
@@ -35,6 +36,7 @@ public class PowerTeleporter : MonoBehaviour
             {
                 //calls event for teleporting player
                 Debug.Log("Teleport Player!");
+                TeleporterEvent.current.interactive_audio_source.PlayOneShot(TeleporterEvent.current.teleport_successful_sound,0.5f);
                 TeleporterEvent.current.TeleportPlayer();
             }
         }
@@ -82,6 +84,7 @@ public class PowerTeleporter : MonoBehaviour
         //after some time, teleport player back to starting room
         player = TeleporterEvent.current.player;
         yield return new WaitForSeconds(TeleporterEvent.current.upgradeRoomTimer);
+        InteractAudioSource.current.PlayInteractClip(TeleporterEvent.current.teleport_return_sound, 0.5f);
         player.transform.position = TeleporterEvent.current.startingRoom_Teleporter.transform.position;
 
         //begin teleporter link cooldown

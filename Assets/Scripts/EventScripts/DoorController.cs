@@ -24,7 +24,6 @@ public class DoorController : MonoBehaviour
     [SerializeField] private float rotationValueY;  //this value specifies where the door's y component will rotate to
 
     [SerializeField] private bool door_is_rotatable;
-    [SerializeField] public AudioSource interactive_audioSource;
     [SerializeField] private AudioClip doorOpenSound;
 
     [SerializeField] private AudioClip detonateStartExplosiveSound;
@@ -59,7 +58,7 @@ public class DoorController : MonoBehaviour
             if (door_is_rotatable)
             {
                 LeanTween.rotateLocal(this.gameObject, new Vector3(0, rotationValueY, 0), .5f);
-                interactive_audioSource.PlayOneShot(doorOpenSound,1f);
+                InteractAudioSource.current.PlayInteractClip(doorOpenSound, 0.5f);
             }
 
             else
@@ -102,11 +101,11 @@ public class DoorController : MonoBehaviour
     {
         //play detonate sound
         doorBomb.SetActive(true);
-        interactive_audioSource.PlayOneShot(detonateStartExplosiveSound, 1f);
+        InteractAudioSource.current.PlayInteractClip(detonateStartExplosiveSound, 1f);
         yield return new WaitForSeconds(.7f);
-        interactive_audioSource.PlayOneShot(detonateTickingExplosiveSound,1f);
+        InteractAudioSource.current.PlayInteractClip(detonateTickingExplosiveSound, 1f);
         yield return new WaitForSeconds(1.35f);
-        interactive_audioSource.PlayOneShot(doorOpenSound, 1f);
+        InteractAudioSource.current.PlayInteractClip(doorOpenSound, 1f);
         CameraShaker.Instance.ShakeOnce(22f, 5f, 0.1f, 2.5f);
         //the particle system will renable its script to auto delete itself after animation is done playing
         explosionParticles.gameObject.GetComponent<CFX_AutoDestructShuriken>().enabled = true;

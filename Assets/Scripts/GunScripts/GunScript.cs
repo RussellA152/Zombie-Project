@@ -63,6 +63,7 @@ public class GunScript : MonoBehaviour
     [SerializeField] private AudioClip reloadSound1;  //remove mag sound
     [SerializeField] private AudioClip reloadSound2;  //load mag sound
     [SerializeField] private AudioClip reloadSound3;  //gun cocking sound
+    [SerializeField] private float timeBetweenReloadSounds;  //this is the time between each of the three reload sounds (its so each gun can be slightly different)
 
     //public AudioClip reloadSound;
     private AudioSource gunAudio;
@@ -198,7 +199,7 @@ public class GunScript : MonoBehaviour
         //gunAnimation.Play();
 
         //plays shoot AudioClip
-        gunAudio.PlayOneShot(shootSound, 0.6f);
+        gunAudio.PlayOneShot(shootSound, 0.5f);
 
         LeanTween.rotateLocal(this.gameObject, new Vector3(recoilRotateX,180,0), .05f);
         LeanTween.moveLocalZ(this.gameObject, recoilPositionZ, .05f);
@@ -344,22 +345,22 @@ public class GunScript : MonoBehaviour
         if (playerPerkAccessor.has_Reload_Speed_Perk)
         {
             yield return new WaitForSeconds(0.2f);
-            gunAudio.PlayOneShot(reloadSound1, 0.5f);
-            yield return new WaitForSeconds(.4f);
-            gunAudio.PlayOneShot(reloadSound2, 0.5f);
-            yield return new WaitForSeconds(.4f);
-            gunAudio.PlayOneShot(reloadSound3, 0.5f);
+            gunAudio.PlayOneShot(reloadSound1, 0.4f);
+            yield return new WaitForSeconds(timeBetweenReloadSounds/2);
+            gunAudio.PlayOneShot(reloadSound2, 0.4f);
+            yield return new WaitForSeconds(timeBetweenReloadSounds/2);
+            gunAudio.PlayOneShot(reloadSound3, 0.4f);
 
             yield return new WaitForSeconds((reloadSpeed/2) - .25f);
         }
         else
         {
             yield return new WaitForSeconds(0.2f);
-            gunAudio.PlayOneShot(reloadSound1, 0.5f);
-            yield return new WaitForSeconds(0.8f);
-            gunAudio.PlayOneShot(reloadSound2, 0.5f);
-            yield return new WaitForSeconds(0.8f);
-            gunAudio.PlayOneShot(reloadSound3, 0.5f);
+            gunAudio.PlayOneShot(reloadSound1, 0.4f);
+            yield return new WaitForSeconds(timeBetweenReloadSounds);
+            gunAudio.PlayOneShot(reloadSound2, 0.4f);
+            yield return new WaitForSeconds(timeBetweenReloadSounds);
+            gunAudio.PlayOneShot(reloadSound3, 0.4f);
             yield return new WaitForSeconds(reloadSpeed - .25f);
         }
         

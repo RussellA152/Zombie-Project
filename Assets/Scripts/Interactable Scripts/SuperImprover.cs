@@ -14,6 +14,12 @@ public class SuperImprover : MonoBehaviour
 
     private GameObject currentlyEquippedWeaponSI;    //SI refers to the super improver version of equipped weapon (not to be confused with the variable in WeaponSwitching)
 
+    [SerializeField] private AudioClip purchase_successful_sound;
+    [SerializeField] private AudioClip weapon_upgrade_sound;
+    [SerializeField] private AudioClip purchase_failed_sound;
+
+    private bool canInteract;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +28,7 @@ public class SuperImprover : MonoBehaviour
         upgradePrice = 5000;
         inTrigger = false;
         wantsToUpgradeGun = false;
-
+        canInteract = true;
     }
 
     // Update is called once per frame
@@ -72,14 +78,25 @@ public class SuperImprover : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if (wantsToUpgradeGun && PlayerScore.pScore >= upgradePrice)
+            if (wantsToUpgradeGun && canInteract)
             {
-                if (!currentlyEquippedWeaponSI.GetComponent<GunScript>().isUpgraded)
+                if (!currentlyEquippedWeaponSI.GetComponent<GunScript>().isUpgraded && PlayerScore.pScore >= upgradePrice)
                 {
                     //upgrade the currently held weapon
+                    canInteract = false;
+                    InteractAudioSource.current.PlayInteractClip(purchase_successful_sound, 0.5f);
+                    InteractAudioSource.current.PlayInteractClip(weapon_upgrade_sound, 0.5f);
                     PlayerScore.pScore -= upgradePrice;
                     currentlyEquippedWeaponSI.GetComponent<GunScript>().UpgradeGun();
-                }   
+                    StartCoroutine(InteractionDelay());
+                }
+                else
+                {
+                    canInteract = false;
+                    InteractAudioSource.current.PlayInteractClip(purchase_failed_sound, 0.5f);
+                    StartCoroutine(InteractionDelay());
+                    
+                }
             }
                 
         }
@@ -93,5 +110,10 @@ public class SuperImprover : MonoBehaviour
         {
             inTrigger = false;
         }
+    }
+    IEnumerator InteractionDelay()
+    {
+        yield return new WaitForSeconds(1f);
+        canInteract = true;
     }
 }

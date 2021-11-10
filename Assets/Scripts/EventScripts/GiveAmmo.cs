@@ -11,7 +11,6 @@ public class GiveAmmo : MonoBehaviour
 
     private bool ammoIsFull; 
 
-    [SerializeField] private AudioSource interactive_audioSource;
     [SerializeField] private AudioClip purchase_successful_sound;
     [SerializeField] private AudioClip purchase_failed_sound;
 
@@ -54,7 +53,7 @@ public class GiveAmmo : MonoBehaviour
             if(PlayerScore.pScore >= access_gun_script.ammoPrice)
             {
                 //subtracts the specific ammo price of currently equipped gun from the Player's score
-                interactive_audioSource.PlayOneShot(purchase_successful_sound,0.5f);
+                InteractAudioSource.current.PlayInteractClip(purchase_successful_sound, 0.5f);
                 PlayerScore.pScore -= access_gun_script.ammoPrice;
                 access_gun_script.MaxAmmo();
 
@@ -64,13 +63,13 @@ public class GiveAmmo : MonoBehaviour
             }
             else
             {
-                interactive_audioSource.PlayOneShot(purchase_failed_sound,0.5f);
+                InteractAudioSource.current.PlayInteractClip(purchase_failed_sound, 0.5f);
             }
 
         }
         else
         {
-            interactive_audioSource.PlayOneShot(purchase_failed_sound, 0.5f);
+            InteractAudioSource.current.PlayInteractClip(purchase_failed_sound, 0.5f);
         }
     }
 

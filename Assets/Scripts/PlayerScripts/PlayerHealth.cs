@@ -23,6 +23,8 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private GameObject roundControllerObject;
     private RoundController roundControllerScriptAccessor;
 
+    [SerializeField] private AudioClip life_save_sound;
+
     private void Start()
     {
         //canTakeDamage = true;
@@ -45,6 +47,7 @@ public class PlayerHealth : MonoBehaviour
     }
     private void Update()
     {
+
         if ((playerHealth < originalPlayerHealth) && !is_dead)
         {
             RegenerateHealth();
@@ -79,24 +82,22 @@ public class PlayerHealth : MonoBehaviour
     public void SavePlayerLife()
     {
         // these two functions basically reset the player to their original health and speed states before purchasing speed perks
-        if (perkInventory.has_Life_Savior_Perk)
-        {
-            DecreaseHealth();
-            if(perkInventory.has_Sprint_Speed_Perk == true)
-                playerMovementAccessor.DecreaseSpeed();
+        playerHealth = 1f;
+        InteractAudioSource.current.PlayInteractClip(life_save_sound, 0.5f);
+        DecreaseHealth();
+        if(perkInventory.has_Sprint_Speed_Perk == true)
+            playerMovementAccessor.DecreaseSpeed();
 
             //if player was saved by life savior perk, remove all of their perks so they have to repurchase them
-            perkInventory.has_Life_Savior_Perk = false;
-            perkInventory.has_Reload_Speed_Perk = false;
-            perkInventory.has_Sprint_Speed_Perk = false;
-            perkInventory.has_Health_Increase_Perk = false; 
-  
-        }
-        else if (!perkInventory.has_Life_Savior_Perk)
-        {
-            is_dead = true;
-            Debug.Log("You Died!");
-        }
+        perkInventory.has_Life_Savior_Perk = false;
+        perkInventory.has_Reload_Speed_Perk = false;
+        perkInventory.has_Sprint_Speed_Perk = false;
+        perkInventory.has_Health_Increase_Perk = false; 
+    }
+    public void PlayerHasDied()
+    {
+        is_dead = true;
+        Debug.Log("You Died!");
     }
     /*
     private void OnTriggerStay(Collider other)
@@ -123,7 +124,14 @@ public class PlayerHealth : MonoBehaviour
     {
         if(playerHealth <= 0f)
         {
-            SavePlayerLife();
+            if (perkInventory.has_Life_Savior_Perk)
+            {
+                SavePlayerLife();
+            }
+            else if (!perkInventory.has_Life_Savior_Perk)
+            {
+                PlayerHasDied();
+            }
             //lastCallTime = Time.time;
             
         }

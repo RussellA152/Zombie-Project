@@ -11,19 +11,22 @@ public class DoorTrigger : MonoBehaviour
     private bool doorWasOpened;
 
     public bool isEndingDoor;    //this bool represents whether this door, is the final door to end the level
-    [SerializeField] private AudioSource interactive_audio_source;
+    //[SerializeField] private AudioSource interactive_audio_source;
 
     [SerializeField] private AudioClip purchase_successful_sound;
     [SerializeField] private AudioClip purchase_failed_sound;
 
+    private bool canInteract;
+
 
     private void Start()
     {
+        canInteract = true;
         inTrigger = false;
         wantsToBuyDoor = false;
         doorWasOpened = false;
 
-        interactive_audio_source = this.transform.GetComponentInParent<DoorController>().interactive_audioSource;
+        //interactive_audio_source = this.transform.GetComponentInParent<DoorController>().interactive_audioSource;
     }
     private void Update()
     {
@@ -55,37 +58,43 @@ public class DoorTrigger : MonoBehaviour
         {
             
             //Debug.Log("Hold 'f' to open Door [Cost: " + doorPrice);
-            if(wantsToBuyDoor && !doorWasOpened && !isEndingDoor)
+            if(wantsToBuyDoor && !doorWasOpened && !isEndingDoor && canInteract)
             {
                 if(PlayerScore.pScore >= doorPrice)
                 {
                     PlayerScore.pScore -= doorPrice;
                     GameEvents.current.DoorwayTriggerEnter(id);
-                    interactive_audio_source.PlayOneShot(purchase_successful_sound,0.5f);
+                    InteractAudioSource.current.PlayInteractClip(purchase_successful_sound, 0.5f);
+                    canInteract = false;
                     doorWasOpened = true;
                 }
                 else
                 {
-                    interactive_audio_source.PlayOneShot(purchase_failed_sound,0.5f);
+                    InteractAudioSource.current.PlayInteractClip(purchase_failed_sound, 0.5f);
+                    canInteract = false;
+                    StartCoroutine(InteractionDelay());
                 }
                 
 
             }
-            else if(wantsToBuyDoor && !doorWasOpened && isEndingDoor)
+            else if(wantsToBuyDoor && !doorWasOpened && isEndingDoor && canInteract)
             {
                 if(PlayerScore.pScore >= doorPrice)
                 {
                     PlayerScore.pScore -= doorPrice;
-                    interactive_audio_source.PlayOneShot(purchase_successful_sound,0.5f);
+                    InteractAudioSource.current.PlayInteractClip(purchase_successful_sound, 0.5f);
                     //instead of calling event, we will call our Buyable ending script functions
                     GameEvents.current.DoorwayTriggerEnter(id);
                     BuyableEnding.current.conditions_met = true;
                     BuyableEnding.current.CompleteLevel();
+                    canInteract = false;
                     doorWasOpened = true;
                 }
                 else
                 {
-                    interactive_audio_source.PlayOneShot(purchase_failed_sound,0.5f);
+                    InteractAudioSource.current.PlayInteractClip(purchase_failed_sound, 0.5f);
+                    canInteract = false;
+                    StartCoroutine(InteractionDelay());
                 }
 
                 
@@ -96,5 +105,10 @@ public class DoorTrigger : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         inTrigger = false; 
+    }
+    IEnumerator InteractionDelay()
+    {
+        yield return new WaitForSeconds(1f);
+        canInteract = true;
     }
 }

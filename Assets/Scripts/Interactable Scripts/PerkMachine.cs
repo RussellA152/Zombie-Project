@@ -37,8 +37,8 @@ public class PerkMachine : MonoBehaviour
     private PlayerMovement playerMovementAccessor;
     private PlayerPerkInventory playerPerkInventory;
 
-    [SerializeField] private AudioSource interactive_audioSource;
     [SerializeField] private AudioClip soda_open_sound;
+    [SerializeField] private AudioClip soda_buff_sound;
 
     [SerializeField] private AudioClip purchase_successful_sound;
     [SerializeField] private AudioClip purchase_failed_sound;
@@ -119,7 +119,7 @@ public class PerkMachine : MonoBehaviour
             {
                 if (PlayerScore.pScore >= perkPrice)
                 {
-                    interactive_audioSource.PlayOneShot(purchase_successful_sound,0.5f);
+                    InteractAudioSource.current.PlayInteractClip(purchase_successful_sound, 0.5f);
                     playerHasPerk = true;
                     PlayerScore.pScore -= perkPrice;
                     GivePerkType();
@@ -128,7 +128,7 @@ public class PerkMachine : MonoBehaviour
                 }
                 else
                 {
-                    interactive_audioSource.PlayOneShot(purchase_failed_sound,0.5f);
+                    InteractAudioSource.current.PlayInteractClip(purchase_failed_sound, 0.5f);
                     StartCoroutine(InteractionDelay());
                 }
                 
@@ -162,7 +162,9 @@ public class PerkMachine : MonoBehaviour
     private void GivePerkType()
     {
         //plays a soda can opening sound when purchasing perk
-        interactive_audioSource.PlayOneShot(soda_open_sound,0.5f);
+        InteractAudioSource.current.PlayInteractClip(soda_open_sound, 0.5f);
+        StartCoroutine(BuffSoundDelay());
+        
 
         switch (perkType)
         {
@@ -201,6 +203,11 @@ public class PerkMachine : MonoBehaviour
         canInteract = false;
         yield return new WaitForSeconds(1f);
         canInteract = true;
+    }
+    IEnumerator BuffSoundDelay()
+    {
+        yield return new WaitForSeconds(1.3f);
+        InteractAudioSource.current.PlayInteractClip(soda_buff_sound, 0.5f);
     }
 
 }
