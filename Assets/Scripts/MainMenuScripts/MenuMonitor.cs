@@ -13,14 +13,16 @@ public class MenuMonitor : MonoBehaviour
     {
         playButton.gameObject.SetActive(false);
         quitButton.gameObject.SetActive(false);
-        downsizerText.gameObject.SetActive(true);
+        if(downsizerText != null)
+            downsizerText.gameObject.SetActive(true);
         StartCoroutine(ChangeText());
     }
 
     private IEnumerator ChangeText()
     {
         yield return new WaitForSeconds(3.6f);
-        downsizerText.gameObject.SetActive(false);
+        if (downsizerText != null)
+            downsizerText.gameObject.SetActive(false);
         playButton.gameObject.SetActive(true);
         quitButton.gameObject.SetActive(true);
     }

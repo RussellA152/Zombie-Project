@@ -18,6 +18,7 @@ public class BuyableEnding : MonoBehaviour
     {
         if (conditions_met)
         {
+            MySceneHandler.current.ChangeScene("Victory Screen");
             Debug.Log("Go to victory screen here!");
         }
     }

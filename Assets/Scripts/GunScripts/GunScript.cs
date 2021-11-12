@@ -84,6 +84,7 @@ public class GunScript : MonoBehaviour
 
     private void Start()
     {
+
         //Application.targetFrameRate = 15;
         //setting the "animator" to the Animator component of WeaponHolder (THIS WON'T WORK IF WE HAVE MULITPLE SCENES)
         GameObject player = GameObject.Find("Player");
