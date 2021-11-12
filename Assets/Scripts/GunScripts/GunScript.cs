@@ -177,20 +177,24 @@ public class GunScript : MonoBehaviour
             StartCoroutine(Reload());
             return;
         }
-        //pressing left mouse will shoot
-        if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire && isAutomatic)
+        if (InputManager.IsInputEnabled)
         {
-            //higher firerate values allow player to shoot faster
-            //essentially, we are setting nextTimeToFire equal to the sum of Time.time and 1/(firerate) 
-            //if the Time.time is 5 seconds, and our nextTimeToFire is 5.25, we need to wait .25 seconds to shoot again
-            nextTimeToFire = Time.time + 1f/fireRate;
-            Shoot();
+            //pressing left mouse will shoot
+            if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire && isAutomatic)
+            {
+                //higher firerate values allow player to shoot faster
+                //essentially, we are setting nextTimeToFire equal to the sum of Time.time and 1/(firerate) 
+                //if the Time.time is 5 seconds, and our nextTimeToFire is 5.25, we need to wait .25 seconds to shoot again
+                nextTimeToFire = Time.time + 1f / fireRate;
+                Shoot();
+            }
+            if (Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire && !isAutomatic)
+            {
+                nextTimeToFire = Time.time + 1f / fireRate;
+                Shoot();
+            }
         }
-        if ( Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire && !isAutomatic)
-        {
-            nextTimeToFire = Time.time + 1f / fireRate;
-            Shoot();
-        }
+            
     }
     void Shoot()
     {
@@ -345,22 +349,22 @@ public class GunScript : MonoBehaviour
         if (playerPerkAccessor.has_Reload_Speed_Perk)
         {
             yield return new WaitForSeconds(0.2f);
-            gunAudio.PlayOneShot(reloadSound1, 0.4f);
+            gunAudio.PlayOneShot(reloadSound1, 0.3f);
             yield return new WaitForSeconds(timeBetweenReloadSounds/2);
-            gunAudio.PlayOneShot(reloadSound2, 0.4f);
+            gunAudio.PlayOneShot(reloadSound2, 0.3f);
             yield return new WaitForSeconds(timeBetweenReloadSounds/2);
-            gunAudio.PlayOneShot(reloadSound3, 0.4f);
+            gunAudio.PlayOneShot(reloadSound3, 0.3f);
 
             yield return new WaitForSeconds((reloadSpeed/2) - .25f);
         }
         else
         {
             yield return new WaitForSeconds(0.2f);
-            gunAudio.PlayOneShot(reloadSound1, 0.4f);
+            gunAudio.PlayOneShot(reloadSound1, 0.3f);
             yield return new WaitForSeconds(timeBetweenReloadSounds);
-            gunAudio.PlayOneShot(reloadSound2, 0.4f);
+            gunAudio.PlayOneShot(reloadSound2, 0.3f);
             yield return new WaitForSeconds(timeBetweenReloadSounds);
-            gunAudio.PlayOneShot(reloadSound3, 0.4f);
+            gunAudio.PlayOneShot(reloadSound3, 0.3f);
             yield return new WaitForSeconds(reloadSpeed - .25f);
         }
         

@@ -1,5 +1,4 @@
 using System.Collections;
-//using System;
 //using System.Collections.Generic;
 using UnityEngine.AI;
 using UnityEngine;
@@ -17,7 +16,6 @@ public class EnemyAttacks : MonoBehaviour
     private NavMeshAgent  navmeshAgentAccessor;
 
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +24,7 @@ public class EnemyAttacks : MonoBehaviour
         navmeshAgentAccessor = gameObject.GetComponent<NavMeshAgent>();
 
         zombieAudioSource = EnemyAudio.current.enemyAudioSourceGameObject.GetComponent<AudioSource>();
+
 
 
         //enemyDamage = 25f; //hard-coded for now, but should be a different value?
@@ -56,42 +55,54 @@ public class EnemyAttacks : MonoBehaviour
             CancelInvoke();
             //when player exits hitbox (not being attacked anymore), the zombie can start moving again
             navmeshAgentAccessor.isStopped = false;
-            SetPlayerAttackedCoroutine = StartCoroutine(SetPlayerAttacked());
-            
+
+            //SetPlayerAttackedCoroutine = StartCoroutine(SetPlayerAttacked());
+
+
+
             //Debug.Log("Attack invoke cancelled");
         }
     }
     private void EnemyDealingDamage()
     {
-        playerHealth.is_attacked = true;
-        //stop player's health regeneration
-        if (SetPlayerAttackedCoroutine != null)
+        if (!playerHealth.is_invincible)
         {
-            StopCoroutine(SetPlayerAttackedCoroutine);
-            Debug.Log("Stop Health Regen Coroutine!");
+            PlayerHealth.is_attacked = true;
+
+            playerHealth.start_regen_timer = Time.time;
+            //stop player's health regeneration
+            //if (SetPlayerAttackedCoroutine != null)
+            //{
+               // StopCoroutine(SetPlayerAttackedCoroutine);
+                //Debug.Log("Stop Health Regen Coroutine!");
+           // }
+
+            PlayerHealth.playerHealth -= enemyDamage;
+            //random chance to play random sound for attack sound
+            int randomAudioClip = Random.Range(0, zombieAttackSounds.Length);
+
+            zombieAudioSource.PlayOneShot(zombieAttackSounds[randomAudioClip], 0.5f);
+
+            //calls the camera shaking function from the player
+            playerHealth.ShakeCameraOnHit();
+
+            //Debug.Log("Attack!");
+            //Debug.Log("Your Health: " + PlayerHealth.playerHealth);
         }
-        PlayerHealth.playerHealth -= enemyDamage;
-        //random chance to play random sound for attack sound
-        int randomAudioClip = Random.Range(0, zombieAttackSounds.Length);
 
-        zombieAudioSource.PlayOneShot(zombieAttackSounds[randomAudioClip], 0.5f);
-
-        
-        
-
-        //Debug.Log("Attack!");
-        //Debug.Log("Your Health: " + PlayerHealth.playerHealth);
     }
     private void OnDisable()
     {
         //This should prevent the zombie from being able to attack player when its dead
         CancelInvoke();
     }
+    /*
     IEnumerator SetPlayerAttacked()
     {
         Debug.Log("Wait for regeneration");
         yield return new WaitForSeconds(3f);
-        playerHealth.is_attacked = false;
+        PlayerHealth.is_attacked = false;
         Debug.Log("Can Regen!");
     }
+    */
 }

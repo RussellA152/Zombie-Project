@@ -71,9 +71,13 @@ public class PlayerMovement : MonoBehaviour
         //uses a raycast to check if player is grounded
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
-        PlayerMovements();
-        ControlDrag();
-        ControlSpeed();
+        if (InputManager.IsInputEnabled)
+        {
+            PlayerMovements();
+            ControlDrag();
+            ControlSpeed();
+
+        }
 
         slopeMoveDirection = Vector3.ProjectOnPlane(moveDirection, slopeHit.normal);
 

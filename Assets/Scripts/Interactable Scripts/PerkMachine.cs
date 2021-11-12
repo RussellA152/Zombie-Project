@@ -206,7 +206,7 @@ public class PerkMachine : MonoBehaviour
     }
     IEnumerator BuffSoundDelay()
     {
-        yield return new WaitForSeconds(1.3f);
+        yield return new WaitForSeconds(1.15f);
         InteractAudioSource.current.PlayInteractClip(soda_buff_sound, 0.5f);
     }
 

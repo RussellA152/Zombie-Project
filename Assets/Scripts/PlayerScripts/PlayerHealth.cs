@@ -1,6 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
+using EZCameraShake;
 using UnityEngine;
+using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -14,20 +14,23 @@ public class PlayerHealth : MonoBehaviour
 
     private PlayerPerkInventory perkInventory;
     private PlayerMovement playerMovementAccessor;
-    public Coroutine RegenerateHealthCoroutine;
+    //public Coroutine RegenerateHealthCoroutine;
 
-    public bool is_attacked;
+    public static bool is_attacked;
     private bool is_dead;
     private bool checked_for_death;
+    public bool is_invincible;
 
     [SerializeField] private GameObject roundControllerObject;
     private RoundController roundControllerScriptAccessor;
 
     [SerializeField] private AudioClip life_save_sound;
 
+    public float start_regen_timer;
+    public float elapsed_regen_timer;
+
     private void Start()
     {
-        //canTakeDamage = true;
 
         perkInventory = GetComponent<PlayerPerkInventory>();
         playerMovementAccessor = GetComponent<PlayerMovement>();
@@ -44,10 +47,17 @@ public class PlayerHealth : MonoBehaviour
         playerHealth = originalPlayerHealth;
 
         is_dead = false;
+        is_invincible = false;
     }
     private void Update()
     {
+        elapsed_regen_timer = Time.time - start_regen_timer;
 
+        if(elapsed_regen_timer >= 3f)
+        {
+            is_attacked = false;
+        }
+        
         if ((playerHealth < originalPlayerHealth) && !is_dead)
         {
             RegenerateHealth();
@@ -82,6 +92,9 @@ public class PlayerHealth : MonoBehaviour
     public void SavePlayerLife()
     {
         // these two functions basically reset the player to their original health and speed states before purchasing speed perks
+
+        //starts coroutine for invincibilty timer (player cannot take damage for a few seconds)
+        StartCoroutine(InvincibleTimer());
         playerHealth = 1f;
         InteractAudioSource.current.PlayInteractClip(life_save_sound, 0.5f);
         DecreaseHealth();
@@ -150,6 +163,18 @@ public class PlayerHealth : MonoBehaviour
         }
 
         
+    }
+    public void ShakeCameraOnHit()
+    {
+        //when player is attacked, we call this function from the enemyAttacks script
+        //allows player to see if they are hit in a visual aspect
+        CameraShaker.Instance.ShakeOnce(10f, 5f, 0.1f, 0.5f);
+    }
+    IEnumerator InvincibleTimer()
+    {
+        is_invincible = true;
+        yield return new WaitForSeconds(5f);
+        is_invincible = false; 
     }
 
     /*
