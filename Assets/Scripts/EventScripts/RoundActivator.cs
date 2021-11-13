@@ -4,17 +4,28 @@ using UnityEngine;
 
 public class RoundActivator : MonoBehaviour
 {
+    //private PlayerUI player_ui_accessor;
+    //[SerializeField] private GameObject pHud;
     private void Update()
     {
         RoundActivatorFunction();
+    }
+
+    private void Start()
+    {
+       // pHud = GameObject.Find("Player's HUD");
+       // player_ui_accessor = pHud.GetComponent<PlayerUI>();
     }
     // when all zombies are dead (zombie counter = 0), start next round
     private void RoundActivatorFunction()
     {
         if(RoundController.zombieCounter == 0)
         {
+
             RoundChange.roundChange.RoundChanging();
-            //Debug.Log("Round activator activated!");
+            //moves round text to the center of the screen at start of new round
+            
+            
             
         }
     }

@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class RoundController : MonoBehaviour
 {
-    public static int zombieCounter = 0;    //initally set to 0, this is variable represents how many zombies are currently alive
+    public static int zombieCounter;    //initally set to 0, this is variable represents how many zombies are currently alive
 
     public GameObject zombie;   //original prefab of the zombie
 
@@ -35,6 +35,9 @@ public class RoundController : MonoBehaviour
     private float zombieSpawnTime = 3f;
     private float zombieDogSpawnTime = 4f;
 
+    private PlayerUI player_ui_accessor;
+    [SerializeField] private GameObject pHud;
+
     //OUR MAIN LIST OF SPAWNING LOCATIONS / TRANSFORMS
     public List<Transform> RandomSpawnLocations;
 
@@ -43,10 +46,14 @@ public class RoundController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        zombieCounter = 0;
         round = 0;
         RoundChange.roundChange.onRoundChange += RoundNumberChange;
         amountOfSpawnLocations = 3;
         length_of_zombie_prefabs = ZombiePrefabs.Count;
+
+        pHud = GameObject.Find("Player's HUD");
+        player_ui_accessor = pHud.GetComponent<PlayerUI>();
         //round = 144;
         //round = 25;
     }
@@ -58,9 +65,17 @@ public class RoundController : MonoBehaviour
     {
         //if all zombies are dead, increment the round and increase zombie spawns (we check this inside the RoundActivator script)
 
-        
+        //if the round is not round 0, then dont play the round ending sound, only the round starting sound
+        if(round != 0)
+        {
+            InteractAudioSource.current.PlayInteractClip(RoundChange.roundChange.round_ending_sound, 0.5f);
+            StartCoroutine(PlayRoundChangeSound());
+        }
+            
+
         //prevents multiple spawning instances, allows us to have correct delay times between rounds and zombie spawns correctly (without this we get infinite invokes)
         CancelInvoke();
+        //StartCoroutine(PlayRoundChangeSound());
 
         //need to reset spawnIncrementor so we can spawn correct number of zombies
         spawnIncrementor = 0;
@@ -79,6 +94,7 @@ public class RoundController : MonoBehaviour
         targetScript = zombieDog.GetComponent<Target>();
         targetScript.RoundDifficultyIncrease();
 
+        
         //This should be hard-coded to make sure the zombie counter caps at 25 maximum zombies
         if (zombieIncrementor < 22)
         {
@@ -92,20 +108,20 @@ public class RoundController : MonoBehaviour
         //if the round is 16 or higher and is not divisible by 5, spawn zombies and dogs simutaneously
         if (round >= 16 && round % 5 != 0 && round != 0)
         {
-            InvokeRepeating("ZombieAndDogSpawns", 10.0f, zombieSpawnTime);
+            InvokeRepeating("ZombieAndDogSpawns", 13.0f, zombieSpawnTime);
         }
         //we check if the round is 5,10,15,20, etc. if so, then it will be a dedicated dog round
         else if (round % 5 == 0 && round != 0)
         {
             //starts in 5 seconds, and invokes every 3 seconds
             //in 5 seconds, we spawn our first zombie, then every 3 seconds after that, we spawn each other zombie
-            InvokeRepeating("ZombieDogSpawns", 11.0f, zombieDogSpawnTime);
+            InvokeRepeating("ZombieDogSpawns", 14.0f, zombieDogSpawnTime);
             // Debug.Log("Spawn Dogs!");
         }
         //if the round is not divisible by 5 (ex. 2,3,4,9), then it will be a normal zombie round
         else
         {
-            InvokeRepeating("ZombieSpawns", 10.0f, zombieSpawnTime);
+            InvokeRepeating("ZombieSpawns", 13.0f, zombieSpawnTime);
             //Debug.Log("Spawn Zombies!");
         }
     }
@@ -208,7 +224,12 @@ public class RoundController : MonoBehaviour
 
 
     }
-
+    IEnumerator PlayRoundChangeSound()
+    {
+        yield return new WaitForSeconds(8f);  
+        InteractAudioSource.current.PlayInteractClip(RoundChange.roundChange.round_starting_sound, 0.5f);
+        player_ui_accessor.RoundChangeUIAnimation();
+    }
     public void StopZombieSpawning()
     {
         //unsubscribes zombie spawning function from Round event system to stop zombie spawns

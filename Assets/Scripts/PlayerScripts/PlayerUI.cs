@@ -11,6 +11,8 @@ public class PlayerUI : MonoBehaviour
     public TextMeshProUGUI roundText;
     public TextMeshProUGUI zombieCounterText;
 
+    [SerializeField] private GameObject roundTextDisplay;
+
 
     //public string healthText;
 
@@ -51,6 +53,7 @@ public class PlayerUI : MonoBehaviour
 
         //should we update this every frame?
         //UpdatePlayerAmmoUI();
+
         UpdatePlayerHealthUI();
         if (Time.time > nextActionTime)
         {
@@ -96,5 +99,19 @@ public class PlayerUI : MonoBehaviour
     public void RetrieveAmmoInfo()
     {
         gunScriptAccessor = weaponHolder.GetComponentInChildren<GunScript>();
+    }
+
+    public void RoundChangeUIAnimation()
+    {
+        //moves round text to the center of the screen
+        roundText.rectTransform.LeanMove(new Vector3(-772f, -390f, 0f),3.5f);
+        StartCoroutine(RoundChangeBack());
+    }
+    IEnumerator RoundChangeBack()
+    {
+        yield return new WaitForSeconds(6.5f);
+
+        roundText.rectTransform.LeanMove(new Vector3(0f, -25f, 0f), 1.5f);
+
     }
 }
