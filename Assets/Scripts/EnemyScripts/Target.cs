@@ -4,7 +4,7 @@ using UnityEngine.AI;
 
 public class Target : MonoBehaviour
 {
-    public float health = 50f;
+    public float health;
     public float maxHealthAmount;
 
     public float minRandomSpeed;
@@ -85,17 +85,22 @@ public class Target : MonoBehaviour
 
             //Caps enemies' health amount so it doesn't go to infinite
             if(health < maxHealthAmount)
+            {
                 health += 10f;
-
-            //Caps enemies' speed amount so it doesn't go to infinite
-            if(maxRandomSpeed < maxPossibleSpeed)
-                difficultySpeedIncrease += .2f;
+                Debug.Log("health increased"+ this.gameObject);
+            }
                 
             
         }
         
     }
    
+    public void IncreaseSpeed()
+    {
+        //Caps enemies' speed amount so it doesn't go to infinite (we can just call this once since speed is statically, we don't want to call this multiple times otherwise the speed will increase exponentially)
+        if (maxRandomSpeed < maxPossibleSpeed)
+            difficultySpeedIncrease += .15f;
+    }
     void Die()
     {
         //destroys the zombie and its AI (everything)
@@ -161,7 +166,7 @@ public class Target : MonoBehaviour
     void SetPowerUpProbability()
     {
         //There is a small chance (10%) for a power up to spawn when a zombie dies
-        int PowerUpDropChance = Random.Range(1, 51);
+        int PowerUpDropChance = Random.Range(1, 31);
 
         if(PowerUpDropChance % 10 == 0)
         {

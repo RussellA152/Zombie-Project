@@ -881,7 +881,7 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.69411767, g: 0.8156863, b: 0.972549, a: 1}
   m_Intensity: 4
   m_Range: 10
   m_SpotAngle: 140
@@ -2232,7 +2232,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6921057, g: 0.81500345, b: 0.9716981, a: 1}
   m_Intensity: 4
   m_Range: 0.75
   m_SpotAngle: 30
@@ -2457,7 +2457,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MyMenuCamera: {fileID: 1142437269}
   finalPositionZ: -48.99
-  timeToReachMonitor: 3
+  timeToReachMonitor: 2
 --- !u!4 &1184324585 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4481777221271996, guid: 9207d796a4eef5c4fb42153a24ebf588, type: 3}

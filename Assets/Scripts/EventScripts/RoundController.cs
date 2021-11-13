@@ -67,8 +67,14 @@ public class RoundController : MonoBehaviour
         round += 1;
 
         //first, access the original zombie's health to increase it
-        targetScript = zombie.GetComponent<Target>();
-        targetScript.RoundDifficultyIncrease();
+        for (int i = 0; i < length_of_zombie_prefabs; i++)
+        {
+            targetScript = ZombiePrefabs[i].GetComponent<Target>();
+            targetScript.RoundDifficultyIncrease();
+        }
+        //we don't care where we call this because speed is static and we only need to increase it once for all zombies to be affected
+        targetScript.IncreaseSpeed();
+        
         //secondly, access the original zombie dog's health to increase it (by reassigning the targetscript)
         targetScript = zombieDog.GetComponent<Target>();
         targetScript.RoundDifficultyIncrease();
@@ -162,6 +168,9 @@ public class RoundController : MonoBehaviour
             if(zombieTypeSpawnChance % 2 == 0)
             {
                 randomSpawnLocationSpot = Random.Range(0, amountOfSpawnLocations);
+
+                int randomZombiePrefabNumber = Random.Range(0, length_of_zombie_prefabs - 1);
+                zombie = ZombiePrefabs[randomZombiePrefabNumber];
 
                 //RandomSpawnLocation's number of elements are increased through the DoorController event System, when opening doors, we add more elements to the RandomSpawnLcations list
                 zombieClone = Instantiate(zombie, RandomSpawnLocations[randomSpawnLocationSpot].position, RandomSpawnLocations[randomSpawnLocationSpot].rotation);

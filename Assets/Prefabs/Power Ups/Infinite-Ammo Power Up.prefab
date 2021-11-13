@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2302649247895107684}
   - component: {fileID: -7183116906834784291}
   m_Layer: 2
-  m_Name: Infinite Ammo
+  m_Name: Infinite-Ammo Power Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -112,3 +112,5 @@ MonoBehaviour:
   infiniteAmmoCountDown: 10
   id: 4
   deletionCountDown: 10
+  powerUpRetrievedSound: {fileID: 8300000, guid: a1eb94ee86c6e2a4ab86fa2c6854a527, type: 3}
+  powerUpFinishedSound: {fileID: 8300000, guid: d752f5238cb47ea46ace4c17075651b9, type: 3}

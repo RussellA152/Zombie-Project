@@ -14,6 +14,8 @@ public class FreePoints : MonoBehaviour
 
     private Coroutine deletionCountDownCoroutine;
 
+    [SerializeField] private AudioClip powerUpRetrievedSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +39,7 @@ public class FreePoints : MonoBehaviour
     {
         if (id == this.id && this.gameObject)
         {
+            InteractAudioSource.current.PlayInteractClip(powerUpRetrievedSound, 0.5f);
             FreePointsGiver();
             gotFreePoints = true;
             Destroy(gameObject);

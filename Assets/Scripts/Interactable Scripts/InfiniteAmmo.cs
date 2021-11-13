@@ -13,6 +13,9 @@ public class InfiniteAmmo : MonoBehaviour
 
     private Coroutine deletionCountDownCoroutine;
 
+    [SerializeField] private AudioClip powerUpRetrievedSound;
+    [SerializeField] private AudioClip powerUpFinishedSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +41,8 @@ public class InfiniteAmmo : MonoBehaviour
     {
         if (id == this.id && this.gameObject)
         {
+            LeanTween.moveY(this.gameObject, 50, 7f);
+            InteractAudioSource.current.PlayInteractClip(powerUpRetrievedSound, 0.5f);
             hasPowerUp = true;
             
             StartCoroutine(InfiniteAmmoTimer());
@@ -67,6 +72,9 @@ public class InfiniteAmmo : MonoBehaviour
     }
     private void OnDestroy()
     {
+        //only play sound if player obtained the powerup
+        if (hasPowerUp)
+            InteractAudioSource.current.PlayInteractClip(powerUpFinishedSound, 0.5f);
         PowerUpEvent.current.onPowerUpAcquire -= GiveInfiniteAmmo;
     }
 }

@@ -10,6 +10,8 @@ public class InstantKill : MonoBehaviour
     [SerializeField] private float deletionCountDown;
     private bool deletionCountDownHasStarted;
     private bool hasPowerUp;
+    [SerializeField] private AudioClip powerUpRetrievedSound;
+    [SerializeField] private AudioClip powerUpFinishedSound;
 
     private Coroutine deletionCountDownCoroutine;
 
@@ -50,7 +52,9 @@ public class InstantKill : MonoBehaviour
     {
         if(id == this.id && this.gameObject)
         {
+            LeanTween.moveY(this.gameObject, 50, 7f);
             hasPowerUp = true;
+            InteractAudioSource.current.PlayInteractClip(powerUpRetrievedSound, 0.5f);
             //PowerUpEvent.current.hasInstantKill = true;
             StartCoroutine(InstantKillTimer());
         }
@@ -79,6 +83,9 @@ public class InstantKill : MonoBehaviour
     }
     private void OnDestroy()
     {
+        //only play sound if player obtained the powerup
+        if(hasPowerUp)
+            InteractAudioSource.current.PlayInteractClip(powerUpFinishedSound,0.5f);
         PowerUpEvent.current.onPowerUpAcquire -= GiveInstantKill;
     }
 }

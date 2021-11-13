@@ -16,6 +16,9 @@ public class MaxAmmo : MonoBehaviour
 
     private Coroutine deletionCountDownCoroutine;
 
+    [SerializeField] private AudioClip powerUpRetrievedSound;
+    //[SerializeField] private AudioClip powerUpFinishedSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +47,7 @@ public class MaxAmmo : MonoBehaviour
     {
         if (id == this.id && this.gameObject)
         {
+            InteractAudioSource.current.PlayInteractClip(powerUpRetrievedSound, 0.5f);
             MaxAllGunAmmo();
             gotMaxAmmo = true;
             Destroy(gameObject);
@@ -72,6 +76,7 @@ public class MaxAmmo : MonoBehaviour
     private void OnDestroy()
     {
         //not sure if we need to stop coroutine since it gets destroyed but this is here just in case
+        //InteractAudioSource.current.PlayInteractClip(powerUpFinishedSound, 0.5f);
         StopCoroutine(deletionCountDownCoroutine);
         PowerUpEvent.current.onPowerUpAcquire -= GiveMaxAmmo;
     }

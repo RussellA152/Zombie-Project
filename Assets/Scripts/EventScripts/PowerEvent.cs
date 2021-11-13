@@ -11,12 +11,16 @@ public class PowerEvent : MonoBehaviour
     public delegate void PowerSwitchedOn();
     public static event PowerSwitchedOn OnPowered;
 
+    [SerializeField] private AudioClip power_on_sound;
+    [SerializeField] private GameObject power_lever;
+
 
     private void Start()
     {
         wantsToTurnOnPower = false;
         inTrigger = false;
         powerIsTurnedOn = false;
+        
     }
 
     void Update()
@@ -60,6 +64,8 @@ public class PowerEvent : MonoBehaviour
                 if (OnPowered != null)
                 {
                     Debug.Log("Power Event system is on");
+                    InteractAudioSource.current.PlayInteractClip(power_on_sound,0.5f);
+                    LeanTween.rotateLocal(power_lever, new Vector3(-120, 0, 0), 1f);
                     OnPowered();
                 }
                 
