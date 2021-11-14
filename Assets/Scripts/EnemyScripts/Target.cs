@@ -21,6 +21,8 @@ public class Target : MonoBehaviour
 
     public GameObject enemy;
 
+    public bool is_dead;
+
     public GameObject attackHitbox;
     [SerializeField] private GameObject headHitBox;
 
@@ -52,7 +54,7 @@ public class Target : MonoBehaviour
         enemyAttacks_access = GetComponent<EnemyAttacks>();
         zombieAudio = EnemyAudio.current.enemyAudioSourceGameObject.GetComponent<AudioSource>();
         //zombieDamagedAudio = EnemyDamagedSound.current.enemyDamagedAudioSourceGameObject.GetComponent<AudioSource>();
-
+        is_dead = false;
         //zombieAudioSource.GetComponent<AudioSource>();
 
 
@@ -107,6 +109,7 @@ public class Target : MonoBehaviour
         if(gameObject.CompareTag("Enemy"))
         {
             callDieFunction = false;
+            is_dead = true;
 
             //plays a death sound
             if (zombieAudio.isPlaying)

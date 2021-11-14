@@ -320,7 +320,7 @@ public class GunScript : MonoBehaviour
     {
         //Debug.Log("start");
         yield return new WaitForSeconds(.4f);
-        if(hitRB != null && target.health > 0)
+        if(hitRB != null && !target.is_dead)
         {
             //hitRB.enabled = true;
             //set rigidbody back to being kinematic so player cannot push the object

@@ -66,64 +66,13 @@ public class RoundController : MonoBehaviour
         //if all zombies are dead, increment the round and increase zombie spawns (we check this inside the RoundActivator script)
 
         //if the round is not round 0, then dont play the round ending sound, only the round starting sound
-        if(round != 0)
-        {
-            InteractAudioSource.current.PlayInteractClip(RoundChange.roundChange.round_ending_sound, 0.5f);
-            StartCoroutine(PlayRoundChangeSound());
-        }
-            
-
-        //prevents multiple spawning instances, allows us to have correct delay times between rounds and zombie spawns correctly (without this we get infinite invokes)
-        CancelInvoke();
-        //StartCoroutine(PlayRoundChangeSound());
-
-        //need to reset spawnIncrementor so we can spawn correct number of zombies
-        spawnIncrementor = 0;
-        round += 1;
-
-        //first, access the original zombie's health to increase it
-        for (int i = 0; i < length_of_zombie_prefabs; i++)
-        {
-            targetScript = ZombiePrefabs[i].GetComponent<Target>();
-            targetScript.RoundDifficultyIncrease();
-        }
-        //we don't care where we call this because speed is static and we only need to increase it once for all zombies to be affected
-        targetScript.IncreaseSpeed();
-        
-        //secondly, access the original zombie dog's health to increase it (by reassigning the targetscript)
-        targetScript = zombieDog.GetComponent<Target>();
-        targetScript.RoundDifficultyIncrease();
-
-        
-        //This should be hard-coded to make sure the zombie counter caps at 25 maximum zombies
-        if (zombieIncrementor < 22)
-        {
-            zombieIncrementor = (round * 2) + 1 ;
-        }
-        //round 1 wil have 4 zombies, round 2 will have 6, round 3 will have 8, etc.
-        zombieCounter = zombieIncrementor;
-        //since zombieCounter is constantly decreasing, we need to remember how many zombies we should be spawning at the start of each round, which is why we use ZombieCountAtStartOfRound
-        ZombieCountAtStartOfRound = zombieCounter;
-        
-        //if the round is 16 or higher and is not divisible by 5, spawn zombies and dogs simutaneously
-        if (round >= 16 && round % 5 != 0 && round != 0)
-        {
-            InvokeRepeating("ZombieAndDogSpawns", 13.0f, zombieSpawnTime);
-        }
-        //we check if the round is 5,10,15,20, etc. if so, then it will be a dedicated dog round
-        else if (round % 5 == 0 && round != 0)
-        {
-            //starts in 5 seconds, and invokes every 3 seconds
-            //in 5 seconds, we spawn our first zombie, then every 3 seconds after that, we spawn each other zombie
-            InvokeRepeating("ZombieDogSpawns", 14.0f, zombieDogSpawnTime);
-            // Debug.Log("Spawn Dogs!");
-        }
-        //if the round is not divisible by 5 (ex. 2,3,4,9), then it will be a normal zombie round
-        else
-        {
-            InvokeRepeating("ZombieSpawns", 13.0f, zombieSpawnTime);
-            //Debug.Log("Spawn Zombies!");
-        }
+        RoundActivator.round_must_increment = false;
+        //if(round != 0)
+        //{
+          //  InteractAudioSource.current.PlayInteractClip(RoundChange.roundChange.round_ending_sound, 0.5f);
+           // StartCoroutine(PlayRoundChangeSoundOnly());
+        //}
+        StartCoroutine(RoundChangeWithSoundCoroutine());
     }
     private void ZombieSpawns()
     {
@@ -224,13 +173,84 @@ public class RoundController : MonoBehaviour
 
 
     }
-    IEnumerator PlayRoundChangeSound()
+    IEnumerator RoundChangeWithSoundCoroutine()
     {
-        yield return new WaitForSeconds(8f);  
+        Debug.Log("START ROUND CHANGE COROUTINE");
+        if(round == 0)
+        {
+            yield return new WaitForSeconds(1f);
+        }
+        else
+        {
+            yield return new WaitForSeconds(0.5f);
+        }
+        
+
+        if(round != 0)
+        {
+            InteractAudioSource.current.PlayInteractClip(RoundChange.roundChange.round_ending_sound, 0.5f);
+            yield return new WaitForSeconds(7f);
+        }
+        
+
         InteractAudioSource.current.PlayInteractClip(RoundChange.roundChange.round_starting_sound, 0.5f);
         player_ui_accessor.RoundChangeUIAnimation();
+        yield return new WaitForSeconds(3.3f);
+
+        //prevents multiple spawning instances, allows us to have correct delay times between rounds and zombie spawns correctly (without this we get infinite invokes)
+        CancelInvoke();
+        //StartCoroutine(PlayRoundChangeSound());
+
+        //need to reset spawnIncrementor so we can spawn correct number of zombies
+        spawnIncrementor = 0;
+        round += 1;
+
+        //first, access the original zombie's health to increase it
+        for (int i = 0; i < length_of_zombie_prefabs; i++)
+        {
+            targetScript = ZombiePrefabs[i].GetComponent<Target>();
+            targetScript.RoundDifficultyIncrease();
+        }
+        //we don't care where we call this because speed is static and we only need to increase it once for all zombies to be affected
+        targetScript.IncreaseSpeed();
+
+        //secondly, access the original zombie dog's health to increase it (by reassigning the targetscript)
+        targetScript = zombieDog.GetComponent<Target>();
+        targetScript.RoundDifficultyIncrease();
+
+
+        //This should be hard-coded to make sure the zombie counter caps at 25 maximum zombies
+        if (zombieIncrementor < 22)
+        {
+            zombieIncrementor = (round * 2) + 1;
+        }
+        //round 1 wil have 4 zombies, round 2 will have 6, round 3 will have 8, etc.
+        zombieCounter = zombieIncrementor;
+        //since zombieCounter is constantly decreasing, we need to remember how many zombies we should be spawning at the start of each round, which is why we use ZombieCountAtStartOfRound
+        ZombieCountAtStartOfRound = zombieCounter;
+
+        //if the round is 16 or higher and is not divisible by 5, spawn zombies and dogs simutaneously
+        if (round >= 16 && round % 5 != 0 && round != 0)
+        {
+            InvokeRepeating("ZombieAndDogSpawns", 6.0f, zombieSpawnTime);
+        }
+        //we check if the round is 5,10,15,20, etc. if so, then it will be a dedicated dog round
+        else if (round % 5 == 0 && round != 0)
+        {
+            //starts in 5 seconds, and invokes every 3 seconds
+            //in 5 seconds, we spawn our first zombie, then every 3 seconds after that, we spawn each other zombie
+            InvokeRepeating("ZombieDogSpawns", 6.0f, zombieDogSpawnTime);
+            // Debug.Log("Spawn Dogs!");
+        }
+        //if the round is not divisible by 5 (ex. 2,3,4,9), then it will be a normal zombie round
+        else
+        {
+            InvokeRepeating("ZombieSpawns", 6.0f, zombieSpawnTime);
+            //Debug.Log("Spawn Zombies!");
+        }
+        RoundActivator.round_must_increment = true;
     }
-    public void StopZombieSpawning()
+        public void StopZombieSpawning()
     {
         //unsubscribes zombie spawning function from Round event system to stop zombie spawns
         RoundChange.roundChange.onRoundChange -= RoundNumberChange;

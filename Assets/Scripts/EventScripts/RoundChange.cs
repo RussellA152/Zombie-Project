@@ -22,12 +22,6 @@ public class RoundChange : MonoBehaviour
     {
         pHud = GameObject.Find("Player's HUD");
         player_ui_accessor = pHud.GetComponent<PlayerUI>();
-
-        if (RoundController.round == 0)
-        {
-            InteractAudioSource.current.PlayInteractClip(RoundChange.roundChange.round_starting_sound, 0.5f);
-            player_ui_accessor.RoundChangeUIAnimation();
-        }
     }
     public void RoundChanging()
     {
