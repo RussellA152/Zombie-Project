@@ -113,6 +113,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5261225358377289987}
+  - component: {fileID: 2740009907732329001}
   m_Layer: 0
   m_Name: M1911 Wall Buy
   m_TagString: Untagged
@@ -137,6 +138,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2740009907732329001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5261225358377391395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0.8862745, g: 0.54509807, b: 0.17254902, a: 1}
+  outlineWidth: 4
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &5261225358377391397
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,7 +571,7 @@ MonoBehaviour:
   weaponHolder: {fileID: 0}
   ammoCrate: {fileID: 7606109146631800109, guid: ff8bd0c3ad00cd547b0bbdcb8ac6c37f, type: 3}
   weaponHolderTransform: {fileID: 5973960565841901988, guid: 0c1eef0d53e2ff4479861676fe3b6fb4, type: 3}
-  gunPrice: 0
-  interactive_audioSource: {fileID: 0}
+  is_starting_weapon_wall_buy: 1
+  gunPrice: 400
   purchase_successful_sound: {fileID: 8300000, guid: 792a6e132d38a4f70bbae7f091a6cab3, type: 3}
   purchase_failed_sound: {fileID: 8300000, guid: 16458abe8d5a64f7a8082f0de46d643f, type: 3}

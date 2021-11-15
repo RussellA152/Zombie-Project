@@ -13,6 +13,8 @@ public class PlayerUI : MonoBehaviour
 
     [SerializeField] private GameObject roundTextDisplay;
 
+    [SerializeField] private GameObject crosshair;
+
 
     //public string healthText;
 
@@ -76,7 +78,7 @@ public class PlayerUI : MonoBehaviour
     }
     void UpdatePlayerPointsUI()
     {
-        scoreText.text = "$ " + PlayerScore.pScore;
+        scoreText.text = "$ " + Mathf.Round(PlayerScore.pScore);
         //pointElement.text = "Points: " + PlayerScore.pScore;
     }
     public void UpdatePlayerAmmoUI()
@@ -104,7 +106,7 @@ public class PlayerUI : MonoBehaviour
     public void RoundChangeUIAnimation()
     {
         //moves round text to the center of the screen
-        roundText.rectTransform.LeanMove(new Vector3(-772f, -390f, 0f),3.5f);
+        roundText.rectTransform.LeanMoveLocal(crosshair.transform.localPosition,3.5f);
         StartCoroutine(RoundChangeBack());
     }
     IEnumerator RoundChangeBack()

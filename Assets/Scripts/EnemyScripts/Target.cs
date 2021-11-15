@@ -103,7 +103,7 @@ public class Target : MonoBehaviour
         if (maxRandomSpeed < maxPossibleSpeed)
             difficultySpeedIncrease += .15f;
     }
-    void Die()
+    public void Die()
     {
         //destroys the zombie and its AI (everything)
         if(gameObject.CompareTag("Enemy"))

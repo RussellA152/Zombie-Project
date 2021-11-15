@@ -5,13 +5,21 @@ using UnityEngine;
 public class PlayerScore : MonoBehaviour
 {
     public static float pScore;
+    private float money_regen_rate;
     // Start is called before the first frame update
     void Start()
     {
-        pScore = 1000f;
+        money_regen_rate = 1.3f;
+        pScore = 200f;
     }
     private void Update()
     {
-        //Debug.Log("My Score: " + pScore);
+        //player's money will grow/regen overtime as to prevent player from being stuck without ammo and money
+        RegenMoney();
+    }
+    void RegenMoney()
+    {
+        pScore += money_regen_rate * Time.deltaTime;
+        
     }
 }
