@@ -63,9 +63,11 @@ public class PlayerHealth : MonoBehaviour
             RegenerateHealth();
         }
 
-        playerDeath();
+        //we only want to check this, if the player is not dead because we only want to load to the death screen once
+        if(!is_dead)
+            playerDeath();
 
-        if (is_dead && !checked_for_death )
+        if (is_dead && !checked_for_death)
         {
             roundControllerScriptAccessor.StopZombieSpawning();
             checked_for_death = true;
@@ -110,6 +112,8 @@ public class PlayerHealth : MonoBehaviour
     public void PlayerHasDied()
     {
         is_dead = true;
+        MySceneHandler.current.ChangeScene("Death Screen");
+
         Debug.Log("You Died!");
     }
     /*

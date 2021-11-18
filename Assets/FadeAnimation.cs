@@ -1,6 +1,6 @@
 
 using UnityEngine;
-
+using System.Collections;
 public class FadeAnimation : MonoBehaviour
 {
     private Animator animator;
@@ -8,6 +8,12 @@ public class FadeAnimation : MonoBehaviour
     {
         animator = GetComponent<Animator>();
 
-        //animator.SetTrigger("")
+        StartCoroutine(FadeDelay());
+    }
+    IEnumerator FadeDelay()
+    {
+        yield return new WaitForSeconds(4f);
+        animator.SetTrigger("FadeOut");
+        Debug.Log("trigger FADEOUT!");
     }
 }

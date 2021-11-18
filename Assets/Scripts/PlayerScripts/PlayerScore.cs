@@ -19,7 +19,8 @@ public class PlayerScore : MonoBehaviour
     }
     void RegenMoney()
     {
-        pScore += money_regen_rate * Time.deltaTime;
+        if(InputManager.IsInputEnabled)
+            pScore += money_regen_rate * Time.deltaTime;
         
     }
 }

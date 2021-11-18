@@ -26,7 +26,7 @@ public class InputManager : MonoBehaviour
     {
         //initially false, but will be set to true a few seconds after loading main game scene
         IsInputEnabled = false;
-        InputTurnOnTimer = 3f;
+        InputTurnOnTimer = 5f;
     }
 
 }
