@@ -238,4 +238,10 @@ public class PlayerMovement : MonoBehaviour
         walkSpeed -= 5f;
         sprintSpeed -= 5f;
     }
+    public void FreezePlayer()
+    {
+        //this function, when called, will freeze the player's position
+        //this will mainly be called when the player is killed as to prevent any movement when dying
+        rb.constraints = RigidbodyConstraints.FreezePosition;
+    }
 }

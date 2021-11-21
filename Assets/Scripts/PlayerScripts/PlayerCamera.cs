@@ -35,7 +35,11 @@ public class PlayerCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MyInput();
+        if (InputManager.IsInputEnabled)
+        {
+            MyInput();
+        }
+        
 
         cam.transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
         orientation.transform.rotation = Quaternion.Euler(0, yRotation, 0);
@@ -43,6 +47,7 @@ public class PlayerCamera : MonoBehaviour
     void MyInput()
     {
         //gets mouse input from user
+
         mouseX = Input.GetAxisRaw("Mouse X");
         mouseY = Input.GetAxisRaw("Mouse Y");
 

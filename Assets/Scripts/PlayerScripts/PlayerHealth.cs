@@ -29,6 +29,8 @@ public class PlayerHealth : MonoBehaviour
     public float start_regen_timer;
     public float elapsed_regen_timer;
 
+    [SerializeField] private GameObject fade_object;
+
     private void Start()
     {
 
@@ -112,7 +114,12 @@ public class PlayerHealth : MonoBehaviour
     public void PlayerHasDied()
     {
         is_dead = true;
-        MySceneHandler.current.ChangeScene("Death Screen");
+        //making the player invincible so they can't hear hurt sounds after death
+        is_invincible = true;
+        GetComponent<PlayerMovement>().FreezePlayer();
+        InputManager.IsInputEnabled = false;
+        StartCoroutine(FadeDeathDelay());
+        
 
         Debug.Log("You Died!");
     }
@@ -179,6 +186,12 @@ public class PlayerHealth : MonoBehaviour
         is_invincible = true;
         yield return new WaitForSeconds(5f);
         is_invincible = false; 
+    }
+    IEnumerator FadeDeathDelay()
+    {
+        fade_object.GetComponent<FadeAnimation>().FadeToRed();
+        yield return new WaitForSeconds(0.5f);
+        MySceneHandler.current.ChangeScene("Death Screen");
     }
 
     /*

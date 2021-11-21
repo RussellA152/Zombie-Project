@@ -51,6 +51,7 @@ public class MySceneHandler : MonoBehaviour
         }
         FindFadeAnimator();
         //when scene is done loading, turn off input for a few se
+        InputManager.IsInputEnabled = false;
         yield return new WaitForSeconds(InputManager.InputTurnOnTimer);
         InputManager.IsInputEnabled = true;
 

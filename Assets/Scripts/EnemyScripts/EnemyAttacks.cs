@@ -43,7 +43,7 @@ public class EnemyAttacks : MonoBehaviour
             //when player is about to be attacked, the zombie's navmeshagent is stopped as to prevent player from being constantly pushed by the zombie (prevents pushing through walls)
             navmeshAgentAccessor.isStopped = true;
                 
-            InvokeRepeating("EnemyDealingDamage", .6f, 1f);
+            InvokeRepeating("EnemyDealingDamage", .45f, .9f);
             
         }
     }

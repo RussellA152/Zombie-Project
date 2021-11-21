@@ -16,7 +16,10 @@ public class VictoryScreen : MonoBehaviour
         replayButton.gameObject.SetActive(false);
         youSurvivedText.gameObject.SetActive(false);
         youEscapedText.gameObject.SetActive(true);
-        youSurvivedText.text = "You Survived \n" + RoundController.round + " Rounds!";
+        if(RoundController.round == 1)
+            youSurvivedText.text = "You Survived \n" + RoundController.round + " Round!";
+        else
+            youSurvivedText.text = "You Survived \n" + RoundController.round + " Rounds!";
         StartCoroutine(ChangeText());
     }
 

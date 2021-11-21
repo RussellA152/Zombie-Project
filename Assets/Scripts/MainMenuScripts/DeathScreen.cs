@@ -16,7 +16,11 @@ public class DeathScreen : MonoBehaviour
         retryButton.gameObject.SetActive(false);
         youLastedText.gameObject.SetActive(false);
         youDiedText.gameObject.SetActive(true);
-        youLastedText.text = "You Lasted \n" + RoundController.round + " Rounds!";
+        if(RoundController.round == 1)
+            youLastedText.text = "You Lasted \n" + RoundController.round + " Round!";
+        else
+            youLastedText.text = "You Lasted \n" + RoundController.round + " Rounds!";
+
         StartCoroutine(ChangeText());
     }
 

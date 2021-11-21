@@ -1,4 +1,4 @@
-using System;
+using System.Collections;
 using UnityEngine;
 
 public class BuyableEnding : MonoBehaviour
@@ -18,8 +18,15 @@ public class BuyableEnding : MonoBehaviour
     {
         if (conditions_met)
         {
-            MySceneHandler.current.ChangeScene("Victory Screen");
+            //MySceneHandler.current.ChangeScene("Victory Screen");
+            StartCoroutine(CompletionDelay());
             Debug.Log("Go to victory screen here!");
         }
+    }
+    IEnumerator CompletionDelay()
+    {
+        //this is a small delay for better scene transitioning
+        yield return new WaitForSeconds(2f);
+        MySceneHandler.current.ChangeScene("Victory Screen");
     }
 }
