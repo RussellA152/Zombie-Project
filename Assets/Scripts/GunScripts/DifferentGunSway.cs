@@ -40,10 +40,13 @@ public class DifferentGunSway : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CalculateSway();
+        if (InputManager.IsInputEnabled)
+        {
+            CalculateSway();
 
-        MoveSway();
-        TiltSway();
+            MoveSway();
+            TiltSway();
+        }
     }
 
     private void CalculateSway()

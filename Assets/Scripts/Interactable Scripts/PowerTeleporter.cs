@@ -9,6 +9,8 @@ public class PowerTeleporter : MonoBehaviour
 
     [SerializeField] private Transform superImprover_teleporter_position;
 
+    [SerializeField] private bool buyable_ending_conditions_met;
+
 
     // Start is called before the first frame update
     void Start()
@@ -71,7 +73,9 @@ public class PowerTeleporter : MonoBehaviour
     void TeleportPlayerToUpgradeRoom()
     {
         player = TeleporterEvent.current.player;
+        //player's position and rotation begins the superimprover_teleporter_position's position
         player.transform.position = superImprover_teleporter_position.transform.position;
+        TeleporterEvent.current.player_orientation.transform.rotation = ChangeRotation(0f, 90f, 0f);
 
         //make these values false again so player has to relink them, not simply just reuse teleporter
         TeleporterEvent.current.wants_to_link_teleporters = false;
@@ -84,8 +88,16 @@ public class PowerTeleporter : MonoBehaviour
         //after some time, teleport player back to starting room
         player = TeleporterEvent.current.player;
         yield return new WaitForSeconds(TeleporterEvent.current.upgradeRoomTimer);
-        InteractAudioSource.current.PlayInteractClip(TeleporterEvent.current.teleport_return_sound, 0.5f);
-        player.transform.position = TeleporterEvent.current.startingRoom_Teleporter.transform.position;
+
+        //if the player has not purchased the buyable ending door, then they will be teleported back, otherwise....
+        //they will not be teleported back, so they can't miss the final explosion effect
+        if(!BuyableEnding.current.conditions_met)
+        {
+            InteractAudioSource.current.PlayInteractClip(TeleporterEvent.current.teleport_return_sound, 0.5f);
+            player.transform.position = TeleporterEvent.current.startingRoom_Teleporter.transform.position;
+            TeleporterEvent.current.player_orientation.transform.rotation = ChangeRotation(0f, 0f, 0f);
+        }
+        
 
         //begin teleporter link cooldown
         StartCoroutine(LinkCoolDown());
@@ -100,5 +112,12 @@ public class PowerTeleporter : MonoBehaviour
         //Debug.Log("Teleporter can be linked now!");
         TeleporterEvent.current.teleporters_can_be_linked = true;
 
+    }
+
+    private Quaternion ChangeRotation(float x, float y, float z)
+    {
+        Quaternion newQuaternion = new Quaternion();
+        newQuaternion.Set(x, y, z, 1 );
+        return newQuaternion;
     }
 }

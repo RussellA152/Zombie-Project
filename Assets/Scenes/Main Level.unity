@@ -1329,6 +1329,50 @@ Transform:
   m_Father: {fileID: 1877470203}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &97804831
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 97804833}
+  - component: {fileID: 97804832}
+  m_Layer: 0
+  m_Name: Background Audio Clip Adder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &97804832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97804831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd78f04cacccc304ab917dc87e2e5a2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myBackgroundMusic: {fileID: 8300000, guid: ecbde59135d9d9240b48ae63f9172870, type: 3}
+--- !u!4 &97804833
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97804831}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -41.60505, y: 5.5667915, z: -88.02}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 55
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &101791677
 GameObject:
   m_ObjectHideFlags: 0
@@ -1349,7 +1393,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 119
   m_IsActive: 1
 --- !u!65 &101791678
 BoxCollider:
@@ -1434,7 +1478,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 101791677}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.41, y: 1.66, z: -50.01}
+  m_LocalPosition: {x: 5.4, y: 0, z: -111.03}
   m_LocalScale: {x: 2.2, y: 0.1, z: 2.2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1605,7 +1649,6 @@ GameObject:
   m_Component:
   - component: {fileID: 120914113}
   - component: {fileID: 120914115}
-  - component: {fileID: 120914114}
   m_Layer: 0
   m_Name: Buyable Ending Object
   m_TagString: Untagged
@@ -1627,19 +1670,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 54
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &120914114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 120914112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8629e93d80216c341b72b3313725da81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  conditions_met: 0
 --- !u!114 &120914115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3847,7 +3877,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-572044
+  m_Name: pb_Mesh-142986
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7544,7 +7574,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-570540
+  m_Name: pb_Mesh-141482
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9612,6 +9642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  player_orientation: {fileID: 1298773938690528168}
   teleporters_are_linked: 0
   wants_to_link_teleporters: 0
   teleporters_can_be_linked: 0
@@ -18213,7 +18244,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-571952
+  m_Name: pb_Mesh-142894
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -23488,6 +23519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   superImprover_teleporter_position: {fileID: 1960141042}
+  buyable_ending_conditions_met: 0
 --- !u!1001 &1738568137
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27215,7 +27247,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-569932
+  m_Name: pb_Mesh-140874
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -28958,6 +28990,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9172c7877d7982d46be4f549f8385f79, type: 3}
+--- !u!1 &1298773938690528168 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1298773940178178812, guid: 9172c7877d7982d46be4f549f8385f79, type: 3}
+  m_PrefabInstance: {fileID: 1298773938690528167}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4047566828367850546
 PrefabInstance:
   m_ObjectHideFlags: 0

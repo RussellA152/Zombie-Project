@@ -43,6 +43,8 @@ public class RoundController : MonoBehaviour
 
     Target targetScript;
 
+    private AudioSource backGroundMusicAccessor;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -54,6 +56,8 @@ public class RoundController : MonoBehaviour
 
         pHud = GameObject.Find("Player's HUD");
         player_ui_accessor = pHud.GetComponent<PlayerUI>();
+
+        backGroundMusicAccessor = BackgroundMusic.current.gameObject.GetComponent<AudioSource>();
         //round = 144;
         //round = 25;
     }
@@ -178,16 +182,19 @@ public class RoundController : MonoBehaviour
         Debug.Log("START ROUND CHANGE COROUTINE");
         if(round == 0)
         {
+            backGroundMusicAccessor.Pause();
             yield return new WaitForSeconds(1f);
         }
         else
         {
+            backGroundMusicAccessor.Pause();
             yield return new WaitForSeconds(0.5f);
         }
         
 
         if(round != 0)
         {
+            //pauses current background music
             InteractAudioSource.current.PlayInteractClip(RoundChange.roundChange.round_ending_sound, 0.5f);
             yield return new WaitForSeconds(7f);
         }
@@ -195,6 +202,7 @@ public class RoundController : MonoBehaviour
 
         InteractAudioSource.current.PlayInteractClip(RoundChange.roundChange.round_starting_sound, 0.5f);
         player_ui_accessor.RoundChangeUIAnimation();
+        
         yield return new WaitForSeconds(3.3f);
 
         //prevents multiple spawning instances, allows us to have correct delay times between rounds and zombie spawns correctly (without this we get infinite invokes)
@@ -228,6 +236,10 @@ public class RoundController : MonoBehaviour
         zombieCounter = zombieIncrementor;
         //since zombieCounter is constantly decreasing, we need to remember how many zombies we should be spawning at the start of each round, which is why we use ZombieCountAtStartOfRound
         ZombieCountAtStartOfRound = zombieCounter;
+
+        yield return new WaitForSeconds(.5f);
+        //unpauses current background music
+        backGroundMusicAccessor.UnPause();
 
         //if the round is 16 or higher and is not divisible by 5, spawn zombies and dogs simutaneously
         if (round >= 16 && round % 5 != 0 && round != 0)
