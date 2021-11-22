@@ -30,6 +30,7 @@ public class PlayerHealth : MonoBehaviour
     public float elapsed_regen_timer;
 
     [SerializeField] private GameObject fade_object;
+    [SerializeField] private AudioClip death_sound;
 
     private void Start()
     {
@@ -116,6 +117,7 @@ public class PlayerHealth : MonoBehaviour
         is_dead = true;
         //making the player invincible so they can't hear hurt sounds after death
         is_invincible = true;
+        InteractAudioSource.current.PlayInteractClip(death_sound, 0.5f);
         GetComponent<PlayerMovement>().FreezePlayer();
         InputManager.IsInputEnabled = false;
         StartCoroutine(FadeDeathDelay());
