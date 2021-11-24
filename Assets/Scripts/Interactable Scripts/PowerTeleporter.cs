@@ -73,9 +73,12 @@ public class PowerTeleporter : MonoBehaviour
     void TeleportPlayerToUpgradeRoom()
     {
         player = TeleporterEvent.current.player;
+        StartCoroutine(PLayerMovementDelay());
         //player's position and rotation begins the superimprover_teleporter_position's position
-        player.transform.position = superImprover_teleporter_position.transform.position;
-        TeleporterEvent.current.player_orientation.transform.rotation = ChangeRotation(0f, 90f, 0f);
+        player.transform.position = new Vector3(superImprover_teleporter_position.transform.position.x, superImprover_teleporter_position.transform.position.y + 1f, superImprover_teleporter_position.transform.position.z);
+        //TeleporterEvent.current.player_orientation.transform.rotation = ChangeRotation(0f, 90f, 0f);
+
+        //StartCoroutine(PLayerMovementDelay());
 
         //make these values false again so player has to relink them, not simply just reuse teleporter
         TeleporterEvent.current.wants_to_link_teleporters = false;
@@ -91,11 +94,11 @@ public class PowerTeleporter : MonoBehaviour
 
         //if the player has not purchased the buyable ending door, then they will be teleported back, otherwise....
         //they will not be teleported back, so they can't miss the final explosion effect
-        if(!BuyableEnding.current.conditions_met)
+        if (!BuyableEnding.current.conditions_met)
         {
             InteractAudioSource.current.PlayInteractClip(TeleporterEvent.current.teleport_return_sound, 0.5f);
-            player.transform.position = TeleporterEvent.current.startingRoom_Teleporter.transform.position;
-            TeleporterEvent.current.player_orientation.transform.rotation = ChangeRotation(0f, 0f, 0f);
+            StartCoroutine(PLayerMovementDelay());
+            player.transform.position = new Vector3(TeleporterEvent.current.startingRoom_Teleporter.transform.position.x, TeleporterEvent.current.startingRoom_Teleporter.transform.position.y + 1f, TeleporterEvent.current.startingRoom_Teleporter.transform.position.z);
         }
         
 
@@ -114,10 +117,16 @@ public class PowerTeleporter : MonoBehaviour
 
     }
 
-    private Quaternion ChangeRotation(float x, float y, float z)
+    IEnumerator PLayerMovementDelay()
     {
-        Quaternion newQuaternion = new Quaternion();
-        newQuaternion.Set(x, y, z, 1 );
-        return newQuaternion;
+        var invincibility = player.gameObject.GetComponent<PlayerHealth>().is_invincible;
+        //The player will not be allowed to move for a few seconds shortly after teleporting (this will hopefully prevent any falling through map bugs)
+        InputManager.IsInputEnabled = false;
+        //while player is frozen, make them invincible for a second
+        invincibility = true;
+        yield return new WaitForSeconds(1f);
+        InputManager.IsInputEnabled = true;
+        invincibility = false;
+
     }
 }

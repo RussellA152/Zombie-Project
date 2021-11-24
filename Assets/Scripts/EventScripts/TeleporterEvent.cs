@@ -8,7 +8,7 @@ public class TeleporterEvent : MonoBehaviour
     public static TeleporterEvent current;
 
     public GameObject player;
-    public GameObject player_orientation;
+    //public GameObject player_orientation;
 
     public bool teleporters_are_linked;
     public bool wants_to_link_teleporters;
@@ -60,4 +60,5 @@ public class TeleporterEvent : MonoBehaviour
             onTeleport();
         }
     }
+
 }

@@ -125,6 +125,7 @@ MonoBehaviour:
   maxPossibleSpeed: 4
   pointsForDeath: 100
   enemy: {fileID: 6161461571742736593}
+  is_dead: 0
   attackHitbox: {fileID: 6161461571761144968}
   headHitBox: {fileID: 4535154337366502985}
   instaKillPowerUp: {fileID: 5709781838649901865, guid: 5d2bb03800184e0428dac6b77e2b3b37, type: 3}
@@ -773,7 +774,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shirt
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6391547677184306892, guid: 32dd0396e86eb6a49884ed33a7550a94, type: 3}
+    - {fileID: 6272754737906339027, guid: 32dd0396e86eb6a49884ed33a7550a94, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 32dd0396e86eb6a49884ed33a7550a94, type: 3}
 --- !u!4 &457406065875374604 stripped
 Transform:
