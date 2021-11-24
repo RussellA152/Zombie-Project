@@ -8,6 +8,7 @@ public class TeleporterEvent : MonoBehaviour
     public static TeleporterEvent current;
 
     public GameObject player;
+    public Rigidbody playerRB;
     //public GameObject player_orientation;
 
     public bool teleporters_are_linked;
@@ -44,6 +45,7 @@ public class TeleporterEvent : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("Player");
+        playerRB = player.GetComponent<Rigidbody>();
         teleporters_can_be_linked = true;
         teleporters_are_linked = false;
         wants_to_link_teleporters = false;

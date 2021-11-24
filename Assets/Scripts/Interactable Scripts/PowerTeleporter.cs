@@ -12,12 +12,14 @@ public class PowerTeleporter : MonoBehaviour
     [SerializeField] private bool buyable_ending_conditions_met;
 
 
+
     // Start is called before the first frame update
     void Start()
     {
         TeleporterEvent.current.onTeleport += TeleportPlayerToUpgradeRoom;
+
         //get reference for player from event system
-        
+
     }
 
     // Update is called once per frame
@@ -73,9 +75,11 @@ public class PowerTeleporter : MonoBehaviour
     void TeleportPlayerToUpgradeRoom()
     {
         player = TeleporterEvent.current.player;
-        StartCoroutine(PLayerMovementDelay());
+        
         //player's position and rotation begins the superimprover_teleporter_position's position
         player.transform.position = new Vector3(superImprover_teleporter_position.transform.position.x, superImprover_teleporter_position.transform.position.y + 1f, superImprover_teleporter_position.transform.position.z);
+
+        StartCoroutine(PlayerMovementDelay());
         //TeleporterEvent.current.player_orientation.transform.rotation = ChangeRotation(0f, 90f, 0f);
 
         //StartCoroutine(PLayerMovementDelay());
@@ -97,8 +101,8 @@ public class PowerTeleporter : MonoBehaviour
         if (!BuyableEnding.current.conditions_met)
         {
             InteractAudioSource.current.PlayInteractClip(TeleporterEvent.current.teleport_return_sound, 0.5f);
-            StartCoroutine(PLayerMovementDelay());
             player.transform.position = new Vector3(TeleporterEvent.current.startingRoom_Teleporter.transform.position.x, TeleporterEvent.current.startingRoom_Teleporter.transform.position.y + 1f, TeleporterEvent.current.startingRoom_Teleporter.transform.position.z);
+            StartCoroutine(PlayerMovementDelay());
         }
         
 
@@ -117,15 +121,19 @@ public class PowerTeleporter : MonoBehaviour
 
     }
 
-    IEnumerator PLayerMovementDelay()
+    IEnumerator PlayerMovementDelay()
     {
         var invincibility = player.gameObject.GetComponent<PlayerHealth>().is_invincible;
+        //yield return new WaitForSeconds(1f);
+        //TeleporterEvent.current.playerRB.constraints = RigidbodyConstraints.FreezePosition;
         //The player will not be allowed to move for a few seconds shortly after teleporting (this will hopefully prevent any falling through map bugs)
-        InputManager.IsInputEnabled = false;
+        //InputManager.IsInputEnabled = false;
         //while player is frozen, make them invincible for a second
         invincibility = true;
-        yield return new WaitForSeconds(1f);
-        InputManager.IsInputEnabled = true;
+        yield return new WaitForSeconds(2f);
+        
+        //InputManager.IsInputEnabled = true;
+        //TeleporterEvent.current.playerRB.constraints = RigidbodyConstraints.None;
         invincibility = false;
 
     }
