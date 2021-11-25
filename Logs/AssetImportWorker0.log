@@ -15,11 +15,11 @@ C:/Users/Daniel/Documents/GitHub/Zombie-Project
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51558
+64764
 Successfully changed project path to: C:/Users/Daniel/Documents/GitHub/Zombie-Project
 C:/Users/Daniel/Documents/GitHub/Zombie-Project
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 48.66 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 49.98 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.1f1 (270dd8c3da1c)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Resources/UnitySubsystems
@@ -37,264 +37,73 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56616
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56204
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001674 seconds.
+Registered in 0.001736 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 55.39 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 46.75 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.049 seconds
+- Completed reload, in  0.973 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001163 seconds.
+Registered in 0.001055 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.52 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.50 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.864 seconds
+- Completed reload, in  0.841 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
 Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 0.53 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.55 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2035 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 104.6 MB.
-System memory in use after: 104.6 MB.
+System memory in use before: 104.7 MB.
+System memory in use after: 104.7 MB.
 
 Unloading 79 unused Assets to reduce memory usage. Loaded Objects now: 2492.
-Total: 2.259000 ms (FindLiveObjects: 0.270100 ms CreateObjectMapping: 0.116900 ms MarkObjects: 1.681000 ms  DeleteObjects: 0.190200 ms)
+Total: 2.715000 ms (FindLiveObjects: 0.351200 ms CreateObjectMapping: 0.149100 ms MarkObjects: 2.017700 ms  DeleteObjects: 0.196200 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Scenes/Main Level.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7094aa4993c530313e80e4661c8d6632') in 0.019507 seconds
-  Import took 0.022417 seconds .
-
-========================================================================
-Received Prepare
-Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 1.83 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 60.9 MB.
-System memory in use after: 61.0 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2492.
-Total: 2.993700 ms (FindLiveObjects: 0.187300 ms CreateObjectMapping: 0.070900 ms MarkObjects: 2.626500 ms  DeleteObjects: 0.107900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000978 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.51 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
-
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.734 seconds
-Platform modules already initialized, skipping
-Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 0.59 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1949 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 99.6 MB.
-System memory in use after: 99.6 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2494.
-Total: 2.341000 ms (FindLiveObjects: 0.195000 ms CreateObjectMapping: 0.087800 ms MarkObjects: 1.979600 ms  DeleteObjects: 0.077800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001144 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.66 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
-
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.742 seconds
-Platform modules already initialized, skipping
-Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 0.67 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1949 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 99.6 MB.
-System memory in use after: 99.7 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2496.
-Total: 2.471100 ms (FindLiveObjects: 0.307200 ms CreateObjectMapping: 0.108000 ms MarkObjects: 1.954200 ms  DeleteObjects: 0.100800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001100 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.88 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
-
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.819 seconds
-Platform modules already initialized, skipping
-Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 0.56 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1949 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 99.6 MB.
-System memory in use after: 99.7 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2498.
-Total: 2.769500 ms (FindLiveObjects: 0.214800 ms CreateObjectMapping: 0.085800 ms MarkObjects: 2.342600 ms  DeleteObjects: 0.125000 ms)
+  path: Assets/Scenes/Main Menu.unity
+  artifactKey: Guid(7f32aaca200760747978876076c7dba5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Main Menu.unity using Guid(7f32aaca200760747978876076c7dba5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c62b5e330cd2ccddcedc802b7969e63') in 0.012521 seconds
+  Import took 0.015621 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 9978.719501 seconds.
-  path: Assets/Scenes/Main Level.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bd2d7a5d57b1e676a87ab58809c5800') in 0.011291 seconds
-  Import took 0.016036 seconds .
+  Time since last request: 0.000164 seconds.
+  path: Assets/Scenes/Victory Screen.unity
+  artifactKey: Guid(32c1715eaf02d2842bebaa2fb1bc3e2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Victory Screen.unity using Guid(32c1715eaf02d2842bebaa2fb1bc3e2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cec7ce0937215aaf7eee91f6cb15346') in 0.007272 seconds
+  Import took 0.010511 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1141.250405 seconds.
+  Time since last request: 0.000232 seconds.
   path: Assets/Scenes/Main Level.unity
   artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e40fcf8d8df42439001d7c863677158c') in 0.002797 seconds
-  Import took 0.006491 seconds .
+Start importing Assets/Scenes/Main Level.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7905f7bc8ada1771a16e26fd92348bbf') in 0.003943 seconds
+  Import took 0.007564 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001044 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.51 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
-
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.707 seconds
-Platform modules already initialized, skipping
-Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 0.61 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1949 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 99.7 MB.
-System memory in use after: 99.7 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2500.
-Total: 2.207400 ms (FindLiveObjects: 0.191000 ms CreateObjectMapping: 0.060700 ms MarkObjects: 1.876900 ms  DeleteObjects: 0.078100 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001162 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.65 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
-
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.738 seconds
-Platform modules already initialized, skipping
-Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 0.53 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1949 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 99.7 MB.
-System memory in use after: 99.7 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2502.
-Total: 2.793600 ms (FindLiveObjects: 0.208900 ms CreateObjectMapping: 0.081900 ms MarkObjects: 2.370700 ms  DeleteObjects: 0.131100 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 186.403811 seconds.
-  path: Assets/Scenes/Main Level.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd8a90fcdc29ffd1fa4de8f254cbd054') in 0.007783 seconds
-  Import took 0.011505 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001169 seconds.
+Registered in 0.001163 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.63 ms, found 1 plugins.
@@ -312,34 +121,26 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.760 seconds
+- Completed reload, in  0.775 seconds
 Platform modules already initialized, skipping
 Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
 Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 0.55 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.72 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1949 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 99.7 MB.
 System memory in use after: 99.7 MB.
 
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2504.
-Total: 1.909300 ms (FindLiveObjects: 0.147600 ms CreateObjectMapping: 0.053000 ms MarkObjects: 1.602100 ms  DeleteObjects: 0.106000 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 1184.260471 seconds.
-  path: Assets/Scenes/Main Level.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24673d171c7064d881e7d64429a5b5b3') in 0.017118 seconds
-  Import took 0.021538 seconds .
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2494.
+Total: 2.008100 ms (FindLiveObjects: 0.220200 ms CreateObjectMapping: 0.070600 ms MarkObjects: 1.629800 ms  DeleteObjects: 0.086800 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001062 seconds.
+Registered in 0.001072 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.55 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.52 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Warning: Annotation not found!
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
@@ -354,34 +155,34 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.721 seconds
+- Completed reload, in  0.750 seconds
 Platform modules already initialized, skipping
 Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
 Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 0.54 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.52 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1949 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 99.7 MB.
 System memory in use after: 99.8 MB.
 
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2506.
-Total: 2.098900 ms (FindLiveObjects: 0.234900 ms CreateObjectMapping: 0.068100 ms MarkObjects: 1.671300 ms  DeleteObjects: 0.123900 ms)
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2496.
+Total: 2.668500 ms (FindLiveObjects: 0.208500 ms CreateObjectMapping: 0.075700 ms MarkObjects: 2.267200 ms  DeleteObjects: 0.115800 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 82.229659 seconds.
+  Time since last request: 191.117191 seconds.
   path: Assets/Scenes/Main Level.unity
   artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2cc84ef82ebf2a6740c0851d0cf523b7') in 0.015777 seconds
-  Import took 0.018998 seconds .
+Start importing Assets/Scenes/Main Level.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b86ae99e64a65384f70e15af33bd2f77') in 0.007339 seconds
+  Import took 0.011480 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001089 seconds.
+Registered in 0.001073 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.55 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.61 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Warning: Annotation not found!
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
@@ -396,1004 +197,16 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.729 seconds
+- Completed reload, in  0.759 seconds
 Platform modules already initialized, skipping
 Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
 Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 0.54 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.55 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1949 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 99.7 MB.
 System memory in use after: 99.8 MB.
 
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2508.
-Total: 2.189200 ms (FindLiveObjects: 0.160000 ms CreateObjectMapping: 0.060200 ms MarkObjects: 1.894500 ms  DeleteObjects: 0.073800 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 122.051285 seconds.
-  path: Assets/Scenes/Main Level.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d2f2d3fcf061c89340ec59d4e4aa619') in 0.013495 seconds
-  Import took 0.016926 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.694322 seconds.
-  path: Assets/Scenes/New Lighting Settings 1.lighting
-  artifactKey: Guid(84fa352d17f5db54fac38d460afe348f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/New Lighting Settings 1.lighting using Guid(84fa352d17f5db54fac38d460afe348f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f678e1e06729c5a978004b3dd2af008') in 0.036126 seconds
-  Import took 0.039274 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 465.805417 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-7_comp_light.exr
-  artifactKey: Guid(3faa72e314dfa874ba755f1f36fdc32a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-7_comp_light.exr using Guid(3faa72e314dfa874ba755f1f36fdc32a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d9315fbde8bd5ce5ab82f6d406fea8a') in 0.060926 seconds
-  Import took 0.065373 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000283 seconds.
-  path: Assets/Scenes/Main Level/ReflectionProbe-2.exr
-  artifactKey: Guid(41edaacfed0b42244bf2cc94a750a555) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/ReflectionProbe-2.exr using Guid(41edaacfed0b42244bf2cc94a750a555) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '751fee01f01bbdbffacedb08d84c1641') in 0.038932 seconds
-  Import took 0.042766 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000178 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-17_comp_light.exr
-  artifactKey: Guid(d0db2c796fbeaf0439e458f31826249b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-17_comp_light.exr using Guid(d0db2c796fbeaf0439e458f31826249b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d8a786ef4f93bf75ce70b776c56af97') in 0.013208 seconds
-  Import took 0.016809 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000261 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-15_comp_dir.png
-  artifactKey: Guid(13c87067386f6884fbbeaa3b2e1dee80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-15_comp_dir.png using Guid(13c87067386f6884fbbeaa3b2e1dee80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b8ad89ecae1e4e9cd1921527fb56c0b') in 0.123747 seconds
-  Import took 0.127324 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000229 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-20_comp_dir.png
-  artifactKey: Guid(74fffaaa837896f4d8a7569825200f58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-20_comp_dir.png using Guid(74fffaaa837896f4d8a7569825200f58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f87d78e150c78214a4e6bc8fa7785e5') in 0.009657 seconds
-  Import took 0.013842 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000219 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-11_comp_light.exr
-  artifactKey: Guid(16347c4d08fdc1d41a95439fe72d72f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-11_comp_light.exr using Guid(16347c4d08fdc1d41a95439fe72d72f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1242280a43a0dcce9938b3b5a7509dd') in 0.010191 seconds
-  Import took 0.014032 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000143 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-24_comp_dir.png
-  artifactKey: Guid(9e21e7729bfbac243a3921e395ab7084) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-24_comp_dir.png using Guid(9e21e7729bfbac243a3921e395ab7084) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9b6d5bb3b34e3c6da12adc2d5c297f6') in 0.009528 seconds
-  Import took 0.012729 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000179 seconds.
-  path: Assets/Scenes/Main Level/ReflectionProbe-3.exr
-  artifactKey: Guid(0f3bb63473601c844b12f73c73a01014) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/ReflectionProbe-3.exr using Guid(0f3bb63473601c844b12f73c73a01014) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe13f3d7dd272f09460352b1f6ccef13') in 0.016112 seconds
-  Import took 0.019172 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000195 seconds.
-  path: Assets/Scenes/Main Level/ReflectionProbe-1.exr
-  artifactKey: Guid(f692d17d9e2b7924bb97716488e524f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/ReflectionProbe-1.exr using Guid(f692d17d9e2b7924bb97716488e524f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42c9cb1bd2daf05ba1d0700e203ef98e') in 0.013045 seconds
-  Import took 0.016501 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000163 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-9_comp_dir.png
-  artifactKey: Guid(578fa00eef8be9546b7b82cb6d772064) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-9_comp_dir.png using Guid(578fa00eef8be9546b7b82cb6d772064) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6d445dae53ef6d3f4ecbc37ff0ef50e') in 0.011312 seconds
-  Import took 0.014453 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000144 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-12_comp_dir.png
-  artifactKey: Guid(982b57b2f5c809141b868b01b106f4e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-12_comp_dir.png using Guid(982b57b2f5c809141b868b01b106f4e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '578bcc7aaec850ef1fb7278c365f3f0d') in 0.009839 seconds
-  Import took 0.013063 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000202 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-16_comp_dir.png
-  artifactKey: Guid(68a0a305388cf8f4a9cfeb42c6f84498) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-16_comp_dir.png using Guid(68a0a305388cf8f4a9cfeb42c6f84498) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '203f058fcf3bea261c50bbb9d54c6dd8') in 0.010663 seconds
-  Import took 0.014517 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000196 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-19_comp_dir.png
-  artifactKey: Guid(e858e67cff250a9428e6087758a39914) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-19_comp_dir.png using Guid(e858e67cff250a9428e6087758a39914) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce8b9b34f9ae3d90ee2ffa08d827c0f6') in 0.014100 seconds
-  Import took 0.017940 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000183 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-21_comp_light.exr
-  artifactKey: Guid(de7279c13dfd9ff4b88d5649c9bc75ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-21_comp_light.exr using Guid(de7279c13dfd9ff4b88d5649c9bc75ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '371740fb2e59ea63a1f336320fdeacff') in 0.011288 seconds
-  Import took 0.014877 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000248 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-8_comp_dir.png
-  artifactKey: Guid(e8a5ef2e274124f448a159d09163fcdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-8_comp_dir.png using Guid(e8a5ef2e274124f448a159d09163fcdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e766143886d46de7418e096099a6f5f') in 0.009385 seconds
-  Import took 0.012734 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000214 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-18_comp_light.exr
-  artifactKey: Guid(b12052165f40dae488a4c2011c20fc2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-18_comp_light.exr using Guid(b12052165f40dae488a4c2011c20fc2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b87d1b49b275675233d11ed7623e34a7') in 0.010470 seconds
-  Import took 0.013997 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000146 seconds.
-  path: Assets/Scenes/Main Level/ReflectionProbe-5.exr
-  artifactKey: Guid(ba4f375506d0cdb44916573005ad3a05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/ReflectionProbe-5.exr using Guid(ba4f375506d0cdb44916573005ad3a05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90858a26991332ec9e1207991906b1ee') in 0.015552 seconds
-  Import took 0.018493 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000190 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-9_comp_light.exr
-  artifactKey: Guid(0d8447601791e634992ba096bf2b7c84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-9_comp_light.exr using Guid(0d8447601791e634992ba096bf2b7c84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '694dbf7010a6326c27a5a2f611482dde') in 0.009828 seconds
-  Import took 0.013162 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000191 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-24_comp_light.exr
-  artifactKey: Guid(8cdec70a9d1ab834e9a36c647bfcd7a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-24_comp_light.exr using Guid(8cdec70a9d1ab834e9a36c647bfcd7a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5892d2fb88e16397c7f2488db7e415c') in 0.010981 seconds
-  Import took 0.013974 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000159 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-13_comp_dir.png
-  artifactKey: Guid(d4dda38a7b4d411498fa509e8c653be3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-13_comp_dir.png using Guid(d4dda38a7b4d411498fa509e8c653be3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6bb1004c9dc20643dec11f22ac799eaa') in 0.010337 seconds
-  Import took 0.013491 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000204 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-23_comp_dir.png
-  artifactKey: Guid(da3a769240a76b84694f3f35043bd45f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-23_comp_dir.png using Guid(da3a769240a76b84694f3f35043bd45f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f7bbc436433f1fb786edbc9245e26cc') in 0.010742 seconds
-  Import took 0.013821 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000131 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-10_comp_light.exr
-  artifactKey: Guid(f46734a897af48343b10fdade5e9b9c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-10_comp_light.exr using Guid(f46734a897af48343b10fdade5e9b9c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f923d88e11d79bffefbd62c00af989d0') in 0.010282 seconds
-  Import took 0.013269 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000188 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-20_comp_light.exr
-  artifactKey: Guid(3593703ab6e781049b22b4a891741ab0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-20_comp_light.exr using Guid(3593703ab6e781049b22b4a891741ab0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd83b83d26e2899f16a62cc8e1a04cd01') in 0.011889 seconds
-  Import took 0.015044 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000180 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-17_comp_dir.png
-  artifactKey: Guid(01d660ac93a7e7d42b21a9258e06fea9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-17_comp_dir.png using Guid(01d660ac93a7e7d42b21a9258e06fea9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0e358ca5105c47c48ed881612e6dbe4') in 0.010486 seconds
-  Import took 0.013951 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000222 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-19_comp_light.exr
-  artifactKey: Guid(b31c829e47212bc44869d6d230ae45c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-19_comp_light.exr using Guid(b31c829e47212bc44869d6d230ae45c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e33e1818095ffa24bef43169a08f8c9') in 0.009938 seconds
-  Import took 0.013894 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000215 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-8_comp_light.exr
-  artifactKey: Guid(c0d0af818da66c247be2a6db0a6e32ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-8_comp_light.exr using Guid(c0d0af818da66c247be2a6db0a6e32ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eac46b5389c204d415b2be6f8836bb6d') in 0.010186 seconds
-  Import took 0.013947 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000216 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-14_comp_light.exr
-  artifactKey: Guid(abc0a4ca7e458ee41b406ab7d8891941) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-14_comp_light.exr using Guid(abc0a4ca7e458ee41b406ab7d8891941) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd909a7c12a21f32ee18d2344ebdf42f4') in 0.010608 seconds
-  Import took 0.013908 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000249 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-11_comp_dir.png
-  artifactKey: Guid(0ec52a62f4ae735469c38c66ad106532) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-11_comp_dir.png using Guid(0ec52a62f4ae735469c38c66ad106532) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '438b1b62f1ed8c7998a9e452eca8b6c6') in 0.010733 seconds
-  Import took 0.014754 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000232 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-26_comp_light.exr
-  artifactKey: Guid(22a85b3ee8deb8a4c8844c664401dbf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-26_comp_light.exr using Guid(22a85b3ee8deb8a4c8844c664401dbf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '502c989fdc64fdecd63d7dd099f66d9d') in 0.010973 seconds
-  Import took 0.014242 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000165 seconds.
-  path: Assets/Scenes/Main Level/ReflectionProbe-6.exr
-  artifactKey: Guid(ff92889f31e398d4483d5738ea77f235) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/ReflectionProbe-6.exr using Guid(ff92889f31e398d4483d5738ea77f235) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29697e6f9d180ea730d9424013277d39') in 0.012967 seconds
-  Import took 0.016009 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000187 seconds.
-  path: Assets/Scenes/Main Level/ReflectionProbe-0.exr
-  artifactKey: Guid(e53992806c2098d42a22d710783e4983) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/ReflectionProbe-0.exr using Guid(e53992806c2098d42a22d710783e4983) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f84699ff3e31d0ee0fdc233bf906232c') in 0.013984 seconds
-  Import took 0.016838 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000191 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-12_comp_light.exr
-  artifactKey: Guid(bf69a8faab46eff47aa8f59e586f36d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-12_comp_light.exr using Guid(bf69a8faab46eff47aa8f59e586f36d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81751ab3a86320c671f503c99a78f2e4') in 0.009542 seconds
-  Import took 0.013255 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000193 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-16_comp_light.exr
-  artifactKey: Guid(d3cb3dd848d4b7543b8ca156a3965a4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-16_comp_light.exr using Guid(d3cb3dd848d4b7543b8ca156a3965a4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b3bf37bac2bdaafebc329dc0b447cf2') in 0.011112 seconds
-  Import took 0.014306 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000271 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-14_comp_dir.png
-  artifactKey: Guid(0f8d62d03c5f0ae438ae43289cef4d64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-14_comp_dir.png using Guid(0f8d62d03c5f0ae438ae43289cef4d64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecac24566dceede24b847ecdadaeed5d') in 0.012761 seconds
-  Import took 0.016018 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000237 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-10_comp_dir.png
-  artifactKey: Guid(34f32b0876bfca34c836999bb8d26eab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-10_comp_dir.png using Guid(34f32b0876bfca34c836999bb8d26eab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '369a363686d3a3036af9b7f4ee97ecdf') in 0.012062 seconds
-  Import took 0.015039 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000186 seconds.
-  path: Assets/Scenes/Main Level/ReflectionProbe-4.exr
-  artifactKey: Guid(575b26b41ebb4a143a9e9f66e7d99b30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/ReflectionProbe-4.exr using Guid(575b26b41ebb4a143a9e9f66e7d99b30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6cfabd8913faa80848339a91d1a8e1c') in 0.013980 seconds
-  Import took 0.017919 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000271 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-23_comp_light.exr
-  artifactKey: Guid(481c676f844072a4b9574774b4146b6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-23_comp_light.exr using Guid(481c676f844072a4b9574774b4146b6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91bdebdabfd7edafa99b7ba2daa0d676') in 0.010539 seconds
-  Import took 0.013748 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000189 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-26_comp_dir.png
-  artifactKey: Guid(5e147d7b161c5344f96521a7a82e7733) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-26_comp_dir.png using Guid(5e147d7b161c5344f96521a7a82e7733) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b30b0a0c4698fadad2bb57f5f89bd67b') in 0.010616 seconds
-  Import took 0.013489 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000253 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-22_comp_dir.png
-  artifactKey: Guid(e0da70b0b2a22ba4781f0ad9cf1f2898) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-22_comp_dir.png using Guid(e0da70b0b2a22ba4781f0ad9cf1f2898) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b78aa17f0f95b30bd0088ee97645cd59') in 0.010949 seconds
-  Import took 0.014596 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000196 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-13_comp_light.exr
-  artifactKey: Guid(d55f5c22c15a7fb43b96fc302a076a1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-13_comp_light.exr using Guid(d55f5c22c15a7fb43b96fc302a076a1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf5e7013452ecb7cdbbcff18c19578d5') in 0.009389 seconds
-  Import took 0.012176 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000225 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-21_comp_dir.png
-  artifactKey: Guid(60a0b78e80d3f5f42a397cf41b662d7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-21_comp_dir.png using Guid(60a0b78e80d3f5f42a397cf41b662d7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47f206dbbdaeaba8301bb049e89747d8') in 0.012189 seconds
-  Import took 0.014995 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000195 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-15_comp_light.exr
-  artifactKey: Guid(0478cfd38cb2850459fb50c7aad25ab0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-15_comp_light.exr using Guid(0478cfd38cb2850459fb50c7aad25ab0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bc3a4548505a1185ba481eab4c398b1') in 0.010600 seconds
-  Import took 0.013722 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000157 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-22_comp_light.exr
-  artifactKey: Guid(0cf21bf67233b6e4f9a50847d72658aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-22_comp_light.exr using Guid(0cf21bf67233b6e4f9a50847d72658aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44e8c01ae5e95b72dca4bd8805942149') in 0.011508 seconds
-  Import took 0.014438 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000189 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-25_comp_dir.png
-  artifactKey: Guid(340134f75999d8044a480132db393186) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-25_comp_dir.png using Guid(340134f75999d8044a480132db393186) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19834b5dd91ac82c6ee10f644d891d4e') in 0.012190 seconds
-  Import took 0.015324 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000205 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-25_comp_light.exr
-  artifactKey: Guid(b263d7482a449064a89971d3b81ae0f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-25_comp_light.exr using Guid(b263d7482a449064a89971d3b81ae0f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6b5487adf8bdfd96c88def16b8b910d') in 0.010203 seconds
-  Import took 0.013560 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000177 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-7_comp_light.exr
-  artifactKey: Guid(3faa72e314dfa874ba755f1f36fdc32a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-7_comp_light.exr using Guid(3faa72e314dfa874ba755f1f36fdc32a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d9315fbde8bd5ce5ab82f6d406fea8a') in 0.007207 seconds
-  Import took 0.010030 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000306 seconds.
-  path: Assets/Scenes/Main Level/NavMesh.asset
-  artifactKey: Guid(0242acb59ffe96e4a81d1deb4b5d4b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/NavMesh.asset using Guid(0242acb59ffe96e4a81d1deb4b5d4b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29a1ceba997ac5f63c771555dea65266') in 0.007925 seconds
-  Import took 0.011341 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000198 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-18_comp_dir.png
-  artifactKey: Guid(8bce9b5b193cce44594805fd94d0e940) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-18_comp_dir.png using Guid(8bce9b5b193cce44594805fd94d0e940) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f267d8cc08e23707c619e8fd56271f52') in 0.010666 seconds
-  Import took 0.013837 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 29.774753 seconds.
-  path: Assets/Scenes/Main Level/LightingData.asset
-  artifactKey: Guid(41a11d43e4d999a499a1164dfa3c70cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/LightingData.asset using Guid(41a11d43e4d999a499a1164dfa3c70cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07acdc1d7d6f62455835fd3e9efb6850') in 0.007450 seconds
-  Import took 0.011433 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000206 seconds.
-  path: Assets/Scenes/Main Level/ReflectionProbe-2.exr
-  artifactKey: Guid(41edaacfed0b42244bf2cc94a750a555) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/ReflectionProbe-2.exr using Guid(41edaacfed0b42244bf2cc94a750a555) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4d4ee66430300222bedb69294600163') in 0.014505 seconds
-  Import took 0.018417 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000220 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-7_comp_dir.png
-  artifactKey: Guid(109f78f6942da93438b5e5adecda565f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-7_comp_dir.png using Guid(109f78f6942da93438b5e5adecda565f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd2dd58da0ecd82ff9af139f561d5d48') in 0.011483 seconds
-  Import took 0.016485 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000186 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-3_comp_dir.png
-  artifactKey: Guid(b39d878b18c3c1c45b3efe60183d8806) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-3_comp_dir.png using Guid(b39d878b18c3c1c45b3efe60183d8806) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2da896fb2057c9e0f65b9151801a4158') in 0.011358 seconds
-  Import took 0.015031 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000270 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-4_comp_light.exr
-  artifactKey: Guid(b1de0e33210b9be4f95f4df7d7e77652) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-4_comp_light.exr using Guid(b1de0e33210b9be4f95f4df7d7e77652) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae6b561f47bdc057350fd4319ab8dcb2') in 0.010586 seconds
-  Import took 0.014334 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000157 seconds.
-  path: Assets/Scenes/Main Level/ReflectionProbe-3.exr
-  artifactKey: Guid(0f3bb63473601c844b12f73c73a01014) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/ReflectionProbe-3.exr using Guid(0f3bb63473601c844b12f73c73a01014) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31e8e02afc94632e3093e1f786ea1175') in 0.014085 seconds
-  Import took 0.017440 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000169 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-1_comp_light.exr
-  artifactKey: Guid(63648c87ddddb524f985f15e907bd724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-1_comp_light.exr using Guid(63648c87ddddb524f985f15e907bd724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b7014ccb032602f415884d86eb7de43') in 0.009318 seconds
-  Import took 0.012675 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000178 seconds.
-  path: Assets/Scenes/Main Level/ReflectionProbe-1.exr
-  artifactKey: Guid(f692d17d9e2b7924bb97716488e524f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/ReflectionProbe-1.exr using Guid(f692d17d9e2b7924bb97716488e524f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fece3c678ced8de69734f718348bbaee') in 0.012592 seconds
-  Import took 0.015688 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000170 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-4_comp_dir.png
-  artifactKey: Guid(2cd11b253a3936e49914a3ce38ba6ba5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-4_comp_dir.png using Guid(2cd11b253a3936e49914a3ce38ba6ba5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fff8073f43366da7951b78687ad90bf') in 0.009274 seconds
-  Import took 0.012392 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000144 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-5_comp_light.exr
-  artifactKey: Guid(d5237820cfc1b2645a5e61f58d2e47c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-5_comp_light.exr using Guid(d5237820cfc1b2645a5e61f58d2e47c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60249076bd702141eaf6cf7050bc4ef1') in 0.008194 seconds
-  Import took 0.011168 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000134 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-3_comp_light.exr
-  artifactKey: Guid(5add1d219ba91b547b22bffb13bf0b7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-3_comp_light.exr using Guid(5add1d219ba91b547b22bffb13bf0b7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81c280c0651a8b265d18d9699f531a54') in 0.008074 seconds
-  Import took 0.011080 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000145 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-5_comp_dir.png
-  artifactKey: Guid(9bb0416a286988f4aab772dc3cf583a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-5_comp_dir.png using Guid(9bb0416a286988f4aab772dc3cf583a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '985908782d84209643d55f8a04a1a30c') in 0.008800 seconds
-  Import took 0.012519 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000186 seconds.
-  path: Assets/Scenes/Main Level/ReflectionProbe-5.exr
-  artifactKey: Guid(ba4f375506d0cdb44916573005ad3a05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/ReflectionProbe-5.exr using Guid(ba4f375506d0cdb44916573005ad3a05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fae73f5f6e47171918eead6b0ed949dc') in 0.011611 seconds
-  Import took 0.014586 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000279 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-2_comp_light.exr
-  artifactKey: Guid(d22b26c9aa172c04dbfa9efebf4ab57c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-2_comp_light.exr using Guid(d22b26c9aa172c04dbfa9efebf4ab57c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc391217d1309e2b300f4cecdcb9ac7f') in 0.010236 seconds
-  Import took 0.013492 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000205 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-0_comp_dir.png
-  artifactKey: Guid(69ac4932e66128244a664e6d32186182) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-0_comp_dir.png using Guid(69ac4932e66128244a664e6d32186182) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c5e14674b6c0524380c66083b02d29a') in 0.009701 seconds
-  Import took 0.013162 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000195 seconds.
-  path: Assets/Scenes/Main Level/ReflectionProbe-6.exr
-  artifactKey: Guid(ff92889f31e398d4483d5738ea77f235) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/ReflectionProbe-6.exr using Guid(ff92889f31e398d4483d5738ea77f235) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64173f253d8b551ba43edf6ff525e899') in 0.011248 seconds
-  Import took 0.014709 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000289 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-6_comp_light.exr
-  artifactKey: Guid(46559428cbeed6246a745f54814969fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-6_comp_light.exr using Guid(46559428cbeed6246a745f54814969fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59effd1f346311342cef41ab320710ab') in 0.009216 seconds
-  Import took 0.012687 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000249 seconds.
-  path: Assets/Scenes/Main Level/ReflectionProbe-0.exr
-  artifactKey: Guid(e53992806c2098d42a22d710783e4983) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/ReflectionProbe-0.exr using Guid(e53992806c2098d42a22d710783e4983) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e7ff4d79b8fdf3f313d75fe39785763') in 0.011425 seconds
-  Import took 0.014527 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000188 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-0_comp_light.exr
-  artifactKey: Guid(4cd54b242e4444c41b5db5fdd4b7bc35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-0_comp_light.exr using Guid(4cd54b242e4444c41b5db5fdd4b7bc35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e09ffbea0539aefb4158f8c9f6e9eb3e') in 0.009304 seconds
-  Import took 0.012408 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000225 seconds.
-  path: Assets/Scenes/Main Level/ReflectionProbe-4.exr
-  artifactKey: Guid(575b26b41ebb4a143a9e9f66e7d99b30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/ReflectionProbe-4.exr using Guid(575b26b41ebb4a143a9e9f66e7d99b30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ed367b1d3fe850c6515b8c4544e1c69') in 0.012801 seconds
-  Import took 0.016554 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000163 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-2_comp_dir.png
-  artifactKey: Guid(cbeed1c55194b1b4fbcff0fde656c9c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-2_comp_dir.png using Guid(cbeed1c55194b1b4fbcff0fde656c9c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8440f97076b6f35b87d9e4567dc497ea') in 0.009575 seconds
-  Import took 0.012577 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000169 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-6_comp_dir.png
-  artifactKey: Guid(9b6625393d71e754ab2d6f5f1d976ac7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-6_comp_dir.png using Guid(9b6625393d71e754ab2d6f5f1d976ac7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abfd5e3ec24a9fa0e82654cfc96f8698') in 0.008934 seconds
-  Import took 0.011827 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000169 seconds.
-  path: Assets/Scenes/Main Level/Lightmap-1_comp_dir.png
-  artifactKey: Guid(e1a0985fd2cd81d41881189f05dedd34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level/Lightmap-1_comp_dir.png using Guid(e1a0985fd2cd81d41881189f05dedd34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '036c7ecc28f508dc51b64f0d4049f9f1') in 0.008939 seconds
-  Import took 0.012115 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 22.682412 seconds.
-  path: Assets/Scenes/Main Level.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b68f98a33c014f0caa6740de090068f') in 0.006285 seconds
-  Import took 0.010052 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000763 seconds.
-  path: Assets/Scenes/Main Level.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b68f98a33c014f0caa6740de090068f') in 0.002489 seconds
-  Import took 0.006059 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001006 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.52 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
-
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.730 seconds
-Platform modules already initialized, skipping
-Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 0.60 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1949 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 102.6 MB.
-System memory in use after: 102.7 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2545.
-Total: 2.396700 ms (FindLiveObjects: 0.289000 ms CreateObjectMapping: 0.171200 ms MarkObjects: 1.809200 ms  DeleteObjects: 0.113500 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001229 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.52 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
-
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.769 seconds
-Platform modules already initialized, skipping
-Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 0.55 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1949 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 102.6 MB.
-System memory in use after: 102.7 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2547.
-Total: 2.007700 ms (FindLiveObjects: 0.189300 ms CreateObjectMapping: 0.093700 ms MarkObjects: 1.651000 ms  DeleteObjects: 0.072900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000999 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.52 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
-
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.768 seconds
-Platform modules already initialized, skipping
-Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 0.53 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1949 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 102.6 MB.
-System memory in use after: 102.7 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2549.
-Total: 2.537800 ms (FindLiveObjects: 0.186600 ms CreateObjectMapping: 0.062400 ms MarkObjects: 2.170400 ms  DeleteObjects: 0.117700 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 1007.940884 seconds.
-  path: Assets/Scenes/Main Level.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf1cee705669df8d239129b7090b61fd') in 0.013830 seconds
-  Import took 0.018028 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000997 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.02 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
-
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.729 seconds
-Platform modules already initialized, skipping
-Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 0.53 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1949 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 102.6 MB.
-System memory in use after: 102.7 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2551.
-Total: 1.999000 ms (FindLiveObjects: 0.223400 ms CreateObjectMapping: 0.067000 ms MarkObjects: 1.599800 ms  DeleteObjects: 0.108000 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001030 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.84 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
-
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.876 seconds
-Platform modules already initialized, skipping
-Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 0.75 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1949 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 102.6 MB.
-System memory in use after: 102.7 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2553.
-Total: 2.513200 ms (FindLiveObjects: 0.350300 ms CreateObjectMapping: 0.122400 ms MarkObjects: 1.946400 ms  DeleteObjects: 0.092500 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 766.004508 seconds.
-  path: Assets/Scenes/Main Level.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd632114113cb63b43ffb451114bc5dde') in 0.006070 seconds
-  Import took 0.010339 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001081 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.51 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
-
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.716 seconds
-Platform modules already initialized, skipping
-Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 0.52 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1949 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 102.7 MB.
-System memory in use after: 102.7 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2555.
-Total: 2.407800 ms (FindLiveObjects: 0.217200 ms CreateObjectMapping: 0.062400 ms MarkObjects: 2.027700 ms  DeleteObjects: 0.099800 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 373.559350 seconds.
-  path: Assets/Scenes/Main Level.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c90b1f32d35e00169cc22e398228f4c') in 0.015228 seconds
-  Import took 0.019673 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001066 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.74 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
-
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.914 seconds
-Platform modules already initialized, skipping
-Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 0.54 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1949 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 102.7 MB.
-System memory in use after: 102.7 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2557.
-Total: 2.450600 ms (FindLiveObjects: 0.324600 ms CreateObjectMapping: 0.093900 ms MarkObjects: 1.938500 ms  DeleteObjects: 0.092800 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 165.051696 seconds.
-  path: Assets/Scenes/Main Level.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f618ec84b0e4cb6efcf640da9e1e6a8') in 0.012563 seconds
-  Import took 0.016283 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001129 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.72 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
-
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.896 seconds
-Platform modules already initialized, skipping
-Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 0.58 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1949 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 102.7 MB.
-System memory in use after: 102.7 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2559.
-Total: 2.564200 ms (FindLiveObjects: 0.299700 ms CreateObjectMapping: 0.114000 ms MarkObjects: 2.059600 ms  DeleteObjects: 0.089500 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 197.942236 seconds.
-  path: Assets/Scenes/Main Level.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8ebb116bcb5ab15079303a0dbf5c686') in 0.005893 seconds
-  Import took 0.009061 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001034 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.57 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
-
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.881 seconds
-Platform modules already initialized, skipping
-Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 0.58 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1949 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 102.7 MB.
-System memory in use after: 102.8 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2561.
-Total: 2.310200 ms (FindLiveObjects: 0.231100 ms CreateObjectMapping: 0.087100 ms MarkObjects: 1.869700 ms  DeleteObjects: 0.121100 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001109 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.59 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
-
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.708 seconds
-Platform modules already initialized, skipping
-Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 0.52 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1949 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 102.7 MB.
-System memory in use after: 102.8 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2563.
-Total: 1.996200 ms (FindLiveObjects: 0.251600 ms CreateObjectMapping: 0.067800 ms MarkObjects: 1.571200 ms  DeleteObjects: 0.104800 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 401.211390 seconds.
-  path: Assets/Scenes/Main Level.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '150ff6c919b6fa935b642d5e6ca6a689') in 0.011496 seconds
-  Import took 0.014509 seconds .
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2498.
+Total: 1.884600 ms (FindLiveObjects: 0.167700 ms CreateObjectMapping: 0.065700 ms MarkObjects: 1.579900 ms  DeleteObjects: 0.070600 ms)
 
