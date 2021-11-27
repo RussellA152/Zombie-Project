@@ -4389,7 +4389,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-5186
+  m_Name: pb_Mesh-6082
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8226,7 +8226,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3630
+  m_Name: pb_Mesh-4526
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -25083,6 +25083,10 @@ PrefabInstance:
       propertyPath: fade_in_object
       value: 
       objectReference: {fileID: 1174413278}
+    - target: {fileID: 3455335543699120203, guid: b898bf66537bcdb41b69a95ad1b799b2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4771083427744155812, guid: b898bf66537bcdb41b69a95ad1b799b2, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -25091,11 +25095,30 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8725982679399992258, guid: b898bf66537bcdb41b69a95ad1b799b2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b898bf66537bcdb41b69a95ad1b799b2, type: 3}
 --- !u!1 &1711283776 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1966851699381306184, guid: b898bf66537bcdb41b69a95ad1b799b2, type: 3}
+  m_PrefabInstance: {fileID: 1711283775}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1711283777 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1966851699381306186, guid: b898bf66537bcdb41b69a95ad1b799b2, type: 3}
+  m_PrefabInstance: {fileID: 1711283775}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1711283778 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8725982679399992260, guid: b898bf66537bcdb41b69a95ad1b799b2, type: 3}
+  m_PrefabInstance: {fileID: 1711283775}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1711283779 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3455335543699120205, guid: b898bf66537bcdb41b69a95ad1b799b2, type: 3}
   m_PrefabInstance: {fileID: 1711283775}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1717034623
@@ -25280,6 +25303,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: New Power Switch
       objectReference: {fileID: 0}
+    - target: {fileID: 4314052056237629087, guid: caf06c6b6e0529a4fb5b03cbaae9e004, type: 3}
+      propertyPath: fadeIn_image
+      value: 
+      objectReference: {fileID: 1711283779}
+    - target: {fileID: 4314052056237629087, guid: caf06c6b6e0529a4fb5b03cbaae9e004, type: 3}
+      propertyPath: fadeOut_image
+      value: 
+      objectReference: {fileID: 1711283778}
+    - target: {fileID: 4314052056237629087, guid: caf06c6b6e0529a4fb5b03cbaae9e004, type: 3}
+      propertyPath: fade_animator
+      value: 
+      objectReference: {fileID: 1711283777}
     - target: {fileID: 6363241237638972165, guid: caf06c6b6e0529a4fb5b03cbaae9e004, type: 3}
       propertyPath: m_RootOrder
       value: 44
@@ -25482,6 +25517,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   superImprover_teleporter_position: {fileID: 1960141042}
   buyable_ending_conditions_met: 0
+  fade_animator: {fileID: 1711283777}
 --- !u!1001 &1738568137
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29161,7 +29197,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3012
+  m_Name: pb_Mesh-3908
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

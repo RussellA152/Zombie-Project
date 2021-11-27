@@ -11,15 +11,15 @@ public class PowerTeleporter : MonoBehaviour
 
     [SerializeField] private bool buyable_ending_conditions_met;
 
+    [SerializeField] private Animator fade_animator;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
+        //subscribes to our Teleporter event system
         TeleporterEvent.current.onTeleport += TeleportPlayerToUpgradeRoom;
-
-        //get reference for player from event system
-
     }
 
     // Update is called once per frame
@@ -74,21 +74,14 @@ public class PowerTeleporter : MonoBehaviour
     }
     void TeleportPlayerToUpgradeRoom()
     {
-        player = TeleporterEvent.current.player;
         
-        //player's position and rotation begins the superimprover_teleporter_position's position
-        player.transform.position = new Vector3(superImprover_teleporter_position.transform.position.x, superImprover_teleporter_position.transform.position.y + 1f, superImprover_teleporter_position.transform.position.z);
 
-        StartCoroutine(PlayerMovementDelay());
+        StartCoroutine(PlayTeleportAnimationSuperImprover());
         //TeleporterEvent.current.player_orientation.transform.rotation = ChangeRotation(0f, 90f, 0f);
 
         //StartCoroutine(PLayerMovementDelay());
 
         //make these values false again so player has to relink them, not simply just reuse teleporter
-        TeleporterEvent.current.wants_to_link_teleporters = false;
-        TeleporterEvent.current.teleporters_are_linked = false;
-
-        StartCoroutine(TeleportBackToStartingRoom());
     }
     IEnumerator TeleportBackToStartingRoom()
     {
@@ -100,9 +93,13 @@ public class PowerTeleporter : MonoBehaviour
         //they will not be teleported back, so they can't miss the final explosion effect
         if (!BuyableEnding.current.conditions_met)
         {
+            fade_animator.SetTrigger("PurpleFadeOut");
+            yield return new WaitForSeconds(1f);
             InteractAudioSource.current.PlayInteractClip(TeleporterEvent.current.teleport_return_sound, 0.5f);
             player.transform.position = new Vector3(TeleporterEvent.current.startingRoom_Teleporter.transform.position.x, TeleporterEvent.current.startingRoom_Teleporter.transform.position.y + 1f, TeleporterEvent.current.startingRoom_Teleporter.transform.position.z);
             StartCoroutine(PlayerMovementDelay());
+            fade_animator.SetTrigger("PurpleFadeIn");
+            
         }
         
 
@@ -123,6 +120,8 @@ public class PowerTeleporter : MonoBehaviour
 
     IEnumerator PlayerMovementDelay()
     {
+
+        //fade_animator.SetTrigger("PurpleFadeIn");
         var invincibility = player.gameObject.GetComponent<PlayerHealth>().is_invincible;
         //yield return new WaitForSeconds(1f);
         //TeleporterEvent.current.playerRB.constraints = RigidbodyConstraints.FreezePosition;
@@ -137,4 +136,25 @@ public class PowerTeleporter : MonoBehaviour
         invincibility = false;
 
     }
+
+    IEnumerator PlayTeleportAnimationSuperImprover()
+    {
+        fade_animator.SetTrigger("PurpleFadeOut");
+
+        player = TeleporterEvent.current.player;
+        yield return new WaitForSeconds(1.2f);
+        //player's position and rotation begins the superimprover_teleporter_position's position
+        player.transform.position = new Vector3(superImprover_teleporter_position.transform.position.x, superImprover_teleporter_position.transform.position.y + 1f, superImprover_teleporter_position.transform.position.z);
+        fade_animator.SetTrigger("PurpleFadeIn");
+        StartCoroutine(PlayerMovementDelay());
+
+        TeleporterEvent.current.wants_to_link_teleporters = false;
+        TeleporterEvent.current.teleporters_are_linked = false;
+
+        TeleporterEvent.current.wants_to_link_teleporters = false;
+        TeleporterEvent.current.teleporters_are_linked = false;
+
+        StartCoroutine(TeleportBackToStartingRoom());
+    }
+    
 }

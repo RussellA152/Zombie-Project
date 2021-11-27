@@ -70,7 +70,12 @@ public class MySceneHandler : MonoBehaviour
         if (GameObject.Find("Fade Animator") != null)
             animator_object = GameObject.Find("Fade Animator");
         if (animator_object != null)
+        {
             animator = animator_object.GetComponent<Animator>();
+            animator.SetTrigger("FadeIn");
+        }
+            
+        
     }
 
 }

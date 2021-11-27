@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class PowerEvent : MonoBehaviour
@@ -13,6 +13,9 @@ public class PowerEvent : MonoBehaviour
 
     [SerializeField] private AudioClip power_on_sound;
     [SerializeField] private GameObject power_lever;
+
+    [SerializeField] private Animator fade_animator;
+
 
 
     private void Start()
@@ -67,6 +70,7 @@ public class PowerEvent : MonoBehaviour
                     InteractAudioSource.current.PlayInteractClip(power_on_sound,0.5f);
                     LeanTween.rotateLocal(power_lever, new Vector3(-120, 0, 0), 1f);
                     OnPowered();
+                    StartCoroutine(PowerFadeAnimation());
                 }
                 
             }
@@ -81,5 +85,13 @@ public class PowerEvent : MonoBehaviour
             Debug.Log("Not in power Trigger");
             
         }
+    }
+
+    IEnumerator PowerFadeAnimation()
+    {
+        //when power is turned on, we fade to a bright color, then fade back
+        fade_animator.SetTrigger("QuickFadeOut");
+        yield return new WaitForSeconds(.9f);
+        fade_animator.SetTrigger("QuickFadeIn");
     }
 }
