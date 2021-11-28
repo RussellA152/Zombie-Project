@@ -13,6 +13,9 @@ public class PowerTeleporter : MonoBehaviour
 
     [SerializeField] private Animator fade_animator;
 
+    //when player enters superimprover room, turn on the light, otherwise turn it off for performance increase
+    [SerializeField] private GameObject superImprover_light;
+
 
 
     // Start is called before the first frame update
@@ -20,6 +23,11 @@ public class PowerTeleporter : MonoBehaviour
     {
         //subscribes to our Teleporter event system
         TeleporterEvent.current.onTeleport += TeleportPlayerToUpgradeRoom;
+
+        if(superImprover_light != null)
+        {
+            superImprover_light.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -74,14 +82,13 @@ public class PowerTeleporter : MonoBehaviour
     }
     void TeleportPlayerToUpgradeRoom()
     {
-        
-
+        //when player enters superimprover room, turn on the light
+        if (superImprover_light != null)
+        {
+            superImprover_light.SetActive(true);
+        }
         StartCoroutine(PlayTeleportAnimationSuperImprover());
-        //TeleporterEvent.current.player_orientation.transform.rotation = ChangeRotation(0f, 90f, 0f);
 
-        //StartCoroutine(PLayerMovementDelay());
-
-        //make these values false again so player has to relink them, not simply just reuse teleporter
     }
     IEnumerator TeleportBackToStartingRoom()
     {
@@ -101,8 +108,11 @@ public class PowerTeleporter : MonoBehaviour
             fade_animator.SetTrigger("PurpleFadeIn");
             
         }
-        
-
+        //turn off superimprover light because player is no longer inside the room
+        if (superImprover_light != null)
+        {
+            superImprover_light.SetActive(false);
+        }
         //begin teleporter link cooldown
         StartCoroutine(LinkCoolDown());
     }
