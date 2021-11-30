@@ -31,6 +31,9 @@ public class PerkMachine : MonoBehaviour
 
     [Header("GameObject Accessors")]
     public GameObject player;
+    [SerializeField] private ParticleSystem player_first_power_particle_effect;
+    [SerializeField] private ParticleSystem player_second_power_particle_effect;
+    //[SerializeField] private ParticleSystem player_second_power_particle_effect;
     //public GameObject weaponHolder;
 
     private PlayerHealth playerHealthAccessor;
@@ -163,7 +166,7 @@ public class PerkMachine : MonoBehaviour
     {
         //plays a soda can opening sound when purchasing perk
         InteractAudioSource.current.PlayInteractClip(soda_open_sound, 0.5f);
-        StartCoroutine(BuffSoundDelay());
+        
         
 
         switch (perkType)
@@ -174,6 +177,9 @@ public class PerkMachine : MonoBehaviour
                 playerPerkInventory.has_Health_Increase_Perk = true;
                 purchased_Health_Increase_Perk = true;
                 playerHealthAccessor.IncreaseHealth();
+                //since we want to enter bytes for color values, we need to use new color32 instead of new color()
+                var color1 = new Color32(200, 30, 0, 255);
+                StartCoroutine(BuffSoundDelay(color1));
                 Debug.Log("You have acquired health increase!");
                 break;
             case 2:
@@ -181,18 +187,22 @@ public class PerkMachine : MonoBehaviour
                 playerPerkInventory.has_Sprint_Speed_Perk = true;
                 purchased_Sprint_Speed_Perk = true;
                 playerMovementAccessor.IncreaseSpeed();
+                var color2 = new Color32(69, 97, 255, 255);
+                StartCoroutine(BuffSoundDelay(color2));
                 Debug.Log("You have acquired sprint speed increase!");
                 break;
             case 3:
-                
                 playerPerkInventory.has_Reload_Speed_Perk = true;
                 purchased_Reload_Speed_Perk = true;
+                var color3 = new Color32(78, 200, 42, 255);
+                StartCoroutine(BuffSoundDelay(color3));
                 Debug.Log("You have acquired reload speed increase!");
                 break;
             case 4:
                 playerPerkInventory.has_Life_Savior_Perk = true;
                 purchased_Life_Savior_Perk = true;
-                
+                var color4 = new Color32(227, 229, 120, 255);
+                StartCoroutine(BuffSoundDelay(color4));
                 Debug.Log("You have acquired life savior!");
                 break;
         }
@@ -204,10 +214,16 @@ public class PerkMachine : MonoBehaviour
         yield return new WaitForSeconds(1f);
         canInteract = true;
     }
-    IEnumerator BuffSoundDelay()
+    IEnumerator BuffSoundDelay(Color color)
     {
-        yield return new WaitForSeconds(1.15f);
+        var main = player_first_power_particle_effect.main;
+        var main2 = player_second_power_particle_effect.main;
+        yield return new WaitForSeconds(1f);
         InteractAudioSource.current.PlayInteractClip(soda_buff_sound, 0.5f);
+        main.startColor = color;
+        main2.startColor = color;
+        player_first_power_particle_effect.gameObject.SetActive(true);
+        player_first_power_particle_effect.Play();
     }
 
 }

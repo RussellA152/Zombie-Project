@@ -15,11 +15,11 @@ C:/Users/Daniel/Documents/GitHub/Zombie-Project
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-55504
+62495
 Successfully changed project path to: C:/Users/Daniel/Documents/GitHub/Zombie-Project
 C:/Users/Daniel/Documents/GitHub/Zombie-Project
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 76.27 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 52.16 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.1f1 (270dd8c3da1c)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Resources/UnitySubsystems
@@ -37,110 +37,228 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56664
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56596
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.105279 seconds.
+Registered in 0.001766 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 52.43 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 50.34 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.212 seconds
+- Completed reload, in  0.975 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.040515 seconds.
+Registered in 0.001271 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.96 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.78 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.811 seconds
+- Completed reload, in  0.881 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
 Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 0.61 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.63 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2035 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 104.9 MB.
 System memory in use after: 104.9 MB.
 
 Unloading 79 unused Assets to reduce memory usage. Loaded Objects now: 2492.
-Total: 2.911600 ms (FindLiveObjects: 0.344300 ms CreateObjectMapping: 0.205900 ms MarkObjects: 2.123800 ms  DeleteObjects: 0.236600 ms)
+Total: 2.152500 ms (FindLiveObjects: 0.205400 ms CreateObjectMapping: 0.152700 ms MarkObjects: 1.632100 ms  DeleteObjects: 0.161800 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Prefabs/Teleporter Prefabs/SuperImprover Teleported Location.prefab
-  artifactKey: Guid(d96baef256a817c4abb6aeb8ba3299c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/SuperImprover Teleported Location.prefab using Guid(d96baef256a817c4abb6aeb8ba3299c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47c2c14c4e62bca700db815c19d4419a') in 0.056999 seconds
-  Import took 0.060130 seconds .
+  path: Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room) 1.prefab
+  artifactKey: Guid(252e1099af5b00e49b1a0889614683bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room) 1.prefab using Guid(252e1099af5b00e49b1a0889614683bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '651bb6b7ead134d814339f7856927ae9') in 0.091679 seconds
+  Import took 0.119458 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000211 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/Teleporter (Starting Room).prefab
-  artifactKey: Guid(16c3ffef060487548b3267c143a9e08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/Teleporter (Starting Room).prefab using Guid(16c3ffef060487548b3267c143a9e08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '859dda5ec930d326faf12e90968e3b8b') in 0.053568 seconds
-  Import took 0.056701 seconds .
+  Time since last request: 4.316542 seconds.
+  path: Assets/Prefabs/Teleporter Prefabs/Zombie Spawn Pad.prefab
+  artifactKey: Guid(252e1099af5b00e49b1a0889614683bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Teleporter Prefabs/Zombie Spawn Pad.prefab using Guid(252e1099af5b00e49b1a0889614683bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7450f553ff779464bade07f354bb406a') in 0.014575 seconds
+  Import took 0.018708 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000218 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/Teleporter (Power Room).prefab
-  artifactKey: Guid(c8b74fd99ceee2c43b7582c741eb2465) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/Teleporter (Power Room).prefab using Guid(c8b74fd99ceee2c43b7582c741eb2465) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8472569d1abf9ed670aab9640d660f9') in 0.010384 seconds
-  Import took 0.013581 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001172 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.53 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
-
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.802 seconds
-Platform modules already initialized, skipping
-Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 0.55 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1949 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 102.4 MB.
-System memory in use after: 102.5 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2502.
-Total: 2.227900 ms (FindLiveObjects: 0.289300 ms CreateObjectMapping: 0.096200 ms MarkObjects: 1.769000 ms  DeleteObjects: 0.072800 ms)
+  Time since last request: 0.004986 seconds.
+  path: Assets/Prefabs/Teleporter Prefabs/Zombie Spawn Pad.prefab
+  artifactKey: Guid(252e1099af5b00e49b1a0889614683bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Teleporter Prefabs/Zombie Spawn Pad.prefab using Guid(252e1099af5b00e49b1a0889614683bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7450f553ff779464bade07f354bb406a') in 0.008736 seconds
+  Import took 0.012919 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 261.596625 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/Teleporter (Power Room).prefab
-  artifactKey: Guid(c8b74fd99ceee2c43b7582c741eb2465) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/Teleporter (Power Room).prefab using Guid(c8b74fd99ceee2c43b7582c741eb2465) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6922dbbeee55c6239703c9e14d4d7f1e') in 0.052324 seconds
-  Import took 0.055387 seconds .
+  Time since last request: 5.672931 seconds.
+  path: Assets/Prefabs/Teleporter Prefabs/Zombie Spawn Pad.prefab
+  artifactKey: Guid(252e1099af5b00e49b1a0889614683bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Teleporter Prefabs/Zombie Spawn Pad.prefab using Guid(252e1099af5b00e49b1a0889614683bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e79727d74d4648f456e8e4d9cc8a101') in 0.008845 seconds
+  Import took 0.012549 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.584072 seconds.
+  path: Assets/Prefabs/Teleporter Prefabs/Zombie Spawn Pad.prefab
+  artifactKey: Guid(252e1099af5b00e49b1a0889614683bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Teleporter Prefabs/Zombie Spawn Pad.prefab using Guid(252e1099af5b00e49b1a0889614683bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '158412a92a3f6e4e6c656099b7522737') in 0.011415 seconds
+  Import took 0.015102 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.615962 seconds.
+  path: Assets/Prefabs/Teleporter Prefabs/Zombie Spawn Pad.prefab
+  artifactKey: Guid(252e1099af5b00e49b1a0889614683bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Teleporter Prefabs/Zombie Spawn Pad.prefab using Guid(252e1099af5b00e49b1a0889614683bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a4289b5896bb49af952a2b0d15e9c5c') in 0.011792 seconds
+  Import took 0.015828 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.625085 seconds.
+  path: Assets/Prefabs/Teleporter Prefabs/Zombie Spawn Pad.prefab
+  artifactKey: Guid(252e1099af5b00e49b1a0889614683bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Teleporter Prefabs/Zombie Spawn Pad.prefab using Guid(252e1099af5b00e49b1a0889614683bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd419f56feabb7d058b0a9ad03bdb70d2') in 0.009621 seconds
+  Import took 0.013065 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.430524 seconds.
+  path: Assets/Prefabs/Teleporter Prefabs/Zombie Spawn Pad.prefab
+  artifactKey: Guid(252e1099af5b00e49b1a0889614683bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Teleporter Prefabs/Zombie Spawn Pad.prefab using Guid(252e1099af5b00e49b1a0889614683bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05a38a29f19de8dbc51d10543b4fb155') in 0.010209 seconds
+  Import took 0.014821 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.800322 seconds.
+  path: Assets/Prefabs/Teleporter Prefabs/Zombie Spawn Pad.prefab
+  artifactKey: Guid(252e1099af5b00e49b1a0889614683bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Teleporter Prefabs/Zombie Spawn Pad.prefab using Guid(252e1099af5b00e49b1a0889614683bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32c82ad78384ea1259dd42eb06abd29f') in 0.006948 seconds
+  Import took 0.011007 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.442328 seconds.
+  path: Assets/Prefabs/Teleporter Prefabs/Zombie Spawn Pad.prefab
+  artifactKey: Guid(252e1099af5b00e49b1a0889614683bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Teleporter Prefabs/Zombie Spawn Pad.prefab using Guid(252e1099af5b00e49b1a0889614683bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a870a8461eeff5a33eaf50dcf0afe03') in 0.006011 seconds
+  Import took 0.009680 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.122723 seconds.
+  path: Assets/Prefabs/Teleporter Prefabs/Zombie Spawn Pad.prefab
+  artifactKey: Guid(252e1099af5b00e49b1a0889614683bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Teleporter Prefabs/Zombie Spawn Pad.prefab using Guid(252e1099af5b00e49b1a0889614683bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '284dfeb0f5396ddb4229f93038760e48') in 0.008468 seconds
+  Import took 0.013450 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.266373 seconds.
+  path: Assets/Materials/Teleporter Glow.mat
+  artifactKey: Guid(d82b47dac5b4f87449989eb3521f76a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Teleporter Glow.mat using Guid(d82b47dac5b4f87449989eb3521f76a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08241037025f26400bc1c3ce504fe9f3') in 0.043358 seconds
+  Import took 0.047476 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 112.265461 seconds.
+  path: Assets/Prefabs/Teleporter Prefabs/Zombie Spawn Pad.prefab
+  artifactKey: Guid(252e1099af5b00e49b1a0889614683bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Teleporter Prefabs/Zombie Spawn Pad.prefab using Guid(252e1099af5b00e49b1a0889614683bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2c4cdc8828646331724b2a01ac2e723') in 0.017734 seconds
+  Import took 0.021045 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.119581 seconds.
+  path: Assets/Prefabs/Teleporter Prefabs/Zombie Spawn Pad.prefab
+  artifactKey: Guid(252e1099af5b00e49b1a0889614683bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Teleporter Prefabs/Zombie Spawn Pad.prefab using Guid(252e1099af5b00e49b1a0889614683bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f98aabb32a5a7305f2123a7c3ba6fc86') in 0.009087 seconds
+  Import took 0.013011 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 30.052385 seconds.
+  path: Assets/Prefabs/Teleporter Prefabs/Zombie Spawn Pad.prefab
+  artifactKey: Guid(252e1099af5b00e49b1a0889614683bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Teleporter Prefabs/Zombie Spawn Pad.prefab using Guid(252e1099af5b00e49b1a0889614683bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '728a014450692bcc37e999638661eb5d') in 0.010579 seconds
+  Import took 0.013938 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.884723 seconds.
+  path: Assets/Prefabs/Teleporter Prefabs/Zombie Spawn Pad 1.prefab
+  artifactKey: Guid(87c6760ad64031546a0192ef91eda780) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Teleporter Prefabs/Zombie Spawn Pad 1.prefab using Guid(87c6760ad64031546a0192ef91eda780) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1387a4bdf123f1ddc4da4501fc8fec10') in 0.013695 seconds
+  Import took 0.017005 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002770 seconds.
+  path: Assets/Prefabs/Teleporter Prefabs/Zombie Spawn Pad 1.prefab
+  artifactKey: Guid(87c6760ad64031546a0192ef91eda780) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Teleporter Prefabs/Zombie Spawn Pad 1.prefab using Guid(87c6760ad64031546a0192ef91eda780) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1387a4bdf123f1ddc4da4501fc8fec10') in 0.010207 seconds
+  Import took 0.013690 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.617979 seconds.
+  path: Assets/Prefabs/Teleporter Prefabs/Zombie Spawn Pad 2.prefab
+  artifactKey: Guid(87c6760ad64031546a0192ef91eda780) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Teleporter Prefabs/Zombie Spawn Pad 2.prefab using Guid(87c6760ad64031546a0192ef91eda780) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b6b2b9884a9f7e996db9e7a7845675d') in 0.012886 seconds
+  Import took 0.016591 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.914475 seconds.
+  path: Assets/Prefabs/Teleporter Prefabs/Zombie Spawn Pad 1.prefab
+  artifactKey: Guid(252e1099af5b00e49b1a0889614683bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Teleporter Prefabs/Zombie Spawn Pad 1.prefab using Guid(252e1099af5b00e49b1a0889614683bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '073e00a7cc07e1f77cebd4f55e376996') in 0.010227 seconds
+  Import took 0.013791 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002413 seconds.
+  path: Assets/Prefabs/Teleporter Prefabs/Zombie Spawn Pad 1.prefab
+  artifactKey: Guid(252e1099af5b00e49b1a0889614683bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Teleporter Prefabs/Zombie Spawn Pad 1.prefab using Guid(252e1099af5b00e49b1a0889614683bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '073e00a7cc07e1f77cebd4f55e376996') in 0.009557 seconds
+  Import took 0.012777 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 39.913621 seconds.
+  path: Assets/Scenes/Main Level.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Main Level.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4691e75b65ceabc4587fa484ecc97e6') in 0.003104 seconds
+  Import took 0.006962 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 46.831909 seconds.
+  path: Assets/Prefabs/Teleporter Prefabs/Zombie Spawn Pad 2.prefab
+  artifactKey: Guid(87c6760ad64031546a0192ef91eda780) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Teleporter Prefabs/Zombie Spawn Pad 2.prefab using Guid(87c6760ad64031546a0192ef91eda780) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b9f5cc9b0af0252dc31cdcf3b20830c') in 0.010994 seconds
+  Import took 0.014299 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 670.812802 seconds.
+  path: Assets/Scenes/Main Level.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Main Level.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a525b11c84ba1a1df2318c550a03fc58') in 0.002887 seconds
+  Import took 0.007437 seconds .
 
 ========================================================================
 Received Prepare
@@ -148,7 +266,7 @@ Registering precompiled user dll's ...
 Registered in 0.001146 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.56 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.61 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Warning: Annotation not found!
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
@@ -163,463 +281,17 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.833 seconds
+- Completed reload, in  0.901 seconds
 Platform modules already initialized, skipping
 Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
 Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 0.52 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1949 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 102.5 MB.
-System memory in use after: 102.5 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2505.
-Total: 2.186800 ms (FindLiveObjects: 0.371900 ms CreateObjectMapping: 0.137700 ms MarkObjects: 1.570400 ms  DeleteObjects: 0.105300 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 524.741473 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs
-  artifactKey: Guid(08cbba01a304df14786445d4c7973f74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs using Guid(08cbba01a304df14786445d4c7973f74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ac6197fe07be6adaa272e63a704ec20') in 0.011351 seconds
-  Import took 0.015999 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.080312 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/Teleporter (Starting Room).prefab
-  artifactKey: Guid(16c3ffef060487548b3267c143a9e08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/Teleporter (Starting Room).prefab using Guid(16c3ffef060487548b3267c143a9e08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42ec31a3636a4c1937688d923145b429') in 0.060025 seconds
-  Import took 0.063805 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 27.249636 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/Teleporter (Starting Room).prefab
-  artifactKey: Guid(16c3ffef060487548b3267c143a9e08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/Teleporter (Starting Room).prefab using Guid(16c3ffef060487548b3267c143a9e08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7932a3f9df768d6cdaf624b8de663ed') in 0.008857 seconds
-  Import took 0.012522 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 57.677702 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room).prefab
-  artifactKey: Guid(e00f8d1905b13b6449e4e9a9352a2a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room).prefab using Guid(e00f8d1905b13b6449e4e9a9352a2a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afd2d5c2b48d6f700dba8120146b7c14') in 0.010694 seconds
-  Import took 0.014914 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.021954 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room).prefab
-  artifactKey: Guid(e00f8d1905b13b6449e4e9a9352a2a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room).prefab using Guid(e00f8d1905b13b6449e4e9a9352a2a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afd2d5c2b48d6f700dba8120146b7c14') in 0.007134 seconds
-  Import took 0.010933 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.081653 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/Teleporter (Starting Room).prefab
-  artifactKey: Guid(16c3ffef060487548b3267c143a9e08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/Teleporter (Starting Room).prefab using Guid(16c3ffef060487548b3267c143a9e08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4113d4dc7819693b25a3d82715d999cf') in 0.008238 seconds
-  Import took 0.012045 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.016459 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/Teleporter (Starting Room).prefab
-  artifactKey: Guid(16c3ffef060487548b3267c143a9e08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/Teleporter (Starting Room).prefab using Guid(16c3ffef060487548b3267c143a9e08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4113d4dc7819693b25a3d82715d999cf') in 0.008355 seconds
-  Import took 0.012148 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 23.030660 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/Teleporter (Starting Room).prefab
-  artifactKey: Guid(16c3ffef060487548b3267c143a9e08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/Teleporter (Starting Room).prefab using Guid(16c3ffef060487548b3267c143a9e08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3522c17ed4387e8c3ac5b6a526d10a2b') in 0.011263 seconds
-  Import took 0.014601 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000209 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room).prefab
-  artifactKey: Guid(e00f8d1905b13b6449e4e9a9352a2a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room).prefab using Guid(e00f8d1905b13b6449e4e9a9352a2a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f921f75139f7d24009a3b4eca04bdbe') in 0.010687 seconds
-  Import took 0.013581 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.013168 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/Teleporter (Starting Room).prefab
-  artifactKey: Guid(16c3ffef060487548b3267c143a9e08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/Teleporter (Starting Room).prefab using Guid(16c3ffef060487548b3267c143a9e08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1b0563e2dd5b75950bce204a2945fdf') in 0.007923 seconds
-  Import took 0.012061 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000172 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room).prefab
-  artifactKey: Guid(e00f8d1905b13b6449e4e9a9352a2a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room).prefab using Guid(e00f8d1905b13b6449e4e9a9352a2a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea5893487bdfed8854cbfd9e7055c731') in 0.010360 seconds
-  Import took 0.014502 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.189702 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/Teleporter (Starting Room).prefab
-  artifactKey: Guid(16c3ffef060487548b3267c143a9e08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/Teleporter (Starting Room).prefab using Guid(16c3ffef060487548b3267c143a9e08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9662c9fd55533d6b71583afbb435f8bc') in 0.007858 seconds
-  Import took 0.012708 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000187 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room).prefab
-  artifactKey: Guid(e00f8d1905b13b6449e4e9a9352a2a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room).prefab using Guid(e00f8d1905b13b6449e4e9a9352a2a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b50e103f06bdf1228ae8888e38cbba5') in 0.006755 seconds
-  Import took 0.009714 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.602795 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/Teleporter (Starting Room).prefab
-  artifactKey: Guid(16c3ffef060487548b3267c143a9e08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/Teleporter (Starting Room).prefab using Guid(16c3ffef060487548b3267c143a9e08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b45044d23b63f845031ff9bc88b5e9f5') in 0.006887 seconds
-  Import took 0.010790 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000144 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room).prefab
-  artifactKey: Guid(e00f8d1905b13b6449e4e9a9352a2a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room).prefab using Guid(e00f8d1905b13b6449e4e9a9352a2a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f795bdfbacc74bf5f48777e9405d0e4') in 0.007405 seconds
-  Import took 0.011562 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.414705 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/Teleporter (Starting Room).prefab
-  artifactKey: Guid(16c3ffef060487548b3267c143a9e08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/Teleporter (Starting Room).prefab using Guid(16c3ffef060487548b3267c143a9e08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aceb2dd93593d36e7204a439d30ad20b') in 0.007861 seconds
-  Import took 0.012378 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000254 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room).prefab
-  artifactKey: Guid(e00f8d1905b13b6449e4e9a9352a2a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room).prefab using Guid(e00f8d1905b13b6449e4e9a9352a2a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9160978533323a483cbcb069ddc709d') in 0.009284 seconds
-  Import took 0.012475 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.223801 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/Teleporter (Starting Room).prefab
-  artifactKey: Guid(16c3ffef060487548b3267c143a9e08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/Teleporter (Starting Room).prefab using Guid(16c3ffef060487548b3267c143a9e08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e559e84a6ca336d6852ad7982c0fd6b') in 0.009097 seconds
-  Import took 0.012189 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000153 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room).prefab
-  artifactKey: Guid(e00f8d1905b13b6449e4e9a9352a2a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room).prefab using Guid(e00f8d1905b13b6449e4e9a9352a2a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18d9c51fd2056938dd429002835c46d3') in 0.006730 seconds
-  Import took 0.009744 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.793128 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/Teleporter (Starting Room).prefab
-  artifactKey: Guid(16c3ffef060487548b3267c143a9e08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/Teleporter (Starting Room).prefab using Guid(16c3ffef060487548b3267c143a9e08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59788e2985d250d1793eeca214d71352') in 0.007269 seconds
-  Import took 0.010925 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000204 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room).prefab
-  artifactKey: Guid(e00f8d1905b13b6449e4e9a9352a2a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room).prefab using Guid(e00f8d1905b13b6449e4e9a9352a2a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2956b1b8bc9cb4ead7be5605bdbc3e5d') in 0.007067 seconds
-  Import took 0.010375 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 554.525873 seconds.
-  path: Assets/Materials/Teleporter Glow.mat
-  artifactKey: Guid(d82b47dac5b4f87449989eb3521f76a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Teleporter Glow.mat using Guid(d82b47dac5b4f87449989eb3521f76a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3e96511545b19d0aee258c0316d099d') in 0.030079 seconds
-  Import took 0.034454 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 62.315245 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room).prefab
-  artifactKey: Guid(e00f8d1905b13b6449e4e9a9352a2a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room).prefab using Guid(e00f8d1905b13b6449e4e9a9352a2a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdbfbc3e77dd69d3b9fb205157c4214d') in 0.010381 seconds
-  Import took 0.014012 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.867927 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room).prefab
-  artifactKey: Guid(e00f8d1905b13b6449e4e9a9352a2a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room).prefab using Guid(e00f8d1905b13b6449e4e9a9352a2a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9660d595009270523780e45fcaf7367') in 0.012538 seconds
-  Import took 0.016638 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.977041 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room).prefab
-  artifactKey: Guid(e00f8d1905b13b6449e4e9a9352a2a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room).prefab using Guid(e00f8d1905b13b6449e4e9a9352a2a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddc69fb303160f0f014a751fc7adab62') in 0.011431 seconds
-  Import took 0.014976 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 91.800081 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room).prefab
-  artifactKey: Guid(e00f8d1905b13b6449e4e9a9352a2a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room).prefab using Guid(e00f8d1905b13b6449e4e9a9352a2a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc0efb831a17168a9e520cd2ca588537') in 0.010937 seconds
-  Import took 0.014425 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 72.179133 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room) 1.prefab
-  artifactKey: Guid(6d318a972f88b26418270bf17fff1b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room) 1.prefab using Guid(6d318a972f88b26418270bf17fff1b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b700dc87ff715a7640e933a8e73418d') in 0.011287 seconds
-  Import took 0.015435 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.029184 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room) 1.prefab
-  artifactKey: Guid(6d318a972f88b26418270bf17fff1b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room) 1.prefab using Guid(6d318a972f88b26418270bf17fff1b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b700dc87ff715a7640e933a8e73418d') in 0.008103 seconds
-  Import took 0.011445 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 15.989757 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room) 1.prefab
-  artifactKey: Guid(6d318a972f88b26418270bf17fff1b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room) 1.prefab using Guid(6d318a972f88b26418270bf17fff1b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef46f89529a2afc4b15e486abc8b88c3') in 0.008016 seconds
-  Import took 0.011413 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.293565 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room) 1.prefab
-  artifactKey: Guid(6d318a972f88b26418270bf17fff1b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room) 1.prefab using Guid(6d318a972f88b26418270bf17fff1b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9e1de625b361cfb4253b4f2c7a0d55f') in 0.010126 seconds
-  Import took 0.013540 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.109844 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room) 1.prefab
-  artifactKey: Guid(6d318a972f88b26418270bf17fff1b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room) 1.prefab using Guid(6d318a972f88b26418270bf17fff1b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ba184487de5429c7b9c7d829095e1dd') in 0.008350 seconds
-  Import took 0.012264 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.780446 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room) 1.prefab
-  artifactKey: Guid(6d318a972f88b26418270bf17fff1b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Starting Room) 1.prefab using Guid(6d318a972f88b26418270bf17fff1b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83c07ce4f7c2b8560c2674da2e9e8563') in 0.008349 seconds
-  Import took 0.011773 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.212489 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Power Room).prefab
-  artifactKey: Guid(6d318a972f88b26418270bf17fff1b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Power Room).prefab using Guid(6d318a972f88b26418270bf17fff1b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30f5d329fb8dbc315b01f6d4804f0a41') in 0.010658 seconds
-  Import took 0.014742 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.025038 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Power Room).prefab
-  artifactKey: Guid(6d318a972f88b26418270bf17fff1b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Power Room).prefab using Guid(6d318a972f88b26418270bf17fff1b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30f5d329fb8dbc315b01f6d4804f0a41') in 0.007421 seconds
-  Import took 0.010856 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.099471 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Power Room).prefab
-  artifactKey: Guid(6d318a972f88b26418270bf17fff1b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Power Room).prefab using Guid(6d318a972f88b26418270bf17fff1b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be902638d145c9120e0ee9b5e384f321') in 0.008713 seconds
-  Import took 0.012199 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.026201 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Power Room).prefab
-  artifactKey: Guid(6d318a972f88b26418270bf17fff1b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/Teleporter Pad (Power Room).prefab using Guid(6d318a972f88b26418270bf17fff1b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55ccf21ef3fb080466e8f5bba7b1aa45') in 0.008813 seconds
-  Import took 0.012505 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4103.034684 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/SuperImprover Teleported Location.prefab
-  artifactKey: Guid(d96baef256a817c4abb6aeb8ba3299c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/SuperImprover Teleported Location.prefab using Guid(d96baef256a817c4abb6aeb8ba3299c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef65f416e12468831000a7d55896824b') in 0.013375 seconds
-  Import took 0.018309 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.155739 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/SuperImprover Teleported Location.prefab
-  artifactKey: Guid(d96baef256a817c4abb6aeb8ba3299c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/SuperImprover Teleported Location.prefab using Guid(d96baef256a817c4abb6aeb8ba3299c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '570c48e3970ebb18402db7ae11643323') in 0.008565 seconds
-  Import took 0.012806 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.369434 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/SuperImprover Teleported Location.prefab
-  artifactKey: Guid(d96baef256a817c4abb6aeb8ba3299c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/SuperImprover Teleported Location.prefab using Guid(d96baef256a817c4abb6aeb8ba3299c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0eb6fc2a11fc06eda849cfc1e8dd760') in 0.011967 seconds
-  Import took 0.015479 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.058709 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/SuperImprover Teleported Location.prefab
-  artifactKey: Guid(d96baef256a817c4abb6aeb8ba3299c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/SuperImprover Teleported Location.prefab using Guid(d96baef256a817c4abb6aeb8ba3299c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e16381cf37720e8ab8cb99a835e92ebc') in 0.008672 seconds
-  Import took 0.012316 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 15.737969 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/SuperImprover Teleported Location.prefab
-  artifactKey: Guid(d96baef256a817c4abb6aeb8ba3299c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/SuperImprover Teleported Location.prefab using Guid(d96baef256a817c4abb6aeb8ba3299c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '363e29c9ebef44010bb6c0e2dd67ddfb') in 0.007435 seconds
-  Import took 0.010918 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.764153 seconds.
-  path: Assets/Prefabs/Teleporter Prefabs/SuperImprover Teleported Location.prefab
-  artifactKey: Guid(d96baef256a817c4abb6aeb8ba3299c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Teleporter Prefabs/SuperImprover Teleported Location.prefab using Guid(d96baef256a817c4abb6aeb8ba3299c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb6922e00a1972888e5b07527e386201') in 0.009321 seconds
-  Import took 0.012467 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 68.589414 seconds.
-  path: Assets/Scenes/Main Level.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Level.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c953439a5ba346c48ef92621ca8d82ec') in 0.014419 seconds
-  Import took 0.018166 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001191 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.58 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
-
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.881 seconds
-Platform modules already initialized, skipping
-Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 0.53 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1949 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 102.8 MB.
-System memory in use after: 102.8 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2542.
-Total: 2.468600 ms (FindLiveObjects: 0.184200 ms CreateObjectMapping: 0.093100 ms MarkObjects: 2.067900 ms  DeleteObjects: 0.122500 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001079 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.70 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
-
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.858 seconds
-Platform modules already initialized, skipping
-Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 0.53 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1949 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 102.8 MB.
-System memory in use after: 102.8 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2544.
-Total: 2.213800 ms (FindLiveObjects: 0.219500 ms CreateObjectMapping: 0.082900 ms MarkObjects: 1.831600 ms  DeleteObjects: 0.079000 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001201 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.57 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
-
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.728 seconds
-Platform modules already initialized, skipping
-Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 0.63 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1949 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 102.8 MB.
-System memory in use after: 102.8 MB.
+System memory in use before: 102.7 MB.
+System memory in use after: 102.7 MB.
 
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2546.
-Total: 2.337800 ms (FindLiveObjects: 0.397000 ms CreateObjectMapping: 0.089200 ms MarkObjects: 1.771200 ms  DeleteObjects: 0.079100 ms)
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2536.
+Total: 1.848700 ms (FindLiveObjects: 0.168800 ms CreateObjectMapping: 0.059400 ms MarkObjects: 1.547300 ms  DeleteObjects: 0.072400 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
