@@ -294,6 +294,12 @@ MonoBehaviour:
   reloadSound3: {fileID: 8300000, guid: 9d1bfb3f7e78dde4aa3ea1c8288c5a46, type: 3}
   timeBetweenReloadSounds: 1.3
   reloadKey: 114
+  gun_body: {fileID: 1196822182817224063}
+  gun_bolt: {fileID: 1196591076031008411}
+  gun_magazine: {fileID: 0}
+  gun_slide: {fileID: 0}
+  gun_trigger: {fileID: 1196323710739965319}
+  upgraded_material: {fileID: 2100000, guid: d114cde0600508c4f9eed72b935654e6, type: 2}
 --- !u!114 &4873978627280196049
 MonoBehaviour:
   m_ObjectHideFlags: 0

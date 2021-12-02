@@ -75,6 +75,21 @@ public class GunScript : MonoBehaviour
     //reloading key
     [SerializeField] KeyCode reloadKey = KeyCode.R;
 
+    [SerializeField] private GameObject gun_body;
+    [SerializeField] private GameObject gun_bolt;
+    [SerializeField] private GameObject gun_magazine;
+    [SerializeField] private GameObject gun_slide;
+    [SerializeField] private GameObject gun_trigger;
+
+    private MeshRenderer gun_body_meshR;
+    private MeshRenderer gun_bolt_meshR;
+    private MeshRenderer gun_magazine_meshR;
+    private MeshRenderer gun_slide_meshR;
+    private MeshRenderer gun_trigger_meshR;
+
+    [SerializeField] private Material upgraded_material;
+
+
     //set to 0 by default to allow us to shoot at least once
     private float nextTimeToFire = 0f;
 
@@ -91,6 +106,7 @@ public class GunScript : MonoBehaviour
         GameObject WeaponHolder = GameObject.Find("WeaponHolder");
         weaponHolder = WeaponHolder;
         GameObject PlayerHud = GameObject.Find("Player's HUD");
+
         animator = WeaponHolder.GetComponent<Animator>();
         PlayerUIAccessor = PlayerHud.GetComponent<PlayerUI>();
         playerPerkAccessor = player.GetComponent<PlayerPerkInventory>();
@@ -98,6 +114,16 @@ public class GunScript : MonoBehaviour
         //setting gunAudio to the audio source of the gun
         GameObject GunAudioObject = GameObject.Find("Gun Audio");
         gunAudio = GunAudioObject.GetComponent<AudioSource>();
+
+        //caching the mesh renderer of the gun component
+        if(gun_bolt != null)
+         gun_bolt_meshR = gun_bolt.GetComponent<MeshRenderer>();
+        if(gun_magazine != null)
+            gun_magazine_meshR = gun_magazine.GetComponent<MeshRenderer>();
+        if(gun_slide != null)
+            gun_slide_meshR = gun_slide.GetComponent<MeshRenderer>();
+        if(gun_trigger != null)
+            gun_trigger_meshR = gun_trigger.GetComponent<MeshRenderer>();
 
         //setting fpsCam to the Main Camera
         fpsCam = Camera.main;
@@ -301,6 +327,19 @@ public class GunScript : MonoBehaviour
 
     public void UpgradeGun()
     {
+        //change the material of each of the gun's 4 components
+        if(gun_body_meshR != null)
+            gun_body_meshR.material = upgraded_material;
+        if (gun_magazine_meshR != null)
+            gun_magazine_meshR.material = upgraded_material;
+        if(gun_bolt_meshR != null)
+            gun_bolt_meshR.material = upgraded_material;
+        if(gun_slide_meshR != null)
+            gun_slide_meshR.material = upgraded_material;
+        if(gun_trigger_meshR != null)
+            gun_trigger_meshR.material = upgraded_material;
+
+
         damage *= upgradeDamageMultiplier;
         original_mag_size *= 2;
         original_ammoCapacity *= 2;

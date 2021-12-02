@@ -398,6 +398,12 @@ MonoBehaviour:
   reloadSound3: {fileID: 8300000, guid: fe3a3f0a89981cd499a5be3e1e7104b7, type: 3}
   timeBetweenReloadSounds: 1.5
   reloadKey: 114
+  gun_body: {fileID: 8427048481940346957}
+  gun_bolt: {fileID: 8426707665527524931}
+  gun_magazine: {fileID: 8426937324904596309}
+  gun_slide: {fileID: 8280294423575740531}
+  gun_trigger: {fileID: 8426676719869529855}
+  upgraded_material: {fileID: 2100000, guid: d114cde0600508c4f9eed72b935654e6, type: 2}
 --- !u!1001 &2771482768292864094
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -538,6 +544,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49535f27af2648646a94c1f9918737d6, type: 3}
+--- !u!1 &8280294423575740531 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1378609178869200, guid: 49535f27af2648646a94c1f9918737d6, type: 3}
+  m_PrefabInstance: {fileID: 8281387707326971299}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8285906497870025285 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4523601712017382, guid: 49535f27af2648646a94c1f9918737d6, type: 3}
