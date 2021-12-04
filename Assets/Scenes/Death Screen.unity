@@ -1876,6 +1876,7 @@ GameObject:
   - component: {fileID: 931897526}
   - component: {fileID: 931897525}
   - component: {fileID: 931897524}
+  - component: {fileID: 931897527}
   m_Layer: 5
   m_Name: Continue Button
   m_TagString: Untagged
@@ -1959,6 +1960,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 931897527}
+        m_TargetAssemblyTypeName: ButtonInteraction, Assembly-CSharp
+        m_MethodName: WhenClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &931897525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1997,6 +2010,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 931897522}
   m_CullTransparentMesh: 1
+--- !u!114 &931897527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931897522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f54e22e65a052bc4481ff057aea32924, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  this_button: {fileID: 931897524}
 --- !u!4 &941019069 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4383897055993122, guid: 09bbc701d5952e2479584092953ee7a4, type: 3}
@@ -2771,6 +2797,7 @@ GameObject:
   - component: {fileID: 1198588593}
   - component: {fileID: 1198588592}
   - component: {fileID: 1198588591}
+  - component: {fileID: 1198588594}
   m_Layer: 5
   m_Name: Retry Button
   m_TagString: Untagged
@@ -2854,6 +2881,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1198588594}
+        m_TargetAssemblyTypeName: ButtonInteraction, Assembly-CSharp
+        m_MethodName: WhenClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1198588592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2892,6 +2931,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1198588589}
   m_CullTransparentMesh: 1
+--- !u!114 &1198588594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198588589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f54e22e65a052bc4481ff057aea32924, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  this_button: {fileID: 1198588591}
 --- !u!1001 &1203462509
 PrefabInstance:
   m_ObjectHideFlags: 0
