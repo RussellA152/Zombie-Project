@@ -93,6 +93,7 @@ public class GunScript : MonoBehaviour
     //set to 0 by default to allow us to shoot at least once
     private float nextTimeToFire = 0f;
 
+    private WeaponSwitching weaponSwitchingAccessor;
 
     private NavMeshAgent hitRB;
     private Target target;
@@ -110,12 +111,15 @@ public class GunScript : MonoBehaviour
         animator = WeaponHolder.GetComponent<Animator>();
         PlayerUIAccessor = PlayerHud.GetComponent<PlayerUI>();
         playerPerkAccessor = player.GetComponent<PlayerPerkInventory>();
+        weaponSwitchingAccessor = weaponHolder.GetComponent<WeaponSwitching>();
 
         //setting gunAudio to the audio source of the gun
         GameObject GunAudioObject = GameObject.Find("Gun Audio");
         gunAudio = GunAudioObject.GetComponent<AudioSource>();
 
         //caching the mesh renderer of the gun component
+        if (gun_body != null)
+            gun_body_meshR = gun_body.GetComponent<MeshRenderer>();
         if(gun_bolt != null)
          gun_bolt_meshR = gun_bolt.GetComponent<MeshRenderer>();
         if(gun_magazine != null)
@@ -327,31 +331,8 @@ public class GunScript : MonoBehaviour
 
     public void UpgradeGun()
     {
-        //change the material of each of the gun's 4 components
-        if(gun_body_meshR != null)
-            gun_body_meshR.material = upgraded_material;
-        if (gun_magazine_meshR != null)
-            gun_magazine_meshR.material = upgraded_material;
-        if(gun_bolt_meshR != null)
-            gun_bolt_meshR.material = upgraded_material;
-        if(gun_slide_meshR != null)
-            gun_slide_meshR.material = upgraded_material;
-        if(gun_trigger_meshR != null)
-            gun_trigger_meshR.material = upgraded_material;
-
-
-        damage *= upgradeDamageMultiplier;
-        original_mag_size *= 2;
-        original_ammoCapacity *= 2;
-
-        current_mag_size = original_mag_size;
-        ammoCapacity = original_ammoCapacity;
-        bullets_fired = 0;
-        PlayerUIAccessor.UpdatePlayerAmmoUI();
-
-        ammoPrice *= 2;
-        Debug.Log("Weapon upgrade me!");
-        isUpgraded = true;
+        //starts coroutine needed for weapon upgrading animation
+        StartCoroutine(UpgradeGunAnimation());
 
     }
 
@@ -434,5 +415,45 @@ public class GunScript : MonoBehaviour
 
         //when player reloads, update ammo UI
         PlayerUIAccessor.UpdatePlayerAmmoUI();
+    }
+    IEnumerator UpgradeGunAnimation()
+    {
+        //plays swap animation
+        weaponSwitchingAccessor.animator.SetBool("Swapping", true);
+        weaponHolder.GetComponentInChildren<GunScript>().isSwapping = true;
+        yield return new WaitForSeconds(1f - .25f);
+
+        //change the material of each of the gun's 4 components
+        if (gun_body_meshR != null)
+            gun_body_meshR.material = upgraded_material;
+        if (gun_magazine_meshR != null)
+            gun_magazine_meshR.material = upgraded_material;
+        if (gun_bolt_meshR != null)
+            gun_bolt_meshR.material = upgraded_material;
+        if (gun_slide_meshR != null)
+            gun_slide_meshR.material = upgraded_material;
+        if (gun_trigger_meshR != null)
+            gun_trigger_meshR.material = upgraded_material;
+
+        //increases damage and ammo capacity of weapon
+        damage *= upgradeDamageMultiplier;
+        original_mag_size *= 2;
+        original_ammoCapacity *= 2;
+
+        //refills ammo upon upgrade
+        current_mag_size = original_mag_size;
+        ammoCapacity = original_ammoCapacity;
+        bullets_fired = 0;
+        PlayerUIAccessor.UpdatePlayerAmmoUI();
+
+        //ammo price is increased for upgraded weapons
+        ammoPrice *= 2;
+
+        isUpgraded = true;
+
+        //set the swap animation back to false
+        weaponSwitchingAccessor.animator.SetBool("Swapping", false);
+        yield return new WaitForSeconds(.25f);
+        weaponHolder.GetComponentInChildren<GunScript>().isSwapping = false;
     }
 }

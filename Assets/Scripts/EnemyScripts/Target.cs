@@ -168,10 +168,13 @@ public class Target : MonoBehaviour
     }
     void SetPowerUpProbability()
     {
-        //There is a small chance (10%) for a power up to spawn when a zombie dies
-        int PowerUpDropChance = Random.Range(1, 31);
+        //There is a small chance for a power up to spawn when a zombie dies
 
-        if(PowerUpDropChance % 10 == 0)
+        //random.value returns a random number from 0 - 1.0
+        var PowerUpDropChance = Random.value;
+
+        //5% chance for zombie to drop a random power up (1.0 - 0.95 = 0.08)
+        if(PowerUpDropChance > 0.95)
         {
             //IF a power-up spawns, it has a 1 in 5 chance to be a different power ability (I.E. Max Ammo, Insta-kill)
             int PowerUpAbilityObjectChance = Random.Range(1, 6);
@@ -194,8 +197,6 @@ public class Target : MonoBehaviour
                     powerUpObject = Instantiate(freePointsPowerUp, transform.position, transform.rotation);
                     break;
             }
-
-            Debug.Log("POWER UP SPAWNED");
         }
 
     }
