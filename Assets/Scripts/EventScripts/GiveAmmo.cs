@@ -83,4 +83,9 @@ public class GiveAmmo : MonoBehaviour
     {
         RefillPlayerAmmo.current.RefillAmmo -= GivePlayerFullAmmoForOneGun;
     }
+
+    public float ReturnAmmoPrice()
+    {
+        return access_gun_script.ammoPrice;
+    }
 }

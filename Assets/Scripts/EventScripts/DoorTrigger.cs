@@ -48,6 +48,8 @@ public class DoorTrigger : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             inTrigger = true;
+            if(!doorWasOpened)
+                InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to open door: ($" + doorPrice + ")");
         }
     }
     //while the player is inside the Door Trigger, we check if wantsToBuyDoor is true, and if they have the suffiicent points to buy the door,
@@ -65,6 +67,7 @@ public class DoorTrigger : MonoBehaviour
                     PlayerScore.pScore -= doorPrice;
                     GameEvents.current.DoorwayTriggerEnter(id);
                     InteractAudioSource.current.PlayInteractClip(purchase_successful_sound, 0.5f);
+                    InteractionTextbox.current.CloseTextBox();
                     canInteract = false;
                     doorWasOpened = true;
                 }
@@ -83,6 +86,7 @@ public class DoorTrigger : MonoBehaviour
                 {
                     PlayerScore.pScore -= doorPrice;
                     InteractAudioSource.current.PlayInteractClip(purchase_successful_sound, 0.5f);
+                    InteractionTextbox.current.CloseTextBox();
                     //instead of calling event, we will call our Buyable ending script functions
                     GameEvents.current.DoorwayTriggerEnter(id);
                     BuyableEnding.current.conditions_met = true;
@@ -104,7 +108,8 @@ public class DoorTrigger : MonoBehaviour
     //when player exits the Door Trigger, inTrigger is set to false
     private void OnTriggerExit(Collider other)
     {
-        inTrigger = false; 
+        inTrigger = false;
+        InteractionTextbox.current.CloseTextBox();
     }
     IEnumerator InteractionDelay()
     {

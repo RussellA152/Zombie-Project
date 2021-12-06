@@ -98,6 +98,9 @@ public class GunScript : MonoBehaviour
     private NavMeshAgent hitRB;
     private Target target;
 
+    public string gunName;
+    public string upgradedGunName;
+
     private void Start()
     {
 
@@ -331,6 +334,8 @@ public class GunScript : MonoBehaviour
 
     public void UpgradeGun()
     {
+        //change name of the gun to its upgraded version name
+        gunName = upgradedGunName;
         //starts coroutine needed for weapon upgrading animation
         StartCoroutine(UpgradeGunAnimation());
 

@@ -15,7 +15,7 @@ public class StartingTeleporter : MonoBehaviour
             {
                 TeleporterEvent.current.teleporters_are_linked = true;
                 TeleporterEvent.current.interactive_audio_source.PlayOneShot(TeleporterEvent.current.teleport_link_sound, 0.5f);
-                Debug.Log("Teleporters are linked!");
+                InteractionTextbox.current.ChangeTextBoxDescription("Teleporters were linked!");
             }
         }
     }
@@ -26,10 +26,11 @@ public class StartingTeleporter : MonoBehaviour
             if (PowerEvent.powerIsTurnedOn)
             {
                 inTrigger = true;
+                InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to link teleporters.");
             }
             else
             {
-                Debug.Log("You must turn on power!");
+                InteractionTextbox.current.ChangeTextBoxDescription("The power must be turned on!");
             }
             
             //TeleporterEvent.current.in_powerRoom_Teleporter_Trigger = true;
@@ -41,6 +42,7 @@ public class StartingTeleporter : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             inTrigger = false;
+            InteractionTextbox.current.CloseTextBox();
             //TeleporterEvent.current.in_powerRoom_Teleporter_Trigger = false;
         }
     }

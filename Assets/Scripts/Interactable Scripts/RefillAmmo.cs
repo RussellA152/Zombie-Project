@@ -66,7 +66,7 @@ public class RefillAmmo : MonoBehaviour
         {
             //if player enters the trigger of the ammo crate, set inTrigger to true
             inTrigger = true;
-
+            InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to purchase ammo "+"(" + GiveAmmoAccessor.ReturnAmmoPrice() +")");
             //accesses GunScript so we can execute the MaxAmmo function (gives player full ammo in clip and capacity)
             //access_gun_script = GunAccessor.GetComponentInChildren<GunScript>();
             GiveAmmoAccessor.AccessGunComponents();
@@ -96,6 +96,7 @@ public class RefillAmmo : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             inTrigger = false;
+            InteractionTextbox.current.CloseTextBox();
         }
     }
 

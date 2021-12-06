@@ -39,6 +39,10 @@ public class WallBuy : MonoBehaviour
     [SerializeField] private AudioClip purchase_successful_sound;
     [SerializeField] private AudioClip purchase_failed_sound;
 
+    private string original_weaponName;    // this is the original gun name (we want to keep this in memory especially after gun is upgraded);
+    private string weaponName;
+    private float ammoPrice;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -62,6 +66,10 @@ public class WallBuy : MonoBehaviour
         refillAmmoAccessor = ammoCrate.GetComponent<RefillAmmo>();
 
         GiveAmmoAccessor = GiveAmmoReference.GetComponent<GiveAmmo>();
+        weaponName = gunPrefab.GetComponent<GunScript>().gunName;
+        //although we don't need the ammoprice for purchasing ammo, we just want to display the number on screen
+        ammoPrice = gunPrefab.GetComponent<GunScript>().ammoPrice;
+        original_weaponName = weaponName;
 
 
     }
@@ -93,6 +101,15 @@ public class WallBuy : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             inTrigger = true;
+
+            //when player enters wall buy range, display the gun name and price of it
+            //However, if the player owns the weapon, then we will display that they will buy ammo instead
+            if(!playerHasThisGun)
+
+                InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to purchase: " + weaponName + "($" + gunPrice + ")");
+            else
+                InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to purchase ammo: ($" + ammoPrice + ")");
+
             //checking if the player currently has the wall buy weapon in their weapon inventory 
             if (currentWeaponsList.currentWeaponsList.Contains(gunPrefab) || currentWeaponsList.currentWeaponsList.Contains(gunClone))
             {
@@ -174,6 +191,7 @@ public class WallBuy : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             inTrigger = false;
+            InteractionTextbox.current.CloseTextBox();
         }
     }
 
@@ -210,6 +228,9 @@ public class WallBuy : MonoBehaviour
         
         //Debug.Log("update weapon inventory 1");
         GiveAmmoAccessor.AccessGunComponents();
+
+        //since player has just bought a new weapon, display that they can now purchase ammo
+        InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to purchase ammo: ($" + ammoPrice + ")");
     }
 
     //If weapon replacement is needed, this function will be called instead of AddGunOnPurchase()
@@ -254,6 +275,9 @@ public class WallBuy : MonoBehaviour
 
         //Debug.Log("update weapon inventory 2");
         GiveAmmoAccessor.AccessGunComponents();
+
+        //since player has just bought a new weapon, display that they can now purchase ammo
+        InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to purchase ammo: ($" + ammoPrice + ")");
     }
     void BuyAmmoInsteadOfGun()
     {
@@ -275,7 +299,7 @@ public class WallBuy : MonoBehaviour
     {
         //normally we would call this in the AddGunOnPurchase or ReplaceGunOnPurchase functions, but we will call this here instead because the swap delay will make the transaction take longer
         PlayerScore.pScore -= gunPrice;
-
+        
         weaponSwitchingAccessor.animator.SetBool("Swapping", true);
         weaponHolder.GetComponentInChildren<GunScript>().isSwapping = true;
         yield return new WaitForSeconds(1f - .25f);

@@ -47,7 +47,7 @@ public class PowerEvent : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             inTrigger = true;
-            Debug.Log("Press 'F' to turn on power.");
+            InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to turn on power.");
         }
         
     }
@@ -82,8 +82,8 @@ public class PowerEvent : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             inTrigger = false;
-            Debug.Log("Not in power Trigger");
-            
+            InteractionTextbox.current.CloseTextBox();
+
         }
     }
 

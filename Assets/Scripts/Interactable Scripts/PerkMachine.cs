@@ -46,6 +46,10 @@ public class PerkMachine : MonoBehaviour
     [SerializeField] private AudioClip purchase_successful_sound;
     [SerializeField] private AudioClip purchase_failed_sound;
 
+    [SerializeField] private string perk_name;
+    [SerializeField] private string perk_description;
+
+
 
     private void Awake()
     {
@@ -87,6 +91,13 @@ public class PerkMachine : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            if (!playerHasPerk && machineIsPowered)
+                InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to purchase: " + perk_name + "(" + perk_description + ") " + "($" + perkPrice + ")");
+            else if (playerHasPerk && machineIsPowered)
+                InteractionTextbox.current.ChangeTextBoxDescription("You already have this perk.");
+            else if (!machineIsPowered)
+                InteractionTextbox.current.ChangeTextBoxDescription("The power must be turned on!");
+
             inTrigger = true;
             Debug.Log("Entered perk machine trigger");
 
@@ -143,7 +154,7 @@ public class PerkMachine : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             inTrigger = false;
-            Debug.Log("Exited perk machine trigger");
+            InteractionTextbox.current.CloseTextBox();
         }
     }
 
