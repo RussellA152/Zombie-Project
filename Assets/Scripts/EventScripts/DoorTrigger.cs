@@ -48,8 +48,10 @@ public class DoorTrigger : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             inTrigger = true;
-            if(!doorWasOpened)
+            if(!doorWasOpened && !isEndingDoor)
                 InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to open door: ($" + doorPrice + ")");
+            else if(!doorWasOpened && !isEndingDoor)
+                InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to open final door: ($" + doorPrice + ")");
         }
     }
     //while the player is inside the Door Trigger, we check if wantsToBuyDoor is true, and if they have the suffiicent points to buy the door,

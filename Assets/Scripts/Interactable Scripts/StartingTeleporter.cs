@@ -26,7 +26,12 @@ public class StartingTeleporter : MonoBehaviour
             if (PowerEvent.powerIsTurnedOn)
             {
                 inTrigger = true;
-                InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to link teleporters.");
+                if (!TeleporterEvent.current.teleporters_are_linked && TeleporterEvent.current.wants_to_link_teleporters)
+                    InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to link teleporters.");
+                else if(TeleporterEvent.current.teleporters_are_linked)
+                    InteractionTextbox.current.ChangeTextBoxDescription("This teleporter is already linked.");
+                else if (TeleporterEvent.current.teleporters_can_be_linked)
+                    InteractionTextbox.current.ChangeTextBoxDescription("Teleporters on cooldown.");
             }
             else
             {

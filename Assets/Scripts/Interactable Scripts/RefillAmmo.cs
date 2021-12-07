@@ -45,6 +45,7 @@ public class RefillAmmo : MonoBehaviour
             {
                 Debug.Log("get component weapon switch now!");
                 GiveAmmoAccessor.AccessGunComponents();
+                InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to purchase ammo " + "($" + GiveAmmoAccessor.ReturnAmmoPrice() + ")");
                 //access_gun_script = GunAccessor.GetComponentInChildren<GunScript>();
             }
         }
@@ -66,7 +67,7 @@ public class RefillAmmo : MonoBehaviour
         {
             //if player enters the trigger of the ammo crate, set inTrigger to true
             inTrigger = true;
-            InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to purchase ammo "+"(" + GiveAmmoAccessor.ReturnAmmoPrice() +")");
+            InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to purchase ammo "+"($" + GiveAmmoAccessor.ReturnAmmoPrice() +")");
             //accesses GunScript so we can execute the MaxAmmo function (gives player full ammo in clip and capacity)
             //access_gun_script = GunAccessor.GetComponentInChildren<GunScript>();
             GiveAmmoAccessor.AccessGunComponents();

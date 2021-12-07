@@ -92,7 +92,7 @@ public class PerkMachine : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             if (!playerHasPerk && machineIsPowered)
-                InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to purchase: " + perk_name + "(" + perk_description + ") " + "($" + perkPrice + ")");
+                InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to purchase: " + perk_name + " (" + perk_description + ") " + " ($" + perkPrice + ")");
             else if (playerHasPerk && machineIsPowered)
                 InteractionTextbox.current.ChangeTextBoxDescription("You already have this perk.");
             else if (!machineIsPowered)
@@ -177,7 +177,9 @@ public class PerkMachine : MonoBehaviour
     {
         //plays a soda can opening sound when purchasing perk
         InteractAudioSource.current.PlayInteractClip(soda_open_sound, 0.5f);
-        
+
+        //close textbox because player has purchased perk
+        InteractionTextbox.current.CloseTextBox();
         
 
         switch (perkType)

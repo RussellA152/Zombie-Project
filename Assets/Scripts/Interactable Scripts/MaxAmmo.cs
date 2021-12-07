@@ -48,15 +48,16 @@ public class MaxAmmo : MonoBehaviour
         if (id == this.id && this.gameObject)
         {
             InteractAudioSource.current.PlayInteractClip(powerUpRetrievedSound, 0.5f);
+            StartCoroutine(PowerUpTextbox("Max Ammo!"));
             MaxAllGunAmmo();
             gotMaxAmmo = true;
-            Destroy(gameObject);
+            Destroy(gameObject,4f);
         }
     }
 
     void MaxAllGunAmmo()
     {
-        
+        LeanTween.moveY(this.gameObject, 50, 7f);
         //loops through the player's weapon inventory and gives max ammo to all of them
         foreach (GameObject gun in currentWeaponsList.currentWeaponsList)
         {
@@ -79,5 +80,11 @@ public class MaxAmmo : MonoBehaviour
         //InteractAudioSource.current.PlayInteractClip(powerUpFinishedSound, 0.5f);
         StopCoroutine(deletionCountDownCoroutine);
         PowerUpEvent.current.onPowerUpAcquire -= GiveMaxAmmo;
+    }
+    IEnumerator PowerUpTextbox(string text)
+    {
+        InteractionTextbox.current.ChangeTextBoxDescription(text);
+        yield return new WaitForSeconds(2f);
+        InteractionTextbox.current.CloseTextBox();
     }
 }

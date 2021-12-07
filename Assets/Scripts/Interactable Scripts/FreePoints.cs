@@ -31,7 +31,7 @@ public class FreePoints : MonoBehaviour
             //we subscribe when we triggerEnter instead of at Start() so we don't activate duplicates at the same time
             PowerUpEvent.current.onPowerUpAcquire += FreePointsSubscriber;
             PowerUpEvent.current.PowerUpAcquirement(id);
-            Debug.Log("Free Points power up event executed");
+            
 
         }
     }
@@ -40,15 +40,18 @@ public class FreePoints : MonoBehaviour
         if (id == this.id && this.gameObject)
         {
             InteractAudioSource.current.PlayInteractClip(powerUpRetrievedSound, 0.5f);
+            StartCoroutine(PowerUpTextbox("Spot Bonus!"));
             FreePointsGiver();
             gotFreePoints = true;
-            Destroy(gameObject);
+            Destroy(gameObject, 4f);
+            
         }
     }
 
     void FreePointsGiver()
     {
         PlayerScore.pScore += 1000f;
+        LeanTween.moveY(this.gameObject, 50, 7f);
     }
 
     //makes free points power up delete after some time
@@ -62,6 +65,14 @@ public class FreePoints : MonoBehaviour
     {
         //not sure if we need to stop coroutine since it gets destroyed but this is here just in case
         StopCoroutine(deletionCountDownCoroutine);
+        InteractionTextbox.current.CloseTextBox();
         PowerUpEvent.current.onPowerUpAcquire -= FreePointsSubscriber;
+    }
+
+    IEnumerator PowerUpTextbox(string text)
+    {
+        InteractionTextbox.current.ChangeTextBoxDescription(text);
+        yield return new WaitForSeconds(2f);
+        InteractionTextbox.current.CloseTextBox();
     }
 }

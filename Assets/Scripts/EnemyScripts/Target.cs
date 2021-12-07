@@ -174,7 +174,7 @@ public class Target : MonoBehaviour
         var PowerUpDropChance = Random.value;
 
         //5% chance for zombie to drop a random power up (1.0 - 0.95 = 0.08)
-        if(PowerUpDropChance > 0.95)
+        if(PowerUpDropChance > 0.1)
         {
             //IF a power-up spawns, it has a 1 in 5 chance to be a different power ability (I.E. Max Ammo, Insta-kill)
             int PowerUpAbilityObjectChance = Random.Range(1, 6);

@@ -83,6 +83,12 @@ public class WallBuy : MonoBehaviour
             if (weaponSwitchingAccessor.previousSelectedWeapon != weaponSwitchingAccessor.selectedWeapon)
             {
                 GiveAmmoAccessor.AccessGunComponents();
+
+                if (!playerHasThisGun)
+
+                    InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to purchase: " + weaponName + " ($" + gunPrice + ")");
+                else if (playerHasThisGun && (weaponSwitchingAccessor.equippedWeapon.gameObject == gunClone || weaponSwitchingAccessor.equippedWeapon.gameObject == gunPrefab))
+                    InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to purchase ammo: ($" + ammoPrice + ")");
             }
         }
 
@@ -106,8 +112,8 @@ public class WallBuy : MonoBehaviour
             //However, if the player owns the weapon, then we will display that they will buy ammo instead
             if(!playerHasThisGun)
 
-                InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to purchase: " + weaponName + "($" + gunPrice + ")");
-            else
+                InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to purchase: " + weaponName + " ($" + gunPrice + ")");
+            else if(playerHasThisGun && (weaponSwitchingAccessor.equippedWeapon.gameObject == gunClone || weaponSwitchingAccessor.equippedWeapon.gameObject == gunPrefab))
                 InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to purchase ammo: ($" + ammoPrice + ")");
 
             //checking if the player currently has the wall buy weapon in their weapon inventory 

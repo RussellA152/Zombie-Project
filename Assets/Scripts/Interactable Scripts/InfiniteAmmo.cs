@@ -31,6 +31,7 @@ public class InfiniteAmmo : MonoBehaviour
             if (!hasPowerUp)
             {
                 StopCoroutine(deletionCountDownCoroutine);
+                StartCoroutine(ChangeTextbox());
                 PowerUpEvent.current.onPowerUpAcquire += GiveInfiniteAmmo;
                 PowerUpEvent.current.PowerUpAcquirement(id);
                 Debug.Log("Infinite Ammo power up event executed");
@@ -61,7 +62,6 @@ public class InfiniteAmmo : MonoBehaviour
 
         yield return new WaitForSeconds(infiniteAmmoCountDown);
         PowerUpEvent.current.hasInfiniteAmmo = false;
-        Debug.Log("Infinite Ammo is over");
         Destroy(gameObject);
     }
 
@@ -75,7 +75,20 @@ public class InfiniteAmmo : MonoBehaviour
         //only play sound if player obtained the powerup
         if (hasPowerUp)
             InteractAudioSource.current.PlayInteractClip(powerUpFinishedSound, 0.5f);
+        InteractionTextbox.current.CloseTextBox();
         PowerUpEvent.current.onPowerUpAcquire -= GiveInfiniteAmmo;
+    }
+
+    IEnumerator ChangeTextbox()
+    {
+        InteractionTextbox.current.ChangeTextBoxDescription("Infinite Ammo!");
+        yield return new WaitForSeconds(1f);
+        InteractionTextbox.current.CloseTextBox();
+        yield return new WaitForSeconds(infiniteAmmoCountDown - 3f);
+        InteractionTextbox.current.ChangeTextBoxDescription("Infinite Ammo Is Over!");
+        yield return new WaitForSeconds(3f);
+        InteractionTextbox.current.CloseTextBox();
+
     }
 }
 

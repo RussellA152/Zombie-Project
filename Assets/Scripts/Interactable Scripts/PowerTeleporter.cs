@@ -41,6 +41,7 @@ public class PowerTeleporter : MonoBehaviour
             {
                 TeleporterEvent.current.wants_to_link_teleporters = true;
                 TeleporterEvent.current.interactive_audio_source.PlayOneShot(TeleporterEvent.current.interact_successful_sound, 0.5f);
+                InteractionTextbox.current.ChangeTextBoxDescription("Linking process is in progress!");
                 Debug.Log("Player wants to link teleporters!");
             }
             //if teleporter is already linked and player presses 'F' then teleport player
@@ -62,10 +63,20 @@ public class PowerTeleporter : MonoBehaviour
             if (PowerEvent.powerIsTurnedOn)
             {
                 inTrigger = true;
+
+                //Based on conditions of the teleporter, different text will show up on the textbox
+                if (!TeleporterEvent.current.teleporters_are_linked && TeleporterEvent.current.teleporters_can_be_linked && !TeleporterEvent.current.wants_to_link_teleporters)
+                    InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to start linking process.");
+                else if (TeleporterEvent.current.wants_to_link_teleporters && !TeleporterEvent.current.teleporters_are_linked)
+                    InteractionTextbox.current.ChangeTextBoxDescription("Linking process is in progress!");
+                else if(TeleporterEvent.current.teleporters_are_linked)
+                    InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to teleporter to SuperImprover.");
+                else if (!TeleporterEvent.current.teleporters_can_be_linked)
+                    InteractionTextbox.current.ChangeTextBoxDescription("Teleporters are on cooldown.");
             }
             else
             {
-                Debug.Log("You must turn on power!");
+                InteractionTextbox.current.ChangeTextBoxDescription("The power must be turned on!");
             }
 
             //TeleporterEvent.current.in_powerRoom_Teleporter_Trigger = true;
@@ -78,6 +89,7 @@ public class PowerTeleporter : MonoBehaviour
         {
             inTrigger = false;
             //TeleporterEvent.current.in_powerRoom_Teleporter_Trigger = false;
+            InteractionTextbox.current.CloseTextBox();
         }
     }
     void TeleportPlayerToUpgradeRoom()

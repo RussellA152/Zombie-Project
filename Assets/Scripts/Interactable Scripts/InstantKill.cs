@@ -30,6 +30,7 @@ public class InstantKill : MonoBehaviour
             if (!hasPowerUp)
             {
                 StopCoroutine(deletionCountDownCoroutine);
+                StartCoroutine(ChangeTextbox());
                 PowerUpEvent.current.onPowerUpAcquire += GiveInstantKill;
                 PowerUpEvent.current.PowerUpAcquirement(id);
                 Debug.Log(" instant kill power up event executed");
@@ -72,7 +73,6 @@ public class InstantKill : MonoBehaviour
 
         yield return new WaitForSeconds(instantKillCountDown);
         PowerUpEvent.current.hasInstantKill = false;
-        Debug.Log("Instant kill is over");
         Destroy(gameObject);
     }
 
@@ -86,6 +86,19 @@ public class InstantKill : MonoBehaviour
         //only play sound if player obtained the powerup
         if(hasPowerUp)
             InteractAudioSource.current.PlayInteractClip(powerUpFinishedSound,0.5f);
+        InteractionTextbox.current.CloseTextBox();
         PowerUpEvent.current.onPowerUpAcquire -= GiveInstantKill;
+    }
+
+    IEnumerator ChangeTextbox()
+    {
+        InteractionTextbox.current.ChangeTextBoxDescription("Instant Discharge!");
+        yield return new WaitForSeconds(1f);
+        InteractionTextbox.current.CloseTextBox();
+        yield return new WaitForSeconds(instantKillCountDown - 3f);
+        InteractionTextbox.current.ChangeTextBoxDescription("Instant Discharge Is Over!");
+        yield return new WaitForSeconds(3f);
+        InteractionTextbox.current.CloseTextBox();
+
     }
 }

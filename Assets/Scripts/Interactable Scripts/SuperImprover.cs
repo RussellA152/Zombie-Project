@@ -37,6 +37,7 @@ public class SuperImprover : MonoBehaviour
         if (inTrigger)
         {
             currentlyEquippedWeaponSI = weaponSwitchAccessor.equippedWeapon.gameObject;
+            CheckTextBox();
             
         }
 
@@ -63,10 +64,13 @@ public class SuperImprover : MonoBehaviour
                 inTrigger = true;
 
                 currentlyEquippedWeaponSI = weaponSwitchAccessor.equippedWeapon.gameObject;
+                CheckTextBox();
+
+                
             }
             else
             {
-                Debug.Log("You must turn on the power!");
+                InteractionTextbox.current.ChangeTextBoxDescription("The power must be turned on!");
             }
             
 
@@ -109,11 +113,20 @@ public class SuperImprover : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             inTrigger = false;
+            InteractionTextbox.current.CloseTextBox();
         }
     }
     IEnumerator InteractionDelay()
     {
         yield return new WaitForSeconds(1f);
         canInteract = true;
+    }
+
+    private void CheckTextBox()
+    {
+        if (!currentlyEquippedWeaponSI.GetComponent<GunScript>().isUpgraded)
+            InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to upgrade " + currentlyEquippedWeaponSI.GetComponent<GunScript>().name + " (" + upgradePrice + ")");
+        else
+            InteractionTextbox.current.ChangeTextBoxDescription("Weapon is already upgraded!");
     }
 }

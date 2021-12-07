@@ -44,6 +44,7 @@ public class DoublePoints : MonoBehaviour
                 //we subscribe when we triggerEnter instead of at Start() so we don't activate duplicates at the same time
 
                 PowerUpEvent.current.onPowerUpAcquire += GiveDoublePoints;
+                StartCoroutine(ChangeTextbox());
                 PowerUpEvent.current.PowerUpAcquirement(id);
                 Debug.Log("Double Points power up event executed " + this.name);
             }
@@ -92,18 +93,14 @@ public class DoublePoints : MonoBehaviour
     {
         while (PowerUpEvent.current.hasDoublePoints)
         {
-            Debug.Log("DP WAIT UNTIL " + this.name);
             
             yield return new WaitUntil(() => PowerUpEvent.current.hasDoublePoints == false);
 
-            Debug.Log("DP DONE WAIT " + this.name);
         }
         PowerUpEvent.current.hasDoublePoints = true;
-        Debug.Log("STARTED DP TIMER " + this.name);
 
         yield return new WaitForSeconds(doublePointsCountDown);
         PowerUpEvent.current.hasDoublePoints = false;
-        Debug.Log("Double points is over" + this.name);
         Destroy(gameObject);
     }
     IEnumerator DeletePowerUpTimer()
@@ -116,6 +113,20 @@ public class DoublePoints : MonoBehaviour
         //only play sound if player obtained the powerup
         if (hasPowerUp)
             InteractAudioSource.current.PlayInteractClip(powerUpFinishedSound, 0.5f);
+        InteractionTextbox.current.CloseTextBox();
         PowerUpEvent.current.onPowerUpAcquire -= GiveDoublePoints;
+    }
+
+
+    IEnumerator ChangeTextbox()
+    {
+        InteractionTextbox.current.ChangeTextBoxDescription("Double Points!");
+        yield return new WaitForSeconds(1f);
+        InteractionTextbox.current.CloseTextBox();
+        yield return new WaitForSeconds(doublePointsCountDown-2f);
+        InteractionTextbox.current.ChangeTextBoxDescription("Double Points Is Over!");
+        yield return new WaitForSeconds(2f);
+        InteractionTextbox.current.CloseTextBox();
+
     }
 }

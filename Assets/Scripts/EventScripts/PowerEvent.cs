@@ -47,7 +47,8 @@ public class PowerEvent : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             inTrigger = true;
-            InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to turn on power.");
+            if(!powerIsTurnedOn)
+                InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to turn on power.");
         }
         
     }
@@ -60,13 +61,12 @@ public class PowerEvent : MonoBehaviour
             if(wantsToTurnOnPower && !powerIsTurnedOn)
             {
                 powerIsTurnedOn = true;
-                Debug.Log("Power is now on");
+                InteractionTextbox.current.CloseTextBox();
 
                 //if powerIsTurnedOn is true, then execute the power event (this should only occur once since powerIsTurnedOn wont ever become false again)
                 //Our power event is now executed here
                 if (OnPowered != null)
                 {
-                    Debug.Log("Power Event system is on");
                     InteractAudioSource.current.PlayInteractClip(power_on_sound,0.5f);
                     LeanTween.rotateLocal(power_lever, new Vector3(-120, 0, 0), 1f);
                     OnPowered();
