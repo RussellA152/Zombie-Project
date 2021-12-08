@@ -75,7 +75,6 @@ public class InfiniteAmmo : MonoBehaviour
         //only play sound if player obtained the powerup
         if (hasPowerUp)
             InteractAudioSource.current.PlayInteractClip(powerUpFinishedSound, 0.5f);
-        InteractionTextbox.current.CloseTextBox();
         PowerUpEvent.current.onPowerUpAcquire -= GiveInfiniteAmmo;
     }
 
@@ -83,10 +82,6 @@ public class InfiniteAmmo : MonoBehaviour
     {
         InteractionTextbox.current.ChangeTextBoxDescription("Infinite Ammo!");
         yield return new WaitForSeconds(1f);
-        InteractionTextbox.current.CloseTextBox();
-        yield return new WaitForSeconds(infiniteAmmoCountDown - 3f);
-        InteractionTextbox.current.ChangeTextBoxDescription("Infinite Ammo Is Over!");
-        yield return new WaitForSeconds(3f);
         InteractionTextbox.current.CloseTextBox();
 
     }

@@ -84,9 +84,11 @@ public class InstantKill : MonoBehaviour
     private void OnDestroy()
     {
         //only play sound if player obtained the powerup
-        if(hasPowerUp)
-            InteractAudioSource.current.PlayInteractClip(powerUpFinishedSound,0.5f);
-        InteractionTextbox.current.CloseTextBox();
+        if (hasPowerUp)
+        {
+            InteractAudioSource.current.PlayInteractClip(powerUpFinishedSound, 0.5f);
+        }
+            
         PowerUpEvent.current.onPowerUpAcquire -= GiveInstantKill;
     }
 
@@ -94,10 +96,6 @@ public class InstantKill : MonoBehaviour
     {
         InteractionTextbox.current.ChangeTextBoxDescription("Instant Discharge!");
         yield return new WaitForSeconds(1f);
-        InteractionTextbox.current.CloseTextBox();
-        yield return new WaitForSeconds(instantKillCountDown - 3f);
-        InteractionTextbox.current.ChangeTextBoxDescription("Instant Discharge Is Over!");
-        yield return new WaitForSeconds(3f);
         InteractionTextbox.current.CloseTextBox();
 
     }

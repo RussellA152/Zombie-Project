@@ -113,7 +113,6 @@ public class DoublePoints : MonoBehaviour
         //only play sound if player obtained the powerup
         if (hasPowerUp)
             InteractAudioSource.current.PlayInteractClip(powerUpFinishedSound, 0.5f);
-        InteractionTextbox.current.CloseTextBox();
         PowerUpEvent.current.onPowerUpAcquire -= GiveDoublePoints;
     }
 
@@ -122,10 +121,6 @@ public class DoublePoints : MonoBehaviour
     {
         InteractionTextbox.current.ChangeTextBoxDescription("Double Points!");
         yield return new WaitForSeconds(1f);
-        InteractionTextbox.current.CloseTextBox();
-        yield return new WaitForSeconds(doublePointsCountDown-2f);
-        InteractionTextbox.current.ChangeTextBoxDescription("Double Points Is Over!");
-        yield return new WaitForSeconds(2f);
         InteractionTextbox.current.CloseTextBox();
 
     }

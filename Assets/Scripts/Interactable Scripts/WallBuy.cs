@@ -77,6 +77,7 @@ public class WallBuy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         //Doesn't help with wall buy ammo bug (not detecting gun at times)
         if (inTrigger)
         {
@@ -84,11 +85,6 @@ public class WallBuy : MonoBehaviour
             {
                 GiveAmmoAccessor.AccessGunComponents();
 
-                if (!playerHasThisGun)
-
-                    InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to purchase: " + weaponName + " ($" + gunPrice + ")");
-                else if (playerHasThisGun && (weaponSwitchingAccessor.equippedWeapon.gameObject == gunClone || weaponSwitchingAccessor.equippedWeapon.gameObject == gunPrefab))
-                    InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to purchase ammo: ($" + ammoPrice + ")");
             }
         }
 
@@ -115,6 +111,8 @@ public class WallBuy : MonoBehaviour
                 InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to purchase: " + weaponName + " ($" + gunPrice + ")");
             else if(playerHasThisGun && (weaponSwitchingAccessor.equippedWeapon.gameObject == gunClone || weaponSwitchingAccessor.equippedWeapon.gameObject == gunPrefab))
                 InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to purchase ammo: ($" + ammoPrice + ")");
+            else
+                InteractionTextbox.current.ChangeTextBoxDescription("Incorrect Weapon.");
 
             //checking if the player currently has the wall buy weapon in their weapon inventory 
             if (currentWeaponsList.currentWeaponsList.Contains(gunPrefab) || currentWeaponsList.currentWeaponsList.Contains(gunClone))
@@ -136,6 +134,21 @@ public class WallBuy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+
+            if (!playerHasThisGun)
+            {
+                InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to purchase: " + weaponName + " ($" + gunPrice + ")");
+            }
+            //for some reason, the code is messed up and only does this when the gun that is NOT the wall buy gun is equipped?
+            else if (playerHasThisGun && weaponSwitchingAccessor.equippedWeapon.gameObject == gunClone || weaponSwitchingAccessor.equippedWeapon.gameObject == gunPrefab)
+            {
+                InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to purchase ammo: ($" + ammoPrice + ")");
+            }
+            else
+            {
+                InteractionTextbox.current.ChangeTextBoxDescription("Incorrect Weapon.");
+            }
+
             if (weaponSwitchingAccessor.equippedWeapon.gameObject == gunClone || weaponSwitchingAccessor.equippedWeapon.gameObject == gunPrefab)
             {
                 if ((wantsToBuyGun && playerHasThisGun && canInteract))
@@ -235,8 +248,6 @@ public class WallBuy : MonoBehaviour
         //Debug.Log("update weapon inventory 1");
         GiveAmmoAccessor.AccessGunComponents();
 
-        //since player has just bought a new weapon, display that they can now purchase ammo
-        InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to purchase ammo: ($" + ammoPrice + ")");
     }
 
     //If weapon replacement is needed, this function will be called instead of AddGunOnPurchase()
@@ -281,9 +292,6 @@ public class WallBuy : MonoBehaviour
 
         //Debug.Log("update weapon inventory 2");
         GiveAmmoAccessor.AccessGunComponents();
-
-        //since player has just bought a new weapon, display that they can now purchase ammo
-        InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to purchase ammo: ($" + ammoPrice + ")");
     }
     void BuyAmmoInsteadOfGun()
     {

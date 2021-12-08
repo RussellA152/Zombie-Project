@@ -38,7 +38,7 @@ public class SuperImprover : MonoBehaviour
         {
             currentlyEquippedWeaponSI = weaponSwitchAccessor.equippedWeapon.gameObject;
             CheckTextBox();
-            
+
         }
 
         if (inTrigger && Input.GetKey(KeyCode.F))
