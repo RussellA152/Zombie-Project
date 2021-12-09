@@ -60,9 +60,14 @@ public class DoorTrigger : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            
+            if (!doorWasOpened && !isEndingDoor)
+                InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to open door: ($" + doorPrice + ")");
+            else if (!doorWasOpened && !isEndingDoor)
+                InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to open final door: ($" + doorPrice + ")");
+
+
             //Debug.Log("Hold 'f' to open Door [Cost: " + doorPrice);
-            if(wantsToBuyDoor && !doorWasOpened && !isEndingDoor && canInteract)
+            if (wantsToBuyDoor && !doorWasOpened && !isEndingDoor && canInteract)
             {
                 if(PlayerScore.pScore >= doorPrice)
                 {

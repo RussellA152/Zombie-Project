@@ -44,7 +44,7 @@ public class DoublePoints : MonoBehaviour
                 //we subscribe when we triggerEnter instead of at Start() so we don't activate duplicates at the same time
 
                 PowerUpEvent.current.onPowerUpAcquire += GiveDoublePoints;
-                StartCoroutine(ChangeTextbox());
+                StartCoroutine(CloseTextboxBegin());
                 PowerUpEvent.current.PowerUpAcquirement(id);
                 Debug.Log("Double Points power up event executed " + this.name);
             }
@@ -97,6 +97,7 @@ public class DoublePoints : MonoBehaviour
             yield return new WaitUntil(() => PowerUpEvent.current.hasDoublePoints == false);
 
         }
+        StartCoroutine(ChangeTextbox());
         PowerUpEvent.current.hasDoublePoints = true;
 
         yield return new WaitForSeconds(doublePointsCountDown);
@@ -112,14 +113,24 @@ public class DoublePoints : MonoBehaviour
     {
         //only play sound if player obtained the powerup
         if (hasPowerUp)
+        {
             InteractAudioSource.current.PlayInteractClip(powerUpFinishedSound, 0.5f);
+        }
+            
         PowerUpEvent.current.onPowerUpAcquire -= GiveDoublePoints;
     }
 
-
-    IEnumerator ChangeTextbox()
+    IEnumerator CloseTextboxBegin()
     {
         InteractionTextbox.current.ChangeTextBoxDescription("Double Points!");
+        yield return new WaitForSeconds(1f);
+        InteractionTextbox.current.CloseTextBox();
+    }
+    IEnumerator ChangeTextbox()
+    {
+       
+        yield return new WaitForSeconds(doublePointsCountDown-2f);
+        InteractionTextbox.current.ChangeTextBoxDescription("Double Points Expired!");
         yield return new WaitForSeconds(1f);
         InteractionTextbox.current.CloseTextBox();
 

@@ -178,5 +178,25 @@ public class PowerTeleporter : MonoBehaviour
 
         StartCoroutine(TeleportBackToStartingRoom());
     }
-    
+    private void OnTriggerStay(Collider other)
+    {
+        if (PowerEvent.powerIsTurnedOn)
+        {
+
+            //Based on conditions of the teleporter, different text will show up on the textbox
+            if (!TeleporterEvent.current.teleporters_are_linked && TeleporterEvent.current.teleporters_can_be_linked && !TeleporterEvent.current.wants_to_link_teleporters)
+                InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to start linking process.");
+            else if (TeleporterEvent.current.wants_to_link_teleporters && !TeleporterEvent.current.teleporters_are_linked)
+                InteractionTextbox.current.ChangeTextBoxDescription("Linking process is in progress!");
+            else if (TeleporterEvent.current.teleporters_are_linked)
+                InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to teleporter to SuperImprover.");
+            else if (!TeleporterEvent.current.teleporters_can_be_linked)
+                InteractionTextbox.current.ChangeTextBoxDescription("Teleporters are on cooldown.");
+        }
+        else
+        {
+            InteractionTextbox.current.ChangeTextBoxDescription("The power must be turned on!");
+        }
+    }
+
 }

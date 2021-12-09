@@ -129,7 +129,15 @@ public class PerkMachine : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if(wantsToBuyPerk && !playerHasPerk && canInteract)
+            if (!playerHasPerk && machineIsPowered)
+                InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to purchase: " + perk_name + " (" + perk_description + ") " + " ($" + perkPrice + ")");
+            else if (playerHasPerk && machineIsPowered)
+                InteractionTextbox.current.ChangeTextBoxDescription("You already have this perk.");
+            else if (!machineIsPowered)
+                InteractionTextbox.current.ChangeTextBoxDescription("The power must be turned on!");
+
+
+            if (wantsToBuyPerk && !playerHasPerk && canInteract)
             {
                 if (PlayerScore.pScore >= perkPrice)
                 {

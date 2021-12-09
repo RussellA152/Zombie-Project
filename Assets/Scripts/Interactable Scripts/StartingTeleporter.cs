@@ -31,7 +31,9 @@ public class StartingTeleporter : MonoBehaviour
                 else if(TeleporterEvent.current.teleporters_are_linked)
                     InteractionTextbox.current.ChangeTextBoxDescription("This teleporter is already linked.");
                 else if (TeleporterEvent.current.teleporters_can_be_linked)
-                    InteractionTextbox.current.ChangeTextBoxDescription("Teleporters on cooldown.");
+                    InteractionTextbox.current.ChangeTextBoxDescription("Start the teleporter process first.");
+                else if (!TeleporterEvent.current.teleporters_can_be_linked)
+                    InteractionTextbox.current.ChangeTextBoxDescription("Teleporters are on cooldown.");
             }
             else
             {
@@ -49,6 +51,22 @@ public class StartingTeleporter : MonoBehaviour
             inTrigger = false;
             InteractionTextbox.current.CloseTextBox();
             //TeleporterEvent.current.in_powerRoom_Teleporter_Trigger = false;
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (PowerEvent.powerIsTurnedOn)
+        {
+            inTrigger = true;
+            if (!TeleporterEvent.current.teleporters_are_linked && TeleporterEvent.current.wants_to_link_teleporters)
+                InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to link teleporters.");
+            else if (TeleporterEvent.current.teleporters_are_linked)
+                InteractionTextbox.current.ChangeTextBoxDescription("This teleporter is already linked.");
+            else if (TeleporterEvent.current.teleporters_can_be_linked)
+                InteractionTextbox.current.ChangeTextBoxDescription("Start the teleporter process first.");
+            else if (!TeleporterEvent.current.teleporters_can_be_linked)
+                InteractionTextbox.current.ChangeTextBoxDescription("Teleporters are on cooldown.");
         }
     }
 }

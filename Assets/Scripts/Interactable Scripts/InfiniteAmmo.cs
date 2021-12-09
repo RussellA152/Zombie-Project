@@ -31,7 +31,7 @@ public class InfiniteAmmo : MonoBehaviour
             if (!hasPowerUp)
             {
                 StopCoroutine(deletionCountDownCoroutine);
-                StartCoroutine(ChangeTextbox());
+                StartCoroutine(CloseTextboxBegin());
                 PowerUpEvent.current.onPowerUpAcquire += GiveInfiniteAmmo;
                 PowerUpEvent.current.PowerUpAcquirement(id);
                 Debug.Log("Infinite Ammo power up event executed");
@@ -45,7 +45,7 @@ public class InfiniteAmmo : MonoBehaviour
             LeanTween.moveY(this.gameObject, 50, 7f);
             InteractAudioSource.current.PlayInteractClip(powerUpRetrievedSound, 0.5f);
             hasPowerUp = true;
-            
+
             StartCoroutine(InfiniteAmmoTimer());
         }
 
@@ -57,6 +57,7 @@ public class InfiniteAmmo : MonoBehaviour
         {
             yield return new WaitUntil(() => PowerUpEvent.current.hasInfiniteAmmo == false);
         }
+        StartCoroutine(ChangeTextbox());
         PowerUpEvent.current.hasInfiniteAmmo = true;
 
 
@@ -78,9 +79,17 @@ public class InfiniteAmmo : MonoBehaviour
         PowerUpEvent.current.onPowerUpAcquire -= GiveInfiniteAmmo;
     }
 
-    IEnumerator ChangeTextbox()
+    IEnumerator CloseTextboxBegin()
     {
         InteractionTextbox.current.ChangeTextBoxDescription("Infinite Ammo!");
+        yield return new WaitForSeconds(1f);
+        InteractionTextbox.current.CloseTextBox();
+    }
+    IEnumerator ChangeTextbox()
+    {
+
+        yield return new WaitForSeconds(infiniteAmmoCountDown - 2f);
+        InteractionTextbox.current.ChangeTextBoxDescription("Infinite Ammo Expired!");
         yield return new WaitForSeconds(1f);
         InteractionTextbox.current.CloseTextBox();
 

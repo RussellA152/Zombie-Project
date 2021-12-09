@@ -30,7 +30,7 @@ public class InstantKill : MonoBehaviour
             if (!hasPowerUp)
             {
                 StopCoroutine(deletionCountDownCoroutine);
-                StartCoroutine(ChangeTextbox());
+                StartCoroutine(CloseTextboxBegin());
                 PowerUpEvent.current.onPowerUpAcquire += GiveInstantKill;
                 PowerUpEvent.current.PowerUpAcquirement(id);
                 Debug.Log(" instant kill power up event executed");
@@ -51,7 +51,7 @@ public class InstantKill : MonoBehaviour
     }
     void GiveInstantKill(int id)
     {
-        if(id == this.id && this.gameObject)
+        if (id == this.id && this.gameObject)
         {
             LeanTween.moveY(this.gameObject, 50, 7f);
             hasPowerUp = true;
@@ -59,7 +59,7 @@ public class InstantKill : MonoBehaviour
             //PowerUpEvent.current.hasInstantKill = true;
             StartCoroutine(InstantKillTimer());
         }
-        
+
     }
     IEnumerator InstantKillTimer()
     {
@@ -68,6 +68,7 @@ public class InstantKill : MonoBehaviour
         {
             yield return new WaitUntil(() => PowerUpEvent.current.hasInstantKill == false);
         }
+        StartCoroutine(ChangeTextbox());
         PowerUpEvent.current.hasInstantKill = true;
 
 
@@ -88,13 +89,21 @@ public class InstantKill : MonoBehaviour
         {
             InteractAudioSource.current.PlayInteractClip(powerUpFinishedSound, 0.5f);
         }
-            
+
         PowerUpEvent.current.onPowerUpAcquire -= GiveInstantKill;
     }
 
-    IEnumerator ChangeTextbox()
+    IEnumerator CloseTextboxBegin()
     {
         InteractionTextbox.current.ChangeTextBoxDescription("Instant Discharge!");
+        yield return new WaitForSeconds(1f);
+        InteractionTextbox.current.CloseTextBox();
+    }
+    IEnumerator ChangeTextbox()
+    {
+
+        yield return new WaitForSeconds(instantKillCountDown - 2f);
+        InteractionTextbox.current.ChangeTextBoxDescription("Instant Discharge Expired!");
         yield return new WaitForSeconds(1f);
         InteractionTextbox.current.CloseTextBox();
 
