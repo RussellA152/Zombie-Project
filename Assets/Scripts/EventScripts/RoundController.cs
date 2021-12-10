@@ -179,7 +179,7 @@ public class RoundController : MonoBehaviour
     }
     IEnumerator RoundChangeWithSoundCoroutine()
     {
-        Debug.Log("START ROUND CHANGE COROUTINE");
+        //Debug.Log("START ROUND CHANGE COROUTINE");
         if(round == 0)
         {
             backGroundMusicAccessor.Pause();

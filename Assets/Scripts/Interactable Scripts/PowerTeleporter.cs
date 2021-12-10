@@ -180,7 +180,7 @@ public class PowerTeleporter : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (PowerEvent.powerIsTurnedOn)
+        if (PowerEvent.powerIsTurnedOn && other.gameObject.CompareTag("Player"))
         {
 
             //Based on conditions of the teleporter, different text will show up on the textbox
@@ -192,10 +192,10 @@ public class PowerTeleporter : MonoBehaviour
                 InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to teleporter to SuperImprover.");
             else if (!TeleporterEvent.current.teleporters_can_be_linked)
                 InteractionTextbox.current.ChangeTextBoxDescription("Teleporters are on cooldown.");
-        }
-        else
-        {
-            InteractionTextbox.current.ChangeTextBoxDescription("The power must be turned on!");
+            else
+            {
+                InteractionTextbox.current.ChangeTextBoxDescription("The power must be turned on!");
+            }
         }
     }
 

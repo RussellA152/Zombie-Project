@@ -40,9 +40,9 @@ public class PowerUps : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && !hasPowerUp)
         {
-            Debug.Log("Power-up Acquired");
+           // Debug.Log("Power-up Acquired");
             PowerUpEvent.current.PowerUpAcquirement(id);
-            Debug.Log("power up event executed");
+           // Debug.Log("power up event executed");
 
         }
     }
@@ -59,13 +59,13 @@ public class PowerUps : MonoBehaviour
             hasInstaKill = true;
             powerUpCountDown = instaKillCountDown;
             StartCoroutine(PowerupCountDownRoutine());
-            Debug.Log("Insta Kill!");
+           // Debug.Log("Insta Kill!");
         }
         //power up has a max ammo ability
         else if(powerUpAbilityChance == 2)
         {
             gotMaxAmmo = true;
-            Debug.Log("Max Ammo!");
+          //  Debug.Log("Max Ammo!");
         }
         //power up has double points ability
         else if(powerUpAbilityChance == 3)
@@ -73,14 +73,14 @@ public class PowerUps : MonoBehaviour
             hasDoublePoints = true;
             powerUpCountDown = doublePointsCountDown;
             StartCoroutine(PowerupCountDownRoutine());
-            Debug.Log("Double Points!");
+          //  Debug.Log("Double Points!");
         }
         else if(powerUpAbilityChance == 4)
         {
             hasSuperStrength = true;
             powerUpCountDown = superStrengthCountDown;
             StartCoroutine(PowerupCountDownRoutine());
-            Debug.Log("Super Strength");
+          //  Debug.Log("Super Strength");
         }
 
 
@@ -88,7 +88,7 @@ public class PowerUps : MonoBehaviour
     }
     IEnumerator PowerupCountDownRoutine()
     {
-        Debug.Log("Power up CountDown Begins");
+       // Debug.Log("Power up CountDown Begins");
 
         yield return new WaitForSeconds(powerUpCountDown);
 
@@ -104,7 +104,7 @@ public class PowerUps : MonoBehaviour
         {
             hasSuperStrength = false;
         }
-        Debug.Log("Power up CountDown Ended");
+       // Debug.Log("Power up CountDown Ended");
 
         Destroy(gameObject);
     }

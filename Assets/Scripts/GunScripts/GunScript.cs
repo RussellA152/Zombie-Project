@@ -368,7 +368,7 @@ public class GunScript : MonoBehaviour
 
         isReloading = true;
 
-        Debug.Log("reloading");
+        //Debug.Log("reloading");
         animator.SetBool("Reloading", true);
 
         //delay for reloading time

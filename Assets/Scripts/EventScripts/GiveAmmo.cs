@@ -76,7 +76,7 @@ public class GiveAmmo : MonoBehaviour
     public void AccessGunComponents()
     {
         access_gun_script = GunAccessor.GetComponentInChildren<GunScript>();
-        Debug.Log("access gun components");
+        //Debug.Log("access gun components");
         
     }
     private void OnDisable()

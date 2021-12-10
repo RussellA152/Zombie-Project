@@ -33,7 +33,7 @@ public class InstantKill : MonoBehaviour
                 StartCoroutine(CloseTextboxBegin());
                 PowerUpEvent.current.onPowerUpAcquire += GiveInstantKill;
                 PowerUpEvent.current.PowerUpAcquirement(id);
-                Debug.Log(" instant kill power up event executed");
+               // Debug.Log(" instant kill power up event executed");
             }
         }
 

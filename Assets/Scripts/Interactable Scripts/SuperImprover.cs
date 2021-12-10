@@ -25,7 +25,7 @@ public class SuperImprover : MonoBehaviour
     {
         weaponSwitchAccessor = weaponHolder.GetComponent<WeaponSwitching>();
 
-        upgradePrice = 5000;
+        upgradePrice = 4000;
         inTrigger = false;
         wantsToUpgradeGun = false;
         canInteract = true;
@@ -125,8 +125,8 @@ public class SuperImprover : MonoBehaviour
     private void CheckTextBox()
     {
         if (!currentlyEquippedWeaponSI.GetComponent<GunScript>().isUpgraded)
-            InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to upgrade " + currentlyEquippedWeaponSI.GetComponent<GunScript>().name + " (" + upgradePrice + ")");
+            InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to superimprove " + currentlyEquippedWeaponSI.GetComponent<GunScript>().name + " (" + upgradePrice + ")");
         else
-            InteractionTextbox.current.ChangeTextBoxDescription("Weapon is already upgraded!");
+            InteractionTextbox.current.ChangeTextBoxDescription("Weapon is already improved!");
     }
 }

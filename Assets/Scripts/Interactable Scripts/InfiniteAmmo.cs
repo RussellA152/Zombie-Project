@@ -34,7 +34,7 @@ public class InfiniteAmmo : MonoBehaviour
                 StartCoroutine(CloseTextboxBegin());
                 PowerUpEvent.current.onPowerUpAcquire += GiveInfiniteAmmo;
                 PowerUpEvent.current.PowerUpAcquirement(id);
-                Debug.Log("Infinite Ammo power up event executed");
+                //Debug.Log("Infinite Ammo power up event executed");
             }
         }
     }

@@ -56,7 +56,7 @@ public class StartingTeleporter : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (PowerEvent.powerIsTurnedOn)
+        if (PowerEvent.powerIsTurnedOn && other.gameObject.CompareTag("Player"))
         {
             inTrigger = true;
             if (!TeleporterEvent.current.teleporters_are_linked && TeleporterEvent.current.wants_to_link_teleporters)

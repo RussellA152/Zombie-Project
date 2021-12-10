@@ -337,7 +337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32ecae8d98ad5494990c84d46c3f9273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  perkPrice: 100
+  perkPrice: 3000
   is_Life_Savior_Perk: 1
   is_Reload_Speed_Perk: 0
   is_Sprint_Speed_Perk: 0
@@ -355,6 +355,14 @@ MonoBehaviour:
   purchase_failed_sound: {fileID: 8300000, guid: 16458abe8d5a64f7a8082f0de46d643f, type: 3}
   perk_name: Miracle Lemonade
   perk_description: Survive a Fatal Blow
+  perkUI_slot1: {fileID: 0}
+  perkUI_slot2: {fileID: 0}
+  perkUI_slot3: {fileID: 0}
+  perkUI_slot4: {fileID: 0}
+  perk_color_R: 246
+  perk_color_G: 199
+  perk_color_B: 87
+  perk_color_A: 255
 --- !u!1 &9144811463972978565
 GameObject:
   m_ObjectHideFlags: 0

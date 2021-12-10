@@ -39,7 +39,7 @@ public class MaxAmmo : MonoBehaviour
             //we subscribe when we triggerEnter instead of at Start() so we don't activate duplicates at the same time
             PowerUpEvent.current.onPowerUpAcquire += GiveMaxAmmo;
             PowerUpEvent.current.PowerUpAcquirement(id);
-            Debug.Log("Max ammo power up event executed");
+            //Debug.Log("Max ammo power up event executed");
 
         }
     }

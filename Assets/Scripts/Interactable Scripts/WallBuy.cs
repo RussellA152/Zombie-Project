@@ -119,12 +119,12 @@ public class WallBuy : MonoBehaviour
             {
                 GiveAmmoAccessor.AccessGunComponents();
                 playerHasThisGun = true;
-                Debug.Log("You have this gun");
+               // Debug.Log("You have this gun");
             }
             else
             {
                 playerHasThisGun = false;
-                Debug.Log("You do not have this gun");
+               // Debug.Log("You do not have this gun");
             }
         }
 
@@ -296,7 +296,7 @@ public class WallBuy : MonoBehaviour
     void BuyAmmoInsteadOfGun()
     {
         
-        Debug.Log("Buy Ammo! instead of buying gun");
+        //Debug.Log("Buy Ammo! instead of buying gun");
         
         RefillPlayerAmmo.current.AmmoRefiller();
     }

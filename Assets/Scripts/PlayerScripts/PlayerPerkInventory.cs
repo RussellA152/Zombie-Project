@@ -10,6 +10,13 @@ public class PlayerPerkInventory : MonoBehaviour
     public bool has_Reload_Speed_Perk;
     public bool has_Life_Savior_Perk;
 
+    [Header("Perk Slots UI")]
+    public GameObject perkUI_slot1;
+    public GameObject perkUI_slot2;
+    public GameObject perkUI_slot3;
+    public GameObject perkUI_slot4;
+
+
 
     // Start is called before the first frame update
     void Start()

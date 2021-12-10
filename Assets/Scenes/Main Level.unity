@@ -1180,7 +1180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 18
-  doorPrice: 100
+  doorPrice: 12000
   isEndingDoor: 1
   purchase_successful_sound: {fileID: 8300000, guid: 792a6e132d38a4f70bbae7f091a6cab3, type: 3}
   purchase_failed_sound: {fileID: 8300000, guid: 16458abe8d5a64f7a8082f0de46d643f, type: 3}
@@ -1941,7 +1941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 14
-  doorPrice: 0
+  doorPrice: 2000
   isEndingDoor: 0
   purchase_successful_sound: {fileID: 8300000, guid: 792a6e132d38a4f70bbae7f091a6cab3, type: 3}
   purchase_failed_sound: {fileID: 8300000, guid: 16458abe8d5a64f7a8082f0de46d643f, type: 3}
@@ -3697,6 +3697,7 @@ MonoBehaviour:
   previousSelectedWeapon: 0
   animator: {fileID: 314030238}
   weaponswapSound: {fileID: 8300000, guid: 53c407265c9243f4898071d0b10e9b94, type: 3}
+  GiveAmmo_object: {fileID: 1173192237}
 --- !u!95 &314030238
 Animator:
   serializedVersion: 3
@@ -4782,7 +4783,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-165236
+  m_Name: pb_Mesh-32022
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4945,6 +4946,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4481731013709450, guid: b3e1ae4b20d1a0845a32d4418535010b, type: 3}
   m_PrefabInstance: {fileID: 966330869}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &422638060
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 422638061}
+  - component: {fileID: 422638063}
+  - component: {fileID: 422638062}
+  m_Layer: 5
+  m_Name: Perk Slot 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &422638061
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422638060}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1643276014}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 250, y: 30}
+  m_SizeDelta: {x: 40, y: 40}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &422638062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422638060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 70141d51621e24facbca9196bbde84b4, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &422638063
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422638060}
+  m_CullTransparentMesh: 1
 --- !u!1001 &428004070
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7426,6 +7502,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3310601784662692169, guid: 5ed6bbb38e0b5554f8a39a45476a3eea, type: 3}
   m_PrefabInstance: {fileID: 229171933}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &536144041
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 536144042}
+  - component: {fileID: 536144044}
+  - component: {fileID: 536144043}
+  m_Layer: 5
+  m_Name: Perk Slot 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &536144042
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536144041}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1643276014}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 300, y: 30}
+  m_SizeDelta: {x: 40, y: 40}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &536144043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536144041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 70141d51621e24facbca9196bbde84b4, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &536144044
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536144041}
+  m_CullTransparentMesh: 1
 --- !u!1 &537605037
 GameObject:
   m_ObjectHideFlags: 0
@@ -7683,6 +7834,10 @@ PrefabInstance:
     - target: {fileID: 4047566828878885325, guid: e2b4f4be6ff6d534790a0bc9af82ccda, type: 3}
       propertyPath: id
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4047566828878885325, guid: e2b4f4be6ff6d534790a0bc9af82ccda, type: 3}
+      propertyPath: doorPrice
+      value: 1200
       objectReference: {fileID: 0}
     - target: {fileID: 4047566828878885326, guid: e2b4f4be6ff6d534790a0bc9af82ccda, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -8987,7 +9142,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-163572
+  m_Name: pb_Mesh-30314
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13156,6 +13311,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 431307506}
     - target: {fileID: 2092648892525071539, guid: 44586fa39c22ced439fc7035f7e8dce8, type: 3}
+      propertyPath: perkUI_slot1
+      value: 
+      objectReference: {fileID: 422638060}
+    - target: {fileID: 2092648892525071539, guid: 44586fa39c22ced439fc7035f7e8dce8, type: 3}
+      propertyPath: perkUI_slot2
+      value: 
+      objectReference: {fileID: 536144041}
+    - target: {fileID: 2092648892525071539, guid: 44586fa39c22ced439fc7035f7e8dce8, type: 3}
+      propertyPath: perkUI_slot3
+      value: 
+      objectReference: {fileID: 1683481462}
+    - target: {fileID: 2092648892525071539, guid: 44586fa39c22ced439fc7035f7e8dce8, type: 3}
+      propertyPath: perkUI_slot4
+      value: 
+      objectReference: {fileID: 1230812887}
+    - target: {fileID: 2092648892525071539, guid: 44586fa39c22ced439fc7035f7e8dce8, type: 3}
       propertyPath: interactive_audioSource
       value: 
       objectReference: {fileID: 1776938757}
@@ -14197,6 +14368,10 @@ PrefabInstance:
     - target: {fileID: 4047566828878885325, guid: e2b4f4be6ff6d534790a0bc9af82ccda, type: 3}
       propertyPath: id
       value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4047566828878885325, guid: e2b4f4be6ff6d534790a0bc9af82ccda, type: 3}
+      propertyPath: doorPrice
+      value: 1200
       objectReference: {fileID: 0}
     - target: {fileID: 4047566828878885326, guid: e2b4f4be6ff6d534790a0bc9af82ccda, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -19399,7 +19574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 11
-  doorPrice: 100
+  doorPrice: 1000
   isEndingDoor: 0
   purchase_successful_sound: {fileID: 8300000, guid: 792a6e132d38a4f70bbae7f091a6cab3, type: 3}
   purchase_failed_sound: {fileID: 8300000, guid: 16458abe8d5a64f7a8082f0de46d643f, type: 3}
@@ -19676,6 +19851,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4636729762691941770, guid: 87c6760ad64031546a0192ef91eda780, type: 3}
   m_PrefabInstance: {fileID: 1228223665}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1230812887
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1230812888}
+  - component: {fileID: 1230812890}
+  - component: {fileID: 1230812889}
+  m_Layer: 5
+  m_Name: Perk Slot 4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1230812888
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230812887}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1643276014}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 400, y: 30}
+  m_SizeDelta: {x: 40, y: 40}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &1230812889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230812887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 70141d51621e24facbca9196bbde84b4, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1230812890
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230812887}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1232173400
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19914,6 +20164,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 602737410}
     m_Modifications:
+    - target: {fileID: 7606109146295122463, guid: ff8bd0c3ad00cd547b0bbdcb8ac6c37f, type: 3}
+      propertyPath: GiveAmmoReference
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7606109146622289785, guid: ff8bd0c3ad00cd547b0bbdcb8ac6c37f, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -21703,6 +21957,22 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 431307506}
+    - target: {fileID: 2092648892525071539, guid: fb410171d4e745946afdc7cd3c009864, type: 3}
+      propertyPath: perkUI_slot1
+      value: 
+      objectReference: {fileID: 422638060}
+    - target: {fileID: 2092648892525071539, guid: fb410171d4e745946afdc7cd3c009864, type: 3}
+      propertyPath: perkUI_slot2
+      value: 
+      objectReference: {fileID: 536144041}
+    - target: {fileID: 2092648892525071539, guid: fb410171d4e745946afdc7cd3c009864, type: 3}
+      propertyPath: perkUI_slot3
+      value: 
+      objectReference: {fileID: 1683481462}
+    - target: {fileID: 2092648892525071539, guid: fb410171d4e745946afdc7cd3c009864, type: 3}
+      propertyPath: perkUI_slot4
+      value: 
+      objectReference: {fileID: 1230812887}
     - target: {fileID: 2092648892525071539, guid: fb410171d4e745946afdc7cd3c009864, type: 3}
       propertyPath: interactive_audioSource
       value: 
@@ -26253,6 +26523,10 @@ RectTransform:
   - {fileID: 2035931865}
   - {fileID: 538419981}
   - {fileID: 1109819115}
+  - {fileID: 422638061}
+  - {fileID: 536144042}
+  - {fileID: 1683481463}
+  - {fileID: 1230812888}
   m_Father: {fileID: 963194228}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -26782,6 +27056,81 @@ Transform:
   m_Father: {fileID: 633208345}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &1683481462
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1683481463}
+  - component: {fileID: 1683481465}
+  - component: {fileID: 1683481464}
+  m_Layer: 5
+  m_Name: Perk Slot 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1683481463
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683481462}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1643276014}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 350, y: 30}
+  m_SizeDelta: {x: 40, y: 40}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &1683481464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683481462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 70141d51621e24facbca9196bbde84b4, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1683481465
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683481462}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1686848280
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28936,6 +29285,22 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 431307506}
+    - target: {fileID: 2092648892525071539, guid: 65bb36ba56167dc48867776e477139cf, type: 3}
+      propertyPath: perkUI_slot1
+      value: 
+      objectReference: {fileID: 422638060}
+    - target: {fileID: 2092648892525071539, guid: 65bb36ba56167dc48867776e477139cf, type: 3}
+      propertyPath: perkUI_slot2
+      value: 
+      objectReference: {fileID: 536144041}
+    - target: {fileID: 2092648892525071539, guid: 65bb36ba56167dc48867776e477139cf, type: 3}
+      propertyPath: perkUI_slot3
+      value: 
+      objectReference: {fileID: 1683481462}
+    - target: {fileID: 2092648892525071539, guid: 65bb36ba56167dc48867776e477139cf, type: 3}
+      propertyPath: perkUI_slot4
+      value: 
+      objectReference: {fileID: 1230812887}
     - target: {fileID: 2092648892525071539, guid: 65bb36ba56167dc48867776e477139cf, type: 3}
       propertyPath: interactive_audioSource
       value: 
@@ -31466,7 +31831,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-162932
+  m_Name: pb_Mesh-29664
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -32425,6 +32790,22 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 431307506}
+    - target: {fileID: 4308817555364926708, guid: 2cf8b60dc8f200240b3e25270c206d4e, type: 3}
+      propertyPath: perkUI_slot1
+      value: 
+      objectReference: {fileID: 422638060}
+    - target: {fileID: 4308817555364926708, guid: 2cf8b60dc8f200240b3e25270c206d4e, type: 3}
+      propertyPath: perkUI_slot2
+      value: 
+      objectReference: {fileID: 536144041}
+    - target: {fileID: 4308817555364926708, guid: 2cf8b60dc8f200240b3e25270c206d4e, type: 3}
+      propertyPath: perkUI_slot3
+      value: 
+      objectReference: {fileID: 1683481462}
+    - target: {fileID: 4308817555364926708, guid: 2cf8b60dc8f200240b3e25270c206d4e, type: 3}
+      propertyPath: perkUI_slot4
+      value: 
+      objectReference: {fileID: 1230812887}
     - target: {fileID: 4308817555364926708, guid: 2cf8b60dc8f200240b3e25270c206d4e, type: 3}
       propertyPath: interactive_audioSource
       value: 
@@ -33442,6 +33823,22 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7027959975942305257, guid: 9172c7877d7982d46be4f549f8385f79, type: 3}
+      propertyPath: perkUI_slot1
+      value: 
+      objectReference: {fileID: 422638060}
+    - target: {fileID: 7027959975942305257, guid: 9172c7877d7982d46be4f549f8385f79, type: 3}
+      propertyPath: perkUI_slot2
+      value: 
+      objectReference: {fileID: 536144041}
+    - target: {fileID: 7027959975942305257, guid: 9172c7877d7982d46be4f549f8385f79, type: 3}
+      propertyPath: perkUI_slot3
+      value: 
+      objectReference: {fileID: 1683481462}
+    - target: {fileID: 7027959975942305257, guid: 9172c7877d7982d46be4f549f8385f79, type: 3}
+      propertyPath: perkUI_slot4
+      value: 
+      objectReference: {fileID: 1230812887}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9172c7877d7982d46be4f549f8385f79, type: 3}
 --- !u!1001 &2956247366227513262
@@ -33604,6 +34001,10 @@ PrefabInstance:
       propertyPath: DoorSpecificSpawnLocations.Array.data[1]
       value: 
       objectReference: {fileID: 553280997}
+    - target: {fileID: 4047566828878885325, guid: e2b4f4be6ff6d534790a0bc9af82ccda, type: 3}
+      propertyPath: doorPrice
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 4047566828878885326, guid: e2b4f4be6ff6d534790a0bc9af82ccda, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0

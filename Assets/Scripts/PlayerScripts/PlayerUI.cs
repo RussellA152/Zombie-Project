@@ -72,7 +72,7 @@ public class PlayerUI : MonoBehaviour
     }
     void UpdatePlayerHealthUI()
     {
-        healthText.text = "Health: " + Mathf.Round(PlayerHealth.playerHealth);
+        healthText.text = "H " + Mathf.Round(PlayerHealth.playerHealth);
         //healthElement.text = healthText + PlayerHealth.playerHealth;
         //Debug.Log("Player health UI updated");
     }

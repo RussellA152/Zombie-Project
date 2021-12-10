@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class PerkMachine : MonoBehaviour
@@ -48,6 +48,16 @@ public class PerkMachine : MonoBehaviour
 
     [SerializeField] private string perk_name;
     [SerializeField] private string perk_description;
+
+    [SerializeField] private GameObject perkUI_slot1;
+    [SerializeField] private GameObject perkUI_slot2;
+    [SerializeField] private GameObject perkUI_slot3;
+    [SerializeField] private GameObject perkUI_slot4;
+
+    [SerializeField] private byte perk_color_R;     //perk's R color
+    [SerializeField] private byte perk_color_G;     //perk's G color
+    [SerializeField] private byte perk_color_B;     //perk's B color
+    [SerializeField] private byte perk_color_A;     //perk's Alpha/ transparency
 
 
 
@@ -99,7 +109,7 @@ public class PerkMachine : MonoBehaviour
                 InteractionTextbox.current.ChangeTextBoxDescription("The power must be turned on!");
 
             inTrigger = true;
-            Debug.Log("Entered perk machine trigger");
+            //Debug.Log("Entered perk machine trigger");
 
             //we check if player had ever purchased the life savior perk and if they had lost it (died, and thus losing the life savior perk) and is now trying to repurchase the perk
             if(playerHasPerk && purchased_Life_Savior_Perk == true && !playerPerkInventory.has_Life_Savior_Perk)
@@ -201,7 +211,7 @@ public class PerkMachine : MonoBehaviour
                 //since we want to enter bytes for color values, we need to use new color32 instead of new color()
                 var color1 = new Color32(200, 30, 0, 255);
                 StartCoroutine(BuffSoundDelay(color1));
-                Debug.Log("You have acquired health increase!");
+                //Debug.Log("You have acquired health increase!");
                 break;
             case 2:
                 
@@ -210,23 +220,46 @@ public class PerkMachine : MonoBehaviour
                 playerMovementAccessor.IncreaseSpeed();
                 var color2 = new Color32(69, 97, 255, 255);
                 StartCoroutine(BuffSoundDelay(color2));
-                Debug.Log("You have acquired sprint speed increase!");
+                //Debug.Log("You have acquired sprint speed increase!");
                 break;
             case 3:
                 playerPerkInventory.has_Reload_Speed_Perk = true;
                 purchased_Reload_Speed_Perk = true;
                 var color3 = new Color32(78, 200, 42, 255);
                 StartCoroutine(BuffSoundDelay(color3));
-                Debug.Log("You have acquired reload speed increase!");
+                //Debug.Log("You have acquired reload speed increase!");
                 break;
             case 4:
                 playerPerkInventory.has_Life_Savior_Perk = true;
                 purchased_Life_Savior_Perk = true;
                 var color4 = new Color32(227, 229, 120, 255);
                 StartCoroutine(BuffSoundDelay(color4));
-                Debug.Log("You have acquired life savior!");
+                //Debug.Log("You have acquired life savior!");
                 break;
         }
+
+        //we have four perk slots on the HUD, if the one perk slot is taken up by another perk (active in game scene), then check the next slot
+        if (!perkUI_slot1.activeInHierarchy)
+        {
+            perkUI_slot1.SetActive(true);
+            perkUI_slot1.GetComponent<Image>().color = new Color32(perk_color_R,perk_color_G,perk_color_B,perk_color_A);
+        }
+        else if (!perkUI_slot2.activeInHierarchy)
+        {
+            perkUI_slot2.SetActive(true);
+            perkUI_slot2.GetComponent<Image>().color = new Color32(perk_color_R, perk_color_G, perk_color_B, perk_color_A);
+        }
+        else if (!perkUI_slot3.activeInHierarchy)
+        {
+            perkUI_slot3.SetActive(true);
+            perkUI_slot3.GetComponent<Image>().color = new Color32(perk_color_R, perk_color_G, perk_color_B, perk_color_A);
+        }
+        else if (!perkUI_slot4.activeInHierarchy)
+        {
+            perkUI_slot4.SetActive(true);
+            perkUI_slot4.GetComponent<Image>().color = new Color32(perk_color_R, perk_color_G, perk_color_B, perk_color_A);
+        }
+
     }
 
     IEnumerator InteractionDelay()

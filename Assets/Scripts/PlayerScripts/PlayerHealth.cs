@@ -110,7 +110,15 @@ public class PlayerHealth : MonoBehaviour
         perkInventory.has_Life_Savior_Perk = false;
         perkInventory.has_Reload_Speed_Perk = false;
         perkInventory.has_Sprint_Speed_Perk = false;
-        perkInventory.has_Health_Increase_Perk = false; 
+        perkInventory.has_Health_Increase_Perk = false;
+
+        //disable perk slot gameobjects after player has died
+        perkInventory.perkUI_slot1.gameObject.SetActive(false);
+        perkInventory.perkUI_slot2.gameObject.SetActive(false);
+        perkInventory.perkUI_slot3.gameObject.SetActive(false);
+        perkInventory.perkUI_slot4.gameObject.SetActive(false);
+        StartCoroutine(ChangeTextbox());
+
     }
     public void PlayerHasDied()
     {
@@ -122,8 +130,6 @@ public class PlayerHealth : MonoBehaviour
         InputManager.IsInputEnabled = false;
         StartCoroutine(FadeDeathDelay());
         
-
-        Debug.Log("You Died!");
     }
     /*
     private void OnTriggerStay(Collider other)
@@ -194,6 +200,12 @@ public class PlayerHealth : MonoBehaviour
         fade_object.GetComponent<FadeAnimation>().FadeToRed();
         yield return new WaitForSeconds(0.5f);
         MySceneHandler.current.ChangeScene("Death Screen");
+    }
+    IEnumerator ChangeTextbox()
+    {
+        InteractionTextbox.current.ChangeTextBoxDescription("Life Saved!");
+        yield return new WaitForSeconds(2f);
+        InteractionTextbox.current.CloseTextBox();
     }
 
     /*

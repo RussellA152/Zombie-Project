@@ -38,17 +38,6 @@ public class RefillAmmo : MonoBehaviour
     {
         //Debug.Log(PlayerScore.pScore);
 
-        //Checking if player has swapped weapons while inside the ammo crate's trigger, if so, then we must update the getComponent so we can buy ammo for the new gun
-        if (inTrigger)
-        {
-            if(access_weaponswitch_script.previousSelectedWeapon != access_weaponswitch_script.selectedWeapon)
-            {
-                Debug.Log("get component weapon switch now!");
-                GiveAmmoAccessor.AccessGunComponents();
-                InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to purchase ammo " + "($" + GiveAmmoAccessor.ReturnAmmoPrice() + ")");
-                //access_gun_script = GunAccessor.GetComponentInChildren<GunScript>();
-            }
-        }
         //checking if the player is inside the trigger, AND if they are pressing the 'f' key,
         //if so, they want to buy ammo
         if (inTrigger && Input.GetKey(KeyCode.F))
@@ -81,7 +70,10 @@ public class RefillAmmo : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if(wantsToBuyAmmo && canInteract)
+            //Bad solution, but its the only one that works at the moment, we will get component while the player is inside the trigger to keep updating ammo
+            GiveAmmoAccessor.AccessGunComponents();
+            InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to purchase ammo " + "($" + GiveAmmoAccessor.ReturnAmmoPrice() + ")");
+            if (wantsToBuyAmmo && canInteract)
             {
                 PurchaseAmmo();
                 

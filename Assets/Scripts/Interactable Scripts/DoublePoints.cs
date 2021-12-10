@@ -46,7 +46,7 @@ public class DoublePoints : MonoBehaviour
                 PowerUpEvent.current.onPowerUpAcquire += GiveDoublePoints;
                 StartCoroutine(CloseTextboxBegin());
                 PowerUpEvent.current.PowerUpAcquirement(id);
-                Debug.Log("Double Points power up event executed " + this.name);
+                //Debug.Log("Double Points power up event executed " + this.name);
             }
             /*
             else if (PowerUpEvent.current.hasDoublePoints && !hasPowerUp)
