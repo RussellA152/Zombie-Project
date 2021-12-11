@@ -10,7 +10,7 @@ public class PlayerScore : MonoBehaviour
     void Start()
     {
         money_regen_rate = 1.3f;
-        pScore = 11200f;
+        pScore = 200f;
     }
     private void Update()
     {
