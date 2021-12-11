@@ -123,7 +123,7 @@ public class DoublePoints : MonoBehaviour
     IEnumerator CloseTextboxBegin()
     {
         InteractionTextbox.current.ChangeTextBoxDescription("Double Points!");
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.5f);
         InteractionTextbox.current.CloseTextBox();
     }
     IEnumerator ChangeTextbox()

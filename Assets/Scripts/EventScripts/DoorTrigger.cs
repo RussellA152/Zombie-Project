@@ -62,7 +62,7 @@ public class DoorTrigger : MonoBehaviour
         {
             if (!doorWasOpened && !isEndingDoor)
                 InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to open door: ($" + doorPrice + ")");
-            else if (!doorWasOpened && !isEndingDoor)
+            else if (!doorWasOpened && isEndingDoor)
                 InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to open final door: ($" + doorPrice + ")");
 
 

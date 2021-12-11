@@ -7,11 +7,12 @@ public class Target : MonoBehaviour
     public float health;
     public float maxHealthAmount;
 
-    public float minRandomSpeed;
-    public float maxRandomSpeed;
+    public float minRandomSpeed;   // the slowest a zombie can move (this increases with round difficulty)
+    public float maxRandomSpeed;   // the fastest a zombie can move (this increases with round difficulty)
     [SerializeField] private float maxPossibleSpeed;
 
-    public static float difficultySpeedIncrease = 0f;
+
+    public static float difficultySpeedIncrease = 0f;    //this number should be reset inside of round controller (this because only one round controller exists, and we want to reset this number at every game restart)
 
     public float pointsForDeath;
 
@@ -40,6 +41,8 @@ public class Target : MonoBehaviour
     [SerializeField] private AudioClip zombieDamageSound;
     [SerializeField] private AudioClip zombieDeathSound;
     private AudioSource zombieAudio { get; set; }
+
+    
     private void OnEnable()
     {
         //enemy Audio Source is a static singleton object audio source for zombie attack and death sounds
@@ -55,6 +58,8 @@ public class Target : MonoBehaviour
         zombieAudio = EnemyAudio.current.enemyAudioSourceGameObject.GetComponent<AudioSource>();
         //zombieDamagedAudio = EnemyDamagedSound.current.enemyDamagedAudioSourceGameObject.GetComponent<AudioSource>();
         is_dead = false;
+        //minRandomSpeed = original_minRandomSpeed;
+        //maxRandomSpeed = original_maxRandomSpeed;
         //zombieAudioSource.GetComponent<AudioSource>();
 
 

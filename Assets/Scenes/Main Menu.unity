@@ -5181,7 +5181,6 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Controls
 
-
     WASD - Movement
 
     Shift - Sprint
@@ -5191,11 +5190,14 @@ MonoBehaviour:
     Left
     Click - Shoot
 
+    Scroll - Gun Swap
+
     R - Reload
 
     F - Interaction
 
-    T - Flashlight On/Off'
+    T
+    - Flashlight On/Off'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}

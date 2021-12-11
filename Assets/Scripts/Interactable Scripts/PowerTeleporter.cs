@@ -42,13 +42,13 @@ public class PowerTeleporter : MonoBehaviour
                 TeleporterEvent.current.wants_to_link_teleporters = true;
                 TeleporterEvent.current.interactive_audio_source.PlayOneShot(TeleporterEvent.current.interact_successful_sound, 0.5f);
                 InteractionTextbox.current.ChangeTextBoxDescription("Linking process is in progress!");
-                Debug.Log("Player wants to link teleporters!");
+               // Debug.Log("Player wants to link teleporters!");
             }
             //if teleporter is already linked and player presses 'F' then teleport player
             else if(Input.GetKeyDown(KeyCode.F) && TeleporterEvent.current.teleporters_are_linked)
             {
                 //calls event for teleporting player
-                Debug.Log("Teleport Player!");
+               // Debug.Log("Teleport Player!");
                 TeleporterEvent.current.interactive_audio_source.PlayOneShot(TeleporterEvent.current.teleport_successful_sound,0.5f);
                 TeleporterEvent.current.TeleportPlayer();
             }

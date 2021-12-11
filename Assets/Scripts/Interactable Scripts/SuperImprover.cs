@@ -125,7 +125,7 @@ public class SuperImprover : MonoBehaviour
     private void CheckTextBox()
     {
         if (!currentlyEquippedWeaponSI.GetComponent<GunScript>().isUpgraded)
-            InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to superimprove " + currentlyEquippedWeaponSI.GetComponent<GunScript>().name + " (" + upgradePrice + ")");
+            InteractionTextbox.current.ChangeTextBoxDescription("Press 'F' to superimprove " + currentlyEquippedWeaponSI.GetComponent<GunScript>().gunName + " (" + upgradePrice + ")");
         else
             InteractionTextbox.current.ChangeTextBoxDescription("Weapon is already improved!");
     }

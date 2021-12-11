@@ -74,7 +74,7 @@ public class PlayerHealth : MonoBehaviour
         {
             roundControllerScriptAccessor.StopZombieSpawning();
             checked_for_death = true;
-            Debug.Log("unsubscribed zombie spawns");
+          //  Debug.Log("unsubscribed zombie spawns");
         }
 
     }

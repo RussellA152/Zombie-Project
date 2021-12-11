@@ -58,9 +58,11 @@ public class RoundController : MonoBehaviour
         player_ui_accessor = pHud.GetComponent<PlayerUI>();
 
         backGroundMusicAccessor = BackgroundMusic.current.gameObject.GetComponent<AudioSource>();
-        //round = 144;
-        //round = 25;
-    }
+
+        Target.difficultySpeedIncrease = 0f;     //we are resetting this value because otherwise zombies will already be fast on game restart
+    //round = 144;
+    //round = 25;
+}
     private void Update()
     {
     }

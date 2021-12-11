@@ -58,7 +58,7 @@ public class GiveAmmo : MonoBehaviour
                 access_gun_script.MaxAmmo();
 
 
-                Debug.Log("Ammo Crate - max ammo granted.");
+               // Debug.Log("Ammo Crate - max ammo granted.");
 
             }
             else

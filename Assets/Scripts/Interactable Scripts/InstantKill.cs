@@ -96,7 +96,7 @@ public class InstantKill : MonoBehaviour
     IEnumerator CloseTextboxBegin()
     {
         InteractionTextbox.current.ChangeTextBoxDescription("Instant Discharge!");
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.5f);
         InteractionTextbox.current.CloseTextBox();
     }
     IEnumerator ChangeTextbox()
